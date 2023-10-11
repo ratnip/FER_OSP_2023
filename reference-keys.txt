@@ -20,3 +20,7 @@ poželjne-karakteristike-procesa-analize-podataka
 organizacija-mapa-za-potrebe-analize-podataka
 pojam-projekta
 kako-koristiti-ovaj-udžbenik
+tipovi
+osnovni-tipovi-podataka
+operatori
+nedostajuće-nepoznate-i-nemoguće-vrijednosti

@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>2 Osnovni tipovi podataka | Programirajmo u R-u</title>
+  <meta name="description" content="Udžbenik za predmet ‘Osnove statističkog programiranja’ na Fakultetu elektrotehnike i računarstva, Sveučilište u Zagrebu." />
+  <meta name="generator" content="bookdown 0.35 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="2 Osnovni tipovi podataka | Programirajmo u R-u" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="Udžbenik za predmet ‘Osnove statističkog programiranja’ na Fakultetu elektrotehnike i računarstva, Sveučilište u Zagrebu." />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="2 Osnovni tipovi podataka | Programirajmo u R-u" />
+  
+  <meta name="twitter:description" content="Udžbenik za predmet ‘Osnove statističkog programiranja’ na Fakultetu elektrotehnike i računarstva, Sveučilište u Zagrebu." />
+  
+
+<meta name="author" content="Damir Pintar" />
+
+
+<meta name="date" content="2023-10-11" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="uvod.html"/>
+
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+<style type="text/css">
+.showopt {
+  background-color: #004c93;
+  color: #FFFFFF; 
+  width: 140px;
+  height: 4	0px;
+  text-align: center;
+  vertical-align: middle !important;
+  float: right;
+  font-family: sans-serif;
+  font-size:10 pt;
+  border-radius: 8px;
+}
+
+.showopt:hover {
+    background-color: #dfe4f2;
+    color: #004c93;
+}
+
+pre.plot {
+  background-color: white !important;
+}
+</style>
+
+<script>
+ $(document).ready(function() {
+
+  $chunks = $('.fold');
+
+  $chunks.each(function () {
+
+    // add button to source code chunks
+    if ( $(this).hasClass('s') ) {
+      $('pre.r', this).prepend("<div class=\"showopt\">Prikaži rješenje</div><br style=\"line-height:22px;\"/>");
+      $('pre.r', this).children('code').attr('class', 'folded');
+    }
+
+    // add button to output chunks
+    if ( $(this).hasClass('o') ) {
+      $('pre:not(.r)', this).has('code').prepend("<div class=\"showopt\">Prikaži ispis</div><br style=\"line-height:22px;\"/>");
+      $('pre:not(.r)', this).children('code:not(r)').addClass('folded');
+
+      // add button to plots
+      $(this).find('img').wrap('<pre class=\"plot\"></pre>');
+      $('pre.plot', this).prepend("<div class=\"showopt\">Prikaži sliku</div><br style=\"line-height:22px;\"/>");
+      $('pre.plot', this).children('img').addClass('folded');
+
+    }
+  });
+
+  // hide all chunks when document is loaded
+  $('.folded').css('display', 'none')
+
+  // function to toggle the visibility
+  $('.showopt').click(function() {
+    var label = $(this).html();
+    if (label.indexOf("Prikaži") >= 0) {
+      $(this).html(label.replace("Prikaži", "Sakrij"));
+    } else {
+      $(this).html(label.replace("Sakrij", "Prikaži"));
+    }
+    $(this).siblings('code, img').slideToggle('fast', 'swing');
+  });
+});
+</script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>(Udžbenik za predmet “Osnove statističkog programiranja”)</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#predgovor"><i class="fa fa-check"></i>Predgovor</a></li>
+</ul></li>
+<li class="part"><span><b>I Osnovni elementi jezika R</b></span></li>
+<li class="chapter" data-level="1" data-path="uvod.html"><a href="uvod.html"><i class="fa fa-check"></i><b>1</b> Uvod</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="uvod.html"><a href="uvod.html#što-je-programski-jezik-r"><i class="fa fa-check"></i><b>1.1</b> Što je programski jezik R?</a>
+<ul>
+<li class="chapter" data-level="1.1.1" data-path="uvod.html"><a href="uvod.html#općenito-o-r-u"><i class="fa fa-check"></i><b>1.1.1</b> Općenito o R-u</a></li>
+<li class="chapter" data-level="1.1.2" data-path="uvod.html"><a href="uvod.html#alternative-jeziku-r"><i class="fa fa-check"></i><b>1.1.2</b> Alternative jeziku R</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="uvod.html"><a href="uvod.html#instalacija-programske-podrške"><i class="fa fa-check"></i><b>1.2</b> Instalacija programske podrške</a></li>
+<li class="chapter" data-level="1.3" data-path="uvod.html"><a href="uvod.html#pregled-razvojnog-sučelja-rstudio"><i class="fa fa-check"></i><b>1.3</b> Pregled razvojnog sučelja <em>RStudio</em></a>
+<ul>
+<li class="chapter" data-level="1.3.1" data-path="uvod.html"><a href="uvod.html#interaktivna-konzola"><i class="fa fa-check"></i><b>1.3.1</b> Interaktivna konzola</a></li>
+<li class="chapter" data-level="1.3.2" data-path="uvod.html"><a href="uvod.html#pisanje-r-skripti"><i class="fa fa-check"></i><b>1.3.2</b> Pisanje R skripti</a></li>
+<li class="chapter" data-level="1.3.3" data-path="uvod.html"><a href="uvod.html#instalacija-dodatnih-paketa"><i class="fa fa-check"></i><b>1.3.3</b> Instalacija dodatnih paketa</a></li>
+<li class="chapter" data-level="1.3.4" data-path="uvod.html"><a href="uvod.html#r-markdown"><i class="fa fa-check"></i><b>1.3.4</b> <em>R Markdown</em></a></li>
+</ul></li>
+<li class="chapter" data-level="1.4" data-path="uvod.html"><a href="uvod.html#organizacija-procesa-podatkovne-analize-uz-r-i-rstudio"><i class="fa fa-check"></i><b>1.4</b> Organizacija procesa podatkovne analize uz R i RStudio</a>
+<ul>
+<li class="chapter" data-level="1.4.1" data-path="uvod.html"><a href="uvod.html#poželjne-karakteristike-procesa-analize-podataka"><i class="fa fa-check"></i><b>1.4.1</b> Poželjne karakteristike procesa analize podataka</a></li>
+<li class="chapter" data-level="1.4.2" data-path="uvod.html"><a href="uvod.html#organizacija-mapa-za-potrebe-analize-podataka"><i class="fa fa-check"></i><b>1.4.2</b> Organizacija mapa za potrebe analize podataka</a></li>
+<li class="chapter" data-level="1.4.3" data-path="uvod.html"><a href="uvod.html#pojam-projekta"><i class="fa fa-check"></i><b>1.4.3</b> Pojam projekta</a></li>
+</ul></li>
+<li class="chapter" data-level="1.5" data-path="uvod.html"><a href="uvod.html#kako-koristiti-ovaj-udžbenik"><i class="fa fa-check"></i><b>1.5</b> Kako koristiti ovaj udžbenik?</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="tipovi.html"><a href="tipovi.html"><i class="fa fa-check"></i><b>2</b> Osnovni tipovi podataka</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="tipovi.html"><a href="tipovi.html#osnovni-tipovi-podataka"><i class="fa fa-check"></i><b>2.1</b> Osnovni tipovi podataka</a></li>
+<li class="chapter" data-level="2.2" data-path="tipovi.html"><a href="tipovi.html#operatori"><i class="fa fa-check"></i><b>2.2</b> Operatori</a></li>
+<li class="chapter" data-level="2.3" data-path="tipovi.html"><a href="tipovi.html#nedostajuće-nepoznate-i-nemoguće-vrijednosti"><i class="fa fa-check"></i><b>2.3</b> Nedostajuće, nepoznate i nemoguće vrijednosti</a></li>
+<li class="chapter" data-level="" data-path="tipovi.html"><a href="tipovi.html#zadaci-za-vježbu"><i class="fa fa-check"></i>Zadaci za vježbu</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Programirajmo u R-u</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="tipovi" class="section level1 hasAnchor" number="2">
+<h1><span class="header-section-number">2</span> Osnovni tipovi podataka<a href="tipovi.html#tipovi" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<hr />
+<p>“Osnovni” ili “primitivni” tipovi podataka su temeljni izgradbeni blokovi programskih jezika. Ovdje se najčešće misli na ugrađene mehanizme koji omogućuju pohrane elementarne informacije - najčešće logičkog, numeričkog ili znakovnog tipa. Većina programskih jezika koristi iste ili vrlo slične načine pohrane takvih informacija, što znači da implementira slične osnovne tipove podataka - razlika je često u detaljima kao što su odabrani nazivu tipa, nazivni broj bajtova i sl. U svakom slučaju najčešći prvi korak kod učenja novog programskog jezika jest upoznavanje osnovnih tipova podataka koje isti podržava.</p>
+<p>Sljedeća stvar koja nas potom može zanimati jest sintaksa jezika, tj. način na kojeg pišemo naredbe koje interpreter jezika može razumjeti i izvršiti. Jezik R u svojoj sintaksi slijedi slične konvencije viđene u jezicima kao što su <em>Python</em>, <em>Ruby</em> ili <em>Java</em>, naravno uz određene specifičnosti (kao i svaki pojedini programski jezik). Neka osnovna sintaksna pravila su: svaka naredba u pravilu mora ići u svoj redak, ali uvlačenje naredbi nije bitno kao ni stavljanje točke-zareza na kraj naredbe; blokove definiramo vitičastim zagradama; tipove varijabli ne moramo definirati unaprijed već se oni samo prilagođavaju pridruženoj vrijednosti; komentari započinju znakom <code>#</code>; i sl. Sintaksu ćemo najbolje naučiti kroz primjere - učenjem elemenata jezika sintaksna pravila često postaju intuitivno jasna. Najbolje je krenuti sa jednostavnim funkcijama i operatorima, što ćemo i učiniti u ovoj lekciji.</p>
+<p>Lekciju ćemo završiti raspravom o tzv. “nedostajućim” ili “nepostojećim” vrijednostima. Budući da R ima svoj vlastiti način definiranja takve vrste vrijednosti, odmah ćemo pojasniti način na koji su one u R-u implementirane kako bi u lekcijama koje slijede bili pripremljeni za lako upravljanje takvim vrijednostima (koje se vrlo često susreću u radu sa stvarnim podatkovnim skupovima).</p>
+<hr />
+<div id="osnovni-tipovi-podataka" class="section level2 hasAnchor" number="2.1">
+<h2><span class="header-section-number">2.1</span> Osnovni tipovi podataka<a href="tipovi.html#osnovni-tipovi-podataka" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>R poznaje šest osnovnih tipova podataka:</p>
+<table>
+<colgroup>
+<col width="13%" />
+<col width="16%" />
+<col width="70%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>tip</th>
+<th>izvorni naziv tipa</th>
+<th>primjeri</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>logički</td>
+<td><em>logical</em></td>
+<td><code>TRUE</code>, <code>FALSE</code> ili <code>T</code>, <code>F</code></td>
+</tr>
+<tr class="even">
+<td>cjelobrojni</td>
+<td><em>integer</em></td>
+<td><code>2L</code>, <code>5L</code>, <code>123456789L</code></td>
+</tr>
+<tr class="odd">
+<td>realni</td>
+<td><em>double</em></td>
+<td><code>4</code>, <code>6</code>, <code>3.14</code>, <code>2e5</code></td>
+</tr>
+<tr class="even">
+<td>kompleksni</td>
+<td><em>complex</em></td>
+<td><code>5 + 2i</code>, <code>7 + 1i</code></td>
+</tr>
+<tr class="odd">
+<td>znakovni</td>
+<td><em>character</em></td>
+<td><code>"A"</code>, <code>"B"</code>, <code>"Pero"</code>, <code>"ABCDEFGHijklmnoPQRSTUVwyz"</code></td>
+</tr>
+<tr class="even">
+<td>bajtovi</td>
+<td><em>raw</em></td>
+<td><code>as.raw(2)</code>, <code>charToRaw("1")</code></td>
+</tr>
+</tbody>
+</table>
+<p>Neke opaske:</p>
+<ul>
+<li>cjelobrojni i realni tipovi se često zajedno tretiraju kao tip <code>numeric</code> (iako ovo nije u potpunosti konzistentno!)</li>
+<li>kompleksni tip mora imati deklariranu imaginarnu konstantu čak i ako je ona 1 (<code>2 + i</code> nije dobar zapis!)</li>
+<li>tip “sirovih” bajtova se relativno rijetko koristi</li>
+</ul>
+<p>Provjeru da li je neka varijabla određenog tipa možemo raditi uz pomoć funkcije <code>is.&lt;naziv_tipa&gt;</code>. Ovo ćemo isprobati u sljedećem zadatku. Prije nego što počnemo s rješavanjem uvedimo jedan novitet: u zadacima gdje ispisujemo više stvari na zaslon korisno je vizualno odvojiti različite segmente ispisa kako bismo lakše shvatili na koji dio koda se referenciraju. U tu svrhu ćemo koristiti naredbu <code>cat("-----------\n")</code> koja jednostavno na zaslon ispisuje niz crtica i prelazi u novi red. Mogli smo koristiti i funkciju <code>print()</code>, no ona uvijek započinje ispis sa indeksom elementa dok naredba <code>cat</code> predstavlja “sirovi” ispis, što nam u ovom slučaju više odgovara.</p>
+<hr />
+<p><strong>Zadatak 2.1 - provjera tipova podataka</strong></p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="tipovi.html#cb11-1" tabindex="-1"></a><span class="co">#isprobajte sljedeće naredbe:</span></span>
+<span id="cb11-2"><a href="tipovi.html#cb11-2" tabindex="-1"></a><span class="co">#is.logical(FALSE)</span></span>
+<span id="cb11-3"><a href="tipovi.html#cb11-3" tabindex="-1"></a><span class="co">#is.integer(2L)</span></span>
+<span id="cb11-4"><a href="tipovi.html#cb11-4" tabindex="-1"></a><span class="co">#is.double(1.11)</span></span>
+<span id="cb11-5"><a href="tipovi.html#cb11-5" tabindex="-1"></a></span>
+<span id="cb11-6"><a href="tipovi.html#cb11-6" tabindex="-1"></a><span class="co"># izvedite sljedeće provjere:</span></span>
+<span id="cb11-7"><a href="tipovi.html#cb11-7" tabindex="-1"></a></span>
+<span id="cb11-8"><a href="tipovi.html#cb11-8" tabindex="-1"></a><span class="co"># da li je 5L numerički tip?</span></span>
+<span id="cb11-9"><a href="tipovi.html#cb11-9" tabindex="-1"></a><span class="co"># da li je 3.14 numerički tip?</span></span>
+<span id="cb11-10"><a href="tipovi.html#cb11-10" tabindex="-1"></a><span class="co"># da li je &quot;ABC&quot; znakovni tip?</span></span>
+<span id="cb11-11"><a href="tipovi.html#cb11-11" tabindex="-1"></a><span class="co"># da li je 4 + 2i kompleksni tip?</span></span>
+<span id="cb11-12"><a href="tipovi.html#cb11-12" tabindex="-1"></a><span class="co"># da li je 5 cjelobrojni tip?</span></span></code></pre></div>
+<div class="fold s o">
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="tipovi.html#cb12-1" tabindex="-1"></a><span class="fu">is.logical</span>(<span class="cn">FALSE</span>)</span>
+<span id="cb12-2"><a href="tipovi.html#cb12-2" tabindex="-1"></a><span class="fu">is.integer</span>(2L)</span>
+<span id="cb12-3"><a href="tipovi.html#cb12-3" tabindex="-1"></a><span class="fu">is.double</span>(<span class="fl">1.11</span>)</span>
+<span id="cb12-4"><a href="tipovi.html#cb12-4" tabindex="-1"></a></span>
+<span id="cb12-5"><a href="tipovi.html#cb12-5" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">&quot;-----------</span><span class="sc">\n</span><span class="st">&quot;</span>)</span>
+<span id="cb12-6"><a href="tipovi.html#cb12-6" tabindex="-1"></a></span>
+<span id="cb12-7"><a href="tipovi.html#cb12-7" tabindex="-1"></a><span class="fu">is.numeric</span>(5L)</span>
+<span id="cb12-8"><a href="tipovi.html#cb12-8" tabindex="-1"></a><span class="fu">is.numeric</span>(<span class="fl">3.14</span>)</span>
+<span id="cb12-9"><a href="tipovi.html#cb12-9" tabindex="-1"></a><span class="fu">is.character</span>(<span class="st">&quot;ABC&quot;</span>)</span>
+<span id="cb12-10"><a href="tipovi.html#cb12-10" tabindex="-1"></a><span class="fu">is.complex</span>(<span class="dv">4</span> <span class="sc">+</span> 2i)</span>
+<span id="cb12-11"><a href="tipovi.html#cb12-11" tabindex="-1"></a><span class="fu">is.integer</span>(<span class="dv">5</span>)</span></code></pre></div>
+<pre><code>## [1] TRUE
+## [1] TRUE
+## [1] TRUE
+## -----------
+## [1] TRUE
+## [1] TRUE
+## [1] TRUE
+## [1] TRUE
+## [1] FALSE</code></pre>
+</div>
+<hr />
+<p>Da li ste uočili nešto neobično u ovim provjerama? Pokušajte objasniti dobiveni rezultat.</p>
+<p>Tip neke varijable ili konstante možemo dohvatiti uz pomoć funkcija <code>typeof</code> ili <code>class</code>. Razlika između njih je sljedeća:</p>
+<ul>
+<li><code>typeof</code> - dohvaća “primitivni” ili “osnovni” tip podatka (<code>integer</code>, <code>double</code> )</li>
+<li><code>class</code> - “objektni tip”, zapravo vrijednost atributa <code>class</code></li>
+</ul>
+<hr />
+<p><strong>Zadatak 2.2 - dohvat naziva tipa podatka</strong></p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="tipovi.html#cb14-1" tabindex="-1"></a><span class="co"># ispišite tipove sljedećih konstanti: TRUE, 2L, F, 3.14, &quot;ABC&quot;</span></span>
+<span id="cb14-2"><a href="tipovi.html#cb14-2" tabindex="-1"></a></span>
+<span id="cb14-3"><a href="tipovi.html#cb14-3" tabindex="-1"></a><span class="co"># ispišite klase istih konstanti. Ima li razlike?</span></span></code></pre></div>
+<div class="fold s o">
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="tipovi.html#cb15-1" tabindex="-1"></a><span class="fu">typeof</span>(<span class="cn">TRUE</span>)</span>
+<span id="cb15-2"><a href="tipovi.html#cb15-2" tabindex="-1"></a><span class="fu">typeof</span>(2L)</span>
+<span id="cb15-3"><a href="tipovi.html#cb15-3" tabindex="-1"></a><span class="fu">typeof</span>(F)</span>
+<span id="cb15-4"><a href="tipovi.html#cb15-4" tabindex="-1"></a><span class="fu">typeof</span>(<span class="fl">3.14</span>)</span>
+<span id="cb15-5"><a href="tipovi.html#cb15-5" tabindex="-1"></a><span class="fu">typeof</span>(<span class="st">&quot;ABC&quot;</span>)</span>
+<span id="cb15-6"><a href="tipovi.html#cb15-6" tabindex="-1"></a></span>
+<span id="cb15-7"><a href="tipovi.html#cb15-7" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">&quot;-----------</span><span class="sc">\n</span><span class="st">&quot;</span>)</span>
+<span id="cb15-8"><a href="tipovi.html#cb15-8" tabindex="-1"></a></span>
+<span id="cb15-9"><a href="tipovi.html#cb15-9" tabindex="-1"></a><span class="fu">class</span>(<span class="cn">TRUE</span>)</span>
+<span id="cb15-10"><a href="tipovi.html#cb15-10" tabindex="-1"></a><span class="fu">class</span>(2L)</span>
+<span id="cb15-11"><a href="tipovi.html#cb15-11" tabindex="-1"></a><span class="fu">class</span>(F)</span>
+<span id="cb15-12"><a href="tipovi.html#cb15-12" tabindex="-1"></a><span class="fu">class</span>(<span class="fl">3.14</span>)</span>
+<span id="cb15-13"><a href="tipovi.html#cb15-13" tabindex="-1"></a><span class="fu">class</span>(<span class="st">&quot;ABC&quot;</span>)</span></code></pre></div>
+<pre><code>## [1] &quot;logical&quot;
+## [1] &quot;integer&quot;
+## [1] &quot;logical&quot;
+## [1] &quot;double&quot;
+## [1] &quot;character&quot;
+## -----------
+## [1] &quot;logical&quot;
+## [1] &quot;integer&quot;
+## [1] &quot;logical&quot;
+## [1] &quot;numeric&quot;
+## [1] &quot;character&quot;</code></pre>
+</div>
+<hr />
+<p>Podatke možemo eksplicitno pretvarati iz jednog tipa u drugi uz pomoć funkcije <code>as.&lt;naziv_tipa&gt;</code>:</p>
+<hr />
+<p><strong>Zadatak 2.3 - pretvorba tipova podataka</strong></p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="tipovi.html#cb17-1" tabindex="-1"></a><span class="co"># Izvedite sljedeće pretvorbe i ispišite rezultat</span></span>
+<span id="cb17-2"><a href="tipovi.html#cb17-2" tabindex="-1"></a></span>
+<span id="cb17-3"><a href="tipovi.html#cb17-3" tabindex="-1"></a><span class="co">#  2.35 u integer</span></span>
+<span id="cb17-4"><a href="tipovi.html#cb17-4" tabindex="-1"></a><span class="co">#  TRUE u numeric</span></span>
+<span id="cb17-5"><a href="tipovi.html#cb17-5" tabindex="-1"></a><span class="co">#  100L u character</span></span>
+<span id="cb17-6"><a href="tipovi.html#cb17-6" tabindex="-1"></a><span class="co">#  2.35 u character</span></span>
+<span id="cb17-7"><a href="tipovi.html#cb17-7" tabindex="-1"></a><span class="co">#  2e2  u character</span></span>
+<span id="cb17-8"><a href="tipovi.html#cb17-8" tabindex="-1"></a><span class="co">#  0 u logical</span></span>
+<span id="cb17-9"><a href="tipovi.html#cb17-9" tabindex="-1"></a><span class="co">#  2.75  u logical</span></span></code></pre></div>
+<div class="fold s o">
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="tipovi.html#cb18-1" tabindex="-1"></a><span class="fu">as.integer</span>(<span class="fl">2.35</span>)</span>
+<span id="cb18-2"><a href="tipovi.html#cb18-2" tabindex="-1"></a><span class="fu">as.numeric</span>(<span class="cn">TRUE</span>)</span>
+<span id="cb18-3"><a href="tipovi.html#cb18-3" tabindex="-1"></a><span class="fu">as.character</span>(100L)</span>
+<span id="cb18-4"><a href="tipovi.html#cb18-4" tabindex="-1"></a><span class="fu">as.character</span>(<span class="fl">2.35</span>)</span>
+<span id="cb18-5"><a href="tipovi.html#cb18-5" tabindex="-1"></a><span class="fu">as.character</span>(<span class="fl">2e2</span>)</span>
+<span id="cb18-6"><a href="tipovi.html#cb18-6" tabindex="-1"></a><span class="fu">as.logical</span>(<span class="dv">0</span>)</span>
+<span id="cb18-7"><a href="tipovi.html#cb18-7" tabindex="-1"></a><span class="fu">as.logical</span>(<span class="fl">2.75</span>)</span></code></pre></div>
+<pre><code>## [1] 2
+## [1] 1
+## [1] &quot;100&quot;
+## [1] &quot;2.35&quot;
+## [1] &quot;200&quot;
+## [1] FALSE
+## [1] TRUE</code></pre>
+</div>
+<hr />
+<p><em>R</em> će sam provoditi implicitnu pretvorbu ukoliko je moguća:</p>
+<hr />
+<p><strong>Zadatak 2.4 - implicitna pretvorba</strong></p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="tipovi.html#cb20-1" tabindex="-1"></a><span class="co"># napišite izraze koji odgovaraju sljedećem i ispišite rezultat:</span></span>
+<span id="cb20-2"><a href="tipovi.html#cb20-2" tabindex="-1"></a></span>
+<span id="cb20-3"><a href="tipovi.html#cb20-3" tabindex="-1"></a><span class="co"># aritmetički operator između logičke i numeričke varijable</span></span>
+<span id="cb20-4"><a href="tipovi.html#cb20-4" tabindex="-1"></a><span class="co"># aritmetički operator između cjelobrojne i numeričke varijable</span></span>
+<span id="cb20-5"><a href="tipovi.html#cb20-5" tabindex="-1"></a><span class="co"># logički operator negacije primjenjen na numeričku varijablu</span></span></code></pre></div>
+<div class="fold s o">
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="tipovi.html#cb21-1" tabindex="-1"></a><span class="co"># aritmetički operator između logičke i numeričke varijable</span></span>
+<span id="cb21-2"><a href="tipovi.html#cb21-2" tabindex="-1"></a><span class="cn">TRUE</span> <span class="sc">+</span> <span class="dv">5</span></span>
+<span id="cb21-3"><a href="tipovi.html#cb21-3" tabindex="-1"></a></span>
+<span id="cb21-4"><a href="tipovi.html#cb21-4" tabindex="-1"></a><span class="co"># aritmetički operator između cjelobrojne i numeričke varijable</span></span>
+<span id="cb21-5"><a href="tipovi.html#cb21-5" tabindex="-1"></a>5L  <span class="sc">+</span> <span class="fl">3.14</span></span>
+<span id="cb21-6"><a href="tipovi.html#cb21-6" tabindex="-1"></a></span>
+<span id="cb21-7"><a href="tipovi.html#cb21-7" tabindex="-1"></a><span class="co"># logički operator negacije primjenjen na numeričku varijablu</span></span>
+<span id="cb21-8"><a href="tipovi.html#cb21-8" tabindex="-1"></a><span class="sc">!</span><span class="dv">25</span></span></code></pre></div>
+<pre><code>## [1] 6
+## [1] 8.14
+## [1] FALSE</code></pre>
+</div>
+<hr />
+<p>Implicitna pretvorba će se izvesti samo ako je smislen - npr. aritmetički operator između znakovne i numeričke varijable rezultirati će greškom.</p>
+<hr />
+</div>
+<div id="operatori" class="section level2 hasAnchor" number="2.2">
+<h2><span class="header-section-number">2.2</span> Operatori<a href="tipovi.html#operatori" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Kao i u drugim programskim jezicima, R dozvoljava korištenje operatora u izrazima. Neki od češće korištenih operatora su:</p>
+<ul>
+<li><em>aritmetički</em> <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, <code>**</code> (potencija), <code>%%</code> (modulo), <code>%/%</code> (cjelobrojno dijeljenje)</li>
+<li><em>usporedni</em> <code>&lt;</code>, <code>&lt;=</code>, <code>&gt;</code>, <code>&gt;=</code>, <code>==</code>, <code>!=</code></li>
+<li><em>logički</em> <code>!</code> (negacija), <code>&amp;&amp;</code> (skalarni “i”), <code>||</code> (skalarni “ili”), <code>&amp;</code> (vektorski “i”), <code>|</code> (vektorski “ili”)</li>
+<li><em>pridruživanje</em> <code>&lt;-</code> ili <code>=</code></li>
+</ul>
+<hr />
+<p><strong>Zadatak 2.5 - operatori</strong></p>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="tipovi.html#cb23-1" tabindex="-1"></a><span class="co"># provjerite koliko iznosi &quot;17 na kvadrat&quot; i &quot;ostatak dijeljenja 101 sa 12&quot;</span></span>
+<span id="cb23-2"><a href="tipovi.html#cb23-2" tabindex="-1"></a></span>
+<span id="cb23-3"><a href="tipovi.html#cb23-3" tabindex="-1"></a><span class="co"># provjerite što je rezultat sljedećih izraza: `17 &gt; 13`, `!TRUE`,  `5 &amp;&amp; 0`, `0. || 2`</span></span></code></pre></div>
+<div class="fold s o">
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="tipovi.html#cb24-1" tabindex="-1"></a><span class="co"># provjerite koliko iznosi &quot;17 na kvadrat&quot; i &quot;ostatak dijeljenja 101 sa 12&quot;</span></span>
+<span id="cb24-2"><a href="tipovi.html#cb24-2" tabindex="-1"></a><span class="dv">17</span> <span class="sc">**</span> <span class="dv">2</span>  <span class="co"># radi i 17 ^ 2</span></span>
+<span id="cb24-3"><a href="tipovi.html#cb24-3" tabindex="-1"></a><span class="dv">101</span> <span class="sc">%%</span> <span class="dv">12</span></span>
+<span id="cb24-4"><a href="tipovi.html#cb24-4" tabindex="-1"></a></span>
+<span id="cb24-5"><a href="tipovi.html#cb24-5" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">&quot;-----------</span><span class="sc">\n</span><span class="st">&quot;</span>)</span>
+<span id="cb24-6"><a href="tipovi.html#cb24-6" tabindex="-1"></a></span>
+<span id="cb24-7"><a href="tipovi.html#cb24-7" tabindex="-1"></a><span class="co"># provjerite što je rezultat sljedećih izraza: `17 &gt; 13`, `!TRUE`,  `5 &amp;&amp; 0`, `0. || 2`, </span></span>
+<span id="cb24-8"><a href="tipovi.html#cb24-8" tabindex="-1"></a><span class="dv">17</span> <span class="sc">&gt;</span> <span class="dv">13</span></span>
+<span id="cb24-9"><a href="tipovi.html#cb24-9" tabindex="-1"></a><span class="sc">!</span><span class="cn">TRUE</span></span>
+<span id="cb24-10"><a href="tipovi.html#cb24-10" tabindex="-1"></a><span class="dv">5</span> <span class="sc">&amp;&amp;</span> <span class="dv">0</span></span>
+<span id="cb24-11"><a href="tipovi.html#cb24-11" tabindex="-1"></a><span class="fl">0.</span> <span class="sc">||</span> <span class="dv">2</span></span></code></pre></div>
+<pre><code>## [1] 289
+## [1] 5
+## -----------
+## [1] TRUE
+## [1] FALSE
+## [1] FALSE
+## [1] TRUE</code></pre>
+</div>
+<hr />
+<p>Logičke vrijednosti i usporedne operatore najčešće ćemo koristiti kod tzv. “uvjetnog izvođenja naredbi”, poznatog iz drugih programskih jezika kao “<em>IF ELSE</em>” naredba. U R-u njezina sintaksa izgleda ovako:</p>
+<p><code>if (izraz) {blok} else {blok}</code></p>
+<p>Isprobajmo ovu naredbu na sljedećem zadatku:</p>
+<hr />
+<p><strong>Zadatak 2.6 - uvjetno izvođenje naredbi</strong></p>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="tipovi.html#cb26-1" tabindex="-1"></a><span class="co"># napišite naredbu koja izvodi sljedeće:</span></span>
+<span id="cb26-2"><a href="tipovi.html#cb26-2" tabindex="-1"></a><span class="co"># &quot;ako je 100 paran broj ispiši &#39;Uspjeh!&#39;&quot;</span></span></code></pre></div>
+<div class="fold s o">
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="tipovi.html#cb27-1" tabindex="-1"></a><span class="cf">if</span> (<span class="dv">100</span> <span class="sc">%%</span> <span class="dv">2</span> <span class="sc">==</span> <span class="dv">0</span>) <span class="fu">print</span>(<span class="st">&quot;Uspjeh!&quot;</span>)</span></code></pre></div>
+<pre><code>## [1] &quot;Uspjeh!&quot;</code></pre>
+</div>
+<hr />
+<p>Uočili smo gore da imamo dvije vrste logičkih operatora za “i” i “ili”. Razliku ćemo objasniti kasnije, za sada je dovoljno reći da se kod uvjetnog izvođenja naredbi ili programskih petlji gotovo isključivo koristimo operatorima <code>&amp;&amp;</code> i <code>||</code> (“C++ - ovski” operatori!).</p>
+<p>Isto tako, već smo spomenuli da R nudi dva operatora pridruživanja, <code>&lt;-</code> i <code>=</code>. Između njih postoje neke sitne razlike, no one nemaju gotovo nikakav utjecaj na uobičajeno korištenje ovog operatora u praksi. U literaturi se za pridruživanje vrijednosti novim varijablama može vidjeti i jedna i druga inačica, no mi ćemo u nastavku primarno i konzistentno koristiti <code>&lt;-</code>, ponajviše zato kako bi programski kod bio vizualno distinktivniji od drugih programskih jezika.</p>
+<p><em>NAPOMENA: za jednostavniji upis operatora <code>&lt;-</code> možemo se koristiti kombinacijom tipaka <code>ALT</code> i <code>-</code></em></p>
+<p>Kod pridruživanja pazimo da je s lijeve strane tzv. “lijeva vrijednost” (engl. <em>lvalue</em>). Ovo u programerskom smislu interpretiramo kao “nešto u što se može pohraniti izračunata vrijednost”.</p>
+<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="tipovi.html#cb29-1" tabindex="-1"></a>x <span class="sc">+</span> <span class="dv">1</span> <span class="ot">&lt;-</span> <span class="dv">2</span>          <span class="co"># greška!!!]</span></span></code></pre></div>
+<p>U pravilu se u R-u kao <em>lvalue</em> koristi varijabla, iako se tu ponekad može pojaviti i poziv funkcije. Ovu možda inicijalno zbunjujuću pojavu razjasniti ćemo kasnije.</p>
+<hr />
+<p>Imenovanje varijabli uglavnom slijedi pravila iz drugih programskih jezika - dozvoljena su slova, brojke, podcrta ali i točka . Prvi simbol mora biti slovo ili točka.</p>
+<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="tipovi.html#cb30-1" tabindex="-1"></a>.mojaVarijabla <span class="ot">&lt;-</span> <span class="dv">5</span>   <span class="co">#OK</span></span>
+<span id="cb30-2"><a href="tipovi.html#cb30-2" tabindex="-1"></a>moja.Varijabla <span class="ot">&lt;-</span> <span class="dv">5</span>  <span class="co">#OK</span></span>
+<span id="cb30-3"><a href="tipovi.html#cb30-3" tabindex="-1"></a>_mojaVarijabla <span class="ot">&lt;-</span> <span class="dv">5</span>  <span class="co"># nije OK</span></span>
+<span id="cb30-4"><a href="tipovi.html#cb30-4" tabindex="-1"></a>123Varijabla <span class="ot">&lt;-</span> <span class="dv">5</span>  <span class="co"># nije OK</span></span></code></pre></div>
+<p>U praksi za varijable složenih imena trebamo odabrati jednu od sljedećih konvencija:</p>
+<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="tipovi.html#cb31-1" tabindex="-1"></a>mojaVarijabla <span class="ot">&lt;-</span> <span class="dv">1</span>    <span class="co"># tzv. camelcase</span></span>
+<span id="cb31-2"><a href="tipovi.html#cb31-2" tabindex="-1"></a>moja_varijabla <span class="ot">&lt;-</span> <span class="dv">2</span>   <span class="co">#  podcrta ili</span></span>
+<span id="cb31-3"><a href="tipovi.html#cb31-3" tabindex="-1"></a>moja.varijabla <span class="ot">&lt;-</span> <span class="dv">3</span>   <span class="co"># točka</span></span></code></pre></div>
+<p>Bitno je da u programskom kodu ne miješamo konvencije tj. da nakon odabira budemo konzistentni.</p>
+<p>Ukoliko baš inzistiramo na čudnim imenima koja koriste specijalne znakove, onda ih moramo staviti pod tzv. “lijeve jednostruke apostrofe” (engl. <em>backticks</em>):</p>
+<hr />
+<p><strong>Zadatak 2.7 - ime varijable sa specijalnim znakovima</strong></p>
+<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="tipovi.html#cb32-1" tabindex="-1"></a><span class="co"># upišite proizvoljno ime sa specijalnim znakovima unutar lijevih apostrofa </span></span>
+<span id="cb32-2"><a href="tipovi.html#cb32-2" tabindex="-1"></a><span class="co"># i ispišite vrijednost varijable</span></span>
+<span id="cb32-3"><a href="tipovi.html#cb32-3" tabindex="-1"></a><span class="co">#`` &lt;- 2               </span></span></code></pre></div>
+<div class="fold s o">
+<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="tipovi.html#cb33-1" tabindex="-1"></a><span class="st">`</span><span class="at">!%^$*@__=</span><span class="st">`</span> <span class="ot">&lt;-</span> <span class="dv">2</span> </span>
+<span id="cb33-2"><a href="tipovi.html#cb33-2" tabindex="-1"></a><span class="st">`</span><span class="at">!%^$*@__=</span><span class="st">`</span></span></code></pre></div>
+<pre><code>## [1] 2</code></pre>
+</div>
+<p>Ovakav način imenovanja varijabli nije previše koristan u praksi, ali ima i svoju svrhu - budući da su operatori u R-u zapravo funkcije (čija su imena doslovno <code>+</code>, <code>**</code> i sl.) upotrebom lijevih apostrofa možemo ih direktno referencirati u njihovom originalnom obliku, što se može pokazati vrlo praktičnim kod tzv. funkcijskog programiranja (o čemu ćemo govoriti u jednoj od budućih lekcija).</p>
+<hr />
+<p>Pridjeljivanje vrijednosti novim nazivima varijabli mi zapravo stvaramo nove varijable u radnoj okolini (koja se u R-u naziva “globalna okolina”). Sve varijable koje smo do sada stvorili možemo vidjeti uz pomoć funkcije <code>ls()</code>. Ukoliko želimo obrisati neke varijable, samo navedemo njihova imena u pozivu funkcije <code>rm()</code> (npr. <code>rm(x, y, z)</code>). Za brisanje <em>svih</em> varijabli iz radne okoline koristimo poziv <code>rm(list=ls())</code>, s time što tu moramo biti oprezni (nema “<em>undo</em>”!).</p>
+<hr />
+<p><strong>Zadatak 2.8 - ispis i brisanje varijabli globalne okoline</strong></p>
+<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="tipovi.html#cb35-1" tabindex="-1"></a><span class="co"># ispišite sve do sada stvorene varijable globalne okoline</span></span>
+<span id="cb35-2"><a href="tipovi.html#cb35-2" tabindex="-1"></a></span>
+<span id="cb35-3"><a href="tipovi.html#cb35-3" tabindex="-1"></a><span class="co"># obrišite neke od gore ispisanih varijabli - npr. rm(x, y, z)</span></span>
+<span id="cb35-4"><a href="tipovi.html#cb35-4" tabindex="-1"></a><span class="co"># ponovo ispišite dostupne varijable</span></span>
+<span id="cb35-5"><a href="tipovi.html#cb35-5" tabindex="-1"></a></span>
+<span id="cb35-6"><a href="tipovi.html#cb35-6" tabindex="-1"></a><span class="co"># obrišite SVE varijable globalne okoline</span></span>
+<span id="cb35-7"><a href="tipovi.html#cb35-7" tabindex="-1"></a><span class="co"># (oprezno s ovim pozivom u praksi!)</span></span>
+<span id="cb35-8"><a href="tipovi.html#cb35-8" tabindex="-1"></a><span class="co"># uvjerite se da je globalna okolina prazna</span></span></code></pre></div>
+<div class="fold s o">
+<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="tipovi.html#cb36-1" tabindex="-1"></a><span class="co"># ispišite sve do sada stvorene varijable globalne okoline</span></span>
+<span id="cb36-2"><a href="tipovi.html#cb36-2" tabindex="-1"></a><span class="fu">ls</span>()</span>
+<span id="cb36-3"><a href="tipovi.html#cb36-3" tabindex="-1"></a></span>
+<span id="cb36-4"><a href="tipovi.html#cb36-4" tabindex="-1"></a><span class="co"># obrišite neke od upravo ispisanih varijabli - npr. rm(x, y, z)</span></span>
+<span id="cb36-5"><a href="tipovi.html#cb36-5" tabindex="-1"></a><span class="co"># ponovo ispišite dostupne varijable</span></span>
+<span id="cb36-6"><a href="tipovi.html#cb36-6" tabindex="-1"></a><span class="fu">rm</span>(x, y)</span>
+<span id="cb36-7"><a href="tipovi.html#cb36-7" tabindex="-1"></a><span class="fu">ls</span>()</span>
+<span id="cb36-8"><a href="tipovi.html#cb36-8" tabindex="-1"></a></span>
+<span id="cb36-9"><a href="tipovi.html#cb36-9" tabindex="-1"></a><span class="co"># obrišite SVE varijable globalne okoline</span></span>
+<span id="cb36-10"><a href="tipovi.html#cb36-10" tabindex="-1"></a><span class="co"># (oprezno s ovim pozivom u praksi!)</span></span>
+<span id="cb36-11"><a href="tipovi.html#cb36-11" tabindex="-1"></a><span class="co"># uvjerite se da je globalna okolina prazna</span></span>
+<span id="cb36-12"><a href="tipovi.html#cb36-12" tabindex="-1"></a><span class="fu">rm</span>(<span class="at">list=</span><span class="fu">ls</span>())</span>
+<span id="cb36-13"><a href="tipovi.html#cb36-13" tabindex="-1"></a><span class="fu">ls</span>()</span></code></pre></div>
+</div>
+<hr />
+<p>Konačno, kad god nam treba pomoć oko neke funkcije, imamo sljedeće opcije na raspolaganju:</p>
+<ul>
+<li>napišemo samo <code>&lt;ime_funkcije&gt;</code> (bez zagrada sa parametrima) i stisnemo <em><ENTER></em> - ukoliko je funkcija pisana u <em>R</em>-u (a nije samo <em>proxy</em> prema implementaciji u C-u) na zaslon ćemo dobiti ispis izvornog koda funkcije</li>
+<li>napišemo <code>help(&lt;ime_funkcije&gt;)</code> ili <code>?&lt;ime_funkcije&gt;</code> čime dobijamo stranicu pomoći o funkciji sa popisom parametara, primjerima i sl.</li>
+<li>napišemo <code>example(&lt;ime_funkcije&gt;)</code> pri čemu dobijemo popis primjera korištenja funkcije i dobivenih rezultata</li>
+</ul>
+<p>Sljedeći isječak koda prikazuje način korištenja gornjih metoda (zbog štednje prostora ne prikazujemo njihov rezultat).</p>
+<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="tipovi.html#cb37-1" tabindex="-1"></a><span class="co">#programski kod funkcije `ls`</span></span>
+<span id="cb37-2"><a href="tipovi.html#cb37-2" tabindex="-1"></a>ls</span>
+<span id="cb37-3"><a href="tipovi.html#cb37-3" tabindex="-1"></a></span>
+<span id="cb37-4"><a href="tipovi.html#cb37-4" tabindex="-1"></a><span class="co"># pomoć za funkciju `ls`</span></span>
+<span id="cb37-5"><a href="tipovi.html#cb37-5" tabindex="-1"></a>?ls    <span class="co"># ili help(ls)</span></span>
+<span id="cb37-6"><a href="tipovi.html#cb37-6" tabindex="-1"></a></span>
+<span id="cb37-7"><a href="tipovi.html#cb37-7" tabindex="-1"></a><span class="co"># primjeri korištenja funkcije `ls`</span></span>
+<span id="cb37-8"><a href="tipovi.html#cb37-8" tabindex="-1"></a><span class="fu">example</span>(ls)</span></code></pre></div>
+<hr />
+</div>
+<div id="nedostajuće-nepoznate-i-nemoguće-vrijednosti" class="section level2 hasAnchor" number="2.3">
+<h2><span class="header-section-number">2.3</span> Nedostajuće, nepoznate i nemoguće vrijednosti<a href="tipovi.html#nedostajuće-nepoznate-i-nemoguće-vrijednosti" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>U R-u postoji tri načina modeliranja “nepostojećih” vrijednosti:</p>
+<ul>
+<li><code>NA</code> - (<em>not available</em>) nedostajuća ili nepoznata vrijednost određenog tipa</li>
+<li><code>NaN</code> - (<em>not a number</em>) “nemogući” broj, npr. <code>0/0</code></li>
+<li><code>NULL</code> - nepostojeća vrijednost, doslovno “ništa”</li>
+</ul>
+<hr />
+<p><strong>Zadatak 2.9 - rad sa NA, NaN i NULL</strong></p>
+<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="tipovi.html#cb38-1" tabindex="-1"></a><span class="co"># Koliko je &quot;5 + nepoznati broj&quot;?</span></span>
+<span id="cb38-2"><a href="tipovi.html#cb38-2" tabindex="-1"></a></span>
+<span id="cb38-3"><a href="tipovi.html#cb38-3" tabindex="-1"></a></span>
+<span id="cb38-4"><a href="tipovi.html#cb38-4" tabindex="-1"></a><span class="co"># Koliko je &quot;5 + nepostojeći broj&quot;?   </span></span>
+<span id="cb38-5"><a href="tipovi.html#cb38-5" tabindex="-1"></a></span>
+<span id="cb38-6"><a href="tipovi.html#cb38-6" tabindex="-1"></a></span>
+<span id="cb38-7"><a href="tipovi.html#cb38-7" tabindex="-1"></a><span class="co"># provjerite klase sljedećih konstanti i izraza:</span></span>
+<span id="cb38-8"><a href="tipovi.html#cb38-8" tabindex="-1"></a>   <span class="co">#  NA</span></span>
+<span id="cb38-9"><a href="tipovi.html#cb38-9" tabindex="-1"></a>   <span class="co">#  aritmetička operacija između numeric i NA</span></span>
+<span id="cb38-10"><a href="tipovi.html#cb38-10" tabindex="-1"></a>   <span class="co">#  NaN</span></span>
+<span id="cb38-11"><a href="tipovi.html#cb38-11" tabindex="-1"></a>   <span class="co">#  NULL</span></span></code></pre></div>
+<div class="fold s o">
+<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="tipovi.html#cb39-1" tabindex="-1"></a><span class="co"># Koliko je &quot;5 + nepoznati broj&quot;?</span></span>
+<span id="cb39-2"><a href="tipovi.html#cb39-2" tabindex="-1"></a><span class="dv">5</span> <span class="sc">+</span> <span class="cn">NaN</span></span>
+<span id="cb39-3"><a href="tipovi.html#cb39-3" tabindex="-1"></a></span>
+<span id="cb39-4"><a href="tipovi.html#cb39-4" tabindex="-1"></a><span class="co"># Koliko je &quot;5 + nepostojeći broj&quot;?   </span></span>
+<span id="cb39-5"><a href="tipovi.html#cb39-5" tabindex="-1"></a><span class="dv">5</span> <span class="sc">+</span> <span class="cn">NA</span></span>
+<span id="cb39-6"><a href="tipovi.html#cb39-6" tabindex="-1"></a></span>
+<span id="cb39-7"><a href="tipovi.html#cb39-7" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">&quot;-----------</span><span class="sc">\n</span><span class="st">&quot;</span>)</span>
+<span id="cb39-8"><a href="tipovi.html#cb39-8" tabindex="-1"></a></span>
+<span id="cb39-9"><a href="tipovi.html#cb39-9" tabindex="-1"></a><span class="co"># provjerite klase sljedećih konstanti i izraza i objasnite rezultat:</span></span>
+<span id="cb39-10"><a href="tipovi.html#cb39-10" tabindex="-1"></a>   <span class="co">#  NA</span></span>
+<span id="cb39-11"><a href="tipovi.html#cb39-11" tabindex="-1"></a>   <span class="co">#  aritmetička operacija između numeric i NA</span></span>
+<span id="cb39-12"><a href="tipovi.html#cb39-12" tabindex="-1"></a>   <span class="co">#  NaN</span></span>
+<span id="cb39-13"><a href="tipovi.html#cb39-13" tabindex="-1"></a>   <span class="co">#  NULL</span></span>
+<span id="cb39-14"><a href="tipovi.html#cb39-14" tabindex="-1"></a><span class="fu">class</span>(<span class="cn">NA</span>)        <span class="co"># logički tip je &quot;najslabiji&quot;!</span></span>
+<span id="cb39-15"><a href="tipovi.html#cb39-15" tabindex="-1"></a><span class="fu">class</span>(<span class="dv">5</span> <span class="sc">+</span> <span class="cn">NA</span>)</span>
+<span id="cb39-16"><a href="tipovi.html#cb39-16" tabindex="-1"></a><span class="fu">class</span>(<span class="cn">NaN</span>)</span>
+<span id="cb39-17"><a href="tipovi.html#cb39-17" tabindex="-1"></a><span class="fu">class</span>(<span class="cn">NULL</span>)</span></code></pre></div>
+<pre><code>## [1] NaN
+## [1] NA
+## -----------
+## [1] &quot;logical&quot;
+## [1] &quot;numeric&quot;
+## [1] &quot;numeric&quot;
+## [1] &quot;NULL&quot;</code></pre>
+</div>
+<hr />
+<p>Provjeru nedostajućih vrijednosti radimo slično provjeri tipova podataka - koristimo funkcije <code>is.na</code>, <code>is.nan</code> i <code>is.null</code>. Moramo voditi računa da je <code>NaN</code> zapravo podvrsta od <code>NA</code> te da je <code>NULL</code> zapravo potpuno zasebna klasa sa specifičnim ponašanjem - pokušaj aritmetičkih ili logičkih operacija nad <code>NULL</code> vrijednosti neće rezultirati “novom” nepostojećom vrijednosti već upozorenjima i “praznim” rezultatima. Ovo je posebno bitno napomenuti poznavateljima jezika <em>SQL</em> - ono što je <code>NULL</code> u SQL-u je <code>NA</code> u R-u i to je ono što u pravilu koristimo u praksi, dok <code>NULL</code> ima vrlo specifične primjene te ga puno rjeđe koristimo u programskom kodu.</p>
+<hr />
+<strong>Primjer - nekoliko jednostavnih naredbi R programskog jezika</strong>
+<div class="fold o">
+<div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb41-1"><a href="tipovi.html#cb41-1" tabindex="-1"></a><span class="co"># Što je od idućeg NA?      NA, NaN, NULL, &quot;&quot;, 0</span></span>
+<span id="cb41-2"><a href="tipovi.html#cb41-2" tabindex="-1"></a><span class="fu">is.na</span>(<span class="cn">NA</span>)</span>
+<span id="cb41-3"><a href="tipovi.html#cb41-3" tabindex="-1"></a><span class="fu">is.na</span>(<span class="cn">NaN</span>)</span>
+<span id="cb41-4"><a href="tipovi.html#cb41-4" tabindex="-1"></a><span class="fu">is.na</span>(<span class="cn">NULL</span>)</span>
+<span id="cb41-5"><a href="tipovi.html#cb41-5" tabindex="-1"></a><span class="fu">is.na</span>(<span class="st">&quot;&quot;</span>)</span>
+<span id="cb41-6"><a href="tipovi.html#cb41-6" tabindex="-1"></a><span class="fu">is.na</span>(<span class="dv">0</span>)</span>
+<span id="cb41-7"><a href="tipovi.html#cb41-7" tabindex="-1"></a></span>
+<span id="cb41-8"><a href="tipovi.html#cb41-8" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">&quot;-----------</span><span class="sc">\n</span><span class="st">&quot;</span>)</span>
+<span id="cb41-9"><a href="tipovi.html#cb41-9" tabindex="-1"></a></span>
+<span id="cb41-10"><a href="tipovi.html#cb41-10" tabindex="-1"></a><span class="co"># Što je od idućeg NaN?     NA, NaN, NULL</span></span>
+<span id="cb41-11"><a href="tipovi.html#cb41-11" tabindex="-1"></a><span class="fu">is.nan</span>(<span class="cn">NA</span>)</span>
+<span id="cb41-12"><a href="tipovi.html#cb41-12" tabindex="-1"></a><span class="fu">is.nan</span>(<span class="cn">NaN</span>)</span>
+<span id="cb41-13"><a href="tipovi.html#cb41-13" tabindex="-1"></a><span class="fu">is.nan</span>(<span class="cn">NULL</span>)</span>
+<span id="cb41-14"><a href="tipovi.html#cb41-14" tabindex="-1"></a></span>
+<span id="cb41-15"><a href="tipovi.html#cb41-15" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">&quot;-----------</span><span class="sc">\n</span><span class="st">&quot;</span>)</span>
+<span id="cb41-16"><a href="tipovi.html#cb41-16" tabindex="-1"></a></span>
+<span id="cb41-17"><a href="tipovi.html#cb41-17" tabindex="-1"></a><span class="co"># Što je od idućeg NULL?    NA, NaN, NULL</span></span>
+<span id="cb41-18"><a href="tipovi.html#cb41-18" tabindex="-1"></a><span class="fu">is.null</span>(<span class="cn">NA</span>)</span>
+<span id="cb41-19"><a href="tipovi.html#cb41-19" tabindex="-1"></a><span class="fu">is.null</span>(<span class="cn">NaN</span>)</span>
+<span id="cb41-20"><a href="tipovi.html#cb41-20" tabindex="-1"></a><span class="fu">is.null</span>(<span class="cn">NULL</span>)</span></code></pre></div>
+<pre><code>## [1] TRUE
+## [1] TRUE
+## logical(0)
+## [1] FALSE
+## [1] FALSE
+## -----------
+## [1] FALSE
+## [1] TRUE
+## logical(0)
+## -----------
+## [1] FALSE
+## [1] FALSE
+## [1] TRUE</code></pre>
+</div>
+<p>Objasnimo što znači izraz <code>logical(0)</code> - ovo je R-ov način izjave da je rezultat “prazan logički vektor”, a nastaje kada postavljamo logičko pitanje o elementu koji formalno ne postoji, tj. element kojeg smo referencirali, ali na posebni način koji označava da se radi o “nepostojećem elementu”. Moramo biti posebno oprezni kada postavljamo ovakva pitanja u sprezi sa <code>if</code> izjavom, budući da će korištenje iste na ovakav način uzrokovati grešku.</p>
+<hr />
+<p>Za kraj posvetimo se malo <code>NA</code> vrijednosti, budući da ćemo ju vrlo često susretati u praksi. Pojednostavljeno rečeno, ukoliko se pojavljuju <code>NA</code> vrijednosti, možemo očekivati sljedeće nuspojave:</p>
+<ul>
+<li>rezultati aritmetičkih izraza rezultiraju sa <code>NA</code> vrijednosti</li>
+<li>rezultati poziva nekih funkcija rezultiraju sa <code>NA</code> (osim ako ne navedemo kompenzacijske akcije, kao npr. parametar <code>na.rm = T</code> koji zapravo znači “ignoriraj <code>NA</code>”)</li>
+<li>rezultati logičkih izraza mogu ali ne moraju rezultirati sa <code>NA</code> vrijednosti ovisno o tom da li izraz ovisi o <code>NA</code> ili ne (npr. <code>TRUE || NA</code> ima rezultat <code>TRUE</code>, ali <code>FALSE || NA</code> ima rezultat <code>NA</code>)</li>
+</ul>
+<p>S ovim zadnjim moramo biti posebno oprezni, budući da <code>NA</code> u uvjetnom izrazu rezultira greškom:</p>
+<div class="sourceCode" id="cb43"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb43-1"><a href="tipovi.html#cb43-1" tabindex="-1"></a><span class="cf">if</span> (<span class="cn">NA</span> <span class="sc">&lt;</span> <span class="dv">2</span>) <span class="fu">print</span>(<span class="st">&quot;Uspjeh!&quot;</span>)  <span class="co"># greška!!</span></span></code></pre></div>
+<p>U ovoj lekciji upoznali smo se sa osnovnim elementima jezika R. U radu s R-om u pravilu radimo sa složenim tipovima podataka koje ćemo upoznati u nastavku - a to su vektori, matrice, podatkovni okviri i liste.</p>
+<hr />
+</div>
+<div id="zadaci-za-vježbu" class="section level2 unnumbered hasAnchor">
+<h2>Zadaci za vježbu<a href="tipovi.html#zadaci-za-vježbu" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ol style="list-style-type: decimal">
+<li>Što je rezultat sljedećih naredbi? Razmislite o mogućem rezultatu prije izvršavanja.</li>
+</ol>
+<div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb44-1"><a href="tipovi.html#cb44-1" tabindex="-1"></a><span class="fu">as.complex</span>(<span class="dv">2</span>)</span>
+<span id="cb44-2"><a href="tipovi.html#cb44-2" tabindex="-1"></a><span class="fu">as.integer</span>(<span class="sc">-</span><span class="fl">3.25</span>)</span>
+<span id="cb44-3"><a href="tipovi.html#cb44-3" tabindex="-1"></a><span class="fu">as.logical</span>(<span class="st">&quot;0&quot;</span>)</span>
+<span id="cb44-4"><a href="tipovi.html#cb44-4" tabindex="-1"></a><span class="fu">as.numeric</span>(<span class="cn">TRUE</span>)</span>
+<span id="cb44-5"><a href="tipovi.html#cb44-5" tabindex="-1"></a><span class="fu">as.character</span>(<span class="fl">11.5</span><span class="sc">+</span>2i)</span>
+<span id="cb44-6"><a href="tipovi.html#cb44-6" tabindex="-1"></a><span class="fu">as.numeric</span>(<span class="st">&quot;ABC&quot;</span>)</span></code></pre></div>
+<ol start="2" style="list-style-type: decimal">
+<li>Kako u R-u izgledaju sljedeći opisni izrazi:</li>
+</ol>
+<ul>
+<li>“tri puta deset na devetu”</li>
+<li>“logaritam od 5”</li>
+<li>“cjelobrojno dijeljenje 10 sa 3”</li>
+<li>“ostatak cjelobrojnog dijeljenja 10 sa 3”</li>
+<li>“tangens od 75 stupnjeva” |</li>
+</ul>
+<ol start="3" style="list-style-type: decimal">
+<li><p>Uz pomoć <code>if</code> izraza provjerite da li se rezultat dijeljenja nule s nulom smatra kao vrijednost <code>NA</code>, <code>NaN</code> ili <code>NULL</code>.</p></li>
+<li><p>Ubacite u varijablu <code>x</code> vrijednost <code>5</code>. Ispišite sve varijable okoline. Potom u varijablu <code>x</code> ubacite <code>NULL</code>. Postoji li i dalje ova varijabla?</p></li>
+</ol>
+<hr />
+<p><a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Programirajmo u R-u</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://www.fer.unizg.hr/en/damir.pintar" property="cc:attributionName" rel="cc:attributionURL">Damir Pintar</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.<br />Based on a work at <a xmlns:dct="http://purl.org/dc/terms/" href="https://ratnip.github.io/FER_OPJR/" rel="dct:source">https://ratnip.github.io/FER_OPJR/</a></p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="uvod.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "google", "twitter", "weibo", "instapaper"],
+"google": false,
+"instapper": false
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "section",
+"scroll_highlight": true
+},
+"toolbar": {
+"position": "fixed",
+"edit": null,
+"download": null,
+"search": true
+}
+});
+});
+</script>
+
+</body>
+
+</html>
