@@ -24,3 +24,15 @@ tipovi
 osnovni-tipovi-podataka
 operatori
 nedostajuće-nepoznate-i-nemoguće-vrijednosti
+vektori
+vektori-1
+stvaranje-vektora
+operator
+principi-vektorizacije-i-recikliranja
+indeksni-vektori
+lokacijsko-referenciranje
+uvjetno-referenciranje
+imensko-referenciranje
+matrice-i-polja
+rezanje-matrica
+liste
