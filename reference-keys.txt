@@ -36,3 +36,9 @@ imensko-referenciranje
 matrice-i-polja
 rezanje-matrica
 liste
+okviri
+podatkovni-okviri
+odabir-redaka-i-stupaca-podatkovnih-okvira
+dodavanje-i-brisanje-redaka-i-stupaca
+faktori
+primjer-4.1---problem-automatske-kategorizacije
