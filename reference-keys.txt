@@ -58,3 +58,7 @@ kako-definirati-funkciju
 princip-kopiranja-kod-izmjene-copy-on-modify
 funkcija-kao-objekt
 generičke-funkcije
+što-su-apply-funkcije
+funkcija-apply
+funkcije-lapply-sapply-i-vapply
+ostale-funkcije-iz-porodice-apply-i-dostupne-alternative
