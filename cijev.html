@@ -1,0 +1,1171 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>9 Koncept urednih podataka | Programirajmo u R-u</title>
+  <meta name="description" content="Udžbenik za predmet ‘Osnove statističkog programiranja’ na Fakultetu elektrotehnike i računarstva, Sveučilište u Zagrebu." />
+  <meta name="generator" content="bookdown 0.35 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="9 Koncept urednih podataka | Programirajmo u R-u" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="Udžbenik za predmet ‘Osnove statističkog programiranja’ na Fakultetu elektrotehnike i računarstva, Sveučilište u Zagrebu." />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="9 Koncept urednih podataka | Programirajmo u R-u" />
+  
+  <meta name="twitter:description" content="Udžbenik za predmet ‘Osnove statističkog programiranja’ na Fakultetu elektrotehnike i računarstva, Sveučilište u Zagrebu." />
+  
+
+<meta name="author" content="Damir Pintar" />
+
+
+<meta name="date" content="2023-11-17" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="objekti.html"/>
+<link rel="next" href="datumi.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+<style type="text/css">
+.showopt {
+  background-color: #004c93;
+  color: #FFFFFF; 
+  width: 140px;
+  height: 4	0px;
+  text-align: center;
+  vertical-align: middle !important;
+  float: right;
+  font-family: sans-serif;
+  font-size:10 pt;
+  border-radius: 8px;
+}
+
+.showopt:hover {
+    background-color: #dfe4f2;
+    color: #004c93;
+}
+
+pre.plot {
+  background-color: white !important;
+}
+</style>
+
+<script>
+ $(document).ready(function() {
+
+  $chunks = $('.fold');
+
+  $chunks.each(function () {
+
+    // add button to source code chunks
+    if ( $(this).hasClass('s') ) {
+      $('pre.r', this).prepend("<div class=\"showopt\">Prikaži rješenje</div><br style=\"line-height:22px;\"/>");
+      $('pre.r', this).children('code').attr('class', 'folded');
+    }
+
+    // add button to output chunks
+    if ( $(this).hasClass('o') ) {
+      $('pre:not(.r)', this).has('code').prepend("<div class=\"showopt\">Prikaži ispis</div><br style=\"line-height:22px;\"/>");
+      $('pre:not(.r)', this).children('code:not(r)').addClass('folded');
+
+      // add button to plots
+      $(this).find('img').wrap('<pre class=\"plot\"></pre>');
+      $('pre.plot', this).prepend("<div class=\"showopt\">Prikaži sliku</div><br style=\"line-height:22px;\"/>");
+      $('pre.plot', this).children('img').addClass('folded');
+
+    }
+  });
+
+  // hide all chunks when document is loaded
+  $('.folded').css('display', 'none')
+
+  // function to toggle the visibility
+  $('.showopt').click(function() {
+    var label = $(this).html();
+    if (label.indexOf("Prikaži") >= 0) {
+      $(this).html(label.replace("Prikaži", "Sakrij"));
+    } else {
+      $(this).html(label.replace("Sakrij", "Prikaži"));
+    }
+    $(this).siblings('code, img').slideToggle('fast', 'swing');
+  });
+});
+</script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>(Udžbenik za predmet “Osnove statističkog programiranja”)</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#predgovor"><i class="fa fa-check"></i>Predgovor</a></li>
+</ul></li>
+<li class="part"><span><b>I Osnovni elementi jezika R</b></span></li>
+<li class="chapter" data-level="1" data-path="uvod.html"><a href="uvod.html"><i class="fa fa-check"></i><b>1</b> Uvod</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="uvod.html"><a href="uvod.html#što-je-programski-jezik-r"><i class="fa fa-check"></i><b>1.1</b> Što je programski jezik R?</a>
+<ul>
+<li class="chapter" data-level="1.1.1" data-path="uvod.html"><a href="uvod.html#općenito-o-r-u"><i class="fa fa-check"></i><b>1.1.1</b> Općenito o R-u</a></li>
+<li class="chapter" data-level="1.1.2" data-path="uvod.html"><a href="uvod.html#alternative-jeziku-r"><i class="fa fa-check"></i><b>1.1.2</b> Alternative jeziku R</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="uvod.html"><a href="uvod.html#instalacija-programske-podrške"><i class="fa fa-check"></i><b>1.2</b> Instalacija programske podrške</a></li>
+<li class="chapter" data-level="1.3" data-path="uvod.html"><a href="uvod.html#pregled-razvojnog-sučelja-rstudio"><i class="fa fa-check"></i><b>1.3</b> Pregled razvojnog sučelja <em>RStudio</em></a>
+<ul>
+<li class="chapter" data-level="1.3.1" data-path="uvod.html"><a href="uvod.html#interaktivna-konzola"><i class="fa fa-check"></i><b>1.3.1</b> Interaktivna konzola</a></li>
+<li class="chapter" data-level="1.3.2" data-path="uvod.html"><a href="uvod.html#pisanje-r-skripti"><i class="fa fa-check"></i><b>1.3.2</b> Pisanje R skripti</a></li>
+<li class="chapter" data-level="1.3.3" data-path="uvod.html"><a href="uvod.html#instalacija-dodatnih-paketa"><i class="fa fa-check"></i><b>1.3.3</b> Instalacija dodatnih paketa</a></li>
+<li class="chapter" data-level="1.3.4" data-path="uvod.html"><a href="uvod.html#r-markdown"><i class="fa fa-check"></i><b>1.3.4</b> <em>R Markdown</em></a></li>
+</ul></li>
+<li class="chapter" data-level="1.4" data-path="uvod.html"><a href="uvod.html#organizacija-procesa-podatkovne-analize-uz-r-i-rstudio"><i class="fa fa-check"></i><b>1.4</b> Organizacija procesa podatkovne analize uz R i RStudio</a>
+<ul>
+<li class="chapter" data-level="1.4.1" data-path="uvod.html"><a href="uvod.html#poželjne-karakteristike-procesa-analize-podataka"><i class="fa fa-check"></i><b>1.4.1</b> Poželjne karakteristike procesa analize podataka</a></li>
+<li class="chapter" data-level="1.4.2" data-path="uvod.html"><a href="uvod.html#organizacija-mapa-za-potrebe-analize-podataka"><i class="fa fa-check"></i><b>1.4.2</b> Organizacija mapa za potrebe analize podataka</a></li>
+<li class="chapter" data-level="1.4.3" data-path="uvod.html"><a href="uvod.html#pojam-projekta"><i class="fa fa-check"></i><b>1.4.3</b> Pojam projekta</a></li>
+</ul></li>
+<li class="chapter" data-level="1.5" data-path="uvod.html"><a href="uvod.html#kako-koristiti-ovaj-udžbenik"><i class="fa fa-check"></i><b>1.5</b> Kako koristiti ovaj udžbenik?</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="tipovi.html"><a href="tipovi.html"><i class="fa fa-check"></i><b>2</b> Osnovni tipovi podataka</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="tipovi.html"><a href="tipovi.html#osnovni-tipovi-podataka"><i class="fa fa-check"></i><b>2.1</b> Osnovni tipovi podataka</a></li>
+<li class="chapter" data-level="2.2" data-path="tipovi.html"><a href="tipovi.html#operatori"><i class="fa fa-check"></i><b>2.2</b> Operatori</a></li>
+<li class="chapter" data-level="2.3" data-path="tipovi.html"><a href="tipovi.html#nedostajuće-nepoznate-i-nemoguće-vrijednosti"><i class="fa fa-check"></i><b>2.3</b> Nedostajuće, nepoznate i nemoguće vrijednosti</a></li>
+<li class="chapter" data-level="" data-path="tipovi.html"><a href="tipovi.html#zadaci-za-vježbu"><i class="fa fa-check"></i>Zadaci za vježbu</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="vektori.html"><a href="vektori.html"><i class="fa fa-check"></i><b>3</b> Vektori, matrice i liste</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="vektori.html"><a href="vektori.html#vektori-1"><i class="fa fa-check"></i><b>3.1</b> Vektori</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="vektori.html"><a href="vektori.html#stvaranje-vektora"><i class="fa fa-check"></i><b>3.1.1</b> Stvaranje vektora</a></li>
+<li class="chapter" data-level="3.1.2" data-path="vektori.html"><a href="vektori.html#operator"><i class="fa fa-check"></i><b>3.1.2</b> Operator <code>[</code></a></li>
+<li class="chapter" data-level="3.1.3" data-path="vektori.html"><a href="vektori.html#principi-vektorizacije-i-recikliranja"><i class="fa fa-check"></i><b>3.1.3</b> Principi vektorizacije i recikliranja</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="vektori.html"><a href="vektori.html#indeksni-vektori"><i class="fa fa-check"></i><b>3.2</b> Indeksni vektori</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="vektori.html"><a href="vektori.html#lokacijsko-referenciranje"><i class="fa fa-check"></i><b>3.2.1</b> Lokacijsko referenciranje</a></li>
+<li class="chapter" data-level="3.2.2" data-path="vektori.html"><a href="vektori.html#uvjetno-referenciranje"><i class="fa fa-check"></i><b>3.2.2</b> Uvjetno referenciranje</a></li>
+<li class="chapter" data-level="3.2.3" data-path="vektori.html"><a href="vektori.html#imensko-referenciranje"><i class="fa fa-check"></i><b>3.2.3</b> Imensko referenciranje</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="vektori.html"><a href="vektori.html#matrice-i-polja"><i class="fa fa-check"></i><b>3.3</b> Matrice i polja</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="vektori.html"><a href="vektori.html#rezanje-matrica"><i class="fa fa-check"></i><b>3.3.1</b> Rezanje matrica</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="vektori.html"><a href="vektori.html#liste"><i class="fa fa-check"></i><b>3.4</b> Liste</a></li>
+<li class="chapter" data-level="" data-path="vektori.html"><a href="vektori.html#zadaci-za-vježbu-1"><i class="fa fa-check"></i>Zadaci za vježbu</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="okviri.html"><a href="okviri.html"><i class="fa fa-check"></i><b>4</b> Podatkovni okviri i faktori</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="okviri.html"><a href="okviri.html#podatkovni-okviri"><i class="fa fa-check"></i><b>4.1</b> Podatkovni okviri</a></li>
+<li class="chapter" data-level="4.2" data-path="okviri.html"><a href="okviri.html#odabir-redaka-i-stupaca-podatkovnih-okvira"><i class="fa fa-check"></i><b>4.2</b> Odabir redaka i stupaca podatkovnih okvira</a></li>
+<li class="chapter" data-level="4.3" data-path="okviri.html"><a href="okviri.html#dodavanje-i-brisanje-redaka-i-stupaca"><i class="fa fa-check"></i><b>4.3</b> Dodavanje i brisanje redaka i stupaca</a></li>
+<li class="chapter" data-level="4.4" data-path="okviri.html"><a href="okviri.html#faktori"><i class="fa fa-check"></i><b>4.4</b> Faktori</a>
+<ul>
+<li class="chapter" data-level="4.4.1" data-path="okviri.html"><a href="okviri.html#primjer-4.1---problem-automatske-kategorizacije"><i class="fa fa-check"></i><b>4.4.1</b> Primjer 4.1 - problem automatske kategorizacije</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="okviri.html"><a href="okviri.html#zadaci-za-vježbu-2"><i class="fa fa-check"></i>Zadaci za vježbu</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="uvjet.html"><a href="uvjet.html"><i class="fa fa-check"></i><b>5</b> Uvjetne naredbe i petlje</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="uvjet.html"><a href="uvjet.html#naredbe-kontrole-toka"><i class="fa fa-check"></i><b>5.1</b> Naredbe kontrole toka</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="uvjet.html"><a href="uvjet.html#uvjetno-izvođenje-naredbi"><i class="fa fa-check"></i><b>5.1.1</b> Uvjetno izvođenje naredbi</a></li>
+<li class="chapter" data-level="5.1.2" data-path="uvjet.html"><a href="uvjet.html#programske-petlje"><i class="fa fa-check"></i><b>5.1.2</b> Programske petlje</a></li>
+<li class="chapter" data-level="5.1.3" data-path="uvjet.html"><a href="uvjet.html#petlja-repeat"><i class="fa fa-check"></i><b>5.1.3</b> Petlja <code>repeat</code></a></li>
+<li class="chapter" data-level="5.1.4" data-path="uvjet.html"><a href="uvjet.html#petlja-while"><i class="fa fa-check"></i><b>5.1.4</b> Petlja <code>while</code></a></li>
+<li class="chapter" data-level="5.1.5" data-path="uvjet.html"><a href="uvjet.html#petlja-for"><i class="fa fa-check"></i><b>5.1.5</b> Petlja <code>for</code></a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="uvjet.html"><a href="uvjet.html#zadaci-za-vježbu-3"><i class="fa fa-check"></i>Zadaci za vježbu</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="paketi.html"><a href="paketi.html"><i class="fa fa-check"></i><b>6</b> Paketi, ugrađene funkcije i okoline</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="paketi.html"><a href="paketi.html#rad-s-paketima"><i class="fa fa-check"></i><b>6.1</b> Rad s paketima</a></li>
+<li class="chapter" data-level="6.2" data-path="paketi.html"><a href="paketi.html#ugrađene-funkcije"><i class="fa fa-check"></i><b>6.2</b> Ugrađene funkcije</a></li>
+<li class="chapter" data-level="6.3" data-path="paketi.html"><a href="paketi.html#okoline"><i class="fa fa-check"></i><b>6.3</b> Okoline</a></li>
+<li class="chapter" data-level="" data-path="paketi.html"><a href="paketi.html#zadaci-za-vježbu-4"><i class="fa fa-check"></i>Zadaci za vježbu</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="korisnik.html"><a href="korisnik.html"><i class="fa fa-check"></i><b>7</b> Korisnički definirane funkcije</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="korisnik.html"><a href="korisnik.html#kako-definirati-funkciju"><i class="fa fa-check"></i><b>7.1</b> Kako definirati funkciju</a>
+<ul>
+<li class="chapter" data-level="7.1.1" data-path="korisnik.html"><a href="korisnik.html#princip-kopiranja-kod-izmjene-copy-on-modify"><i class="fa fa-check"></i><b>7.1.1</b> Princip “kopiranja kod izmjene” (copy-on-modify)</a></li>
+<li class="chapter" data-level="7.1.2" data-path="korisnik.html"><a href="korisnik.html#funkcija-kao-objekt"><i class="fa fa-check"></i><b>7.1.2</b> Funkcija kao objekt</a></li>
+</ul></li>
+<li class="chapter" data-level="7.2" data-path="korisnik.html"><a href="korisnik.html#generičke-funkcije"><i class="fa fa-check"></i><b>7.2</b> Generičke funkcije</a></li>
+<li class="chapter" data-level="7.3" data-path="korisnik.html"><a href="korisnik.html#što-su-apply-funkcije"><i class="fa fa-check"></i><b>7.3</b> Što su <code>apply</code> funkcije?</a>
+<ul>
+<li class="chapter" data-level="7.3.1" data-path="korisnik.html"><a href="korisnik.html#funkcija-apply"><i class="fa fa-check"></i><b>7.3.1</b> Funkcija <code>apply</code></a></li>
+<li class="chapter" data-level="7.3.2" data-path="korisnik.html"><a href="korisnik.html#funkcije-lapply-sapply-i-vapply"><i class="fa fa-check"></i><b>7.3.2</b> Funkcije <code>lapply</code>, <code>sapply</code> i <code>vapply</code></a></li>
+<li class="chapter" data-level="7.3.3" data-path="korisnik.html"><a href="korisnik.html#ostale-funkcije-iz-porodice-apply-i-dostupne-alternative"><i class="fa fa-check"></i><b>7.3.3</b> Ostale funkcije iz porodice <code>apply</code> i dostupne alternative</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="korisnik.html"><a href="korisnik.html#zadaci-za-vježbu-5"><i class="fa fa-check"></i>Zadaci za vježbu</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="objekti.html"><a href="objekti.html"><i class="fa fa-check"></i><b>8</b> Objektni modeli</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="objekti.html"><a href="objekti.html#objektni-modeli-u-jeziku-r"><i class="fa fa-check"></i><b>8.1</b> Objektni modeli u jeziku R</a></li>
+<li class="chapter" data-level="8.2" data-path="objekti.html"><a href="objekti.html#pomoćni-paket-sloop"><i class="fa fa-check"></i><b>8.2</b> Pomoćni paket <code>sloop</code></a></li>
+<li class="chapter" data-level="8.3" data-path="objekti.html"><a href="objekti.html#pregled-objektnog-modela-s3"><i class="fa fa-check"></i><b>8.3</b> Pregled objektnog modela S3</a>
+<ul>
+<li class="chapter" data-level="8.3.1" data-path="objekti.html"><a href="objekti.html#konstruktorska-funkcija"><i class="fa fa-check"></i><b>8.3.1</b> Konstruktorska funkcija</a></li>
+<li class="chapter" data-level="8.3.2" data-path="objekti.html"><a href="objekti.html#generičke-funkcije-1"><i class="fa fa-check"></i><b>8.3.2</b> Generičke funkcije</a></li>
+</ul></li>
+<li class="chapter" data-level="8.4" data-path="objekti.html"><a href="objekti.html#implementacija-generičke-funkcije"><i class="fa fa-check"></i><b>8.4</b> Implementacija generičke funkcije</a>
+<ul>
+<li class="chapter" data-level="8.4.1" data-path="objekti.html"><a href="objekti.html#funkcija-methods"><i class="fa fa-check"></i><b>8.4.1</b> Funkcija <code>methods</code></a></li>
+<li class="chapter" data-level="8.4.2" data-path="objekti.html"><a href="objekti.html#zaključci-o-s3-objektima"><i class="fa fa-check"></i><b>8.4.2</b> Zaključci o S3 objektima</a></li>
+</ul></li>
+<li class="chapter" data-level="8.5" data-path="objekti.html"><a href="objekti.html#kratki-pregled-s4-objekata"><i class="fa fa-check"></i><b>8.5</b> Kratki pregled S4 objekata</a></li>
+<li class="chapter" data-level="" data-path="objekti.html"><a href="objekti.html#zadaci-za-vježbu-6"><i class="fa fa-check"></i>Zadaci za vježbu</a></li>
+</ul></li>
+<li class="part"><span><b>II Upravljanje podacima i vizualizacije</b></span></li>
+<li class="chapter" data-level="9" data-path="cijev.html"><a href="cijev.html"><i class="fa fa-check"></i><b>9</b> Koncept urednih podataka</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="cijev.html"><a href="cijev.html#operator-cjevovoda"><i class="fa fa-check"></i><b>9.1</b> Operator cjevovoda</a></li>
+<li class="chapter" data-level="9.2" data-path="cijev.html"><a href="cijev.html#uredni-podaci"><i class="fa fa-check"></i><b>9.2</b> Uredni podaci</a>
+<ul>
+<li class="chapter" data-level="9.2.1" data-path="cijev.html"><a href="cijev.html#funkcije-pivot_longer-i-pivot_wider"><i class="fa fa-check"></i><b>9.2.1</b> Funkcije <code>pivot_longer</code> i <code>pivot_wider</code></a></li>
+<li class="chapter" data-level="9.2.2" data-path="cijev.html"><a href="cijev.html#funkcije-separate-i-unite"><i class="fa fa-check"></i><b>9.2.2</b> Funkcije <code>separate</code> i <code>unite</code></a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="cijev.html"><a href="cijev.html#zadaci-za-vježbu-7"><i class="fa fa-check"></i>Zadaci za vježbu</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="datumi.html"><a href="datumi.html"><i class="fa fa-check"></i><b>10</b> Rad sa vremenskim podacima</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="datumi.html"><a href="datumi.html#rad-sa-datumima"><i class="fa fa-check"></i><b>10.1</b> Rad sa datumima</a>
+<ul>
+<li class="chapter" data-level="10.1.1" data-path="datumi.html"><a href="datumi.html#klasa-date"><i class="fa fa-check"></i><b>10.1.1</b> Klasa <code>Date</code></a></li>
+</ul></li>
+<li class="chapter" data-level="10.2" data-path="datumi.html"><a href="datumi.html#klase-posixct-i-posixlt"><i class="fa fa-check"></i><b>10.2</b> Klase <code>POSIXct</code> i <code>POSIXlt</code></a></li>
+<li class="chapter" data-level="10.3" data-path="datumi.html"><a href="datumi.html#paket-lubridate"><i class="fa fa-check"></i><b>10.3</b> Paket <code>lubridate</code></a></li>
+<li class="chapter" data-level="" data-path="datumi.html"><a href="datumi.html#zadaci-za-vježbu-8"><i class="fa fa-check"></i>Zadaci za vježbu</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Programirajmo u R-u</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="cijev" class="section level1 hasAnchor" number="9">
+<h1><span class="header-section-number">9</span> Koncept urednih podataka<a href="cijev.html#cijev" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<hr />
+<div id="operator-cjevovoda" class="section level2 hasAnchor" number="9.1">
+<h2><span class="header-section-number">9.1</span> Operator cjevovoda<a href="cijev.html#operator-cjevovoda" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Pogledajmo sljedeći primjer: zamislimo da u jeziku R želimo stvoriti 100 nasumičnih realnih varijabli u rasponu [0,100], zaokružiti ih na dvije decimale, iz ovog skupa odabrati uzorak od 10 varijabli, izračunati aritmetičku sredinu uzorka i ispisati ga na zaslon. Jedno od mogućih programskih rješenja moglo bi biti sljedeće:</p>
+<div class="sourceCode" id="cb334"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb334-1"><a href="cijev.html#cb334-1" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">1234</span>)  <span class="co"># (zbog ponovljivosti)</span></span>
+<span id="cb334-2"><a href="cijev.html#cb334-2" tabindex="-1"></a></span>
+<span id="cb334-3"><a href="cijev.html#cb334-3" tabindex="-1"></a><span class="co"># rješenje gornjeg primjera</span></span>
+<span id="cb334-4"><a href="cijev.html#cb334-4" tabindex="-1"></a>rez <span class="ot">&lt;-</span> <span class="fu">runif</span>(<span class="dv">100</span>, <span class="dv">0</span>, <span class="dv">100</span>) <span class="co"># 100 nasumičnih varijabli iz uniformne razdiobe od 0 do 100</span></span>
+<span id="cb334-5"><a href="cijev.html#cb334-5" tabindex="-1"></a>rez <span class="ot">&lt;-</span> <span class="fu">round</span>(rez,<span class="dv">2</span>)</span>
+<span id="cb334-6"><a href="cijev.html#cb334-6" tabindex="-1"></a>rez <span class="ot">&lt;-</span> <span class="fu">sample</span>(rez, <span class="dv">10</span>)</span>
+<span id="cb334-7"><a href="cijev.html#cb334-7" tabindex="-1"></a>rez <span class="ot">&lt;-</span> <span class="fu">mean</span>(rez)</span>
+<span id="cb334-8"><a href="cijev.html#cb334-8" tabindex="-1"></a>rez</span></code></pre></div>
+<pre><code>## [1] 46.651</code></pre>
+<p>Ovakav kod ima dosta nepotrebnog ponavljanja - u svakom retku koristimo varijablu <code>rez</code> koja čuva međurezultate i operator pridruživanja pomoću kojeg pridružujemo nove rezultate varijabli <code>rez</code>. Alternativno, mogli smo sve obaviti u jednom retku.</p>
+<hr />
+<p><strong>Zadatak 9.1 - učahurene funkcije</strong></p>
+<div class="sourceCode" id="cb336"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb336-1"><a href="cijev.html#cb336-1" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">1234</span>)</span>
+<span id="cb336-2"><a href="cijev.html#cb336-2" tabindex="-1"></a></span>
+<span id="cb336-3"><a href="cijev.html#cb336-3" tabindex="-1"></a><span class="co"># ponovite gornji primjer, ali uz pomoć samo jednog retka programskog koda</span></span></code></pre></div>
+<div class="fold s o">
+<div class="sourceCode" id="cb337"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb337-1"><a href="cijev.html#cb337-1" tabindex="-1"></a><span class="fu">mean</span>(<span class="fu">sample</span>(<span class="fu">round</span>(<span class="fu">runif</span>(<span class="dv">100</span>, <span class="dv">0</span>, <span class="dv">100</span>), <span class="dv">2</span>), <span class="dv">10</span>))</span></code></pre></div>
+<pre><code>## [1] 46.651</code></pre>
+</div>
+<hr />
+<p>Ovdje vidimo jedan tipičan primjer “kodnog sendviča” koji nije problem samo u R-u, već se pojavljuje u većini programskih jezika - rezultat jedne funkcije postaje ulaz u drugu te ukoliko želimo sve obaviti bez eksplicitnog čuvanja međurezultata kao rezultat ćemo dobiti programski kod koji je podložan greškama kod pisanja te je vrlo teško čitljiv.</p>
+<p>Prirodan način interpretacije ovakvog primjera bio bi “slijeva na desno”; kad obavimo jedan posao, rezultat postaje ulaz u drugi posao i tako sve do završetka procesa. Ako bi postojao način kada bi mogli ovakvu intuitivnu interpretaciju predočiti programskim kodom, pojednostavili bismo si ne samo pisanje koda, već bi takav kod postao daleko čitljiviji i lakši za održavanje i eventualnu naknadnu prilagodbu. Upravo ovo bila je motivacija za razvoj tzv. “<em>pipeline</em>” operatora kojeg nudi paket <code>magrittr</code> <span class="citation">(<a href="#ref-R-magrittr">Bache and Wickham 2014</a>)</span>.</p>
+<p>Paket čudnog imena zapravo je inspiriran imenom apstraktnog slikara Renea Magrittea, točnije njegovom slavnom slikom “<em>La trahison des images</em>” koja prikazuje lulu ispod koje su riječi “<em>Ceci n’est pas une pipe</em>”. Na isti način paket <code>magrittr</code> donosi “<em>pipeline</em>” ili “<em>pipe</em>” operator <code>%&gt;%</code> koji “nije lula”. Štogod mislili o navedenom slikarskom djelu ili igri riječi koja je inspirirala ovaj paket, ono što je neporecivo jest činjenica da “<em>pipeline</em>” operator programski kod čini daleko čitljivijim te da je postao izrazito omiljen u R zajednici, pogotovo kod procedura koje uključuju intenzivno “ulančavanje” funkcija.</p>
+<p>Kako radi <code>%&gt;%</code> operator? Vrlo jednostavno - postavimo ga nakon poziva neke funkcije i iza njega navedemo poziv druge funkcije u kojem mjesto rezultata prve naznačimo točkom. Ovo možemo raditi koliko god puta želimo, tj. ovisno koliko poziva “ulančavamo”.</p>
+<div class="sourceCode" id="cb339"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb339-1"><a href="cijev.html#cb339-1" tabindex="-1"></a><span class="fu">h</span>(<span class="fu">g</span>(<span class="fu">f</span>(x), y), z, w)                      <span class="co"># kod bez %&gt;% operatora</span></span>
+<span id="cb339-2"><a href="cijev.html#cb339-2" tabindex="-1"></a></span>
+<span id="cb339-3"><a href="cijev.html#cb339-3" tabindex="-1"></a><span class="fu">f</span>(x) <span class="sc">%&gt;%</span> <span class="fu">g</span>(., y) <span class="sc">%&gt;%</span> <span class="fu">h</span>(., z, w)          <span class="co"># kod sa %&gt;% operatorom</span></span></code></pre></div>
+<p>Ako je rezultat prethodne funkcije na prvom mjestu sljedeće funkcije, onda se točka (štoviše, cijeli taj argument) može izbaciti, tako da je sintaksa još kraća:</p>
+<div class="sourceCode" id="cb340"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb340-1"><a href="cijev.html#cb340-1" tabindex="-1"></a><span class="fu">f</span>(x) <span class="sc">%&gt;%</span> <span class="fu">g</span>(y) <span class="sc">%&gt;%</span> <span class="fu">h</span>(z,w)                 <span class="co"># kod sa %&gt;% bez korištenja točke</span></span></code></pre></div>
+<p>Ukoliko ne želimo koristiti točku, moramo samo voditi računa da su pozivi funkcija u lancu zapravo formalno nepravilni, jer imaju “nevidljivi” prvi argument. Usprkos tome, mnogi R programeri vole ovakvu sintaksu jer zahtijeva manje tipkanja i nešto je preglednija, a spomenuta nepravilnost ne smeta dok god je programer upoznat sa postojanjem “nevidljivog” argumenta.</p>
+<p>Probajmo sada preoblikovati naš prvi primjer uz pomoć <code>%&gt;%</code> operatora.</p>
+<hr />
+<p><strong>Zadatak 9.2 - operator <code>%&gt;%</code></strong></p>
+<div class="sourceCode" id="cb341"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb341-1"><a href="cijev.html#cb341-1" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">1234</span>)</span>
+<span id="cb341-2"><a href="cijev.html#cb341-2" tabindex="-1"></a></span>
+<span id="cb341-3"><a href="cijev.html#cb341-3" tabindex="-1"></a><span class="co"># ponovo rješite prvi primjer uz pomoć %&gt;% operatora</span></span></code></pre></div>
+<div class="fold s o">
+<div class="sourceCode" id="cb342"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb342-1"><a href="cijev.html#cb342-1" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">1234</span>)</span>
+<span id="cb342-2"><a href="cijev.html#cb342-2" tabindex="-1"></a></span>
+<span id="cb342-3"><a href="cijev.html#cb342-3" tabindex="-1"></a><span class="fu">runif</span>(<span class="dv">100</span>, <span class="dv">0</span>, <span class="dv">100</span>) <span class="sc">%&gt;%</span> <span class="fu">round</span>(<span class="dv">2</span>) <span class="sc">%&gt;%</span> <span class="fu">sample</span>(<span class="dv">10</span>) <span class="sc">%&gt;%</span> <span class="fu">mean</span>() <span class="sc">%&gt;%</span> <span class="fu">print</span>()</span></code></pre></div>
+<pre><code>## [1] 46.651</code></pre>
+</div>
+<hr />
+<p>Uočite kako čitanjem gornjeg programskog koda vrlo lagano interpretiramo smisao te linije programskog koda, pogotovo u usporedbi sa istom naredbom napisanom u obliku “sendviča”.</p>
+<p>Krajnji rezultat našeg “lanca” funkcija možemo pohraniti uobičajenim načinom:</p>
+<div class="sourceCode" id="cb344"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb344-1"><a href="cijev.html#cb344-1" tabindex="-1"></a>suma <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span> <span class="sc">%&gt;%</span> sum   <span class="co"># rezultat se pohranjuje u varijablu &#39;suma&#39;</span></span></code></pre></div>
+<p>ali je možda vizualno konzistentnije koristiti “obrnuti” operator pridruživanja: <code>-&gt;</code>.</p>
+<div class="sourceCode" id="cb345"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb345-1"><a href="cijev.html#cb345-1" tabindex="-1"></a><span class="dv">1</span><span class="sc">:</span><span class="dv">10</span> <span class="sc">%&gt;%</span> sum <span class="ot">-&gt;</span> suma   <span class="co"># radi istovjetno gornjem primjeru</span></span></code></pre></div>
+<p>Uočite da u situacijama kada je rezultat prethodne funkcije jedini parametar sljedeće možemo izbaciti zagrade u potpunosti (dakle u gornjim primjerima <code>sum</code>, <code>sum()</code> ili <code>sum(.)</code> bi svi radili jednako).</p>
+<p>Pokušajmo sada kombinirati <code>%&gt;%</code> operator i <code>lapply</code> na primjeru već viđenom u poglavlju o funkcijama iz porodice <code>apply</code>.</p>
+<hr />
+<p><strong>Zadatak 9.3 - funkcija <code>lapply</code> i operator <code>%&gt;%</code></strong></p>
+<div class="sourceCode" id="cb346"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb346-1"><a href="cijev.html#cb346-1" tabindex="-1"></a>l <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">a =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>, <span class="at">b =</span> <span class="dv">10</span><span class="sc">:</span><span class="dv">20</span>, <span class="at">c =</span> <span class="dv">100</span><span class="sc">:</span><span class="dv">200</span>)</span>
+<span id="cb346-2"><a href="cijev.html#cb346-2" tabindex="-1"></a></span>
+<span id="cb346-3"><a href="cijev.html#cb346-3" tabindex="-1"></a><span class="co"># stvorite matricu koja će sadržavati prvi i zadnji element svakog elementa liste</span></span>
+<span id="cb346-4"><a href="cijev.html#cb346-4" tabindex="-1"></a><span class="co"># elementi moraju biti poredani po retcima</span></span>
+<span id="cb346-5"><a href="cijev.html#cb346-5" tabindex="-1"></a><span class="co"># koristite funkcije lapply, unlist i matrix te %&gt;% operator</span></span>
+<span id="cb346-6"><a href="cijev.html#cb346-6" tabindex="-1"></a><span class="co"># rezultat spremite u varijablu `rez`</span></span>
+<span id="cb346-7"><a href="cijev.html#cb346-7" tabindex="-1"></a></span>
+<span id="cb346-8"><a href="cijev.html#cb346-8" tabindex="-1"></a>    </span>
+<span id="cb346-9"><a href="cijev.html#cb346-9" tabindex="-1"></a><span class="co"># ispišite `rez`</span></span></code></pre></div>
+<div class="fold s o">
+<div class="sourceCode" id="cb347"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb347-1"><a href="cijev.html#cb347-1" tabindex="-1"></a>l <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">a =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>, <span class="at">b =</span> <span class="dv">10</span><span class="sc">:</span><span class="dv">20</span>, <span class="at">c =</span> <span class="dv">100</span><span class="sc">:</span><span class="dv">200</span>)</span>
+<span id="cb347-2"><a href="cijev.html#cb347-2" tabindex="-1"></a></span>
+<span id="cb347-3"><a href="cijev.html#cb347-3" tabindex="-1"></a>l <span class="sc">%&gt;%</span> <span class="fu">lapply</span>(<span class="cf">function</span>(x) <span class="fu">c</span>(x[<span class="dv">1</span>], x[<span class="fu">length</span>(x)])) <span class="sc">%&gt;%</span> unlist <span class="sc">%&gt;%</span> <span class="fu">matrix</span>(<span class="at">ncol =</span> <span class="dv">2</span>, <span class="at">byrow =</span> T) <span class="ot">-&gt;</span> rez</span>
+<span id="cb347-4"><a href="cijev.html#cb347-4" tabindex="-1"></a>    </span>
+<span id="cb347-5"><a href="cijev.html#cb347-5" tabindex="-1"></a>rez</span></code></pre></div>
+<pre><code>##      [,1] [,2]
+## [1,]    1   10
+## [2,]   10   20
+## [3,]  100  200</code></pre>
+</div>
+<hr />
+<p>Operator cjevovoda vrlo je pogodan u sprezi s “klasičnim” funkcijama, no možemo naići na problem kada ga želimo kombinirati s drugim operatorima. Uzrok problema jest sintaksa - operator cjevovoda svoju učinkovitost postiže upravo nametanjem nove, “slijedne” sintakse, koja nije kompatibilna sa sintaksom koju nameću drugi operatori, kao npr. <code>+</code>, <code>%%</code> ili <code>[</code>.</p>
+<p>Ukoliko nam je zaista bitno da u našem programskom kodu imamo “neprekinuti” lanac poziva funkcija koji će sadržavati ne samo funkcije, nego i druge operatore, onda je jedno od rješenja koristiti operatore kao “obične” funkcije. Naime, svaki operator je zapravo funkcija koja dijeli ime s operatorom (uz korištenje <em>backtick</em> navodnika kako bi se mogli koristiti simbolima), tako da su sljedeći parovi izraza zapravo ekvivalentni:</p>
+<hr />
+<p><strong>Primjer - operatori kao funkcije</strong></p>
+<div class="sourceCode" id="cb349"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb349-1"><a href="cijev.html#cb349-1" tabindex="-1"></a><span class="co"># svaki par naredbi jest ekvivalentan</span></span>
+<span id="cb349-2"><a href="cijev.html#cb349-2" tabindex="-1"></a><span class="dv">2</span> <span class="sc">+</span> <span class="dv">3</span></span>
+<span id="cb349-3"><a href="cijev.html#cb349-3" tabindex="-1"></a><span class="st">`</span><span class="at">+</span><span class="st">`</span>(<span class="dv">2</span>, <span class="dv">3</span>)</span>
+<span id="cb349-4"><a href="cijev.html#cb349-4" tabindex="-1"></a></span>
+<span id="cb349-5"><a href="cijev.html#cb349-5" tabindex="-1"></a><span class="dv">1</span> <span class="sc">:</span> <span class="dv">5</span></span>
+<span id="cb349-6"><a href="cijev.html#cb349-6" tabindex="-1"></a><span class="st">`</span><span class="at">:</span><span class="st">`</span>(<span class="dv">1</span>, <span class="dv">5</span>)</span>
+<span id="cb349-7"><a href="cijev.html#cb349-7" tabindex="-1"></a></span>
+<span id="cb349-8"><a href="cijev.html#cb349-8" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>)</span>
+<span id="cb349-9"><a href="cijev.html#cb349-9" tabindex="-1"></a><span class="st">`</span><span class="at">&lt;-</span><span class="st">`</span>(<span class="st">&quot;x&quot;</span>, <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>))</span>
+<span id="cb349-10"><a href="cijev.html#cb349-10" tabindex="-1"></a></span>
+<span id="cb349-11"><a href="cijev.html#cb349-11" tabindex="-1"></a>x[<span class="dv">1</span>]</span>
+<span id="cb349-12"><a href="cijev.html#cb349-12" tabindex="-1"></a><span class="st">`</span><span class="at">[</span><span class="st">`</span>(x, <span class="dv">1</span>)</span></code></pre></div>
+<pre><code>## [1] 5
+## [1] 5
+## [1] 1 2 3 4 5
+## [1] 1 2 3 4 5
+## [1] 1
+## [1] 1</code></pre>
+<hr />
+<p>Pokušajmo ovaj princip iskoristiti u sljedećoj vježbi.</p>
+<hr />
+<p><strong>Zadatak 9.4 - složenija uporaba operatora cjevovoda</strong></p>
+<div class="sourceCode" id="cb351"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb351-1"><a href="cijev.html#cb351-1" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">1234</span>)</span>
+<span id="cb351-2"><a href="cijev.html#cb351-2" tabindex="-1"></a></span>
+<span id="cb351-3"><a href="cijev.html#cb351-3" tabindex="-1"></a><span class="co"># &quot;uredite&quot; sljedeću naredbu uz pomoć operatora cjevovoda </span></span>
+<span id="cb351-4"><a href="cijev.html#cb351-4" tabindex="-1"></a><span class="fu">matrix</span>(<span class="fu">table</span>(<span class="fu">sample</span>(<span class="fu">round</span>(<span class="fu">sqrt</span>(<span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10000</span>, <span class="dv">10000</span>, <span class="at">replace =</span> T))), <span class="dv">100</span>))[<span class="dv">1</span><span class="sc">:</span><span class="dv">9</span>], <span class="dv">3</span>, <span class="dv">3</span>)</span></code></pre></div>
+<pre><code>##      [,1] [,2] [,3]
+## [1,]    2    2    2
+## [2,]    1    1    1
+## [3,]    2    2    2</code></pre>
+<div class="fold s o">
+<div class="sourceCode" id="cb353"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb353-1"><a href="cijev.html#cb353-1" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">1234</span>)</span>
+<span id="cb353-2"><a href="cijev.html#cb353-2" tabindex="-1"></a><span class="co"># &quot;uredite&quot; sljedeću naredbu uz pomoć operatora cjevovoda </span></span>
+<span id="cb353-3"><a href="cijev.html#cb353-3" tabindex="-1"></a><span class="dv">1</span><span class="sc">:</span><span class="dv">10000</span> <span class="sc">%&gt;%</span> <span class="fu">sample</span>(<span class="dv">10000</span>, <span class="at">replace =</span> T) <span class="sc">%&gt;%</span> sqrt <span class="sc">%&gt;%</span> round <span class="sc">%&gt;%</span> </span>
+<span id="cb353-4"><a href="cijev.html#cb353-4" tabindex="-1"></a>  <span class="fu">sample</span>(<span class="dv">100</span>) <span class="sc">%&gt;%</span> table <span class="sc">%&gt;%</span> <span class="st">`</span><span class="at">[</span><span class="st">`</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">9</span>) <span class="sc">%&gt;%</span> <span class="fu">matrix</span>(<span class="dv">3</span>, <span class="dv">3</span>)</span></code></pre></div>
+<pre><code>##      [,1] [,2] [,3]
+## [1,]    2    2    2
+## [2,]    1    1    1
+## [3,]    2    2    2</code></pre>
+</div>
+<p><code>%&gt;%</code> operator je posebno pogodan za upravljanje podatkovnim skupovima, pogotovo u scenarijima kada imamo definiranu proceduru transformacije podataka (npr. filtriramo neke retke, potom odaberemo stupce, zatim grupiramo podatke ovisno o nekoj kategorijskoj varijabli). Uz pomoć ovog operatora dobivamo preglednu reprezentaciju našeg procesa prilagodbe podataka koju kasnije lako prilagođavamo i po potrebi proširujemo. Primjeri u nastavku će često prema potrebi koristiti ovaj operator, te preporučujemo njegovo svladavanje prije nastavka sa lekcijama koje slijede.</p>
+<hr />
+</div>
+<div id="uredni-podaci" class="section level2 hasAnchor" number="9.2">
+<h2><span class="header-section-number">9.2</span> Uredni podaci<a href="cijev.html#uredni-podaci" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>U literaturi možemo naći činjenicu kako je u procesu analize priprema podataka često vremenski najzahtjevniji segment procesa - u knjizi <a href = "https://books.google.hr/books/about/Exploratory_Data_Mining_and_Data_Cleanin.html?id=2OWJVkevamQC&redir_esc=y&hl=en">“Exploratory Data Mining and Data Cleaning”</a> spominje se da se na pripremu često troši od 50% do 80% ukupnog vremena. Isto tako, kako navodi Hadley Wickham u svojem članku <a href = "http://vita.had.co.nz/papers/tidy-data.pdf">“Tidy Data”</a>, priprema podataka često nije samo prvi korak već je proces koji se ponavlja kako se otkrivaju nova saznanja ili prikupljaju novi podaci.</p>
+<p>Hadley Wickham je uveo termin “urednih podataka” koji se odnosi na organizaciju podatkovnog skupa na način da u što većoj mjeri olakša njihovu daljnju obradu i analizu. Činjenica je da ulazni podaci često nisu originalno namijenjeni za potrebe analize te kao takvi nisu organizirani na način koji bi omogućio njihovo lako korištenje u analitičkom procesu. “Uredni podaci” zapravo predstavljaju princip kako - prema potrebi - “presložiti” podatke tako da njihova struktura odgovara standardnom, očekivanom metapredlošku.</p>
+<p>Principi urednih podataka imaju sličnosti sa relacijskim modelom podataka no definirani su na način koji više odgovara statističarima i programerima. Ugrubo te principe možemo popisati na sljedeći način:</p>
+<ul>
+<li>podaci su organizirani u tablicu</li>
+<li>svaki redak predstavlja obzervaciju</li>
+<li>svaki stupac predstavlja svojstvo ili varijablu te obzervacije</li>
+</ul>
+<p>Budući da ovo možda zvuči previše trivijalno, pogledajmo koja svojstva Hadley navodi kao tipična za “neuredne” podatke:</p>
+<ul>
+<li>imena stupaca nisu nazivi varijabli, već njihove vrijednosti</li>
+<li>više različitih varijabli spremljeno je u isti stupac</li>
+<li>varijable su spremljene u retke</li>
+<li>više tipova različitih obzervacija spremljeno je u istu tablicu</li>
+<li>jedan tip obzervacije spremljen je u više tablica</li>
+</ul>
+<p>U nastavku ćemo dati nekoliko primjera tablica koje ne odgovaraju u potpunosti definiciji urednih podataka te prikazati kako ih na jednostavan način preoblikovati, tj. “urediti”. Za taj posao koristiti ćemo metode paketa <code>tidyr</code>.</p>
+<p>NAPOMENA: u primjerima i zadacima koji slijede zamijeniti ćemo funkciju <code>str</code> alternativnom funkcijom iz paketa <code>dplyr</code> naziva <code>glimpse</code>. Razlog je čisto tehničke prirode - budući da naredba <code>read_csv</code> formalno vraća objekt klase <code>tibble</code> (svojevrsna nadogradnja podatkovnog okvira), funkcija <code>str</code> nam vraća “previše” informacija, konkretno daje nam i informacije o atributima koji nam nisu interesantni za brzi uvid u okvir. Funkcija <code>glimpse</code> radi gotovo identično funkciji <code>str</code>, ali bez ispisa tih atributa (ali i boljim iskorištavanjem prostora za ispis), tako da predstavlja bolju alternativu.</p>
+<hr />
+<div id="funkcije-pivot_longer-i-pivot_wider" class="section level3 hasAnchor" number="9.2.1">
+<h3><span class="header-section-number">9.2.1</span> Funkcije <code>pivot_longer</code> i <code>pivot_wider</code><a href="cijev.html#funkcije-pivot_longer-i-pivot_wider" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>U radnoj mapi trebala bi se nalaziti datoteka <code>studenti.csv</code>. Učitajmo ju u radnu okolinu. Budući da je datoteka pohranjena uz pomoć UTF-8 kodiranja (budući da sadrži hrvatska slova), naredbi <code>read_csv</code> možete dodati i parametar <code>fileEncoding = "UTF-8"</code> kako bi dobili korektni ispis posebnih znakova.</p>
+<hr />
+<p><strong>Zadatak 9.5 - podatkovni skup <code>studenti</code></strong></p>
+<div class="sourceCode" id="cb355"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb355-1"><a href="cijev.html#cb355-1" tabindex="-1"></a><span class="co"># učitajte podatke iz datoteke `studenti.csv` u varijablu `studenti`</span></span>
+<span id="cb355-2"><a href="cijev.html#cb355-2" tabindex="-1"></a></span>
+<span id="cb355-3"><a href="cijev.html#cb355-3" tabindex="-1"></a><span class="co"># upoznajte se sa podacima uz pomoć standardnih funkcija za tu svrhu</span></span>
+<span id="cb355-4"><a href="cijev.html#cb355-4" tabindex="-1"></a><span class="co"># (names, sapply - class, str, head, summary ...)</span></span>
+<span id="cb355-5"><a href="cijev.html#cb355-5" tabindex="-1"></a><span class="co"># u daljnim primjerima za ovaj postupak koristiti ćemo se izrazom &quot;proučite okvir..&quot;</span></span></code></pre></div>
+<div class="fold s o">
+<div class="sourceCode" id="cb356"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb356-1"><a href="cijev.html#cb356-1" tabindex="-1"></a><span class="co">#library(dplyr) # ako je potrebno</span></span>
+<span id="cb356-2"><a href="cijev.html#cb356-2" tabindex="-1"></a>studenti <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;studenti.csv&quot;</span>)</span>
+<span id="cb356-3"><a href="cijev.html#cb356-3" tabindex="-1"></a></span>
+<span id="cb356-4"><a href="cijev.html#cb356-4" tabindex="-1"></a><span class="fu">glimpse</span>(studenti)</span>
+<span id="cb356-5"><a href="cijev.html#cb356-5" tabindex="-1"></a><span class="fu">head</span>(studenti)</span></code></pre></div>
+<pre><code>## Rows: 27 Columns: 10
+## ── Column specification ───────────────────────────────────
+## Delimiter: &quot;,&quot;
+## chr (9): Prezime, Ime, Matematika 1, Fizika 1, Programiranje, Osnove elektro...
+## dbl (1): JMBAG
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+<pre><code>## Rows: 27
+## Columns: 10
+## $ JMBAG                   &lt;dbl&gt; 1341, 1342, 1343, 1344, 1345, 1346, 1347, 1348…
+## $ Prezime                 &lt;chr&gt; &quot;Anić&quot;, &quot;Babić&quot;, &quot;Crnoja&quot;, &quot;Črnjac&quot;, &quot;Dizla&quot;, …
+## $ Ime                     &lt;chr&gt; &quot;Iva&quot;, &quot;Josip&quot;, &quot;Petra&quot;, &quot;Lucija&quot;, &quot;Stipe&quot;, &quot;I…
+## $ `Matematika 1`          &lt;chr&gt; &quot;2&quot;, &quot;5&quot;, &quot;4&quot;, &quot;2&quot;, &quot;NULL&quot;, &quot;NULL&quot;, &quot;NULL&quot;, &quot;3…
+## $ `Fizika 1`              &lt;chr&gt; &quot;2&quot;, &quot;3&quot;, &quot;3&quot;, &quot;5&quot;, &quot;4&quot;, &quot;3&quot;, &quot;3&quot;, &quot;4&quot;, &quot;2&quot;, &quot;…
+## $ Programiranje           &lt;chr&gt; &quot;NULL&quot;, &quot;4&quot;, &quot;4&quot;, &quot;2&quot;, &quot;3&quot;, &quot;NULL&quot;, &quot;3&quot;, &quot;3&quot;, …
+## $ `Osnove elektrotehnike` &lt;chr&gt; &quot;NULL&quot;, &quot;3&quot;, &quot;2&quot;, &quot;2&quot;, &quot;5&quot;, &quot;5&quot;, &quot;3&quot;, &quot;4&quot;, &quot;2&quot;…
+## $ `Digitalna logika`      &lt;chr&gt; &quot;4&quot;, &quot;NULL&quot;, &quot;3&quot;, &quot;3&quot;, &quot;2&quot;, &quot;5&quot;, &quot;2&quot;, &quot;4&quot;, &quot;3&quot;…
+## $ `Matematika 2`          &lt;chr&gt; &quot;2&quot;, &quot;5&quot;, &quot;4&quot;, &quot;3&quot;, &quot;2&quot;, &quot;5&quot;, &quot;2&quot;, &quot;5&quot;, &quot;NULL&quot;…
+## $ `Algoritmi 1`           &lt;chr&gt; &quot;2&quot;, &quot;5&quot;, &quot;3&quot;, &quot;4&quot;, &quot;2&quot;, &quot;5&quot;, &quot;5&quot;, &quot;4&quot;, &quot;3&quot;, &quot;…
+## # A tibble: 6 × 10
+##   JMBAG Prezime Ime    `Matematika 1` `Fizika 1` Programiranje
+##   &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt;  &lt;chr&gt;          &lt;chr&gt;      &lt;chr&gt;        
+## 1  1341 Anić    Iva    2              2          NULL         
+## 2  1342 Babić   Josip  5              3          4            
+## 3  1343 Crnoja  Petra  4              3          4            
+## 4  1344 Črnjac  Lucija 2              5          2            
+## 5  1345 Dizla   Stipe  NULL           4          3            
+## 6  1346 Ermić   Igor   NULL           3          NULL         
+## # ℹ 4 more variables: `Osnove elektrotehnike` &lt;chr&gt;, `Digitalna logika` &lt;chr&gt;,
+## #   `Matematika 2` &lt;chr&gt;, `Algoritmi 1` &lt;chr&gt;</code></pre>
+</div>
+<hr />
+<p>Uočite da ovaj podatkovni skup ima dosta nedostajućih vrijednosti koje su zapisane kao <code>NULL</code>. Budući da R ne prepoznaje ovo kao nedostajuću vrijednost on je podatke učitao kao znakovne nizove. Budući da su stupci koji se odnose na ocjene očito numerički, možemo ih lako pretvoriti u takve uz pomoć naredbe <code>as.numeric()</code>. No, postoji jednostavniji način - ako znamo na koji način je nedostajuća vrijednost reprezentirana u podatkovnom skupu, možemo to direktno ugraditi u naredbu <code>read_csv</code> uz pomoć parametra <code>na</code>.</p>
+<hr />
+<p><strong>Zadatak 9.6 - prilagodba parametara učitavanja podatkovnog skupa</strong></p>
+<div class="sourceCode" id="cb359"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb359-1"><a href="cijev.html#cb359-1" tabindex="-1"></a><span class="co"># ponovo učitajte podatke iz datoteke `studenti.csv` u varijablu `studenti`</span></span>
+<span id="cb359-2"><a href="cijev.html#cb359-2" tabindex="-1"></a><span class="co"># naredbi `read_csv` dodajte parametre `na` sa znakovnim nizom koji predstavlja NA</span></span>
+<span id="cb359-3"><a href="cijev.html#cb359-3" tabindex="-1"></a><span class="co"># i `col_types` sa znakovnim nizom koji opisuje tipove stupaca </span></span>
+<span id="cb359-4"><a href="cijev.html#cb359-4" tabindex="-1"></a><span class="co"># (npr. `&quot;clf&quot;` predstavlja &quot;character - logical - factor&quot;)</span></span>
+<span id="cb359-5"><a href="cijev.html#cb359-5" tabindex="-1"></a></span>
+<span id="cb359-6"><a href="cijev.html#cb359-6" tabindex="-1"></a></span>
+<span id="cb359-7"><a href="cijev.html#cb359-7" tabindex="-1"></a><span class="co"># proučite okvir `studenti`</span></span></code></pre></div>
+<div class="fold s o">
+<div class="sourceCode" id="cb360"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb360-1"><a href="cijev.html#cb360-1" tabindex="-1"></a>studenti <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;studenti.csv&quot;</span>, <span class="at">na =</span> <span class="st">&quot;NULL&quot;</span>, <span class="at">col_types =</span> <span class="st">&quot;ncciiiii&quot;</span>)</span>
+<span id="cb360-2"><a href="cijev.html#cb360-2" tabindex="-1"></a></span>
+<span id="cb360-3"><a href="cijev.html#cb360-3" tabindex="-1"></a></span>
+<span id="cb360-4"><a href="cijev.html#cb360-4" tabindex="-1"></a><span class="fu">glimpse</span>(studenti)</span>
+<span id="cb360-5"><a href="cijev.html#cb360-5" tabindex="-1"></a><span class="fu">head</span>(studenti)</span></code></pre></div>
+<pre><code>## Rows: 27
+## Columns: 10
+## $ JMBAG                   &lt;dbl&gt; 1341, 1342, 1343, 1344, 1345, 1346, 1347, 1348…
+## $ Prezime                 &lt;chr&gt; &quot;Anić&quot;, &quot;Babić&quot;, &quot;Crnoja&quot;, &quot;Črnjac&quot;, &quot;Dizla&quot;, …
+## $ Ime                     &lt;chr&gt; &quot;Iva&quot;, &quot;Josip&quot;, &quot;Petra&quot;, &quot;Lucija&quot;, &quot;Stipe&quot;, &quot;I…
+## $ `Matematika 1`          &lt;int&gt; 2, 5, 4, 2, NA, NA, NA, 3, 3, 4, 2, 4, 5, 3, 4…
+## $ `Fizika 1`              &lt;int&gt; 2, 3, 3, 5, 4, 3, 3, 4, 2, 2, NA, 2, 4, NA, 5,…
+## $ Programiranje           &lt;int&gt; NA, 4, 4, 2, 3, NA, 3, 3, 3, 4, 3, 5, 2, 4, 4,…
+## $ `Osnove elektrotehnike` &lt;int&gt; NA, 3, 2, 2, 5, 5, 3, 4, 2, 2, 3, 2, 4, 5, 2, …
+## $ `Digitalna logika`      &lt;int&gt; 4, NA, 3, 3, 2, 5, 2, 4, 3, 5, 2, 4, 3, NA, 5,…
+## $ `Matematika 2`          &lt;int&gt; 2, 5, 4, 3, 2, 5, 2, 5, NA, 4, 2, 5, 2, 3, 4, …
+## $ `Algoritmi 1`           &lt;int&gt; 2, 5, 3, 4, 2, 5, 5, 4, 3, 2, 4, 2, 3, NA, 3, …
+## # A tibble: 6 × 10
+##   JMBAG Prezime Ime    `Matematika 1` `Fizika 1` Programiranje
+##   &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt;           &lt;int&gt;      &lt;int&gt;         &lt;int&gt;
+## 1  1341 Anić    Iva                 2          2            NA
+## 2  1342 Babić   Josip               5          3             4
+## 3  1343 Crnoja  Petra               4          3             4
+## 4  1344 Črnjac  Lucija              2          5             2
+## 5  1345 Dizla   Stipe              NA          4             3
+## 6  1346 Ermić   Igor               NA          3            NA
+## # ℹ 4 more variables: `Osnove elektrotehnike` &lt;int&gt;, `Digitalna logika` &lt;int&gt;,
+## #   `Matematika 2` &lt;int&gt;, `Algoritmi 1` &lt;int&gt;</code></pre>
+</div>
+<hr />
+<p>Vidimo da podaci sada imaju odgovarajući tip - no očito ne odgovaraju u potpunosti definiciji “urednih podataka”. Imena stupaca su zapravo kategorije varijable <code>Predmet</code> a “obzervacija” u ovoj tablici reprezentirana je studentom. Dodavanje nove ocjene iz nekog predmeta moguće je jedino dodavanjem novog stupca, pri čemu bismo morali voditi računa da se na taj način dodaju ocjene za <em>sve</em> student, tj. da bi tablica morala imati puno <code>NA</code> vrijednosti za sve kombinacije studenata i predmeta koje su neprimjenjive jer ocjene trenutno nema (i možda je neće ni biti ukoliko student niti ne sluša taj predmet).</p>
+<p>Budući da su podaci u tablici zapravo skup ocjena, bilo bi pogodno preoblikovati tablicu tako da svaki redak upravo bude “ocjena koju je dobio neki student na nekom predmetu”. Razmislite koje korake bi trebalo poduzeti da stvorimo takvu tablicu. Trebamo:</p>
+<ul>
+<li>stvoriti kategorijsku varijablu <code>Predmet</code> koja bi kao razine imala nazive predmeta koji su trenutno stupci</li>
+<li>stvoriti sve pripadne kombinacije student-predmet</li>
+<li>popuniti kombinacije pripadajućom vrijednosti ocjene</li>
+</ul>
+<p>Ovaj postupak nije nemoguć ali zahtjeva dosta truda oko preoblikovanja podatkovnog okvira. Kako bi se ovaj postupak pojednostavio, možemo koristiti funkciju <code>pivot_longer</code> iz paketa <code>tidyr</code> koja obavlja upravo gore opisani postupak: ona “prikuplja” stupce u jedinstvenu varijablu i onda popunjava vrijednosti te varijable uz pomoć postojećih kombinacija naziv stupca / redak. Potpis funkcije izgleda ovako:</p>
+<div class="sourceCode" id="cb362"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb362-1"><a href="cijev.html#cb362-1" tabindex="-1"></a><span class="fu">pivot_longer</span>(data, cols, names_to, values_to, values_drop_na)</span></code></pre></div>
+<p>Detaljni opis funkcije možete dobiti pozivom naredbe <code>?pivot_longer</code>, a ovdje ćemo samo ukratko objasniti parametre:</p>
+<ul>
+<li><code>data</code> je naš podatkovni okvir</li>
+<li><code>cols</code> stupci koje “pivotiramo” - navodimo nazive stupaca (bez navodnika), sintaksu <code>stupac_od:stupad_do</code> ili stupce koje NE želimo sa prefiksom <code>-</code></li>
+<li><code>names_to</code> reprezentira ime novog stupca kojeg stvaramo (u našem slučaju stupac <code>"Predmet"</code>)</li>
+<li><code>values_drop_na</code> omogućuje odabir ispuštanja opservacija sa <code>NA</code> vrijednostima
+Obavimo ovu funkciju nad našim podatkovnim okvirom.</li>
+</ul>
+<p>NAPOMENA: Jedna od specifičnosti paketa <code>tidyverse</code> jest ta što u pozivima funkcija često kod referenciranja stupaca možemo koristiti njihove nazive bez navodnika. No ovdje moramo biti oprezni ako radimo sa <strong>stupcima čiji nazivi krše pravila imenovanja varijabli</strong>. Naš podatkovni okvir primjer je podatkovnog skupa sa takvim stupcima - primjerice, stupac naziva “Matematika 1” sadrži razmak, što predstavlja problem kod njegovog direktnog referenciranja.</p>
+<p>Ovu situaciju lako razrješavamo na isti način kao i u općenitom slučaju varijabli koje krše pravila imenovanja - uz pomoć <em>backticks</em> navodnika (npr. <code>\</code>Varijabla sa razmakom``).</p>
+<p>Alternativno (a i preporučljivo) jest preimenovati imena stupaca tako da koriste nazive koji su lakši za korištenje unutar programskog koda. Ovo nećemo napraviti u nastavku kako bi primjer zornije prikazao općenitiji pristup, ali u stvarnim projektima preimenovanje stupaca često predstavlja bolje i praktičnije rješenje.</p>
+<hr />
+<p><strong>Zadatak 9.7 - funkcija <code>pivot_longer</code></strong></p>
+<div class="sourceCode" id="cb363"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb363-1"><a href="cijev.html#cb363-1" tabindex="-1"></a><span class="co"># stvorite podatkovni okvir `ocjene` uz pomoć funkcije `pivot_longer` i okvira `studenti`</span></span>
+<span id="cb363-2"><a href="cijev.html#cb363-2" tabindex="-1"></a></span>
+<span id="cb363-3"><a href="cijev.html#cb363-3" tabindex="-1"></a></span>
+<span id="cb363-4"><a href="cijev.html#cb363-4" tabindex="-1"></a><span class="co"># proučite okvir `ocjene`</span></span></code></pre></div>
+<div class="fold s o">
+<div class="sourceCode" id="cb364"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb364-1"><a href="cijev.html#cb364-1" tabindex="-1"></a>ocjene <span class="ot">&lt;-</span> <span class="fu">pivot_longer</span>(studenti, <span class="at">cols =</span> <span class="st">`</span><span class="at">Matematika 1</span><span class="st">`</span><span class="sc">:</span><span class="st">`</span><span class="at">Algoritmi 1</span><span class="st">`</span>, </span>
+<span id="cb364-2"><a href="cijev.html#cb364-2" tabindex="-1"></a>                       <span class="at">names_to =</span> <span class="st">&quot;Predmet&quot;</span>, <span class="at">values_to =</span> <span class="st">&quot;Ocjena&quot;</span>,</span>
+<span id="cb364-3"><a href="cijev.html#cb364-3" tabindex="-1"></a>                       <span class="at">values_drop_na =</span> T)</span>
+<span id="cb364-4"><a href="cijev.html#cb364-4" tabindex="-1"></a></span>
+<span id="cb364-5"><a href="cijev.html#cb364-5" tabindex="-1"></a><span class="fu">glimpse</span>(ocjene)</span>
+<span id="cb364-6"><a href="cijev.html#cb364-6" tabindex="-1"></a><span class="fu">head</span>(ocjene)</span></code></pre></div>
+<pre><code>## Rows: 168
+## Columns: 5
+## $ JMBAG   &lt;dbl&gt; 1341, 1341, 1341, 1341, 1341, 1342, 1342, 1342, 1342, 1342, 13…
+## $ Prezime &lt;chr&gt; &quot;Anić&quot;, &quot;Anić&quot;, &quot;Anić&quot;, &quot;Anić&quot;, &quot;Anić&quot;, &quot;Babić&quot;, &quot;Babić&quot;, &quot;Bab…
+## $ Ime     &lt;chr&gt; &quot;Iva&quot;, &quot;Iva&quot;, &quot;Iva&quot;, &quot;Iva&quot;, &quot;Iva&quot;, &quot;Josip&quot;, &quot;Josip&quot;, &quot;Josip&quot;, …
+## $ Predmet &lt;chr&gt; &quot;Matematika 1&quot;, &quot;Fizika 1&quot;, &quot;Digitalna logika&quot;, &quot;Matematika 2&quot;…
+## $ Ocjena  &lt;int&gt; 2, 2, 4, 2, 2, 5, 3, 4, 3, 5, 5, 4, 3, 4, 2, 3, 4, 3, 2, 5, 2,…
+## # A tibble: 6 × 5
+##   JMBAG Prezime Ime   Predmet          Ocjena
+##   &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt; &lt;chr&gt;             &lt;int&gt;
+## 1  1341 Anić    Iva   Matematika 1          2
+## 2  1341 Anić    Iva   Fizika 1              2
+## 3  1341 Anić    Iva   Digitalna logika      4
+## 4  1341 Anić    Iva   Matematika 2          2
+## 5  1341 Anić    Iva   Algoritmi 1           2
+## 6  1342 Babić   Josip Matematika 1          5</code></pre>
+</div>
+<hr />
+<p>Funkcija koja radi inverzan posao od <code>pivot_longer</code> jest funkcija <code>pivot_wider</code>. Ona će podatke iz kombinacije kategorijskog stupca i vrijednosti “raširiti” tako da kategorije postaju nazivi stupaca a vrijednosti se “raspršuju” po odgovarajućim stupcima.</p>
+<p>Potpis funkcije izgleda ovako:</p>
+<div class="sourceCode" id="cb366"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb366-1"><a href="cijev.html#cb366-1" tabindex="-1"></a><span class="fu">pivot_wider</span>(data, names_from, <span class="at">names_prefix =</span> <span class="st">&quot;&quot;</span>, values_from, <span class="at">values_fill =</span> <span class="cn">NULL</span>)</span></code></pre></div>
+<p>Dokumentaciju ove funkcije lako dohvaćamo naredbom <code>?pivot_wider</code> a neke elemente već možemo lako prepoznati korištenjem znanja kako radi funkcija <code>pivot_longer</code>. Parametri koje možda treba dodatno pojasniti su:</p>
+<ul>
+<li><code>data</code> podatkovni okvir</li>
+<li><code>names_from</code> ime stupaca čije vrijednosti “pivotiramo” u široki oblik</li>
+<li><code>names_prefix</code> opcionalni prefiks (bez navodnika) kojeg možemo staviti novim stupcima, korisno ako su novi nazivi stupaca brojevi</li>
+<li><code>values_from</code> ime stupca u kojem se nalaze vrijednosti koje raspršujemo po novoj tablici</li>
+<li><code>values_fill</code> opcionalna vrijednost za nedostajuće vrijednosti; ako parametar stavimo na <code>NULL</code> vrijednosti će biti <code>NA</code></li>
+</ul>
+<hr />
+<p><strong>Zadatak 9.8 - funkcija <code>pivot_wider</code></strong></p>
+<div class="sourceCode" id="cb367"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb367-1"><a href="cijev.html#cb367-1" tabindex="-1"></a><span class="co"># &quot;raširite&quot; podatkovni okvir `ocjene` uz pomoć naredbe `pivot_wider`</span></span>
+<span id="cb367-2"><a href="cijev.html#cb367-2" tabindex="-1"></a><span class="co"># rezultat pohranite u okvir `studenti2`</span></span>
+<span id="cb367-3"><a href="cijev.html#cb367-3" tabindex="-1"></a></span>
+<span id="cb367-4"><a href="cijev.html#cb367-4" tabindex="-1"></a><span class="co"># proučite okvire `studenti` i `studenti2`</span></span></code></pre></div>
+<div class="fold s o">
+<div class="sourceCode" id="cb368"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb368-1"><a href="cijev.html#cb368-1" tabindex="-1"></a>studenti2 <span class="ot">&lt;-</span> <span class="fu">pivot_wider</span>(ocjene, <span class="at">names_from =</span> Predmet, <span class="at">values_from =</span> Ocjena)</span>
+<span id="cb368-2"><a href="cijev.html#cb368-2" tabindex="-1"></a></span>
+<span id="cb368-3"><a href="cijev.html#cb368-3" tabindex="-1"></a><span class="fu">head</span>(studenti)</span>
+<span id="cb368-4"><a href="cijev.html#cb368-4" tabindex="-1"></a><span class="fu">head</span>(studenti2)</span>
+<span id="cb368-5"><a href="cijev.html#cb368-5" tabindex="-1"></a><span class="fu">glimpse</span>(studenti)</span>
+<span id="cb368-6"><a href="cijev.html#cb368-6" tabindex="-1"></a><span class="fu">glimpse</span>(studenti2)</span></code></pre></div>
+<pre><code>## # A tibble: 6 × 10
+##   JMBAG Prezime Ime    `Matematika 1` `Fizika 1` Programiranje
+##   &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt;           &lt;int&gt;      &lt;int&gt;         &lt;int&gt;
+## 1  1341 Anić    Iva                 2          2            NA
+## 2  1342 Babić   Josip               5          3             4
+## 3  1343 Crnoja  Petra               4          3             4
+## 4  1344 Črnjac  Lucija              2          5             2
+## 5  1345 Dizla   Stipe              NA          4             3
+## 6  1346 Ermić   Igor               NA          3            NA
+## # ℹ 4 more variables: `Osnove elektrotehnike` &lt;int&gt;, `Digitalna logika` &lt;int&gt;,
+## #   `Matematika 2` &lt;int&gt;, `Algoritmi 1` &lt;int&gt;
+## # A tibble: 6 × 10
+##   JMBAG Prezime Ime    `Matematika 1` `Fizika 1` `Digitalna logika`
+##   &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt;           &lt;int&gt;      &lt;int&gt;              &lt;int&gt;
+## 1  1341 Anić    Iva                 2          2                  4
+## 2  1342 Babić   Josip               5          3                 NA
+## 3  1343 Crnoja  Petra               4          3                  3
+## 4  1344 Črnjac  Lucija              2          5                  3
+## 5  1345 Dizla   Stipe              NA          4                  2
+## 6  1346 Ermić   Igor               NA          3                  5
+## # ℹ 4 more variables: `Matematika 2` &lt;int&gt;, `Algoritmi 1` &lt;int&gt;,
+## #   Programiranje &lt;int&gt;, `Osnove elektrotehnike` &lt;int&gt;
+## Rows: 27
+## Columns: 10
+## $ JMBAG                   &lt;dbl&gt; 1341, 1342, 1343, 1344, 1345, 1346, 1347, 1348…
+## $ Prezime                 &lt;chr&gt; &quot;Anić&quot;, &quot;Babić&quot;, &quot;Crnoja&quot;, &quot;Črnjac&quot;, &quot;Dizla&quot;, …
+## $ Ime                     &lt;chr&gt; &quot;Iva&quot;, &quot;Josip&quot;, &quot;Petra&quot;, &quot;Lucija&quot;, &quot;Stipe&quot;, &quot;I…
+## $ `Matematika 1`          &lt;int&gt; 2, 5, 4, 2, NA, NA, NA, 3, 3, 4, 2, 4, 5, 3, 4…
+## $ `Fizika 1`              &lt;int&gt; 2, 3, 3, 5, 4, 3, 3, 4, 2, 2, NA, 2, 4, NA, 5,…
+## $ Programiranje           &lt;int&gt; NA, 4, 4, 2, 3, NA, 3, 3, 3, 4, 3, 5, 2, 4, 4,…
+## $ `Osnove elektrotehnike` &lt;int&gt; NA, 3, 2, 2, 5, 5, 3, 4, 2, 2, 3, 2, 4, 5, 2, …
+## $ `Digitalna logika`      &lt;int&gt; 4, NA, 3, 3, 2, 5, 2, 4, 3, 5, 2, 4, 3, NA, 5,…
+## $ `Matematika 2`          &lt;int&gt; 2, 5, 4, 3, 2, 5, 2, 5, NA, 4, 2, 5, 2, 3, 4, …
+## $ `Algoritmi 1`           &lt;int&gt; 2, 5, 3, 4, 2, 5, 5, 4, 3, 2, 4, 2, 3, NA, 3, …
+## Rows: 27
+## Columns: 10
+## $ JMBAG                   &lt;dbl&gt; 1341, 1342, 1343, 1344, 1345, 1346, 1347, 1348…
+## $ Prezime                 &lt;chr&gt; &quot;Anić&quot;, &quot;Babić&quot;, &quot;Crnoja&quot;, &quot;Črnjac&quot;, &quot;Dizla&quot;, …
+## $ Ime                     &lt;chr&gt; &quot;Iva&quot;, &quot;Josip&quot;, &quot;Petra&quot;, &quot;Lucija&quot;, &quot;Stipe&quot;, &quot;I…
+## $ `Matematika 1`          &lt;int&gt; 2, 5, 4, 2, NA, NA, NA, 3, 3, 4, 2, 4, 5, 3, 4…
+## $ `Fizika 1`              &lt;int&gt; 2, 3, 3, 5, 4, 3, 3, 4, 2, 2, NA, 2, 4, NA, 5,…
+## $ `Digitalna logika`      &lt;int&gt; 4, NA, 3, 3, 2, 5, 2, 4, 3, 5, 2, 4, 3, NA, 5,…
+## $ `Matematika 2`          &lt;int&gt; 2, 5, 4, 3, 2, 5, 2, 5, NA, 4, 2, 5, 2, 3, 4, …
+## $ `Algoritmi 1`           &lt;int&gt; 2, 5, 3, 4, 2, 5, 5, 4, 3, 2, 4, 2, 3, NA, 3, …
+## $ Programiranje           &lt;int&gt; NA, 4, 4, 2, 3, NA, 3, 3, 3, 4, 3, 5, 2, 4, 4,…
+## $ `Osnove elektrotehnike` &lt;int&gt; NA, 3, 2, 2, 5, 5, 3, 4, 2, 2, 3, 2, 4, 5, 2, …</code></pre>
+</div>
+<hr />
+<p>U prethodnom primjeru demonstrirali smo inverznu funkcionalnost funkcija <code>pivot_longer</code> i <code>pivot_wider</code> ali narednom <code>pivot_wider</code> nismo postigli uredne podatke, samo smo se vratili na originalni okvir. Pogledajmo sada primjer gdje upravo naredbom <code>pivot_wider</code> “sređujemo” podatke.</p>
+<p>Učitajmo podatke iz datoteke <code>auti.csv</code> koja pohranjuje tehničke karakteristike određenih automobila.</p>
+<hr />
+<p><strong>Zadatak 9.9 - podatkovni skup <code>auti</code></strong></p>
+<div class="sourceCode" id="cb370"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb370-1"><a href="cijev.html#cb370-1" tabindex="-1"></a><span class="co"># učitajte datoteku `auti.csv` u podatkovni okvir naziva `auti`</span></span>
+<span id="cb370-2"><a href="cijev.html#cb370-2" tabindex="-1"></a></span>
+<span id="cb370-3"><a href="cijev.html#cb370-3" tabindex="-1"></a><span class="co"># proučite okvir `auti`</span></span></code></pre></div>
+<div class="fold s o">
+<div class="sourceCode" id="cb371"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb371-1"><a href="cijev.html#cb371-1" tabindex="-1"></a>auti <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;auti.csv&quot;</span>, <span class="at">col_types =</span> <span class="st">&quot;ccn&quot;</span>)</span>
+<span id="cb371-2"><a href="cijev.html#cb371-2" tabindex="-1"></a></span>
+<span id="cb371-3"><a href="cijev.html#cb371-3" tabindex="-1"></a><span class="fu">glimpse</span>(auti)</span>
+<span id="cb371-4"><a href="cijev.html#cb371-4" tabindex="-1"></a><span class="fu">head</span>(auti)</span></code></pre></div>
+<pre><code>## Rows: 18
+## Columns: 3
+## $ `Model auta`              &lt;chr&gt; &quot;Opel Astra&quot;, &quot;Opel Astra&quot;, &quot;Opel Astra&quot;, &quot;O…
+## $ `Tehnicka karakteristika` &lt;chr&gt; &quot;Cilindara&quot;, &quot;KS&quot;, &quot;Dužina m&quot;, &quot;Masa kg&quot;, &quot;C…
+## $ Vrijednost                &lt;dbl&gt; 4.000, 125.000, 4.267, 1285.000, 4.000, 136.…
+## # A tibble: 6 × 3
+##   `Model auta` `Tehnicka karakteristika` Vrijednost
+##   &lt;chr&gt;        &lt;chr&gt;                          &lt;dbl&gt;
+## 1 Opel Astra   Cilindara                       4   
+## 2 Opel Astra   KS                            125   
+## 3 Opel Astra   Dužina m                        4.27
+## 4 Opel Astra   Masa kg                      1285   
+## 5 Audi A4      Cilindara                       4   
+## 6 Audi A4      KS                            136</code></pre>
+</div>
+<hr />
+<p>U ovoj tablici očito je narušen princip urednih podataka da u jedan stupac treba biti pohranjen samo jedan tip varijable - tehničke karakteristike automobila smještene su u jedinstveni stupac naziva <code>Tehnicka.karakteristika</code> a u stupcu <code>Vrijednost</code> nalaze se vrijednosti vrlo različitih tipova (masa u kg, dužina u m i sl.).</p>
+<p>Pokušajte urediti ovaj okvir uz pomoć naredbe <code>pivot_wider</code>.</p>
+<hr />
+<p><strong>Zadatak 9.10 - funkcija <code>pivot_wider</code> (2)</strong></p>
+<div class="sourceCode" id="cb373"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb373-1"><a href="cijev.html#cb373-1" tabindex="-1"></a><span class="co"># stvorite okvir `auti2` koji će biti uređena inačica okvira `auti`</span></span>
+<span id="cb373-2"><a href="cijev.html#cb373-2" tabindex="-1"></a></span>
+<span id="cb373-3"><a href="cijev.html#cb373-3" tabindex="-1"></a><span class="co"># proučite okvir `auti2`</span></span></code></pre></div>
+<div class="fold s o">
+<div class="sourceCode" id="cb374"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb374-1"><a href="cijev.html#cb374-1" tabindex="-1"></a>auti2 <span class="ot">&lt;-</span> <span class="fu">pivot_wider</span>(auti, <span class="at">names_from =</span> <span class="st">`</span><span class="at">Tehnicka karakteristika</span><span class="st">`</span>, <span class="at">values_from =</span> Vrijednost)</span>
+<span id="cb374-2"><a href="cijev.html#cb374-2" tabindex="-1"></a></span>
+<span id="cb374-3"><a href="cijev.html#cb374-3" tabindex="-1"></a><span class="fu">glimpse</span>(auti2)</span>
+<span id="cb374-4"><a href="cijev.html#cb374-4" tabindex="-1"></a><span class="fu">head</span>(auti2)</span></code></pre></div>
+<pre><code>## Rows: 5
+## Columns: 6
+## $ `Model auta` &lt;chr&gt; &quot;Opel Astra&quot;, &quot;Audi A4&quot;, &quot;Renault Grand Scenic&quot;, &quot;Citroen…
+## $ Cilindara    &lt;dbl&gt; 4, 4, 4, 6, 2
+## $ KS           &lt;dbl&gt; 125, 136, 110, 215, 103
+## $ `Dužina m`   &lt;dbl&gt; 4.267, 4.703, 4.560, NA, NA
+## $ `Masa kg`    &lt;dbl&gt; 1285, 1470, NA, 1816, 1260
+## $ Ventila      &lt;dbl&gt; NA, NA, 16, NA, NA
+## # A tibble: 5 × 6
+##   `Model auta`         Cilindara    KS `Dužina m` `Masa kg` Ventila
+##   &lt;chr&gt;                    &lt;dbl&gt; &lt;dbl&gt;      &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;
+## 1 Opel Astra                   4   125       4.27      1285      NA
+## 2 Audi A4                      4   136       4.70      1470      NA
+## 3 Renault Grand Scenic         4   110       4.56        NA      16
+## 4 Citroen C6                   6   215      NA         1816      NA
+## 5 Fiat 500L                    2   103      NA         1260      NA</code></pre>
+</div>
+<hr />
+<p>Naredbe <code>pivot_longer</code> i <code>pivot_wider</code> ne koriste se samo za “neuredne” podatke. One mogu biti vrlo korisne kod pretvorbe tzv. “širokih” podatka (<em>wide data</em>) u “dugačke” (<em>long data</em>). Prikažimo ovo na primjeru tzv. podataka o potrošačkim košaricama.</p>
+<p>Potrošačka košarica predstavlja zapis artikala koje je kupac kupio tijekom jednog dolaska u trgovinu (bilo da se radi o virtualnoj trgovini ili stvarnom prodajnom mjestu). Ako podatke o potrošačkoj košarici zapisujemo u “širokom” formatu, onda podatke organiziramo tako da stupci predstavljaju pojedine artikle a retci jednu kupnju (ili račun). Vrijednost <code>1</code> znači da se artikl našao u košarici, <code>0</code> da nije bio prisutan. Ovakav prikaz pogodan je za različite tipove analiza, ali nije ekonomičan - podaci će često imati jako puno “nula”. S druge strane, “dugački” format jednostavno u svaki redak stavlja kombinaciju identifikatora košarice (ili broja računa) i naziv (ili šifru) kupljenog artikla. Ovakav zapis imati će znatno više redaka, ali je znatno pogodniji u slučajevima kada je broj artikala u asortimanu daleko veći od broja artikala u prosječnoj košarici.</p>
+<hr />
+<p><strong>Zadatak 9.11 - podatkovni skup <code>potrosackaKosarica</code></strong></p>
+<div class="sourceCode" id="cb376"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb376-1"><a href="cijev.html#cb376-1" tabindex="-1"></a><span class="co"># učitajte podatke iz datoteke `potrosackaKosarica.csv` u podatkovni okvir imena `racuni`</span></span>
+<span id="cb376-2"><a href="cijev.html#cb376-2" tabindex="-1"></a></span>
+<span id="cb376-3"><a href="cijev.html#cb376-3" tabindex="-1"></a><span class="co"># proučite okvir `racuni`</span></span></code></pre></div>
+<div class="fold s o">
+<div class="sourceCode" id="cb377"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb377-1"><a href="cijev.html#cb377-1" tabindex="-1"></a>racuni <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;potrosackaKosarica.csv&quot;</span>, <span class="at">show_col_types =</span> F)</span>
+<span id="cb377-2"><a href="cijev.html#cb377-2" tabindex="-1"></a></span>
+<span id="cb377-3"><a href="cijev.html#cb377-3" tabindex="-1"></a><span class="fu">glimpse</span>(racuni)</span>
+<span id="cb377-4"><a href="cijev.html#cb377-4" tabindex="-1"></a><span class="fu">head</span>(racuni)</span></code></pre></div>
+<pre><code>## Rows: 104
+## Columns: 21
+## $ racunID           &lt;dbl&gt; 15671, 15672, 15673, 15674, 15675, 15676, 15677, 156…
+## $ `Coca cola 2l`    &lt;dbl&gt; 0, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0…
+## $ `Čipi Čips`       &lt;dbl&gt; 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1…
+## $ `Nutella 400 g`   &lt;dbl&gt; 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 1, 0, 0, 0, 0…
+## $ `Karlovačko pivo` &lt;dbl&gt; 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0…
+## $ `Ožujsko pivo`    &lt;dbl&gt; 1, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0…
+## $ `Omekšivač 1.5l`  &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 1, 1…
+## $ `Voda 2l`         &lt;dbl&gt; 0, 0, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 0, 1, 0, 1, 0…
+## $ Naranče           &lt;dbl&gt; 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0…
+## $ Jabuke            &lt;dbl&gt; 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0…
+## $ Mandarine         &lt;dbl&gt; 0, 0, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 1, 0, 0, 1…
+## $ Salvete           &lt;dbl&gt; 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0…
+## $ Ajvar             &lt;dbl&gt; 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1…
+## $ Ketchup           &lt;dbl&gt; 1, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0…
+## $ Senf              &lt;dbl&gt; 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0…
+## $ `Mlijeko 0.5l`    &lt;dbl&gt; 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 0…
+## $ `Kiselo vrhnje`   &lt;dbl&gt; 0, 1, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0…
+## $ `Feta sir`        &lt;dbl&gt; 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0…
+## $ Sardine           &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1…
+## $ `Tuna pašteta`    &lt;dbl&gt; 1, 1, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1…
+## $ Nescaffe          &lt;dbl&gt; 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 1, 0, 0…
+## # A tibble: 6 × 21
+##   racunID `Coca cola 2l` `Čipi Čips` `Nutella 400 g` `Karlovačko pivo`
+##     &lt;dbl&gt;          &lt;dbl&gt;       &lt;dbl&gt;           &lt;dbl&gt;             &lt;dbl&gt;
+## 1   15671              0           0               0                 0
+## 2   15672              1           0               1                 1
+## 3   15673              1           1               0                 0
+## 4   15674              0           0               0                 0
+## 5   15675              1           0               1                 0
+## 6   15676              0           0               0                 0
+## # ℹ 16 more variables: `Ožujsko pivo` &lt;dbl&gt;, `Omekšivač 1.5l` &lt;dbl&gt;,
+## #   `Voda 2l` &lt;dbl&gt;, Naranče &lt;dbl&gt;, Jabuke &lt;dbl&gt;, Mandarine &lt;dbl&gt;,
+## #   Salvete &lt;dbl&gt;, Ajvar &lt;dbl&gt;, Ketchup &lt;dbl&gt;, Senf &lt;dbl&gt;,
+## #   `Mlijeko 0.5l` &lt;dbl&gt;, `Kiselo vrhnje` &lt;dbl&gt;, `Feta sir` &lt;dbl&gt;,
+## #   Sardine &lt;dbl&gt;, `Tuna pašteta` &lt;dbl&gt;, Nescaffe &lt;dbl&gt;</code></pre>
+</div>
+<hr />
+<p>Ukoliko želimo pohraniti podatkovni okvir u CSV datoteku, za to možemo koristiti jednostavnu funkciju <code>write_csv</code>. Ova funkcija ima niz potencijalno korisnih parametara, no najvažniji su podatkovni okvir kojeg pohranjujemo, te datoteka u koju isti spremamo.</p>
+<hr />
+<p><strong>Zadatak 9.12 - pretvorba okvira u ‘dugi’ format</strong></p>
+<div class="sourceCode" id="cb379"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb379-1"><a href="cijev.html#cb379-1" tabindex="-1"></a><span class="co"># pretvorite podatke okvira `racuni` iz &quot;širokog&quot; formata u &quot;dugi&quot;</span></span>
+<span id="cb379-2"><a href="cijev.html#cb379-2" tabindex="-1"></a></span>
+<span id="cb379-3"><a href="cijev.html#cb379-3" tabindex="-1"></a><span class="co"># rezultat pohranite u datoteku &#39;potrosackaKosaricaDugiFormat.csv&#39;</span></span></code></pre></div>
+<div class="fold s o">
+<div class="sourceCode" id="cb380"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb380-1"><a href="cijev.html#cb380-1" tabindex="-1"></a><span class="co"># pretvorite podatke okvira `racuni` iz &quot;širokog&quot; formata u &quot;dugi&quot;</span></span>
+<span id="cb380-2"><a href="cijev.html#cb380-2" tabindex="-1"></a>racuniDugi <span class="ot">&lt;-</span> <span class="fu">pivot_longer</span>(racuni, <span class="at">cols =</span> <span class="sc">-</span>racunID, <span class="at">names_to =</span> <span class="st">&quot;artikl&quot;</span>, <span class="at">values_to =</span> <span class="st">&quot;vrijednost&quot;</span>)</span>
+<span id="cb380-3"><a href="cijev.html#cb380-3" tabindex="-1"></a></span>
+<span id="cb380-4"><a href="cijev.html#cb380-4" tabindex="-1"></a><span class="co"># moramo još malo &quot;popraviti&quot; okvir</span></span>
+<span id="cb380-5"><a href="cijev.html#cb380-5" tabindex="-1"></a>racuniDugi <span class="ot">&lt;-</span> racuniDugi[racuniDugi<span class="sc">$</span>vrijednost <span class="sc">!=</span> <span class="dv">0</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>]</span>
+<span id="cb380-6"><a href="cijev.html#cb380-6" tabindex="-1"></a>racuniDugi <span class="ot">&lt;-</span> racuniDugi[<span class="fu">order</span>(racuniDugi<span class="sc">$</span>racunID), ]</span>
+<span id="cb380-7"><a href="cijev.html#cb380-7" tabindex="-1"></a><span class="fu">head</span>(racuniDugi)</span>
+<span id="cb380-8"><a href="cijev.html#cb380-8" tabindex="-1"></a></span>
+<span id="cb380-9"><a href="cijev.html#cb380-9" tabindex="-1"></a><span class="co"># rezultat pohranite u datoteku &#39;potrosackaKosaricaDugiFormat.csv&#39;</span></span>
+<span id="cb380-10"><a href="cijev.html#cb380-10" tabindex="-1"></a><span class="fu">write_csv</span>(racuniDugi, <span class="at">file =</span> <span class="st">&#39;potrosackaKosaricaDugiFormat.csv&#39;</span>)</span></code></pre></div>
+<pre><code>## # A tibble: 6 × 2
+##   racunID artikl      
+##     &lt;dbl&gt; &lt;chr&gt;       
+## 1   15671 Ožujsko pivo
+## 2   15671 Jabuke      
+## 3   15671 Ketchup     
+## 4   15671 Senf        
+## 5   15671 Tuna pašteta
+## 6   15672 Coca cola 2l</code></pre>
+</div>
+<hr />
+<p><strong>Zadatak 9.13 - pretvorba okvira u ‘široki’ format</strong></p>
+<div class="sourceCode" id="cb382"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb382-1"><a href="cijev.html#cb382-1" tabindex="-1"></a><span class="co"># pokušajte &quot;dugi&quot; format oblikovati natrag u &quot;široki&quot;</span></span>
+<span id="cb382-2"><a href="cijev.html#cb382-2" tabindex="-1"></a><span class="co"># pohranite rezultat u datoteku `potrosackaKosaricaSirokiFormat.csv`</span></span></code></pre></div>
+<div class="fold s o">
+<div class="sourceCode" id="cb383"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb383-1"><a href="cijev.html#cb383-1" tabindex="-1"></a><span class="co"># pripremamo okvir - dodajemo vrijednosti za &quot;raspršivanje&quot;</span></span>
+<span id="cb383-2"><a href="cijev.html#cb383-2" tabindex="-1"></a>racuniSiroki <span class="ot">&lt;-</span> racuniDugi</span>
+<span id="cb383-3"><a href="cijev.html#cb383-3" tabindex="-1"></a>racuniSiroki<span class="sc">$</span>vrijednost <span class="ot">&lt;-</span> <span class="dv">1</span></span>
+<span id="cb383-4"><a href="cijev.html#cb383-4" tabindex="-1"></a>racuniSiroki <span class="ot">&lt;-</span> <span class="fu">pivot_wider</span>(racuniSiroki, <span class="at">names_from =</span> artikl, </span>
+<span id="cb383-5"><a href="cijev.html#cb383-5" tabindex="-1"></a>                        <span class="at">values_from =</span> vrijednost, <span class="at">values_fill =</span> <span class="dv">0</span>)</span>
+<span id="cb383-6"><a href="cijev.html#cb383-6" tabindex="-1"></a><span class="fu">head</span>(racuniSiroki,<span class="dv">3</span>)</span>
+<span id="cb383-7"><a href="cijev.html#cb383-7" tabindex="-1"></a></span>
+<span id="cb383-8"><a href="cijev.html#cb383-8" tabindex="-1"></a><span class="co"># pohranite rezultat u datoteku `potrosackaKosaricaSirokiFormat.csv`</span></span>
+<span id="cb383-9"><a href="cijev.html#cb383-9" tabindex="-1"></a><span class="fu">write_csv</span>(racuniSiroki, <span class="at">file =</span> <span class="st">&#39;potrosackaKosaricaSirokiFormat.csv&#39;</span>)</span></code></pre></div>
+<pre><code>## # A tibble: 3 × 21
+##   racunID `Ožujsko pivo` Jabuke Ketchup  Senf `Tuna pašteta` `Coca cola 2l`
+##     &lt;dbl&gt;          &lt;dbl&gt;  &lt;dbl&gt;   &lt;dbl&gt; &lt;dbl&gt;          &lt;dbl&gt;          &lt;dbl&gt;
+## 1   15671              1      1       1     1              1              0
+## 2   15672              0      0       0     0              1              1
+## 3   15673              0      0       0     0              1              1
+## # ℹ 14 more variables: `Nutella 400 g` &lt;dbl&gt;, `Karlovačko pivo` &lt;dbl&gt;,
+## #   `Mlijeko 0.5l` &lt;dbl&gt;, `Kiselo vrhnje` &lt;dbl&gt;, `Čipi Čips` &lt;dbl&gt;,
+## #   `Voda 2l` &lt;dbl&gt;, Mandarine &lt;dbl&gt;, Ajvar &lt;dbl&gt;, Nescaffe &lt;dbl&gt;,
+## #   Naranče &lt;dbl&gt;, `Feta sir` &lt;dbl&gt;, Salvete &lt;dbl&gt;, `Omekšivač 1.5l` &lt;dbl&gt;,
+## #   Sardine &lt;dbl&gt;</code></pre>
+</div>
+<hr />
+</div>
+<div id="funkcije-separate-i-unite" class="section level3 hasAnchor" number="9.2.2">
+<h3><span class="header-section-number">9.2.2</span> Funkcije <code>separate</code> i <code>unite</code><a href="cijev.html#funkcije-separate-i-unite" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<hr />
+<p>Paket <code>tidyr</code> ima još niz korisnih funkcija namijenjenih “uređivanju” podataka a mi ćemo ovdje obratiti još dvije koje se relativno često koriste - <code>separate</code> i <code>unite</code>.</p>
+<p>Funkcija <code>separate</code> je korisna kada neki stupac ima “složene” vrijednosti koje želimo rastaviti u dva ili više stupaca.</p>
+<p><strong>Zadatak 9.14 - podatkovni skup <code>odjeli</code></strong></p>
+<div class="sourceCode" id="cb385"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb385-1"><a href="cijev.html#cb385-1" tabindex="-1"></a><span class="co"># čitajte podatke iz datoteke `odjeli.csv` u varijablu `odjeli`</span></span>
+<span id="cb385-2"><a href="cijev.html#cb385-2" tabindex="-1"></a></span>
+<span id="cb385-3"><a href="cijev.html#cb385-3" tabindex="-1"></a><span class="co"># proučite okvir `odjeli`</span></span></code></pre></div>
+<div class="fold s o">
+<div class="sourceCode" id="cb386"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb386-1"><a href="cijev.html#cb386-1" tabindex="-1"></a>odjeli <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;odjeli_csv&quot;</span>, <span class="at">show_col_types =</span>  <span class="ot">=</span> F)</span>
+<span id="cb386-2"><a href="cijev.html#cb386-2" tabindex="-1"></a></span>
+<span id="cb386-3"><a href="cijev.html#cb386-3" tabindex="-1"></a><span class="fu">glimpse</span>(odjeli)</span>
+<span id="cb386-4"><a href="cijev.html#cb386-4" tabindex="-1"></a><span class="fu">head</span>(odjeli)</span></code></pre></div>
+<pre><code>## Rows: 28
+## Columns: 4
+## $ Odjel    &lt;chr&gt; &quot;A&quot;, &quot;A&quot;, &quot;A&quot;, &quot;A&quot;, &quot;A&quot;, &quot;A&quot;, &quot;A&quot;, &quot;B&quot;, &quot;B&quot;, &quot;B&quot;, &quot;B&quot;, &quot;B&quot;, &quot;…
+## $ Kvartal  &lt;chr&gt; &quot;Q1-2015&quot;, &quot;Q2-2015&quot;, &quot;Q3-2015&quot;, &quot;Q4-2015&quot;, &quot;Q1-2016&quot;, &quot;Q2-20…
+## $ PrihodKn &lt;dbl&gt; 12416.2, 224290.1, 10643.7, 191229.3, 258697.4, 121865.3, 183…
+## $ RashodKn &lt;dbl&gt; 23100.5, 63886.1, 35467.8, 12249.1, 61514.6, 46092.6, 16096.6…
+## # A tibble: 6 × 4
+##   Odjel Kvartal PrihodKn RashodKn
+##   &lt;chr&gt; &lt;chr&gt;      &lt;dbl&gt;    &lt;dbl&gt;
+## 1 A     Q1-2015   12416.   23100.
+## 2 A     Q2-2015  224290.   63886.
+## 3 A     Q3-2015   10644.   35468.
+## 4 A     Q4-2015  191229.   12249.
+## 5 A     Q1-2016  258697.   61515.
+## 6 A     Q2-2016  121865.   46093.</code></pre>
+</div>
+<hr />
+<p>Ova tablica prikazuje prihode i rashode odjela neke tvrtke po kvartalima. Kvartali su trenutno pohranjeni u složenu varijablu <code>Kvartal</code> koja se sastoji od identifikatora godišnjeg kvartala (Q1, Q2, Q3 ili Q4) i godine. Za potrebe analize vjerojatno bi bilo zgodno ovo rastaviti u dva stupca - <code>Kvartal</code> (koji bi pohranjivao samo identifikator kvartala) i <code>Godina</code>.</p>
+<p>Paket <code>tidyr</code> za ovakve potrebe nudi funkciju <code>separate</code> sa sljedećim potpisom:</p>
+<div class="sourceCode" id="cb388"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb388-1"><a href="cijev.html#cb388-1" tabindex="-1"></a><span class="fu">separate</span>(data, col, into, <span class="at">sep =</span> <span class="st">&quot;[^[:alnum:]]+&quot;</span>, <span class="at">remove =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb388-2"><a href="cijev.html#cb388-2" tabindex="-1"></a>  <span class="at">convert =</span> <span class="cn">FALSE</span>, <span class="at">extra =</span> <span class="st">&quot;warn&quot;</span>, <span class="at">fill =</span> <span class="st">&quot;warn&quot;</span>, ...)</span></code></pre></div>
+<p>Potpunu dokumentaciju funkcije možemo pogledati naredbom <code>?separate</code> a ovdje ćemo navesti objašnjenje nekih važnijih parametara:</p>
+<ul>
+<li><code>col</code> - stupac kojeg rastavljamo (ne moramo koristiti navodnike)</li>
+<li><code>into</code> - imena novih stupaca (preporučuje se koristiti znakovni vektor)</li>
+<li><code>sep</code> - separator vrijednosti u originalnom stupcu, <em>default</em>-na vrijednost je zapravo regularni izraz za “nešto što nije alfanumerički znak”</li>
+<li><code>remove</code> - opisuje da li je potrebno ukloniti originalni stupac ili ne</li>
+</ul>
+<p>Pokušajmo primijeniti ovu funkciju na tablicu <code>odjeli</code>. Ponovimo usput princip korištenja <em>pipeline</em> operatora.</p>
+<hr />
+<p><strong>Zadatak 9.15 - funkcija <code>separate</code></strong></p>
+<div class="sourceCode" id="cb389"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb389-1"><a href="cijev.html#cb389-1" tabindex="-1"></a><span class="co"># razdvojite stupac `Kvartal` u stupce `Kvartal` i `Godina` uz uklanjanje originalnog stupca</span></span>
+<span id="cb389-2"><a href="cijev.html#cb389-2" tabindex="-1"></a><span class="co"># rezultat pohranite u varijablu `odjeli2`</span></span>
+<span id="cb389-3"><a href="cijev.html#cb389-3" tabindex="-1"></a><span class="co"># sve učinite u sklopu jedne naredbe uz pomoć `%&gt;%` operatora</span></span>
+<span id="cb389-4"><a href="cijev.html#cb389-4" tabindex="-1"></a></span>
+<span id="cb389-5"><a href="cijev.html#cb389-5" tabindex="-1"></a></span>
+<span id="cb389-6"><a href="cijev.html#cb389-6" tabindex="-1"></a><span class="co"># proučite okvir `odjeli2`</span></span></code></pre></div>
+<div class="fold s o">
+<div class="sourceCode" id="cb390"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb390-1"><a href="cijev.html#cb390-1" tabindex="-1"></a>odjeli <span class="sc">%&gt;%</span> <span class="fu">separate</span>(Kvartal, <span class="fu">c</span>(<span class="st">&quot;Kvartal&quot;</span>, <span class="st">&quot;Godina&quot;</span>), <span class="st">&quot;-&quot;</span>) <span class="ot">-&gt;</span> odjeli2</span>
+<span id="cb390-2"><a href="cijev.html#cb390-2" tabindex="-1"></a></span>
+<span id="cb390-3"><a href="cijev.html#cb390-3" tabindex="-1"></a><span class="fu">glimpse</span>(odjeli2)</span>
+<span id="cb390-4"><a href="cijev.html#cb390-4" tabindex="-1"></a><span class="fu">head</span>(odjeli2)</span></code></pre></div>
+<pre><code>## Rows: 28
+## Columns: 5
+## $ Odjel    &lt;chr&gt; &quot;A&quot;, &quot;A&quot;, &quot;A&quot;, &quot;A&quot;, &quot;A&quot;, &quot;A&quot;, &quot;A&quot;, &quot;B&quot;, &quot;B&quot;, &quot;B&quot;, &quot;B&quot;, &quot;B&quot;, &quot;…
+## $ Kvartal  &lt;chr&gt; &quot;Q1&quot;, &quot;Q2&quot;, &quot;Q3&quot;, &quot;Q4&quot;, &quot;Q1&quot;, &quot;Q2&quot;, &quot;Q3&quot;, &quot;Q1&quot;, &quot;Q2&quot;, &quot;Q3&quot;, &quot;…
+## $ Godina   &lt;chr&gt; &quot;2015&quot;, &quot;2015&quot;, &quot;2015&quot;, &quot;2015&quot;, &quot;2016&quot;, &quot;2016&quot;, &quot;2016&quot;, &quot;2015…
+## $ PrihodKn &lt;dbl&gt; 12416.2, 224290.1, 10643.7, 191229.3, 258697.4, 121865.3, 183…
+## $ RashodKn &lt;dbl&gt; 23100.5, 63886.1, 35467.8, 12249.1, 61514.6, 46092.6, 16096.6…
+## # A tibble: 6 × 5
+##   Odjel Kvartal Godina PrihodKn RashodKn
+##   &lt;chr&gt; &lt;chr&gt;   &lt;chr&gt;     &lt;dbl&gt;    &lt;dbl&gt;
+## 1 A     Q1      2015     12416.   23100.
+## 2 A     Q2      2015    224290.   63886.
+## 3 A     Q3      2015     10644.   35468.
+## 4 A     Q4      2015    191229.   12249.
+## 5 A     Q1      2016    258697.   61515.
+## 6 A     Q2      2016    121865.   46093.</code></pre>
+</div>
+<hr />
+<p>Uočite da su stupci <code>Kvartal</code> i <code>Godina</code> zapravo kategorijske varijable i da bi ih bilo dobro faktorizirati. Faktoriziranje stupaca je nešto teže izvesti uz pomoć <em>pipeline</em> operatora (iako je izvedivo!) no u narednim poglavljima naučiti ćemo kako to puno lakše napraviti uz pomoć funkcija iz paketa <code>dplyr</code>.</p>
+<p>Funkcija <code>separate</code> se često koristi za rastavljanje datuma (npr. <code>2016-10-28</code> u godinu, mjesec i dan) no u takvim situacijama preporuka je koristiti paket <code>lubridate</code> koji je stvoren upravo za lakše upravljanje datumima. Ovaj paket upoznati ćemo u jednom od sljedećih poglavlja.</p>
+<hr />
+<p>Za kraj naučimo još funkciju <code>unite</code> koja se nešto rijeđe koristi a zapravo je inverz funkcije <code>separate</code>. Potpis funkcije <code>unite</code> je:</p>
+<div class="sourceCode" id="cb392"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb392-1"><a href="cijev.html#cb392-1" tabindex="-1"></a><span class="fu">unite</span>(data, col, ..., <span class="at">sep =</span> <span class="st">&quot;_&quot;</span>, <span class="at">remove =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
+<p>I u ovom slučaju dokumentaciju lako dohvaćamo sa <code>?unite</code>, a ovdje dajemo opis parametara koji potencijalno zahtijevaju dodatno objašnjenje:</p>
+<ul>
+<li><code>col</code> - ime novog stupca (nije nužno koristiti navodnike)</li>
+<li><code>...</code> - imena stupaca koje spajamo - ne moramo koristiti navodnike, a ukoliko ima puno stupaca možemo se koristiti sličnom sintaksom za odabir kao i kod funkcije <code>pivot_longer</code></li>
+</ul>
+<p>Isprobajmo naredbu na okviru <code>odjeli2</code>.</p>
+<hr />
+<p><strong>Zadatak 9.16 - funkcija <code>unite</code></strong></p>
+<div class="sourceCode" id="cb393"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb393-1"><a href="cijev.html#cb393-1" tabindex="-1"></a><span class="co"># spojite stupce `Kvartal` i `Godina` iz tablice `odjeli2` u jedinstven stupac `Kvartal`</span></span>
+<span id="cb393-2"><a href="cijev.html#cb393-2" tabindex="-1"></a><span class="co"># uklonite stupce `Kvartal` i `Godina`</span></span>
+<span id="cb393-3"><a href="cijev.html#cb393-3" tabindex="-1"></a><span class="co"># koristite `-` kao separator</span></span>
+<span id="cb393-4"><a href="cijev.html#cb393-4" tabindex="-1"></a><span class="co"># spremite rezultat u varijablu `odjeli3`</span></span>
+<span id="cb393-5"><a href="cijev.html#cb393-5" tabindex="-1"></a><span class="co"># sve ovo izvedite u sklopu jedne naredbe uz pomoć `%&gt;%` operatora</span></span>
+<span id="cb393-6"><a href="cijev.html#cb393-6" tabindex="-1"></a></span>
+<span id="cb393-7"><a href="cijev.html#cb393-7" tabindex="-1"></a></span>
+<span id="cb393-8"><a href="cijev.html#cb393-8" tabindex="-1"></a><span class="co"># proučite okvire `odjeli` i `odjeli3`</span></span></code></pre></div>
+<div class="fold s o">
+<div class="sourceCode" id="cb394"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb394-1"><a href="cijev.html#cb394-1" tabindex="-1"></a>odjeli2 <span class="sc">%&gt;%</span> <span class="fu">unite</span>(Kvartal, Kvartal, Godina, <span class="at">sep =</span> <span class="st">&quot;-&quot;</span>) <span class="ot">-&gt;</span> odjeli3</span>
+<span id="cb394-2"><a href="cijev.html#cb394-2" tabindex="-1"></a></span>
+<span id="cb394-3"><a href="cijev.html#cb394-3" tabindex="-1"></a><span class="fu">glimpse</span>(odjeli)</span>
+<span id="cb394-4"><a href="cijev.html#cb394-4" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">&quot;----------------</span><span class="sc">\n</span><span class="st">&quot;</span>)</span>
+<span id="cb394-5"><a href="cijev.html#cb394-5" tabindex="-1"></a><span class="fu">glimpse</span>(odjeli3)</span>
+<span id="cb394-6"><a href="cijev.html#cb394-6" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">&quot;----------------</span><span class="sc">\n</span><span class="st">&quot;</span>)</span>
+<span id="cb394-7"><a href="cijev.html#cb394-7" tabindex="-1"></a><span class="fu">head</span>(odjeli)</span>
+<span id="cb394-8"><a href="cijev.html#cb394-8" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">&quot;----------------</span><span class="sc">\n</span><span class="st">&quot;</span>)</span>
+<span id="cb394-9"><a href="cijev.html#cb394-9" tabindex="-1"></a><span class="fu">head</span>(odjeli3)</span></code></pre></div>
+<pre><code>## Rows: 28
+## Columns: 4
+## $ Odjel    &lt;chr&gt; &quot;A&quot;, &quot;A&quot;, &quot;A&quot;, &quot;A&quot;, &quot;A&quot;, &quot;A&quot;, &quot;A&quot;, &quot;B&quot;, &quot;B&quot;, &quot;B&quot;, &quot;B&quot;, &quot;B&quot;, &quot;…
+## $ Kvartal  &lt;chr&gt; &quot;Q1-2015&quot;, &quot;Q2-2015&quot;, &quot;Q3-2015&quot;, &quot;Q4-2015&quot;, &quot;Q1-2016&quot;, &quot;Q2-20…
+## $ PrihodKn &lt;dbl&gt; 12416.2, 224290.1, 10643.7, 191229.3, 258697.4, 121865.3, 183…
+## $ RashodKn &lt;dbl&gt; 23100.5, 63886.1, 35467.8, 12249.1, 61514.6, 46092.6, 16096.6…
+## ----------------
+## Rows: 28
+## Columns: 4
+## $ Odjel    &lt;chr&gt; &quot;A&quot;, &quot;A&quot;, &quot;A&quot;, &quot;A&quot;, &quot;A&quot;, &quot;A&quot;, &quot;A&quot;, &quot;B&quot;, &quot;B&quot;, &quot;B&quot;, &quot;B&quot;, &quot;B&quot;, &quot;…
+## $ Kvartal  &lt;chr&gt; &quot;Q1-2015&quot;, &quot;Q2-2015&quot;, &quot;Q3-2015&quot;, &quot;Q4-2015&quot;, &quot;Q1-2016&quot;, &quot;Q2-20…
+## $ PrihodKn &lt;dbl&gt; 12416.2, 224290.1, 10643.7, 191229.3, 258697.4, 121865.3, 183…
+## $ RashodKn &lt;dbl&gt; 23100.5, 63886.1, 35467.8, 12249.1, 61514.6, 46092.6, 16096.6…
+## ----------------
+## # A tibble: 6 × 4
+##   Odjel Kvartal PrihodKn RashodKn
+##   &lt;chr&gt; &lt;chr&gt;      &lt;dbl&gt;    &lt;dbl&gt;
+## 1 A     Q1-2015   12416.   23100.
+## 2 A     Q2-2015  224290.   63886.
+## 3 A     Q3-2015   10644.   35468.
+## 4 A     Q4-2015  191229.   12249.
+## 5 A     Q1-2016  258697.   61515.
+## 6 A     Q2-2016  121865.   46093.
+## ----------------
+## # A tibble: 6 × 4
+##   Odjel Kvartal PrihodKn RashodKn
+##   &lt;chr&gt; &lt;chr&gt;      &lt;dbl&gt;    &lt;dbl&gt;
+## 1 A     Q1-2015   12416.   23100.
+## 2 A     Q2-2015  224290.   63886.
+## 3 A     Q3-2015   10644.   35468.
+## 4 A     Q4-2015  191229.   12249.
+## 5 A     Q1-2016  258697.   61515.
+## 6 A     Q2-2016  121865.   46093.</code></pre>
+</div>
+<hr />
+</div>
+</div>
+<div id="zadaci-za-vježbu-7" class="section level2 unnumbered hasAnchor">
+<h2>Zadaci za vježbu<a href="cijev.html#zadaci-za-vježbu-7" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ol style="list-style-type: decimal">
+<li>Inicijalizirajte generator slučajnih brojeva uz pomoć naredbe <code>set.seed(1234)</code>. Potom uz pomoć jedne naredbe i <code>%&gt;%</code> operatora izvedite sljedeće:</li>
+</ol>
+<ul>
+<li>stvorite 100000 nasumičnih brojeva izvučenih iz normalne razdiobe za aritmetičkom sredinom 10000 i standardnom devijacijom 1000</li>
+<li>zaokružite brojeve na prvi veći cijeli broj</li>
+<li>izbacite duplikate iz skupa</li>
+<li>poredajte skup po veličini</li>
+<li>slučajnim odabirom iz skupa izvucite 100 elemenata</li>
+<li>organizirajte tih 100 elemenata u matricu 10 x 10, složenu po retcima</li>
+<li>izračunajte sume redaka matrice</li>
+<li>ispišite prosjek suma redaka na zaslon.</li>
+</ul>
+<ol start="2" style="list-style-type: decimal">
+<li>U datoteci <code>weather.csv</code> nalaze se podaci o izmjerenim vremenskim uvjetima od strane meteorološke stanice koja svaki sat vremena mjeri temperaturu, tlak, vlažnost i brzinu vjetra (podaci su preuzeti i prilagođeni iz podatkovnog skupa paketa <code>weatherData</code> dostupnog na CRAN-u). Izvedite sljedeće:</li>
+</ol>
+<ul>
+<li>učitajte datoteku u podatkovni okvir i proučite učitane podatke (<code>names</code>, <code>str</code>, <code>summary</code>, <code>head</code>…)</li>
+<li>odgovorite: da li se radi o urednim podacima? Zašto?</li>
+<li>poduzmite odgovarajuće korake kako bi dobili podatkovni okvir koji odgovara principu urednih podataka</li>
+<li>spremite “uređeni” u okvir u datoteku <code>weatherClean.csv</code></li>
+</ul>
+<hr />
+<p><a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Programirajmo u R-u</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://www.fer.unizg.hr/en/damir.pintar" property="cc:attributionName" rel="cc:attributionURL">Damir Pintar</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.<br />Based on a work at <a xmlns:dct="http://purl.org/dc/terms/" href="https://ratnip.github.io/FER_OPJR/" rel="dct:source">https://ratnip.github.io/FER_OPJR/</a></p>
+
+</div>
+</div>
+<h3>References</h3>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-R-magrittr" class="csl-entry">
+Bache, Stefan Milton, and Hadley Wickham. 2014. <em>Magrittr: A Forward-Pipe Operator for r</em>. <a href="https://CRAN.R-project.org/package=magrittr">https://CRAN.R-project.org/package=magrittr</a>.
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="objekti.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="datumi.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "google", "twitter", "weibo", "instapaper"],
+"google": false,
+"instapper": false
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "section",
+"scroll_highlight": true
+},
+"toolbar": {
+"position": "fixed",
+"edit": null,
+"download": null,
+"search": true
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
