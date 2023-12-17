@@ -94,4 +94,6 @@ stvaranje-novih-stupaca-uz-mutate
 ogledni-podatkovni-skup-houston-flights
 grupiranje-i-agregacija-uz-group_by-i-summarise
 spajanje-podatkovnih-okvira-uz-join-funkcije
-integracija-sa-relacijskim-bazama-podataka
+integracija-sa-vanjskim-izvorima-podataka
+excel-datoteka-kao-izvor-odredište-podataka
+rad-sa-relacijskim-bazama
