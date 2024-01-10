@@ -23,7 +23,7 @@
 <meta name="author" content="Damir Pintar" />
 
 
-<meta name="date" content="2023-12-17" />
+<meta name="date" content="2024-01-10" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -31,7 +31,7 @@
   
   
 <link rel="prev" href="nizovi.html"/>
-
+<link rel="next" href="ggplot2.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -390,6 +390,22 @@ div.csl-indent {
 </ul></li>
 <li class="chapter" data-level="" data-path="prilagodba-podatkovnih-skupova-uz-paket-dplyr.html"><a href="prilagodba-podatkovnih-skupova-uz-paket-dplyr.html#zadaci-za-vježbu-10"><i class="fa fa-check"></i>Zadaci za vježbu</a></li>
 </ul></li>
+<li class="chapter" data-level="13" data-path="ggplot2.html"><a href="ggplot2.html"><i class="fa fa-check"></i><b>13</b> Vizualizacija podataka uz paket <code>ggplot2</code></a>
+<ul>
+<li class="chapter" data-level="13.1" data-path="ggplot2.html"><a href="ggplot2.html#eksploratorna-analiza-podataka"><i class="fa fa-check"></i><b>13.1</b> Eksploratorna analiza podataka</a></li>
+<li class="chapter" data-level="13.2" data-path="ggplot2.html"><a href="ggplot2.html#vizualizacija-podataka-uz-pomoć-jezika-r"><i class="fa fa-check"></i><b>13.2</b> Vizualizacija podataka uz pomoć jezika R</a></li>
+<li class="chapter" data-level="13.3" data-path="ggplot2.html"><a href="ggplot2.html#grafička-gramatika-i-paket-ggplot2"><i class="fa fa-check"></i><b>13.3</b> Grafička gramatika i paket <code>ggplot2</code></a>
+<ul>
+<li class="chapter" data-level="13.3.1" data-path="ggplot2.html"><a href="ggplot2.html#aspekti-podataka-estetike-i-geometrije"><i class="fa fa-check"></i><b>13.3.1</b> Aspekti podataka, estetike i geometrije</a></li>
+<li class="chapter" data-level="13.3.2" data-path="ggplot2.html"><a href="ggplot2.html#fiksni-parametri-geometrije"><i class="fa fa-check"></i><b>13.3.2</b> Fiksni parametri geometrije</a></li>
+<li class="chapter" data-level="13.3.3" data-path="ggplot2.html"><a href="ggplot2.html#aspekti-statistike-i-pozicije"><i class="fa fa-check"></i><b>13.3.3</b> Aspekti statistike i pozicije</a></li>
+<li class="chapter" data-level="13.3.4" data-path="ggplot2.html"><a href="ggplot2.html#povezanost-geometrije-i-statistike"><i class="fa fa-check"></i><b>13.3.4</b> Povezanost geometrije i statistike</a></li>
+<li class="chapter" data-level="13.3.5" data-path="ggplot2.html"><a href="ggplot2.html#aspekti-skale-koordinatnog-sustava-i-teme"><i class="fa fa-check"></i><b>13.3.5</b> Aspekti skale, koordinatnog sustava i teme</a></li>
+<li class="chapter" data-level="13.3.6" data-path="ggplot2.html"><a href="ggplot2.html#uvjetni-facetirani-grafovi"><i class="fa fa-check"></i><b>13.3.6</b> Uvjetni (facetirani) grafovi</a></li>
+</ul></li>
+<li class="chapter" data-level="13.4" data-path="ggplot2.html"><a href="ggplot2.html#grafovi-u-eksploratornoj-analizi-i-izvještavanju"><i class="fa fa-check"></i><b>13.4</b> Grafovi u eksploratornoj analizi i izvještavanju</a></li>
+<li class="chapter" data-level="" data-path="ggplot2.html"><a href="ggplot2.html#zadaci-za-vježbu-11"><i class="fa fa-check"></i>Zadaci za vježbu</a></li>
+</ul></li>
 </ul>
 
       </nav>
@@ -448,7 +464,7 @@ div.csl-indent {
 <span id="cb464-3"><a href="prilagodba-podatkovnih-skupova-uz-paket-dplyr.html#cb464-3" tabindex="-1"></a><span class="fu">glimpse</span>(titanic)</span>
 <span id="cb464-4"><a href="prilagodba-podatkovnih-skupova-uz-paket-dplyr.html#cb464-4" tabindex="-1"></a><span class="fu">head</span>(titanic)</span></code></pre></div>
 <pre><code>## Rows: 891 Columns: 12
-## ── Column specification ────────────────
+## ── Column specification ───────────────────────────────────────────
 ## Delimiter: &quot;,&quot;
 ## chr (5): Name, Sex, Ticket, Cabin, Embarked
 ## dbl (7): PassengerId, Survived, Pclass, Age, SibSp, Parch, Fare
@@ -1228,9 +1244,8 @@ div.csl-indent {
 <span id="cb530-10"><a href="prilagodba-podatkovnih-skupova-uz-paket-dplyr.html#cb530-10" tabindex="-1"></a><span class="fu">summarise</span>(<span class="at">MeanArrDelay =</span> <span class="fu">round</span>(<span class="fu">mean</span>(ArrDelay, </span>
 <span id="cb530-11"><a href="prilagodba-podatkovnih-skupova-uz-paket-dplyr.html#cb530-11" tabindex="-1"></a>         <span class="at">na.rm =</span> T) , <span class="dv">2</span>)) <span class="sc">%&gt;%</span></span>
 <span id="cb530-12"><a href="prilagodba-podatkovnih-skupova-uz-paket-dplyr.html#cb530-12" tabindex="-1"></a>         <span class="fu">ungroup</span>() <span class="sc">%&gt;%</span> <span class="fu">arrange</span>(<span class="fu">desc</span>(MeanArrDelay))</span></code></pre></div>
-<pre><code>## `summarise()` has grouped output by
-## &#39;DayOfWeek&#39;. You can override using the
-## `.groups` argument.</code></pre>
+<pre><code>## `summarise()` has grouped output by &#39;DayOfWeek&#39;. You can override
+## using the `.groups` argument.</code></pre>
 <pre><code>## # A tibble: 21 × 3
 ##    DayOfWeek Dest  MeanArrDelay
 ##        &lt;int&gt; &lt;chr&gt;        &lt;dbl&gt;
@@ -1538,11 +1553,6 @@ div.csl-indent {
 <hr />
 <p><a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Programirajmo u R-u</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://www.fer.unizg.hr/en/damir.pintar" property="cc:attributionName" rel="cc:attributionURL">Damir Pintar</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.<br />Based on a work at <a xmlns:dct="http://purl.org/dc/terms/" href="https://ratnip.github.io/FER_OPJR/" rel="dct:source">https://ratnip.github.io/FER_OPJR/</a></p>
 
-<div id="refs" class="references csl-bib-body hanging-indent">
-<div class="csl-entry">
-Bache, Stefan Milton, and Hadley Wickham. 2014. <em>Magrittr: A Forward-Pipe Operator for r</em>. <a href="https://CRAN.R-project.org/package=magrittr">https://CRAN.R-project.org/package=magrittr</a>.
-</div>
-</div>
 </div>
 </div>
             </section>
@@ -1550,8 +1560,8 @@ Bache, Stefan Milton, and Hadley Wickham. 2014. <em>Magrittr: A Forward-Pipe Ope
           </div>
         </div>
       </div>
-<a href="nizovi.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-
+<a href="nizovi.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="ggplot2.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
