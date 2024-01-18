@@ -6,6 +6,7 @@ fig:unnamed-chunk-10
 fig:unnamed-chunk-11
 fig:unnamed-chunk-12
 fig:unnamed-chunk-494
+fig:unnamed-chunk-503
 uvod
 što-je-programski-jezik-r
 općenito-o-r-u
@@ -112,3 +113,10 @@ spremanje-slike-u-datoteku
 aspekti-skale-koordinatnog-sustava-i-teme
 uvjetni-facetirani-grafovi
 grafovi-u-eksploratornoj-analizi-i-izvještavanju
+razdiobe
+rad-sa-razdiobama-vjerojatnosti-u-jeziku-r
+binomna-razdioba
+normalna-razdioba
+generiranje-nasumičnih-opservacija
+procjenu-funkcije-gustoće-razdiobe-i-kvantil-kvantil-graf
+monte-carlo-simulacije
