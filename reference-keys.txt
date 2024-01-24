@@ -120,3 +120,14 @@ normalna-razdioba
 generiranje-nasumičnih-opservacija
 procjenu-funkcije-gustoće-razdiobe-i-kvantil-kvantil-graf
 monte-carlo-simulacije
+regresija
+strojno-učenje
+jednostavna-linearna-regresija
+funkcija-lm
+linearna-regresija-i-kategorijske-varijable
+višestruka-multipla-linearna-regresija
+prediktivno_modeliranje
+što-je-prediktivno-modeliranje
+podaci-za-treniranje-i-testiranje-modela
+klasifikacijski-prediktivni-modeli---knn-klasifikacija
+paket-caret-i-prediktivno-modeliranje
