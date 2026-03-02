@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>3 Vektori, matrice i liste | Programirajmo u R-u</title>
   <meta name="description" content="Udžbenik za predmet ‘Osnove statističkog programiranja’ na Fakultetu elektrotehnike i računarstva, Sveučilište u Zagrebu." />
-  <meta name="generator" content="bookdown 0.35 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.42 and GitBook 2.6.7" />
 
   <meta property="og:title" content="3 Vektori, matrice i liste | Programirajmo u R-u" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="Damir Pintar" />
 
 
-<meta name="date" content="2024-01-24" />
+<meta name="date" content="2026-03-02" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -122,7 +122,7 @@ pre.plot {
 
 <style type="text/css">
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -132,7 +132,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -194,6 +194,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
+  margin-bottom: 0em;
 }
 .hanging div.csl-entry {
   margin-left:2em;
@@ -278,18 +279,17 @@ div.csl-indent {
 <ul>
 <li class="chapter" data-level="3.3.1" data-path="vektori.html"><a href="vektori.html#rezanje-matrica"><i class="fa fa-check"></i><b>3.3.1</b> Rezanje matrica</a></li>
 </ul></li>
-<li class="chapter" data-level="3.4" data-path="vektori.html"><a href="vektori.html#liste"><i class="fa fa-check"></i><b>3.4</b> Liste</a></li>
 <li class="chapter" data-level="" data-path="vektori.html"><a href="vektori.html#zadaci-za-vježbu-1"><i class="fa fa-check"></i>Zadaci za vježbu</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="okviri.html"><a href="okviri.html"><i class="fa fa-check"></i><b>4</b> Podatkovni okviri i faktori</a>
+<li class="chapter" data-level="4" data-path="okviri.html"><a href="okviri.html"><i class="fa fa-check"></i><b>4</b> Liste, podatkovni okviri i faktori</a>
 <ul>
-<li class="chapter" data-level="4.1" data-path="okviri.html"><a href="okviri.html#podatkovni-okviri"><i class="fa fa-check"></i><b>4.1</b> Podatkovni okviri</a></li>
-<li class="chapter" data-level="4.2" data-path="okviri.html"><a href="okviri.html#odabir-redaka-i-stupaca-podatkovnih-okvira"><i class="fa fa-check"></i><b>4.2</b> Odabir redaka i stupaca podatkovnih okvira</a></li>
-<li class="chapter" data-level="4.3" data-path="okviri.html"><a href="okviri.html#dodavanje-i-brisanje-redaka-i-stupaca"><i class="fa fa-check"></i><b>4.3</b> Dodavanje i brisanje redaka i stupaca</a></li>
-<li class="chapter" data-level="4.4" data-path="okviri.html"><a href="okviri.html#faktori"><i class="fa fa-check"></i><b>4.4</b> Faktori</a>
+<li class="chapter" data-level="4.1" data-path="okviri.html"><a href="okviri.html#liste"><i class="fa fa-check"></i><b>4.1</b> Liste</a></li>
+<li class="chapter" data-level="4.2" data-path="okviri.html"><a href="okviri.html#podatkovni-okviri"><i class="fa fa-check"></i><b>4.2</b> Podatkovni okviri</a>
 <ul>
-<li class="chapter" data-level="4.4.1" data-path="okviri.html"><a href="okviri.html#primjer-4.1---problem-automatske-kategorizacije"><i class="fa fa-check"></i><b>4.4.1</b> Primjer 4.1 - problem automatske kategorizacije</a></li>
+<li class="chapter" data-level="4.2.1" data-path="okviri.html"><a href="okviri.html#odabir-redaka-i-stupaca-podatkovnih-okvira"><i class="fa fa-check"></i><b>4.2.1</b> Odabir redaka i stupaca podatkovnih okvira</a></li>
+<li class="chapter" data-level="4.2.2" data-path="okviri.html"><a href="okviri.html#dodavanje-i-brisanje-redaka-i-stupaca"><i class="fa fa-check"></i><b>4.2.2</b> Dodavanje i brisanje redaka i stupaca</a></li>
 </ul></li>
+<li class="chapter" data-level="4.3" data-path="okviri.html"><a href="okviri.html#faktori"><i class="fa fa-check"></i><b>4.3</b> Faktori</a></li>
 <li class="chapter" data-level="" data-path="okviri.html"><a href="okviri.html#zadaci-za-vježbu-2"><i class="fa fa-check"></i>Zadaci za vježbu</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="uvjet.html"><a href="uvjet.html"><i class="fa fa-check"></i><b>5</b> Uvjetne naredbe i petlje</a>
@@ -304,137 +304,115 @@ div.csl-indent {
 </ul></li>
 <li class="chapter" data-level="" data-path="uvjet.html"><a href="uvjet.html#zadaci-za-vježbu-3"><i class="fa fa-check"></i>Zadaci za vježbu</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="paketi.html"><a href="paketi.html"><i class="fa fa-check"></i><b>6</b> Paketi, ugrađene funkcije i okoline</a>
+<li class="chapter" data-level="6" data-path="paketi.html"><a href="paketi.html"><i class="fa fa-check"></i><b>6</b> Paketi i funkcije</a>
 <ul>
 <li class="chapter" data-level="6.1" data-path="paketi.html"><a href="paketi.html#rad-s-paketima"><i class="fa fa-check"></i><b>6.1</b> Rad s paketima</a></li>
 <li class="chapter" data-level="6.2" data-path="paketi.html"><a href="paketi.html#ugrađene-funkcije"><i class="fa fa-check"></i><b>6.2</b> Ugrađene funkcije</a></li>
-<li class="chapter" data-level="6.3" data-path="paketi.html"><a href="paketi.html#okoline"><i class="fa fa-check"></i><b>6.3</b> Okoline</a></li>
+<li class="chapter" data-level="6.3" data-path="paketi.html"><a href="paketi.html#kako-definirati-funkciju"><i class="fa fa-check"></i><b>6.3</b> Kako definirati funkciju</a></li>
+<li class="chapter" data-level="6.4" data-path="paketi.html"><a href="paketi.html#što-su-apply-funkcije"><i class="fa fa-check"></i><b>6.4</b> Što su <code>apply</code> funkcije?</a>
+<ul>
+<li class="chapter" data-level="6.4.1" data-path="paketi.html"><a href="paketi.html#funkcija-apply"><i class="fa fa-check"></i><b>6.4.1</b> Funkcija <code>apply</code></a></li>
+<li class="chapter" data-level="6.4.2" data-path="paketi.html"><a href="paketi.html#funkcije-lapply-i-sapply"><i class="fa fa-check"></i><b>6.4.2</b> Funkcije <code>lapply</code> i <code>sapply</code></a></li>
+<li class="chapter" data-level="6.4.3" data-path="paketi.html"><a href="paketi.html#ostale-funkcije-iz-porodice-apply-i-dostupne-alternative"><i class="fa fa-check"></i><b>6.4.3</b> Ostale funkcije iz porodice <code>apply</code> i dostupne alternative</a></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="paketi.html"><a href="paketi.html#zadaci-za-vježbu-4"><i class="fa fa-check"></i>Zadaci za vježbu</a></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="korisnik.html"><a href="korisnik.html"><i class="fa fa-check"></i><b>7</b> Korisnički definirane funkcije</a>
-<ul>
-<li class="chapter" data-level="7.1" data-path="korisnik.html"><a href="korisnik.html#kako-definirati-funkciju"><i class="fa fa-check"></i><b>7.1</b> Kako definirati funkciju</a>
-<ul>
-<li class="chapter" data-level="7.1.1" data-path="korisnik.html"><a href="korisnik.html#princip-kopiranja-kod-izmjene-copy-on-modify"><i class="fa fa-check"></i><b>7.1.1</b> Princip “kopiranja kod izmjene” (copy-on-modify)</a></li>
-<li class="chapter" data-level="7.1.2" data-path="korisnik.html"><a href="korisnik.html#funkcija-kao-objekt"><i class="fa fa-check"></i><b>7.1.2</b> Funkcija kao objekt</a></li>
-</ul></li>
-<li class="chapter" data-level="7.2" data-path="korisnik.html"><a href="korisnik.html#generičke-funkcije"><i class="fa fa-check"></i><b>7.2</b> Generičke funkcije</a></li>
-<li class="chapter" data-level="7.3" data-path="korisnik.html"><a href="korisnik.html#što-su-apply-funkcije"><i class="fa fa-check"></i><b>7.3</b> Što su <code>apply</code> funkcije?</a>
-<ul>
-<li class="chapter" data-level="7.3.1" data-path="korisnik.html"><a href="korisnik.html#funkcija-apply"><i class="fa fa-check"></i><b>7.3.1</b> Funkcija <code>apply</code></a></li>
-<li class="chapter" data-level="7.3.2" data-path="korisnik.html"><a href="korisnik.html#funkcije-lapply-sapply-i-vapply"><i class="fa fa-check"></i><b>7.3.2</b> Funkcije <code>lapply</code>, <code>sapply</code> i <code>vapply</code></a></li>
-<li class="chapter" data-level="7.3.3" data-path="korisnik.html"><a href="korisnik.html#ostale-funkcije-iz-porodice-apply-i-dostupne-alternative"><i class="fa fa-check"></i><b>7.3.3</b> Ostale funkcije iz porodice <code>apply</code> i dostupne alternative</a></li>
-</ul></li>
-<li class="chapter" data-level="" data-path="korisnik.html"><a href="korisnik.html#zadaci-za-vježbu-5"><i class="fa fa-check"></i>Zadaci za vježbu</a></li>
-</ul></li>
-<li class="chapter" data-level="8" data-path="objekti.html"><a href="objekti.html"><i class="fa fa-check"></i><b>8</b> Objektni modeli</a>
-<ul>
-<li class="chapter" data-level="8.1" data-path="objekti.html"><a href="objekti.html#objektni-modeli-u-jeziku-r"><i class="fa fa-check"></i><b>8.1</b> Objektni modeli u jeziku R</a></li>
-<li class="chapter" data-level="8.2" data-path="objekti.html"><a href="objekti.html#pomoćni-paket-sloop"><i class="fa fa-check"></i><b>8.2</b> Pomoćni paket <code>sloop</code></a></li>
-<li class="chapter" data-level="8.3" data-path="objekti.html"><a href="objekti.html#pregled-objektnog-modela-s3"><i class="fa fa-check"></i><b>8.3</b> Pregled objektnog modela S3</a>
-<ul>
-<li class="chapter" data-level="8.3.1" data-path="objekti.html"><a href="objekti.html#konstruktorska-funkcija"><i class="fa fa-check"></i><b>8.3.1</b> Konstruktorska funkcija</a></li>
-<li class="chapter" data-level="8.3.2" data-path="objekti.html"><a href="objekti.html#generičke-funkcije-1"><i class="fa fa-check"></i><b>8.3.2</b> Generičke funkcije</a></li>
-</ul></li>
-<li class="chapter" data-level="8.4" data-path="objekti.html"><a href="objekti.html#implementacija-generičke-funkcije"><i class="fa fa-check"></i><b>8.4</b> Implementacija generičke funkcije</a>
-<ul>
-<li class="chapter" data-level="8.4.1" data-path="objekti.html"><a href="objekti.html#funkcija-methods"><i class="fa fa-check"></i><b>8.4.1</b> Funkcija <code>methods</code></a></li>
-<li class="chapter" data-level="8.4.2" data-path="objekti.html"><a href="objekti.html#zaključci-o-s3-objektima"><i class="fa fa-check"></i><b>8.4.2</b> Zaključci o S3 objektima</a></li>
-</ul></li>
-<li class="chapter" data-level="8.5" data-path="objekti.html"><a href="objekti.html#kratki-pregled-s4-objekata"><i class="fa fa-check"></i><b>8.5</b> Kratki pregled S4 objekata</a></li>
-<li class="chapter" data-level="" data-path="objekti.html"><a href="objekti.html#zadaci-za-vježbu-6"><i class="fa fa-check"></i>Zadaci za vježbu</a></li>
-</ul></li>
 <li class="part"><span><b>II Upravljanje podacima i vizualizacije</b></span></li>
-<li class="chapter" data-level="9" data-path="cijev.html"><a href="cijev.html"><i class="fa fa-check"></i><b>9</b> Koncept urednih podataka</a>
+<li class="chapter" data-level="7" data-path="cijev.html"><a href="cijev.html"><i class="fa fa-check"></i><b>7</b> Koncept urednih podataka</a>
 <ul>
-<li class="chapter" data-level="9.1" data-path="cijev.html"><a href="cijev.html#operator-cjevovoda"><i class="fa fa-check"></i><b>9.1</b> Operator cjevovoda</a></li>
-<li class="chapter" data-level="9.2" data-path="cijev.html"><a href="cijev.html#uredni-podaci"><i class="fa fa-check"></i><b>9.2</b> Uredni podaci</a>
+<li class="chapter" data-level="7.1" data-path="cijev.html"><a href="cijev.html#operator-cjevovoda"><i class="fa fa-check"></i><b>7.1</b> Operator cjevovoda</a></li>
+<li class="chapter" data-level="7.2" data-path="cijev.html"><a href="cijev.html#uredni-podaci"><i class="fa fa-check"></i><b>7.2</b> Uredni podaci</a>
 <ul>
-<li class="chapter" data-level="9.2.1" data-path="cijev.html"><a href="cijev.html#funkcije-pivot_longer-i-pivot_wider"><i class="fa fa-check"></i><b>9.2.1</b> Funkcije <code>pivot_longer</code> i <code>pivot_wider</code></a></li>
-<li class="chapter" data-level="9.2.2" data-path="cijev.html"><a href="cijev.html#funkcije-separate-i-unite"><i class="fa fa-check"></i><b>9.2.2</b> Funkcije <code>separate</code> i <code>unite</code></a></li>
+<li class="chapter" data-level="7.2.1" data-path="cijev.html"><a href="cijev.html#funkcije-pivot_longer-i-pivot_wider"><i class="fa fa-check"></i><b>7.2.1</b> Funkcije <code>pivot_longer</code> i <code>pivot_wider</code></a></li>
+<li class="chapter" data-level="7.2.2" data-path="cijev.html"><a href="cijev.html#funkcije-separate-i-unite"><i class="fa fa-check"></i><b>7.2.2</b> Funkcije <code>separate</code> i <code>unite</code></a></li>
+<li class="chapter" data-level="7.2.3" data-path="cijev.html"><a href="cijev.html#funkcije-drop_na-i-replace_na"><i class="fa fa-check"></i><b>7.2.3</b> Funkcije <code>drop_NA</code> i <code>replace_NA</code></a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="cijev.html"><a href="cijev.html#zadaci-za-vježbu-7"><i class="fa fa-check"></i>Zadaci za vježbu</a></li>
+<li class="chapter" data-level="" data-path="cijev.html"><a href="cijev.html#zadaci-za-vježbu-5"><i class="fa fa-check"></i>Zadaci za vježbu</a></li>
 </ul></li>
-<li class="chapter" data-level="10" data-path="datumi.html"><a href="datumi.html"><i class="fa fa-check"></i><b>10</b> Rad sa vremenskim podacima</a>
+<li class="chapter" data-level="8" data-path="datumi.html"><a href="datumi.html"><i class="fa fa-check"></i><b>8</b> Rad sa vremenskim podacima</a>
 <ul>
-<li class="chapter" data-level="10.1" data-path="datumi.html"><a href="datumi.html#rad-sa-datumima"><i class="fa fa-check"></i><b>10.1</b> Rad sa datumima</a>
+<li class="chapter" data-level="8.1" data-path="datumi.html"><a href="datumi.html#rad-sa-datumima"><i class="fa fa-check"></i><b>8.1</b> Rad sa datumima</a>
 <ul>
-<li class="chapter" data-level="10.1.1" data-path="datumi.html"><a href="datumi.html#klasa-date"><i class="fa fa-check"></i><b>10.1.1</b> Klasa <code>Date</code></a></li>
+<li class="chapter" data-level="8.1.1" data-path="datumi.html"><a href="datumi.html#klasa-date"><i class="fa fa-check"></i><b>8.1.1</b> Klasa <code>Date</code></a></li>
 </ul></li>
-<li class="chapter" data-level="10.2" data-path="datumi.html"><a href="datumi.html#klase-posixct-i-posixlt"><i class="fa fa-check"></i><b>10.2</b> Klase <code>POSIXct</code> i <code>POSIXlt</code></a></li>
-<li class="chapter" data-level="10.3" data-path="datumi.html"><a href="datumi.html#paket-lubridate"><i class="fa fa-check"></i><b>10.3</b> Paket <code>lubridate</code></a></li>
-<li class="chapter" data-level="" data-path="datumi.html"><a href="datumi.html#zadaci-za-vježbu-8"><i class="fa fa-check"></i>Zadaci za vježbu</a></li>
+<li class="chapter" data-level="8.2" data-path="datumi.html"><a href="datumi.html#klase-posixct-i-posixlt"><i class="fa fa-check"></i><b>8.2</b> Klase <code>POSIXct</code> i <code>POSIXlt</code></a></li>
+<li class="chapter" data-level="8.3" data-path="datumi.html"><a href="datumi.html#paket-lubridate"><i class="fa fa-check"></i><b>8.3</b> Paket <code>lubridate</code></a></li>
+<li class="chapter" data-level="" data-path="datumi.html"><a href="datumi.html#zadaci-za-vježbu-6"><i class="fa fa-check"></i>Zadaci za vježbu</a></li>
 </ul></li>
-<li class="chapter" data-level="11" data-path="nizovi.html"><a href="nizovi.html"><i class="fa fa-check"></i><b>11</b> Obrada znakovnih nizova</a>
+<li class="chapter" data-level="9" data-path="nizovi.html"><a href="nizovi.html"><i class="fa fa-check"></i><b>9</b> Obrada znakovnih nizova</a>
 <ul>
-<li class="chapter" data-level="11.1" data-path="nizovi.html"><a href="nizovi.html#rad-sa-znakovnim-nizovima"><i class="fa fa-check"></i><b>11.1</b> Rad sa znakovnim nizovima</a>
+<li class="chapter" data-level="9.1" data-path="nizovi.html"><a href="nizovi.html#rad-sa-znakovnim-nizovima"><i class="fa fa-check"></i><b>9.1</b> Rad sa znakovnim nizovima</a>
 <ul>
-<li class="chapter" data-level="11.1.1" data-path="nizovi.html"><a href="nizovi.html#analiza-teksta-i-regularni-izrazi"><i class="fa fa-check"></i><b>11.1.1</b> Analiza teksta i regularni izrazi</a></li>
-<li class="chapter" data-level="11.1.2" data-path="nizovi.html"><a href="nizovi.html#paket-stringr"><i class="fa fa-check"></i><b>11.1.2</b> Paket <code>stringr</code></a></li>
+<li class="chapter" data-level="9.1.1" data-path="nizovi.html"><a href="nizovi.html#analiza-teksta-i-regularni-izrazi"><i class="fa fa-check"></i><b>9.1.1</b> Analiza teksta i regularni izrazi</a></li>
+<li class="chapter" data-level="9.1.2" data-path="nizovi.html"><a href="nizovi.html#paket-stringr"><i class="fa fa-check"></i><b>9.1.2</b> Paket <code>stringr</code></a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="nizovi.html"><a href="nizovi.html#zadaci-za-vježbu-9"><i class="fa fa-check"></i>Zadaci za vježbu</a></li>
+<li class="chapter" data-level="" data-path="nizovi.html"><a href="nizovi.html#zadaci-za-vježbu-7"><i class="fa fa-check"></i>Zadaci za vježbu</a></li>
 </ul></li>
-<li class="chapter" data-level="12" data-path="prilagodba-podatkovnih-skupova-uz-paket-dplyr.html"><a href="prilagodba-podatkovnih-skupova-uz-paket-dplyr.html"><i class="fa fa-check"></i><b>12</b> Prilagodba podatkovnih skupova uz paket <code>dplyr</code></a>
+<li class="chapter" data-level="10" data-path="prilagodba-podatkovnih-skupova-uz-paket-dplyr.html"><a href="prilagodba-podatkovnih-skupova-uz-paket-dplyr.html"><i class="fa fa-check"></i><b>10</b> Prilagodba podatkovnih skupova uz paket <code>dplyr</code></a>
 <ul>
-<li class="chapter" data-level="12.1" data-path="prilagodba-podatkovnih-skupova-uz-paket-dplyr.html"><a href="prilagodba-podatkovnih-skupova-uz-paket-dplyr.html#ogledni-podatkovni-skup-titanic"><i class="fa fa-check"></i><b>12.1</b> Ogledni podatkovni skup: <em>Titanic</em></a></li>
-<li class="chapter" data-level="12.2" data-path="prilagodba-podatkovnih-skupova-uz-paket-dplyr.html"><a href="prilagodba-podatkovnih-skupova-uz-paket-dplyr.html#stvaranje-podskupa-obzervacija-uz-filter-i-slice"><i class="fa fa-check"></i><b>12.2</b> Stvaranje podskupa obzervacija uz <code>filter</code> i <code>slice</code></a></li>
-<li class="chapter" data-level="12.3" data-path="prilagodba-podatkovnih-skupova-uz-paket-dplyr.html"><a href="prilagodba-podatkovnih-skupova-uz-paket-dplyr.html#stvaranje-podskupa-varijabli-uz-select"><i class="fa fa-check"></i><b>12.3</b> Stvaranje podskupa varijabli uz <code>select</code></a></li>
-<li class="chapter" data-level="12.4" data-path="prilagodba-podatkovnih-skupova-uz-paket-dplyr.html"><a href="prilagodba-podatkovnih-skupova-uz-paket-dplyr.html#stvaranje-novih-stupaca-uz-mutate"><i class="fa fa-check"></i><b>12.4</b> Stvaranje novih stupaca uz <code>mutate</code></a></li>
-<li class="chapter" data-level="12.5" data-path="prilagodba-podatkovnih-skupova-uz-paket-dplyr.html"><a href="prilagodba-podatkovnih-skupova-uz-paket-dplyr.html#ogledni-podatkovni-skup-houston-flights"><i class="fa fa-check"></i><b>12.5</b> Ogledni podatkovni skup: <em>Houston flights</em></a></li>
-<li class="chapter" data-level="12.6" data-path="prilagodba-podatkovnih-skupova-uz-paket-dplyr.html"><a href="prilagodba-podatkovnih-skupova-uz-paket-dplyr.html#grupiranje-i-agregacija-uz-group_by-i-summarise"><i class="fa fa-check"></i><b>12.6</b> Grupiranje i agregacija uz <code>group_by</code> i <code>summarise</code></a></li>
-<li class="chapter" data-level="12.7" data-path="prilagodba-podatkovnih-skupova-uz-paket-dplyr.html"><a href="prilagodba-podatkovnih-skupova-uz-paket-dplyr.html#spajanje-podatkovnih-okvira-uz-join-funkcije"><i class="fa fa-check"></i><b>12.7</b> Spajanje podatkovnih okvira uz join funkcije</a></li>
-<li class="chapter" data-level="12.8" data-path="prilagodba-podatkovnih-skupova-uz-paket-dplyr.html"><a href="prilagodba-podatkovnih-skupova-uz-paket-dplyr.html#integracija-sa-vanjskim-izvorima-podataka"><i class="fa fa-check"></i><b>12.8</b> Integracija sa vanjskim izvorima podataka</a>
+<li class="chapter" data-level="10.1" data-path="prilagodba-podatkovnih-skupova-uz-paket-dplyr.html"><a href="prilagodba-podatkovnih-skupova-uz-paket-dplyr.html#ogledni-podatkovni-skup-titanic"><i class="fa fa-check"></i><b>10.1</b> Ogledni podatkovni skup: <em>Titanic</em></a></li>
+<li class="chapter" data-level="10.2" data-path="prilagodba-podatkovnih-skupova-uz-paket-dplyr.html"><a href="prilagodba-podatkovnih-skupova-uz-paket-dplyr.html#stvaranje-podskupa-obzervacija-uz-filter-i-slice"><i class="fa fa-check"></i><b>10.2</b> Stvaranje podskupa obzervacija uz <code>filter</code> i <code>slice</code></a></li>
+<li class="chapter" data-level="10.3" data-path="prilagodba-podatkovnih-skupova-uz-paket-dplyr.html"><a href="prilagodba-podatkovnih-skupova-uz-paket-dplyr.html#stvaranje-podskupa-varijabli-uz-select"><i class="fa fa-check"></i><b>10.3</b> Stvaranje podskupa varijabli uz <code>select</code></a></li>
+<li class="chapter" data-level="10.4" data-path="prilagodba-podatkovnih-skupova-uz-paket-dplyr.html"><a href="prilagodba-podatkovnih-skupova-uz-paket-dplyr.html#stvaranje-novih-stupaca-uz-mutate"><i class="fa fa-check"></i><b>10.4</b> Stvaranje novih stupaca uz <code>mutate</code></a></li>
+<li class="chapter" data-level="10.5" data-path="prilagodba-podatkovnih-skupova-uz-paket-dplyr.html"><a href="prilagodba-podatkovnih-skupova-uz-paket-dplyr.html#ogledni-podatkovni-skup-houston-flights"><i class="fa fa-check"></i><b>10.5</b> Ogledni podatkovni skup: <em>Houston flights</em></a></li>
+<li class="chapter" data-level="10.6" data-path="prilagodba-podatkovnih-skupova-uz-paket-dplyr.html"><a href="prilagodba-podatkovnih-skupova-uz-paket-dplyr.html#grupiranje-i-agregacija-uz-group_by-i-summarise"><i class="fa fa-check"></i><b>10.6</b> Grupiranje i agregacija uz <code>group_by</code> i <code>summarise</code></a></li>
+<li class="chapter" data-level="10.7" data-path="prilagodba-podatkovnih-skupova-uz-paket-dplyr.html"><a href="prilagodba-podatkovnih-skupova-uz-paket-dplyr.html#spajanje-podatkovnih-okvira-uz-join-funkcije"><i class="fa fa-check"></i><b>10.7</b> Spajanje podatkovnih okvira uz join funkcije</a></li>
+<li class="chapter" data-level="10.8" data-path="prilagodba-podatkovnih-skupova-uz-paket-dplyr.html"><a href="prilagodba-podatkovnih-skupova-uz-paket-dplyr.html#integracija-sa-vanjskim-izvorima-podataka"><i class="fa fa-check"></i><b>10.8</b> Integracija sa vanjskim izvorima podataka</a>
 <ul>
-<li class="chapter" data-level="12.8.1" data-path="prilagodba-podatkovnih-skupova-uz-paket-dplyr.html"><a href="prilagodba-podatkovnih-skupova-uz-paket-dplyr.html#excel-datoteka-kao-izvor-odredište-podataka"><i class="fa fa-check"></i><b>12.8.1</b> Excel datoteka kao izvor (odredište) podataka</a></li>
-<li class="chapter" data-level="12.8.2" data-path="prilagodba-podatkovnih-skupova-uz-paket-dplyr.html"><a href="prilagodba-podatkovnih-skupova-uz-paket-dplyr.html#rad-sa-relacijskim-bazama"><i class="fa fa-check"></i><b>12.8.2</b> Rad sa relacijskim bazama</a></li>
+<li class="chapter" data-level="10.8.1" data-path="prilagodba-podatkovnih-skupova-uz-paket-dplyr.html"><a href="prilagodba-podatkovnih-skupova-uz-paket-dplyr.html#excel-datoteka-kao-izvor-odredište-podataka"><i class="fa fa-check"></i><b>10.8.1</b> Excel datoteka kao izvor (odredište) podataka</a></li>
+<li class="chapter" data-level="10.8.2" data-path="prilagodba-podatkovnih-skupova-uz-paket-dplyr.html"><a href="prilagodba-podatkovnih-skupova-uz-paket-dplyr.html#rad-sa-relacijskim-bazama"><i class="fa fa-check"></i><b>10.8.2</b> Rad sa relacijskim bazama</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="prilagodba-podatkovnih-skupova-uz-paket-dplyr.html"><a href="prilagodba-podatkovnih-skupova-uz-paket-dplyr.html#zadaci-za-vježbu-10"><i class="fa fa-check"></i>Zadaci za vježbu</a></li>
+<li class="chapter" data-level="" data-path="prilagodba-podatkovnih-skupova-uz-paket-dplyr.html"><a href="prilagodba-podatkovnih-skupova-uz-paket-dplyr.html#zadaci-za-vježbu-8"><i class="fa fa-check"></i>Zadaci za vježbu</a></li>
 </ul></li>
-<li class="chapter" data-level="13" data-path="ggplot2.html"><a href="ggplot2.html"><i class="fa fa-check"></i><b>13</b> Vizualizacija podataka uz paket <code>ggplot2</code></a>
+<li class="chapter" data-level="11" data-path="ggplot2.html"><a href="ggplot2.html"><i class="fa fa-check"></i><b>11</b> Vizualizacija podataka uz paket <code>ggplot2</code></a>
 <ul>
-<li class="chapter" data-level="13.1" data-path="ggplot2.html"><a href="ggplot2.html#eksploratorna-analiza-podataka"><i class="fa fa-check"></i><b>13.1</b> Eksploratorna analiza podataka</a></li>
-<li class="chapter" data-level="13.2" data-path="ggplot2.html"><a href="ggplot2.html#vizualizacija-podataka-uz-pomoć-jezika-r"><i class="fa fa-check"></i><b>13.2</b> Vizualizacija podataka uz pomoć jezika R</a></li>
-<li class="chapter" data-level="13.3" data-path="ggplot2.html"><a href="ggplot2.html#grafička-gramatika-i-paket-ggplot2"><i class="fa fa-check"></i><b>13.3</b> Grafička gramatika i paket <code>ggplot2</code></a>
+<li class="chapter" data-level="11.1" data-path="ggplot2.html"><a href="ggplot2.html#eksploratorna-analiza-podataka"><i class="fa fa-check"></i><b>11.1</b> Eksploratorna analiza podataka</a></li>
+<li class="chapter" data-level="11.2" data-path="ggplot2.html"><a href="ggplot2.html#vizualizacija-podataka-uz-pomoć-jezika-r"><i class="fa fa-check"></i><b>11.2</b> Vizualizacija podataka uz pomoć jezika R</a></li>
+<li class="chapter" data-level="11.3" data-path="ggplot2.html"><a href="ggplot2.html#grafička-gramatika-i-paket-ggplot2"><i class="fa fa-check"></i><b>11.3</b> Grafička gramatika i paket <code>ggplot2</code></a>
 <ul>
-<li class="chapter" data-level="13.3.1" data-path="ggplot2.html"><a href="ggplot2.html#aspekti-podataka-estetike-i-geometrije"><i class="fa fa-check"></i><b>13.3.1</b> Aspekti podataka, estetike i geometrije</a></li>
-<li class="chapter" data-level="13.3.2" data-path="ggplot2.html"><a href="ggplot2.html#fiksni-parametri-geometrije"><i class="fa fa-check"></i><b>13.3.2</b> Fiksni parametri geometrije</a></li>
-<li class="chapter" data-level="13.3.3" data-path="ggplot2.html"><a href="ggplot2.html#aspekti-statistike-i-pozicije"><i class="fa fa-check"></i><b>13.3.3</b> Aspekti statistike i pozicije</a></li>
-<li class="chapter" data-level="13.3.4" data-path="ggplot2.html"><a href="ggplot2.html#povezanost-geometrije-i-statistike"><i class="fa fa-check"></i><b>13.3.4</b> Povezanost geometrije i statistike</a></li>
-<li class="chapter" data-level="13.3.5" data-path="ggplot2.html"><a href="ggplot2.html#aspekti-skale-koordinatnog-sustava-i-teme"><i class="fa fa-check"></i><b>13.3.5</b> Aspekti skale, koordinatnog sustava i teme</a></li>
-<li class="chapter" data-level="13.3.6" data-path="ggplot2.html"><a href="ggplot2.html#uvjetni-facetirani-grafovi"><i class="fa fa-check"></i><b>13.3.6</b> Uvjetni (facetirani) grafovi</a></li>
+<li class="chapter" data-level="11.3.1" data-path="ggplot2.html"><a href="ggplot2.html#aspekti-podataka-estetike-i-geometrije"><i class="fa fa-check"></i><b>11.3.1</b> Aspekti podataka, estetike i geometrije</a></li>
+<li class="chapter" data-level="11.3.2" data-path="ggplot2.html"><a href="ggplot2.html#fiksni-parametri-geometrije"><i class="fa fa-check"></i><b>11.3.2</b> Fiksni parametri geometrije</a></li>
+<li class="chapter" data-level="11.3.3" data-path="ggplot2.html"><a href="ggplot2.html#aspekti-statistike-i-pozicije"><i class="fa fa-check"></i><b>11.3.3</b> Aspekti statistike i pozicije</a></li>
+<li class="chapter" data-level="11.3.4" data-path="ggplot2.html"><a href="ggplot2.html#povezanost-geometrije-i-statistike"><i class="fa fa-check"></i><b>11.3.4</b> Povezanost geometrije i statistike</a></li>
+<li class="chapter" data-level="11.3.5" data-path="ggplot2.html"><a href="ggplot2.html#aspekti-skale-koordinatnog-sustava-i-teme"><i class="fa fa-check"></i><b>11.3.5</b> Aspekti skale, koordinatnog sustava i teme</a></li>
+<li class="chapter" data-level="11.3.6" data-path="ggplot2.html"><a href="ggplot2.html#uvjetni-facetirani-grafovi"><i class="fa fa-check"></i><b>11.3.6</b> Uvjetni (facetirani) grafovi</a></li>
 </ul></li>
-<li class="chapter" data-level="13.4" data-path="ggplot2.html"><a href="ggplot2.html#grafovi-u-eksploratornoj-analizi-i-izvještavanju"><i class="fa fa-check"></i><b>13.4</b> Grafovi u eksploratornoj analizi i izvještavanju</a></li>
-<li class="chapter" data-level="" data-path="ggplot2.html"><a href="ggplot2.html#zadaci-za-vježbu-11"><i class="fa fa-check"></i>Zadaci za vježbu</a></li>
+<li class="chapter" data-level="11.4" data-path="ggplot2.html"><a href="ggplot2.html#grafovi-u-eksploratornoj-analizi-i-izvještavanju"><i class="fa fa-check"></i><b>11.4</b> Grafovi u eksploratornoj analizi i izvještavanju</a></li>
+<li class="chapter" data-level="" data-path="ggplot2.html"><a href="ggplot2.html#zadaci-za-vježbu-9"><i class="fa fa-check"></i>Zadaci za vježbu</a></li>
 </ul></li>
 <li class="part"><span><b>III Statistika i strojno učenje u jeziku R</b></span></li>
-<li class="chapter" data-level="14" data-path="razdiobe.html"><a href="razdiobe.html"><i class="fa fa-check"></i><b>14</b> Razdiobe i simulacije</a>
+<li class="chapter" data-level="12" data-path="razdiobe.html"><a href="razdiobe.html"><i class="fa fa-check"></i><b>12</b> Razdiobe i simulacije</a>
 <ul>
-<li class="chapter" data-level="14.1" data-path="razdiobe.html"><a href="razdiobe.html#rad-sa-razdiobama-vjerojatnosti-u-jeziku-r"><i class="fa fa-check"></i><b>14.1</b> Rad sa razdiobama vjerojatnosti u jeziku R</a></li>
-<li class="chapter" data-level="14.2" data-path="razdiobe.html"><a href="razdiobe.html#binomna-razdioba"><i class="fa fa-check"></i><b>14.2</b> Binomna razdioba</a></li>
-<li class="chapter" data-level="14.3" data-path="razdiobe.html"><a href="razdiobe.html#normalna-razdioba"><i class="fa fa-check"></i><b>14.3</b> Normalna razdioba</a></li>
-<li class="chapter" data-level="14.4" data-path="razdiobe.html"><a href="razdiobe.html#generiranje-nasumičnih-opservacija"><i class="fa fa-check"></i><b>14.4</b> Generiranje nasumičnih opservacija</a></li>
-<li class="chapter" data-level="14.5" data-path="razdiobe.html"><a href="razdiobe.html#procjenu-funkcije-gustoće-razdiobe-i-kvantil-kvantil-graf"><i class="fa fa-check"></i><b>14.5</b> Procjenu funkcije gustoće razdiobe i kvantil-kvantil graf</a></li>
-<li class="chapter" data-level="14.6" data-path="razdiobe.html"><a href="razdiobe.html#monte-carlo-simulacije"><i class="fa fa-check"></i><b>14.6</b> Monte Carlo Simulacije</a></li>
-<li class="chapter" data-level="" data-path="razdiobe.html"><a href="razdiobe.html#zadaci-za-vježbu-12"><i class="fa fa-check"></i>Zadaci za vježbu</a></li>
+<li class="chapter" data-level="12.1" data-path="razdiobe.html"><a href="razdiobe.html#generiranje-slučajnih-brojeva"><i class="fa fa-check"></i><b>12.1</b> Generiranje slučajnih brojeva</a></li>
+<li class="chapter" data-level="12.2" data-path="razdiobe.html"><a href="razdiobe.html#rad-sa-razdiobama-vjerojatnosti-u-jeziku-r"><i class="fa fa-check"></i><b>12.2</b> Rad sa razdiobama vjerojatnosti u jeziku R</a></li>
+<li class="chapter" data-level="12.3" data-path="razdiobe.html"><a href="razdiobe.html#binomna-razdioba"><i class="fa fa-check"></i><b>12.3</b> Binomna razdioba</a></li>
+<li class="chapter" data-level="12.4" data-path="razdiobe.html"><a href="razdiobe.html#normalna-razdioba"><i class="fa fa-check"></i><b>12.4</b> Normalna razdioba</a></li>
+<li class="chapter" data-level="12.5" data-path="razdiobe.html"><a href="razdiobe.html#procjena-funkcije-gustoće-razdiobe-i-kvantil-kvantil-graf"><i class="fa fa-check"></i><b>12.5</b> Procjena funkcije gustoće razdiobe i kvantil-kvantil graf</a></li>
+<li class="chapter" data-level="12.6" data-path="razdiobe.html"><a href="razdiobe.html#monte-carlo-simulacije"><i class="fa fa-check"></i><b>12.6</b> Monte Carlo Simulacije</a></li>
+<li class="chapter" data-level="" data-path="razdiobe.html"><a href="razdiobe.html#zadaci-za-vježbu-10"><i class="fa fa-check"></i>Zadaci za vježbu</a></li>
 </ul></li>
 <li class="part"><span><b>IV Strojno učenje i prediktivna analitika</b></span></li>
-<li class="chapter" data-level="15" data-path="regresija.html"><a href="regresija.html"><i class="fa fa-check"></i><b>15</b> Odabrane metode strojnog učenja: regresijska analiza</a>
+<li class="chapter" data-level="13" data-path="regresija.html"><a href="regresija.html"><i class="fa fa-check"></i><b>13</b> Odabrane metode strojnog učenja: regresijska analiza</a>
 <ul>
-<li class="chapter" data-level="15.1" data-path="regresija.html"><a href="regresija.html#strojno-učenje"><i class="fa fa-check"></i><b>15.1</b> Strojno učenje</a>
+<li class="chapter" data-level="13.1" data-path="regresija.html"><a href="regresija.html#strojno-učenje"><i class="fa fa-check"></i><b>13.1</b> Strojno učenje</a>
 <ul>
-<li class="chapter" data-level="15.1.1" data-path="regresija.html"><a href="regresija.html#jednostavna-linearna-regresija"><i class="fa fa-check"></i><b>15.1.1</b> Jednostavna linearna regresija</a></li>
-<li class="chapter" data-level="15.1.2" data-path="regresija.html"><a href="regresija.html#funkcija-lm"><i class="fa fa-check"></i><b>15.1.2</b> Funkcija <code>lm</code></a></li>
-<li class="chapter" data-level="15.1.3" data-path="regresija.html"><a href="regresija.html#linearna-regresija-i-kategorijske-varijable"><i class="fa fa-check"></i><b>15.1.3</b> Linearna regresija i kategorijske varijable</a></li>
+<li class="chapter" data-level="13.1.1" data-path="regresija.html"><a href="regresija.html#jednostavna-linearna-regresija"><i class="fa fa-check"></i><b>13.1.1</b> Jednostavna linearna regresija</a></li>
+<li class="chapter" data-level="13.1.2" data-path="regresija.html"><a href="regresija.html#funkcija-lm"><i class="fa fa-check"></i><b>13.1.2</b> Funkcija <code>lm</code></a></li>
+<li class="chapter" data-level="13.1.3" data-path="regresija.html"><a href="regresija.html#linearna-regresija-i-kategorijske-varijable"><i class="fa fa-check"></i><b>13.1.3</b> Linearna regresija i kategorijske varijable</a></li>
 </ul></li>
-<li class="chapter" data-level="15.2" data-path="regresija.html"><a href="regresija.html#višestruka-multipla-linearna-regresija"><i class="fa fa-check"></i><b>15.2</b> Višestruka (multipla) linearna regresija</a></li>
-<li class="chapter" data-level="" data-path="regresija.html"><a href="regresija.html#zadaci-za-vježbu-13"><i class="fa fa-check"></i>Zadaci za vježbu</a></li>
+<li class="chapter" data-level="13.2" data-path="regresija.html"><a href="regresija.html#višestruka-multipla-linearna-regresija"><i class="fa fa-check"></i><b>13.2</b> Višestruka (multipla) linearna regresija</a></li>
+<li class="chapter" data-level="" data-path="regresija.html"><a href="regresija.html#zadaci-za-vježbu-11"><i class="fa fa-check"></i>Zadaci za vježbu</a></li>
 </ul></li>
-<li class="chapter" data-level="16" data-path="prediktivno_modeliranje.html"><a href="prediktivno_modeliranje.html"><i class="fa fa-check"></i><b>16</b> Uvod u prediktivno modeliranje</a>
+<li class="chapter" data-level="14" data-path="prediktivno_modeliranje.html"><a href="prediktivno_modeliranje.html"><i class="fa fa-check"></i><b>14</b> Uvod u prediktivno modeliranje</a>
 <ul>
-<li class="chapter" data-level="16.1" data-path="prediktivno_modeliranje.html"><a href="prediktivno_modeliranje.html#što-je-prediktivno-modeliranje"><i class="fa fa-check"></i><b>16.1</b> Što je prediktivno modeliranje?</a></li>
-<li class="chapter" data-level="16.2" data-path="prediktivno_modeliranje.html"><a href="prediktivno_modeliranje.html#podaci-za-treniranje-i-testiranje-modela"><i class="fa fa-check"></i><b>16.2</b> Podaci za treniranje i testiranje modela</a></li>
-<li class="chapter" data-level="16.3" data-path="prediktivno_modeliranje.html"><a href="prediktivno_modeliranje.html#klasifikacijski-prediktivni-modeli---knn-klasifikacija"><i class="fa fa-check"></i><b>16.3</b> Klasifikacijski prediktivni modeli - kNN klasifikacija</a></li>
-<li class="chapter" data-level="16.4" data-path="prediktivno_modeliranje.html"><a href="prediktivno_modeliranje.html#paket-caret-i-prediktivno-modeliranje"><i class="fa fa-check"></i><b>16.4</b> Paket <code>caret</code> i prediktivno modeliranje</a></li>
+<li class="chapter" data-level="14.1" data-path="prediktivno_modeliranje.html"><a href="prediktivno_modeliranje.html#što-je-prediktivno-modeliranje"><i class="fa fa-check"></i><b>14.1</b> Što je prediktivno modeliranje?</a></li>
+<li class="chapter" data-level="14.2" data-path="prediktivno_modeliranje.html"><a href="prediktivno_modeliranje.html#podaci-za-treniranje-i-testiranje-modela"><i class="fa fa-check"></i><b>14.2</b> Podaci za treniranje i testiranje modela</a></li>
+<li class="chapter" data-level="14.3" data-path="prediktivno_modeliranje.html"><a href="prediktivno_modeliranje.html#metode-unakrsne-validacije"><i class="fa fa-check"></i><b>14.3</b> Metode unakrsne validacije</a></li>
+<li class="chapter" data-level="14.4" data-path="prediktivno_modeliranje.html"><a href="prediktivno_modeliranje.html#loocv-krosvalidacija"><i class="fa fa-check"></i><b>14.4</b> LOOCV krosvalidacija</a></li>
+<li class="chapter" data-level="14.5" data-path="prediktivno_modeliranje.html"><a href="prediktivno_modeliranje.html#paket-caret-i-prediktivno-modeliranje"><i class="fa fa-check"></i><b>14.5</b> Paket <code>caret</code> i prediktivno modeliranje</a></li>
+<li class="chapter" data-level="14.6" data-path="prediktivno_modeliranje.html"><a href="prediktivno_modeliranje.html#klasifikacijski-prediktivni-modeli---knn-klasifikacija"><i class="fa fa-check"></i><b>14.6</b> Klasifikacijski prediktivni modeli - kNN klasifikacija</a></li>
+<li class="chapter" data-level="14.7" data-path="prediktivno_modeliranje.html"><a href="prediktivno_modeliranje.html#napredne-klasifikacijske-metode"><i class="fa fa-check"></i><b>14.7</b> Napredne klasifikacijske metode</a></li>
+<li class="chapter" data-level="14.8" data-path="prediktivno_modeliranje.html"><a href="prediktivno_modeliranje.html#zaključak"><i class="fa fa-check"></i><b>14.8</b> Zaključak</a></li>
 </ul></li>
 </ul>
 
@@ -480,7 +458,7 @@ div.csl-indent {
 <div class="fold s o">
 <div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb47-1"><a href="vektori.html#cb47-1" tabindex="-1"></a><span class="co"># stvorite novi vektor `x` sa četiri proizvoljna elementa sljedećih tipova: </span></span>
 <span id="cb47-2"><a href="vektori.html#cb47-2" tabindex="-1"></a><span class="co">#  logički, realni, znakovni i cjelobrojni</span></span>
-<span id="cb47-3"><a href="vektori.html#cb47-3" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(T, <span class="fl">1.25</span>, <span class="st">&quot;Ivo&quot;</span>, 10L)</span>
+<span id="cb47-3"><a href="vektori.html#cb47-3" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(T, <span class="fl">1.25</span>, <span class="st">&quot;Ivo&quot;</span>, <span class="dv">10</span><span class="dt">L</span>)</span>
 <span id="cb47-4"><a href="vektori.html#cb47-4" tabindex="-1"></a></span>
 <span id="cb47-5"><a href="vektori.html#cb47-5" tabindex="-1"></a><span class="co"># ispišite na zaslon sadržaj vektora i njegovu klasu</span></span>
 <span id="cb47-6"><a href="vektori.html#cb47-6" tabindex="-1"></a>x</span>
@@ -492,8 +470,8 @@ div.csl-indent {
 <p>Vektor možemo eksplicitno pretvoriti u drugi tip uz pomoć već upoznatih funkcija <code>as.&lt;naziv_tipa&gt;</code>. Ukoliko je pretvorbu nemoguće provesti element će biti pretvoren u <code>NA</code> uz prikladno upozorenje.</p>
 <hr />
 <p><strong>Zadatak 3.2 - eksplicitna pretvorba tipa vektora</strong></p>
-<div class="sourceCode" id="cb49"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb49-1"><a href="vektori.html#cb49-1" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, T, 2L)</span>
-<span id="cb49-2"><a href="vektori.html#cb49-2" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="fu">c</span>(1L, 2L, 3L)</span>
+<div class="sourceCode" id="cb49"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb49-1"><a href="vektori.html#cb49-1" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, T, <span class="dv">2</span><span class="dt">L</span>)</span>
+<span id="cb49-2"><a href="vektori.html#cb49-2" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span><span class="dt">L</span>, <span class="dv">2</span><span class="dt">L</span>, <span class="dv">3</span><span class="dt">L</span>)</span>
 <span id="cb49-3"><a href="vektori.html#cb49-3" tabindex="-1"></a>z <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fl">1.25</span>, <span class="cn">TRUE</span>, <span class="st">&quot;Ana&quot;</span> )</span>
 <span id="cb49-4"><a href="vektori.html#cb49-4" tabindex="-1"></a></span>
 <span id="cb49-5"><a href="vektori.html#cb49-5" tabindex="-1"></a><span class="co"># razmislite o mogućem rezultatu a potom pokušajte izvršiti sljedeće pretvorbe</span></span>
@@ -1098,153 +1076,6 @@ div.csl-indent {
 <hr />
 </div>
 </div>
-<div id="liste" class="section level2 hasAnchor" number="3.4">
-<h2><span class="header-section-number">3.4</span> Liste<a href="vektori.html#liste" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Lista je element programskog jezika R koji se koristi kao “univerzalni spremnik” bilo kakvih podataka. Za razliku od vektora (tj. od pojma vektora kakvog smo ga inicijalno definirali), lista može sadržavati različite tipove podataka ili - češće - skupove različitih tipova podataka.</p>
-<p>Listu stvaramo uz pomoć funkcije <code>list</code> kojom dodajemo niz parova naziva elemenata i njihovih sadržaja. Ovi elementi mogu biti bilo što, pa čak i druge liste.</p>
-<div class="sourceCode" id="cb107"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb107-1"><a href="vektori.html#cb107-1" tabindex="-1"></a>mojaLista <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">a =</span> <span class="dv">1</span>, <span class="at">b =</span> <span class="dv">2</span><span class="sc">:</span><span class="dv">100</span>, <span class="at">c =</span> <span class="fu">list</span>(<span class="at">x =</span> <span class="dv">1</span>, <span class="at">y =</span> <span class="dv">2</span>))</span></code></pre></div>
-<p>Probajmo stvoriti vlastitu listu u sljedećem primjeru.</p>
-<hr />
-<p><strong>Zadatak 3.18 - stvaranje liste</strong></p>
-<div class="sourceCode" id="cb108"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb108-1"><a href="vektori.html#cb108-1" tabindex="-1"></a><span class="co"># stvorite novu listu naziva `svastara` koja će imati sljedeće elemente</span></span>
-<span id="cb108-2"><a href="vektori.html#cb108-2" tabindex="-1"></a><span class="co">#      element naziva `brojevi` sa cijelim brojevima od 1 do 3</span></span>
-<span id="cb108-3"><a href="vektori.html#cb108-3" tabindex="-1"></a><span class="co">#      element naziva `slova` sa slovima &quot;A&quot; i &quot;B&quot;</span></span>
-<span id="cb108-4"><a href="vektori.html#cb108-4" tabindex="-1"></a><span class="co">#      bezimeni element sa logičkim vektorom `c(T,F)`</span></span>
-<span id="cb108-5"><a href="vektori.html#cb108-5" tabindex="-1"></a><span class="co">#      element naziva `imena` sa imenima &quot;Ivo&quot; i &quot;Ana&quot;</span></span>
-<span id="cb108-6"><a href="vektori.html#cb108-6" tabindex="-1"></a></span>
-<span id="cb108-7"><a href="vektori.html#cb108-7" tabindex="-1"></a></span>
-<span id="cb108-8"><a href="vektori.html#cb108-8" tabindex="-1"></a><span class="co"># ispišite listu `svastara`</span></span></code></pre></div>
-<div class="fold s o">
-<div class="sourceCode" id="cb109"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb109-1"><a href="vektori.html#cb109-1" tabindex="-1"></a>svastara <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">brojevi =</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>), </span>
-<span id="cb109-2"><a href="vektori.html#cb109-2" tabindex="-1"></a>                 <span class="at">slova =</span> <span class="fu">c</span>(<span class="st">&quot;A&quot;</span>, <span class="st">&quot;B&quot;</span>), </span>
-<span id="cb109-3"><a href="vektori.html#cb109-3" tabindex="-1"></a>                 <span class="fu">c</span>(T,F), </span>
-<span id="cb109-4"><a href="vektori.html#cb109-4" tabindex="-1"></a>                 <span class="at">imena =</span> <span class="fu">c</span>(<span class="st">&quot;Ivo&quot;</span>, <span class="st">&quot;Ana&quot;</span>))</span>
-<span id="cb109-5"><a href="vektori.html#cb109-5" tabindex="-1"></a></span>
-<span id="cb109-6"><a href="vektori.html#cb109-6" tabindex="-1"></a></span>
-<span id="cb109-7"><a href="vektori.html#cb109-7" tabindex="-1"></a><span class="co"># ispišite listu `svastara`</span></span>
-<span id="cb109-8"><a href="vektori.html#cb109-8" tabindex="-1"></a>svastara</span></code></pre></div>
-<pre><code>## $brojevi
-## [1] 1 2 3
-## 
-## $slova
-## [1] &quot;A&quot; &quot;B&quot;
-## 
-## [[3]]
-## [1]  TRUE FALSE
-## 
-## $imena
-## [1] &quot;Ivo&quot; &quot;Ana&quot;</code></pre>
-</div>
-<hr />
-<p>Uočite da lista zadržava poredak elemenata - element bez imena prikazan je indeksom 3.</p>
-<p>Funkcija <code>str</code> (engl. <em>structure</em>) omogućuje nam uvid u svojstva i sadržaj liste bez ispisivanja cijele liste. Ovu funkciju analitičari često koriste, kako za pregled lista tako i za brzi uvid u već spomenute podatkovne okvire koje ćemo raditi u idućem poglavlju.</p>
-<hr />
-<p><strong>Zadatak 3.19 - struktura liste</strong></p>
-<div class="sourceCode" id="cb111"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb111-1"><a href="vektori.html#cb111-1" tabindex="-1"></a><span class="co"># ispišite strukturu liste `svastara`</span></span></code></pre></div>
-<div class="fold s o">
-<div class="sourceCode" id="cb112"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb112-1"><a href="vektori.html#cb112-1" tabindex="-1"></a><span class="co"># ispišite strukturu liste `svastara`</span></span>
-<span id="cb112-2"><a href="vektori.html#cb112-2" tabindex="-1"></a><span class="fu">str</span>(svastara)</span></code></pre></div>
-<pre><code>## List of 4
-##  $ brojevi: num [1:3] 1 2 3
-##  $ slova  : chr [1:2] &quot;A&quot; &quot;B&quot;
-##  $        : logi [1:2] TRUE FALSE
-##  $ imena  : chr [1:2] &quot;Ivo&quot; &quot;Ana&quot;</code></pre>
-</div>
-<hr />
-<p>Na početku ove lekcije smo rekli da u R-u vrijedi princip “sve je vektor” te da su vektori zapravo uređeni skupovi elemenata istog tipa. Iz ovog bi se moglo zaključiti da ta činjenica ne vrijedi za liste - oni očito sadržavaju elemente različitih tipova. No pravi odgovor je - i liste su zapravo vektori, a definicija zapravo nije narušena. Naime, svi elementi liste su zapravo male jednoelementne liste, tako da su formalno svi elementi istog tipa.</p>
-<hr />
-<p><strong>Zadatak 3.20 - tip elemenata liste</strong></p>
-<div class="sourceCode" id="cb114"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb114-1"><a href="vektori.html#cb114-1" tabindex="-1"></a><span class="co"># ispišite prvi element liste svastara </span></span>
-<span id="cb114-2"><a href="vektori.html#cb114-2" tabindex="-1"></a></span>
-<span id="cb114-3"><a href="vektori.html#cb114-3" tabindex="-1"></a><span class="co"># provjerite njegov tip</span></span></code></pre></div>
-<div class="fold s o">
-<div class="sourceCode" id="cb115"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb115-1"><a href="vektori.html#cb115-1" tabindex="-1"></a><span class="co"># ispišite prvi element liste svastara </span></span>
-<span id="cb115-2"><a href="vektori.html#cb115-2" tabindex="-1"></a>svastara[<span class="dv">1</span>]</span>
-<span id="cb115-3"><a href="vektori.html#cb115-3" tabindex="-1"></a></span>
-<span id="cb115-4"><a href="vektori.html#cb115-4" tabindex="-1"></a><span class="co"># provjerite njegov tip</span></span>
-<span id="cb115-5"><a href="vektori.html#cb115-5" tabindex="-1"></a><span class="fu">typeof</span>(svastara[<span class="dv">1</span>])</span></code></pre></div>
-<pre><code>## $brojevi
-## [1] 1 2 3
-## 
-## [1] &quot;list&quot;</code></pre>
-</div>
-<hr />
-<p>Dakle, dokazali smo da su elementi liste zapravo male liste, što se vidi iz ispisa samog elementa, kao i provjere njezinog tipa. Možda nam se čini da bi elementi gore stvorene liste trebali biti vektori, budući da smo listu i stvorili “slaganjem” različitih vektora, no u postupku stvaranja objekta R je “umotao” elemente u jednoelementne liste prije nego ih je uklopio u “veliku” listu.</p>
-<p>Često ne želimo raditi s elementom liste kao “malom listom”, nego ga trebao u njegovom “originalnom” obliku. Za ovo koristimo operator <code>[[</code>, tj. operator “dvostruke uglate zagrade”.</p>
-<hr />
-<p><strong>Zadatak 3.21 - operator <code>[[</code></strong></p>
-<div class="sourceCode" id="cb117"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb117-1"><a href="vektori.html#cb117-1" tabindex="-1"></a><span class="co"># ispišite prvi element liste svastara korištenjem  operatora `[[`</span></span>
-<span id="cb117-2"><a href="vektori.html#cb117-2" tabindex="-1"></a></span>
-<span id="cb117-3"><a href="vektori.html#cb117-3" tabindex="-1"></a></span>
-<span id="cb117-4"><a href="vektori.html#cb117-4" tabindex="-1"></a><span class="co"># provjerite njegov tip</span></span></code></pre></div>
-<div class="fold s o">
-<div class="sourceCode" id="cb118"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb118-1"><a href="vektori.html#cb118-1" tabindex="-1"></a><span class="co"># ispišite prvi element liste svastara </span></span>
-<span id="cb118-2"><a href="vektori.html#cb118-2" tabindex="-1"></a>svastara[[<span class="dv">1</span>]]</span>
-<span id="cb118-3"><a href="vektori.html#cb118-3" tabindex="-1"></a></span>
-<span id="cb118-4"><a href="vektori.html#cb118-4" tabindex="-1"></a><span class="co"># provjerite njegov tip</span></span>
-<span id="cb118-5"><a href="vektori.html#cb118-5" tabindex="-1"></a><span class="fu">typeof</span>(svastara[[<span class="dv">1</span>]])</span></code></pre></div>
-<pre><code>## [1] 1 2 3
-## [1] &quot;double&quot;</code></pre>
-</div>
-<hr />
-<p>Navedeni operator najčešće koristimo kako bi dohvatili odabrani element liste kojeg definiramo brojem ili (ako ima ime) nazivom elementa. Kod ovakvog dohvata moramo koristiti kombinaciju simbola <code>lista[["ime_elementa"]]</code> koja je ponešto nespretna za tipkanja. Zbog toga R nudi alternativni način pristupa elementima liste prema nazivu korištenjem operatora <code>$</code>, tj. <code>lista$ime_elementa</code>.</p>
-<hr />
-<p><strong>Zadatak 3.22 - operator <code>$</code></strong></p>
-<div class="sourceCode" id="cb120"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb120-1"><a href="vektori.html#cb120-1" tabindex="-1"></a><span class="co"># ispišite element naziva &quot;slova&quot; liste svastara</span></span>
-<span id="cb120-2"><a href="vektori.html#cb120-2" tabindex="-1"></a><span class="co"># korištenjem operatora `[[`</span></span>
-<span id="cb120-3"><a href="vektori.html#cb120-3" tabindex="-1"></a></span>
-<span id="cb120-4"><a href="vektori.html#cb120-4" tabindex="-1"></a></span>
-<span id="cb120-5"><a href="vektori.html#cb120-5" tabindex="-1"></a><span class="co"># ispišite isti element korištenjem operatora `$`</span></span></code></pre></div>
-<div class="fold s o">
-<div class="sourceCode" id="cb121"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb121-1"><a href="vektori.html#cb121-1" tabindex="-1"></a><span class="co"># ispišite element naziva &quot;slova&quot; liste svastara</span></span>
-<span id="cb121-2"><a href="vektori.html#cb121-2" tabindex="-1"></a><span class="co"># korištenjem operatora `[[`</span></span>
-<span id="cb121-3"><a href="vektori.html#cb121-3" tabindex="-1"></a>svastara[[<span class="st">&quot;slova&quot;</span>]]</span>
-<span id="cb121-4"><a href="vektori.html#cb121-4" tabindex="-1"></a></span>
-<span id="cb121-5"><a href="vektori.html#cb121-5" tabindex="-1"></a><span class="co"># ispišite isti element korištenjem operatora `$`</span></span>
-<span id="cb121-6"><a href="vektori.html#cb121-6" tabindex="-1"></a>svastara<span class="sc">$</span>slova</span></code></pre></div>
-<pre><code>## [1] &quot;A&quot; &quot;B&quot;
-## [1] &quot;A&quot; &quot;B&quot;</code></pre>
-</div>
-<hr />
-<p>Liste su iznimno popularni tip objekta u R-u budući da predstavljaju univerzalni predložak za kompleksnije podatkovne strukture, između ostalog i kompleksnije objekte u užem smislu (kao što ćemo vidjeti kasnije). Lista je također “temelj” za daleko najpopularniji i najčešće korišteni element jezika R - podatkovni okvir - kojeg ćemo upoznati u idućoj lekciji.</p>
-<p>Za kraj naučimo dodati element u listu. Ovo je najjednostavnije učiniti korištenjem već spomenutog operatora <code>$</code> - kao npr. <code>lista$noviElement &lt;- noviElement</code>. Element brišemo tako da mu dodijelimo vrijednost <code>NULL</code>.</p>
-<hr />
-<p><strong>Zadatak 3.23 - dodavanje elementa u listu</strong></p>
-<div class="sourceCode" id="cb123"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb123-1"><a href="vektori.html#cb123-1" tabindex="-1"></a><span class="co"># listi `svastara` dodajte element `parniBrojevi` koji sadrži</span></span>
-<span id="cb123-2"><a href="vektori.html#cb123-2" tabindex="-1"></a><span class="co"># sve parne brojeve od 1 do 100</span></span>
-<span id="cb123-3"><a href="vektori.html#cb123-3" tabindex="-1"></a></span>
-<span id="cb123-4"><a href="vektori.html#cb123-4" tabindex="-1"></a><span class="co"># obrišite treći element liste</span></span>
-<span id="cb123-5"><a href="vektori.html#cb123-5" tabindex="-1"></a></span>
-<span id="cb123-6"><a href="vektori.html#cb123-6" tabindex="-1"></a></span>
-<span id="cb123-7"><a href="vektori.html#cb123-7" tabindex="-1"></a><span class="co"># ispišite listu `svastara`</span></span></code></pre></div>
-<div class="fold s o">
-<div class="sourceCode" id="cb124"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb124-1"><a href="vektori.html#cb124-1" tabindex="-1"></a><span class="co"># listi `svastara` dodajte element `parniBrojevi` koji sadrži</span></span>
-<span id="cb124-2"><a href="vektori.html#cb124-2" tabindex="-1"></a><span class="co"># sve parne brojeve od 1 do 100</span></span>
-<span id="cb124-3"><a href="vektori.html#cb124-3" tabindex="-1"></a>svastara<span class="sc">$</span>parniBrojevi <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">2</span>, <span class="dv">100</span>, <span class="dv">2</span>)</span>
-<span id="cb124-4"><a href="vektori.html#cb124-4" tabindex="-1"></a></span>
-<span id="cb124-5"><a href="vektori.html#cb124-5" tabindex="-1"></a><span class="co"># obrišite treći element liste</span></span>
-<span id="cb124-6"><a href="vektori.html#cb124-6" tabindex="-1"></a>svastara[[<span class="dv">3</span>]] <span class="ot">&lt;-</span> <span class="cn">NULL</span></span>
-<span id="cb124-7"><a href="vektori.html#cb124-7" tabindex="-1"></a></span>
-<span id="cb124-8"><a href="vektori.html#cb124-8" tabindex="-1"></a><span class="co"># ispišite listu `svastara`</span></span>
-<span id="cb124-9"><a href="vektori.html#cb124-9" tabindex="-1"></a><span class="fu">print</span>(svastara)</span></code></pre></div>
-<pre><code>## $brojevi
-## [1] 1 2 3
-## 
-## $slova
-## [1] &quot;A&quot; &quot;B&quot;
-## 
-## $imena
-## [1] &quot;Ivo&quot; &quot;Ana&quot;
-## 
-## $parniBrojevi
-##  [1]   2   4   6   8  10  12  14  16  18  20  22  24  26  28  30  32  34  36  38
-## [20]  40  42  44  46  48  50  52  54  56  58  60  62  64  66  68  70  72  74  76
-## [39]  78  80  82  84  86  88  90  92  94  96  98 100</code></pre>
-</div>
-<hr />
-<p>U sljedećoj lekciji konačno ćemo upoznati već više puta spominjane podatkovne okvire kao daleko najpopularniji i najčešće korištenu podatkovnu strukturu jezika R.</p>
-<hr />
-</div>
 <div id="zadaci-za-vježbu-1" class="section level2 unnumbered hasAnchor">
 <h2>Zadaci za vježbu<a href="vektori.html#zadaci-za-vježbu-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ol style="list-style-type: decimal">
@@ -1259,20 +1090,10 @@ div.csl-indent {
 <li><p>Kolika je suma svih brojeva od 101 do 1001, ako preskočimo sve brojeve djeljive sa 10? Koristite se funkcijom <code>sum</code>.</p></li>
 <li><p>Stvorite matricu 3 x 3 sa brojevima izvođenjem sljedećih naredbi (funkciju <code>sample</code> ćemo pobliže upoznati u jednoj od sljedećih lekcija):</p></li>
 </ol>
-<div class="sourceCode" id="cb126"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb126-1"><a href="vektori.html#cb126-1" tabindex="-1"></a><span class="co"># stvaramo matricu 3x3 nasumično odabranih elemenata iz skupa od 1 do 100</span></span>
-<span id="cb126-2"><a href="vektori.html#cb126-2" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">1234</span>)</span>
-<span id="cb126-3"><a href="vektori.html#cb126-3" tabindex="-1"></a>m <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">100</span>, <span class="dv">9</span>, T)), <span class="at">nrow =</span> <span class="dv">3</span>, <span class="at">ncol =</span> <span class="dv">3</span>, <span class="at">byrow =</span> T)</span></code></pre></div>
+<div class="sourceCode" id="cb107"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb107-1"><a href="vektori.html#cb107-1" tabindex="-1"></a><span class="co"># stvaramo matricu 3x3 nasumično odabranih elemenata iz skupa od 1 do 100</span></span>
+<span id="cb107-2"><a href="vektori.html#cb107-2" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">1234</span>)</span>
+<span id="cb107-3"><a href="vektori.html#cb107-3" tabindex="-1"></a>m <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">100</span>, <span class="dv">9</span>, T)), <span class="at">nrow =</span> <span class="dv">3</span>, <span class="at">ncol =</span> <span class="dv">3</span>, <span class="at">byrow =</span> T)</span></code></pre></div>
 <p>Izračunajte inverznu matricu uz pomoć funkcije <code>solve</code>. Provjerite da li umnožak originalne i inverzne matrice daje jediničnu matricu (za množenje matrica koristite se operatorom <code>%*%</code>).</p>
-<ol start="4" style="list-style-type: decimal">
-<li>Inicijalizirajte ponovo listu <code>svastara</code> korištenu u lekciji. Napravite sljedeće:</li>
-</ol>
-<ul>
-<li>ispišite klasu drugog elementa liste</li>
-<li>ispišite element na trećem mjestu elementa liste naziva <code>slova</code></li>
-<li>provjerite duljinu elementa naziva <code>imena</code> te na zadnje mjesto dodajte ime <code>"Pero"</code></li>
-<li>provjerite da li se broj <code>4</code> nalazi u prvom elementu liste</li>
-<li>na zadnje mjesto liste dodajte novu listu sa tri vektora <code>a</code>, <code>b</code> i <code>c</code> koji svi sadrže elemente (1,2,3)</li>
-</ul>
 <hr />
 <p><a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Programirajmo u R-u</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://www.fer.unizg.hr/en/damir.pintar" property="cc:attributionName" rel="cc:attributionURL">Damir Pintar</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.<br />Based on a work at <a xmlns:dct="http://purl.org/dc/terms/" href="https://ratnip.github.io/FER_OPJR/" rel="dct:source">https://ratnip.github.io/FER_OPJR/</a></p>
 
@@ -1298,51 +1119,51 @@ div.csl-indent {
 <script>
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
-"sharing": {
-"github": false,
-"facebook": true,
-"twitter": true,
-"linkedin": false,
-"weibo": false,
-"instapaper": false,
-"vk": false,
-"whatsapp": false,
-"all": ["facebook", "google", "twitter", "weibo", "instapaper"],
-"google": false,
-"instapper": false
-},
-"fontsettings": {
-"theme": "white",
-"family": "sans",
-"size": 2
-},
-"edit": {
-"link": null,
-"text": null
-},
-"history": {
-"link": null,
-"text": null
-},
-"view": {
-"link": null,
-"text": null
-},
-"download": null,
-"search": {
-"engine": "fuse",
-"options": null
-},
-"toc": {
-"collapse": "section",
-"scroll_highlight": true
-},
-"toolbar": {
-"position": "fixed",
-"edit": null,
-"download": null,
-"search": true
-}
+  "sharing": {
+    "github": false,
+    "facebook": true,
+    "twitter": true,
+    "linkedin": false,
+    "weibo": false,
+    "instapaper": false,
+    "vk": false,
+    "whatsapp": false,
+    "all": ["facebook", "google", "twitter", "weibo", "instapaper"],
+    "google": false,
+    "instapper": false
+  },
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": null,
+    "text": null
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": null,
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "section",
+    "scroll_highlight": true
+  },
+  "toolbar": {
+    "position": "fixed",
+    "edit": null,
+    "download": null,
+    "search": true
+  }
 });
 });
 </script>
