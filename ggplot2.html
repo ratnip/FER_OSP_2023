@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>11 Vizualizacija podataka uz paket ggplot2 | Programirajmo u R-u</title>
   <meta name="description" content="Udžbenik za predmet ‘Uvod u znanost o podacima’ studija Primjenjene kognitivne znanosti na Fakultetu elektrotehnike i računarstva, Sveučilište u Zagrebu." />
-  <meta name="generator" content="bookdown 0.42 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
 
   <meta property="og:title" content="11 Vizualizacija podataka uz paket ggplot2 | Programirajmo u R-u" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="Damir Pintar" />
 
 
-<meta name="date" content="2026-03-02" />
+<meta name="date" content="2026-03-27" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -331,13 +331,30 @@ div.csl-indent {
 </ul></li>
 <li class="chapter" data-level="8" data-path="datumi.html"><a href="datumi.html"><i class="fa fa-check"></i><b>8</b> Rad sa vremenskim podacima</a>
 <ul>
-<li class="chapter" data-level="8.1" data-path="datumi.html"><a href="datumi.html#rad-sa-datumima"><i class="fa fa-check"></i><b>8.1</b> Rad sa datumima</a>
+<li class="chapter" data-level="8.1" data-path="datumi.html"><a href="datumi.html#rad-sa-vremenskim-tipovima-podataka"><i class="fa fa-check"></i><b>8.1</b> Rad sa vremenskim tipovima podataka</a>
 <ul>
 <li class="chapter" data-level="8.1.1" data-path="datumi.html"><a href="datumi.html#klasa-date"><i class="fa fa-check"></i><b>8.1.1</b> Klasa <code>Date</code></a></li>
+<li class="chapter" data-level="8.1.2" data-path="datumi.html"><a href="datumi.html#formatska-specifikacija"><i class="fa fa-check"></i><b>8.1.2</b> Formatska specifikacija</a></li>
+<li class="chapter" data-level="8.1.3" data-path="datumi.html"><a href="datumi.html#klasa-posixct"><i class="fa fa-check"></i><b>8.1.3</b> Klasa <code>POSIXct</code></a></li>
+<li class="chapter" data-level="8.1.4" data-path="datumi.html"><a href="datumi.html#formatska-specifikacija-i-vremenske-zone"><i class="fa fa-check"></i><b>8.1.4</b> Formatska specifikacija i vremenske zone</a></li>
+<li class="chapter" data-level="8.1.5" data-path="datumi.html"><a href="datumi.html#aritmetika-sa-vremenskim-tipovima-podataka"><i class="fa fa-check"></i><b>8.1.5</b> Aritmetika sa vremenskim tipovima podataka</a></li>
+<li class="chapter" data-level="8.1.6" data-path="datumi.html"><a href="datumi.html#klasa-i-funkcija-difftime"><i class="fa fa-check"></i><b>8.1.6</b> Klasa i funkcija <code>difftime</code></a></li>
+<li class="chapter" data-level="8.1.7" data-path="datumi.html"><a href="datumi.html#funkcija-seq-i-vremenski-tipovi-podataka"><i class="fa fa-check"></i><b>8.1.7</b> Funkcija <code>seq</code> i vremenski tipovi podataka</a></li>
 </ul></li>
-<li class="chapter" data-level="8.2" data-path="datumi.html"><a href="datumi.html#klase-posixct-i-posixlt"><i class="fa fa-check"></i><b>8.2</b> Klase <code>POSIXct</code> i <code>POSIXlt</code></a></li>
-<li class="chapter" data-level="8.3" data-path="datumi.html"><a href="datumi.html#paket-lubridate"><i class="fa fa-check"></i><b>8.3</b> Paket <code>lubridate</code></a></li>
-<li class="chapter" data-level="" data-path="datumi.html"><a href="datumi.html#zadaci-za-vježbu-6"><i class="fa fa-check"></i>Zadaci za vježbu</a></li>
+<li class="chapter" data-level="8.2" data-path="datumi.html"><a href="datumi.html#paket-lubridate"><i class="fa fa-check"></i><b>8.2</b> Paket <code>lubridate</code></a>
+<ul>
+<li class="chapter" data-level="8.2.1" data-path="datumi.html"><a href="datumi.html#parsiranje-datuma-i-vremenskih-oznaka"><i class="fa fa-check"></i><b>8.2.1</b> Parsiranje datuma i vremenskih oznaka</a></li>
+<li class="chapter" data-level="8.2.2" data-path="datumi.html"><a href="datumi.html#paket-lubridate-i-vremenske-oznake"><i class="fa fa-check"></i><b>8.2.2</b> Paket <code>lubridate</code> i vremenske oznake</a></li>
+<li class="chapter" data-level="8.2.3" data-path="datumi.html"><a href="datumi.html#izvlačenje-i-postavljanje-segmenata-datuma-i-vremena"><i class="fa fa-check"></i><b>8.2.3</b> Izvlačenje i postavljanje segmenata datuma i vremena</a></li>
+</ul></li>
+<li class="chapter" data-level="8.3" data-path="datumi.html"><a href="datumi.html#trenutci-intervali-trajanja-i-periodi"><i class="fa fa-check"></i><b>8.3</b> Trenutci, intervali, trajanja i periodi</a>
+<ul>
+<li class="chapter" data-level="8.3.1" data-path="datumi.html"><a href="datumi.html#intervali"><i class="fa fa-check"></i><b>8.3.1</b> Intervali</a></li>
+<li class="chapter" data-level="8.3.2" data-path="datumi.html"><a href="datumi.html#period"><i class="fa fa-check"></i><b>8.3.2</b> Period</a></li>
+<li class="chapter" data-level="8.3.3" data-path="datumi.html"><a href="datumi.html#trajanje"><i class="fa fa-check"></i><b>8.3.3</b> Trajanje</a></li>
+<li class="chapter" data-level="8.3.4" data-path="datumi.html"><a href="datumi.html#pomoćne-funkcije-za-rad-sa-vremenskim-intervalima"><i class="fa fa-check"></i><b>8.3.4</b> Pomoćne funkcije za rad sa vremenskim intervalima</a></li>
+</ul></li>
+<li class="chapter" data-level="8.4" data-path="datumi.html"><a href="datumi.html#dodatna-literatura"><i class="fa fa-check"></i><b>8.4</b> Dodatna literatura</a></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="nizovi.html"><a href="nizovi.html"><i class="fa fa-check"></i><b>9</b> Obrada znakovnih nizova</a>
 <ul>
@@ -346,7 +363,7 @@ div.csl-indent {
 <li class="chapter" data-level="9.1.1" data-path="nizovi.html"><a href="nizovi.html#analiza-teksta-i-regularni-izrazi"><i class="fa fa-check"></i><b>9.1.1</b> Analiza teksta i regularni izrazi</a></li>
 <li class="chapter" data-level="9.1.2" data-path="nizovi.html"><a href="nizovi.html#paket-stringr"><i class="fa fa-check"></i><b>9.1.2</b> Paket <code>stringr</code></a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="nizovi.html"><a href="nizovi.html#zadaci-za-vježbu-7"><i class="fa fa-check"></i>Zadaci za vježbu</a></li>
+<li class="chapter" data-level="" data-path="nizovi.html"><a href="nizovi.html#zadaci-za-vježbu-6"><i class="fa fa-check"></i>Zadaci za vježbu</a></li>
 </ul></li>
 <li class="chapter" data-level="10" data-path="prilagodba-podatkovnih-skupova-uz-paket-dplyr.html"><a href="prilagodba-podatkovnih-skupova-uz-paket-dplyr.html"><i class="fa fa-check"></i><b>10</b> Prilagodba podatkovnih skupova uz paket <code>dplyr</code></a>
 <ul>
@@ -362,7 +379,7 @@ div.csl-indent {
 <li class="chapter" data-level="10.8.1" data-path="prilagodba-podatkovnih-skupova-uz-paket-dplyr.html"><a href="prilagodba-podatkovnih-skupova-uz-paket-dplyr.html#excel-datoteka-kao-izvor-odredište-podataka"><i class="fa fa-check"></i><b>10.8.1</b> Excel datoteka kao izvor (odredište) podataka</a></li>
 <li class="chapter" data-level="10.8.2" data-path="prilagodba-podatkovnih-skupova-uz-paket-dplyr.html"><a href="prilagodba-podatkovnih-skupova-uz-paket-dplyr.html#rad-sa-relacijskim-bazama"><i class="fa fa-check"></i><b>10.8.2</b> Rad sa relacijskim bazama</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="prilagodba-podatkovnih-skupova-uz-paket-dplyr.html"><a href="prilagodba-podatkovnih-skupova-uz-paket-dplyr.html#zadaci-za-vježbu-8"><i class="fa fa-check"></i>Zadaci za vježbu</a></li>
+<li class="chapter" data-level="" data-path="prilagodba-podatkovnih-skupova-uz-paket-dplyr.html"><a href="prilagodba-podatkovnih-skupova-uz-paket-dplyr.html#zadaci-za-vježbu-7"><i class="fa fa-check"></i>Zadaci za vježbu</a></li>
 </ul></li>
 <li class="chapter" data-level="11" data-path="ggplot2.html"><a href="ggplot2.html"><i class="fa fa-check"></i><b>11</b> Vizualizacija podataka uz paket <code>ggplot2</code></a>
 <ul>
@@ -378,7 +395,7 @@ div.csl-indent {
 <li class="chapter" data-level="11.3.6" data-path="ggplot2.html"><a href="ggplot2.html#uvjetni-facetirani-grafovi"><i class="fa fa-check"></i><b>11.3.6</b> Uvjetni (facetirani) grafovi</a></li>
 </ul></li>
 <li class="chapter" data-level="11.4" data-path="ggplot2.html"><a href="ggplot2.html#grafovi-u-eksploratornoj-analizi-i-izvještavanju"><i class="fa fa-check"></i><b>11.4</b> Grafovi u eksploratornoj analizi i izvještavanju</a></li>
-<li class="chapter" data-level="" data-path="ggplot2.html"><a href="ggplot2.html#zadaci-za-vježbu-9"><i class="fa fa-check"></i>Zadaci za vježbu</a></li>
+<li class="chapter" data-level="" data-path="ggplot2.html"><a href="ggplot2.html#zadaci-za-vježbu-8"><i class="fa fa-check"></i>Zadaci za vježbu</a></li>
 </ul></li>
 <li class="part"><span><b>III Statistika i strojno učenje u jeziku R</b></span></li>
 <li class="chapter" data-level="12" data-path="razdiobe.html"><a href="razdiobe.html"><i class="fa fa-check"></i><b>12</b> Razdiobe i simulacije</a>
@@ -389,7 +406,7 @@ div.csl-indent {
 <li class="chapter" data-level="12.4" data-path="razdiobe.html"><a href="razdiobe.html#normalna-razdioba"><i class="fa fa-check"></i><b>12.4</b> Normalna razdioba</a></li>
 <li class="chapter" data-level="12.5" data-path="razdiobe.html"><a href="razdiobe.html#procjena-funkcije-gustoće-razdiobe-i-kvantil-kvantil-graf"><i class="fa fa-check"></i><b>12.5</b> Procjena funkcije gustoće razdiobe i kvantil-kvantil graf</a></li>
 <li class="chapter" data-level="12.6" data-path="razdiobe.html"><a href="razdiobe.html#monte-carlo-simulacije"><i class="fa fa-check"></i><b>12.6</b> Monte Carlo Simulacije</a></li>
-<li class="chapter" data-level="" data-path="razdiobe.html"><a href="razdiobe.html#zadaci-za-vježbu-10"><i class="fa fa-check"></i>Zadaci za vježbu</a></li>
+<li class="chapter" data-level="" data-path="razdiobe.html"><a href="razdiobe.html#zadaci-za-vježbu-9"><i class="fa fa-check"></i>Zadaci za vježbu</a></li>
 </ul></li>
 <li class="part"><span><b>IV Strojno učenje i prediktivna analitika</b></span></li>
 <li class="chapter" data-level="13" data-path="regresija.html"><a href="regresija.html"><i class="fa fa-check"></i><b>13</b> Odabrane metode strojnog učenja: regresijska analiza</a>
@@ -401,7 +418,7 @@ div.csl-indent {
 <li class="chapter" data-level="13.1.3" data-path="regresija.html"><a href="regresija.html#linearna-regresija-i-kategorijske-varijable"><i class="fa fa-check"></i><b>13.1.3</b> Linearna regresija i kategorijske varijable</a></li>
 </ul></li>
 <li class="chapter" data-level="13.2" data-path="regresija.html"><a href="regresija.html#višestruka-multipla-linearna-regresija"><i class="fa fa-check"></i><b>13.2</b> Višestruka (multipla) linearna regresija</a></li>
-<li class="chapter" data-level="" data-path="regresija.html"><a href="regresija.html#zadaci-za-vježbu-11"><i class="fa fa-check"></i>Zadaci za vježbu</a></li>
+<li class="chapter" data-level="" data-path="regresija.html"><a href="regresija.html#zadaci-za-vježbu-10"><i class="fa fa-check"></i>Zadaci za vježbu</a></li>
 </ul></li>
 <li class="chapter" data-level="14" data-path="prediktivno_modeliranje.html"><a href="prediktivno_modeliranje.html"><i class="fa fa-check"></i><b>14</b> Uvod u prediktivno modeliranje</a>
 <ul>
@@ -452,11 +469,11 @@ div.csl-indent {
 <p>Osnovna podrška za stvaranje grafova ostvaruje se uz pomoć generičke funkcije <code>plot</code> a njena velika prednost je iznimna jednostavnost. Gotovo svaka popularnija klasa ima vlastitu implementaciju ove funkcije, što znači da je za “brzu” vizualizaciju često dovoljno samo proslijediti željeni objekt (ili objekte) navedenoj funkciji. Npr. ako funkciji proslijedimo dva numerička vektora jednake veličine, funkcija plot će automatski stvoriti graf sa prvim vektorom mapiranim na x-os a drugim na y-os (prikazane uz pomoć linearne kontinuirane skale). Funkcija će također automatski dodati prikladne anotacije kao što su linije za osi, oznake na osima (engl. <em>tickmarks</em>) i pripadajuće vrijednosti, nazive osi i sl.</p>
 <hr />
 <p><strong>Zadatak 11.1 - funkcija ‘plot’</strong></p>
-<div class="sourceCode" id="cb489"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb489-1"><a href="ggplot2.html#cb489-1" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">50</span></span>
-<span id="cb489-2"><a href="ggplot2.html#cb489-2" tabindex="-1"></a><span class="co"># proslijedite `x` i `x*x` funkciji `plot`</span></span></code></pre></div>
+<div class="sourceCode" id="cb502"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb502-1"><a href="ggplot2.html#cb502-1" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">50</span></span>
+<span id="cb502-2"><a href="ggplot2.html#cb502-2" tabindex="-1"></a><span class="co"># proslijedite `x` i `x*x` funkciji `plot`</span></span></code></pre></div>
 <div class="fold s o">
-<div class="sourceCode" id="cb490"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb490-1"><a href="ggplot2.html#cb490-1" tabindex="-1"></a><span class="fu">plot</span>(x, x<span class="sc">*</span>x)</span></code></pre></div>
-<p><img src="osnoveR_files/figure-html/unnamed-chunk-368-1.png" width="672" /></p>
+<div class="sourceCode" id="cb503"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb503-1"><a href="ggplot2.html#cb503-1" tabindex="-1"></a><span class="fu">plot</span>(x, x<span class="sc">*</span>x)</span></code></pre></div>
+<p><img src="osnoveR_files/figure-html/unnamed-chunk-373-1.png" width="672" /></p>
 </div>
 <hr />
 <p>Osnovna podrška je funkcionalna i jednostavna, ali ograničena. Na stvoreni graf se mogu dodavati nove stvari, ali ne i modificirati. Isto tako, fino podešavanje pojedinih aspekata grafa često pozive čini glomaznim i nečitljivim te se gubi dimenzija jednostavnosti (koja je glavni razlog korištenja funkcije plot).</p>
@@ -491,16 +508,16 @@ div.csl-indent {
 <p>Prikažimo ovo sve na primjeru. Za prve primjere koristit ćemo se podatkovnim skupom <code>mtcars</code> kojeg smo dobili s osnovnom distribucijom jezika R unutar paketa <code>datasets</code>. Učitajmo taj podatkovni skup u globalnu okolinu uz pomoć funkcije <code>data</code>.</p>
 <hr />
 <p><strong>Zadatak 11.2 - upoznavanje sa podatkovnim skupom ‘mtcars’</strong></p>
-<div class="sourceCode" id="cb491"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb491-1"><a href="ggplot2.html#cb491-1" tabindex="-1"></a><span class="co"># učitajte podatkovni okvir `mtcars` u globalnu okolinu</span></span>
-<span id="cb491-2"><a href="ggplot2.html#cb491-2" tabindex="-1"></a></span>
-<span id="cb491-3"><a href="ggplot2.html#cb491-3" tabindex="-1"></a><span class="co"># proučite okvir `mtcars`  (head, glimpse, ?...)</span></span></code></pre></div>
+<div class="sourceCode" id="cb504"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb504-1"><a href="ggplot2.html#cb504-1" tabindex="-1"></a><span class="co"># učitajte podatkovni okvir `mtcars` u globalnu okolinu</span></span>
+<span id="cb504-2"><a href="ggplot2.html#cb504-2" tabindex="-1"></a></span>
+<span id="cb504-3"><a href="ggplot2.html#cb504-3" tabindex="-1"></a><span class="co"># proučite okvir `mtcars`  (head, glimpse, ?...)</span></span></code></pre></div>
 <div class="fold s o">
-<div class="sourceCode" id="cb492"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb492-1"><a href="ggplot2.html#cb492-1" tabindex="-1"></a><span class="co"># učitajte podatkovni okvir `mtcars` u globalnu okolinu</span></span>
-<span id="cb492-2"><a href="ggplot2.html#cb492-2" tabindex="-1"></a><span class="fu">data</span>(mtcars)</span>
-<span id="cb492-3"><a href="ggplot2.html#cb492-3" tabindex="-1"></a></span>
-<span id="cb492-4"><a href="ggplot2.html#cb492-4" tabindex="-1"></a><span class="co"># proučite okvir `mtcars`  (head, glimpse, ?...)</span></span>
-<span id="cb492-5"><a href="ggplot2.html#cb492-5" tabindex="-1"></a><span class="fu">glimpse</span>(mtcars)</span>
-<span id="cb492-6"><a href="ggplot2.html#cb492-6" tabindex="-1"></a><span class="fu">head</span>(mtcars)</span></code></pre></div>
+<div class="sourceCode" id="cb505"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb505-1"><a href="ggplot2.html#cb505-1" tabindex="-1"></a><span class="co"># učitajte podatkovni okvir `mtcars` u globalnu okolinu</span></span>
+<span id="cb505-2"><a href="ggplot2.html#cb505-2" tabindex="-1"></a><span class="fu">data</span>(mtcars)</span>
+<span id="cb505-3"><a href="ggplot2.html#cb505-3" tabindex="-1"></a></span>
+<span id="cb505-4"><a href="ggplot2.html#cb505-4" tabindex="-1"></a><span class="co"># proučite okvir `mtcars`  (head, glimpse, ?...)</span></span>
+<span id="cb505-5"><a href="ggplot2.html#cb505-5" tabindex="-1"></a><span class="fu">glimpse</span>(mtcars)</span>
+<span id="cb505-6"><a href="ggplot2.html#cb505-6" tabindex="-1"></a><span class="fu">head</span>(mtcars)</span></code></pre></div>
 <pre><code>## Rows: 32
 ## Columns: 11
 ## $ mpg  &lt;dbl&gt; 21.0, 21.0, 22.8, 21.4, 18.7, 18.1, 14.3, 24.4, 22.8, 19.2, 17.8,…
@@ -525,11 +542,11 @@ div.csl-indent {
 <hr />
 <p>Vidimo da ovi podaci opisuju karakteristike 32 (stara) automobila kao što su: težina, maksimalna brzina, broj konjskih snaga, broj cilindara i sl.</p>
 <p>Budući da su neke od varijabli ovog skupa podataka trenutno numeričke, a zapravo bi im više odgovarao kategorijski tip, možemo prije nastavka provesti kategorizaciju tih varijabli. Usput možemo iskoristiti ovu priliku i prikazati parametar <code>labels</code> koji omogućuje “preimenovanje” kategorija (prema numeričkom ili abecednom rasporedu inicijalnih kategorija).</p>
-<div class="sourceCode" id="cb494"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb494-1"><a href="ggplot2.html#cb494-1" tabindex="-1"></a>mtcars<span class="sc">$</span>vs <span class="ot">&lt;-</span> <span class="fu">factor</span>(mtcars<span class="sc">$</span>vs, <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">&quot;V&quot;</span>, <span class="st">&quot;S&quot;</span>))</span>
-<span id="cb494-2"><a href="ggplot2.html#cb494-2" tabindex="-1"></a>mtcars<span class="sc">$</span>am <span class="ot">&lt;-</span> <span class="fu">factor</span>(mtcars<span class="sc">$</span>am, <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">&quot;automatic&quot;</span>, <span class="st">&quot;manual&quot;</span>))</span>
-<span id="cb494-3"><a href="ggplot2.html#cb494-3" tabindex="-1"></a>mtcars<span class="sc">$</span>cyl  <span class="ot">&lt;-</span> <span class="fu">factor</span>(mtcars<span class="sc">$</span>cyl)</span>
-<span id="cb494-4"><a href="ggplot2.html#cb494-4" tabindex="-1"></a>mtcars<span class="sc">$</span>gear <span class="ot">&lt;-</span> <span class="fu">factor</span>(mtcars<span class="sc">$</span>gear)</span>
-<span id="cb494-5"><a href="ggplot2.html#cb494-5" tabindex="-1"></a>mtcars<span class="sc">$</span>carb <span class="ot">&lt;-</span> <span class="fu">factor</span>(mtcars<span class="sc">$</span>carb)</span></code></pre></div>
+<div class="sourceCode" id="cb507"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb507-1"><a href="ggplot2.html#cb507-1" tabindex="-1"></a>mtcars<span class="sc">$</span>vs <span class="ot">&lt;-</span> <span class="fu">factor</span>(mtcars<span class="sc">$</span>vs, <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">&quot;V&quot;</span>, <span class="st">&quot;S&quot;</span>))</span>
+<span id="cb507-2"><a href="ggplot2.html#cb507-2" tabindex="-1"></a>mtcars<span class="sc">$</span>am <span class="ot">&lt;-</span> <span class="fu">factor</span>(mtcars<span class="sc">$</span>am, <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">&quot;automatic&quot;</span>, <span class="st">&quot;manual&quot;</span>))</span>
+<span id="cb507-3"><a href="ggplot2.html#cb507-3" tabindex="-1"></a>mtcars<span class="sc">$</span>cyl  <span class="ot">&lt;-</span> <span class="fu">factor</span>(mtcars<span class="sc">$</span>cyl)</span>
+<span id="cb507-4"><a href="ggplot2.html#cb507-4" tabindex="-1"></a>mtcars<span class="sc">$</span>gear <span class="ot">&lt;-</span> <span class="fu">factor</span>(mtcars<span class="sc">$</span>gear)</span>
+<span id="cb507-5"><a href="ggplot2.html#cb507-5" tabindex="-1"></a>mtcars<span class="sc">$</span>carb <span class="ot">&lt;-</span> <span class="fu">factor</span>(mtcars<span class="sc">$</span>carb)</span></code></pre></div>
 <p>Kada stvaramo <code>ggplot2</code> vizualizaciju onda često pomaže da razmišljamo o “slojevima” grafa. Svaki sloj na neki način “prekriva” graf poput prozirne folije, što nam omogućuje postavljanje više različitih tipova reprezentacije podataka na isti graf (npr. prikazujemo točke ali ih i povežemo linijom).</p>
 <p>Recimo da nas zanima kako se odnose težina automobila i njegova maksimalna brzina. Intuitivni način vizualizacije bio bi:</p>
 <ul>
@@ -541,57 +558,56 @@ div.csl-indent {
 <div id="prvi-ggplot2-graf" class="section level4 hasAnchor" number="11.3.1.1">
 <h4><span class="header-section-number">11.3.1.1</span> Prvi <code>ggplot2</code> graf<a href="ggplot2.html#prvi-ggplot2-graf" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <div class="fold o">
-<div class="sourceCode" id="cb495"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb495-1"><a href="ggplot2.html#cb495-1" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span> </span>
-<span id="cb495-2"><a href="ggplot2.html#cb495-2" tabindex="-1"></a><span class="fu">layer</span>( <span class="at">data =</span> mtcars,                      <span class="co"># 1. podaci</span></span>
-<span id="cb495-3"><a href="ggplot2.html#cb495-3" tabindex="-1"></a>       <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> wt, <span class="at">y =</span> mpg),     <span class="co"># 2. mapiranja / estetike</span></span>
-<span id="cb495-4"><a href="ggplot2.html#cb495-4" tabindex="-1"></a>       <span class="at">geom =</span> <span class="st">&quot;point&quot;</span>,                     <span class="co"># 3. geometrija</span></span>
-<span id="cb495-5"><a href="ggplot2.html#cb495-5" tabindex="-1"></a>       <span class="at">stat =</span> <span class="st">&quot;identity&quot;</span>,                  <span class="co"># za sada zanemariti</span></span>
-<span id="cb495-6"><a href="ggplot2.html#cb495-6" tabindex="-1"></a>       <span class="at">position =</span> <span class="st">&quot;identity&quot;</span>)              <span class="co"># za sada zanemariti</span></span></code></pre></div>
-<p><img src="osnoveR_files/figure-html/unnamed-chunk-372-1.png" width="672" /></p>
+<div class="sourceCode" id="cb508"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb508-1"><a href="ggplot2.html#cb508-1" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span> </span>
+<span id="cb508-2"><a href="ggplot2.html#cb508-2" tabindex="-1"></a><span class="fu">layer</span>( <span class="at">data =</span> mtcars,                      <span class="co"># 1. podaci</span></span>
+<span id="cb508-3"><a href="ggplot2.html#cb508-3" tabindex="-1"></a>       <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> wt, <span class="at">y =</span> mpg),     <span class="co"># 2. mapiranja / estetike</span></span>
+<span id="cb508-4"><a href="ggplot2.html#cb508-4" tabindex="-1"></a>       <span class="at">geom =</span> <span class="st">&quot;point&quot;</span>,                     <span class="co"># 3. geometrija</span></span>
+<span id="cb508-5"><a href="ggplot2.html#cb508-5" tabindex="-1"></a>       <span class="at">stat =</span> <span class="st">&quot;identity&quot;</span>,                  <span class="co"># za sada zanemariti</span></span>
+<span id="cb508-6"><a href="ggplot2.html#cb508-6" tabindex="-1"></a>       <span class="at">position =</span> <span class="st">&quot;identity&quot;</span>)              <span class="co"># za sada zanemariti</span></span></code></pre></div>
+<p><img src="osnoveR_files/figure-html/unnamed-chunk-377-1.png" width="672" /></p>
 </div>
 <p>Osnovna funkcija za izgradnju jest funkcija <code>ggplot</code>. Ona zapravo inicijalizira objekt klase <code>ggplot</code>. Naime, za <code>ggplot2</code> vizualizacije specifično je da su grafovi zapravo objekti, a ono što inače smatramo grafom je samo njihova vizualna reprezentacija. Ovdje zapravo leži moć ovakvog tipa reprezentacija - graf je nešto što možemo po volji mijenjati, preoblikovati, proširivati i pohranjivati, a vizualizacija predstavlja konačni nusproizvod upravljanja tim objektom.</p>
 <p>Ovakvom objektu potom dodajemo “slojeve” uz pomoć funkcije <code>layer</code>. Sloj objektu dodajemo uz pomoć operatora <code>+</code>, što predstavlja intuitivan prikaz i olakšava rad sa ovakvim tipom grafova. Sloj kao takav ima one gramatičke aspekte o kojima smo ranije govorili - podatke, estetike i geometrije. U pozivu vidimo još dva aspekta grafičke gramatike - statistike i poziciju - koje ćemo objasniti kasnije. Dovoljno je napomenuti da <code>"identity"</code> zapravo znači “ostavi onako kakvo jest”, tj. radi se o nekoj dodatnoj obradi unutar procesa vizualizacije koju za sada zanemarujemo, tj. ne koristimo.</p>
 <p>Iako formalno svaki sloj ima svoje gramatičke aspekte, gotovo uvijek postoje aspekti koji su zajednički svim slojevima (npr. vrlo često jedan graf prikazuje jedan podatkovni skup a svi slojevi “dijele” x i y os). Ukoliko imamo ovakve zajedničke aspekte onda ih možemo definirati odmah kod stvaranja objekta <code>ggplot</code> koji onda postaju “default-ni” parametri slojeva koje dodajemo (iako oni uvijek imaju opciju “gaženja” tih parametara svojim aspektima). Isto tako, za stvaranje dodatnih slojeva često se koristimo pomoćnim funkcijama intuitivnog imena koje imaju unaprijed podešene najčešće korištene parametre kako ih ne bismo morali stalno ponovo upisivati. Tako npr. funkcija <code>geom_point</code> dodaje sloj koji nasljeđuje već definirane aspekte a kao geometriju koristi točke.</p>
 <p>Pogledajmo sljedeći primjer koji koristi “skraćeni” način stvaranja navedenog grafa:</p>
 <div class="fold o">
-<div class="sourceCode" id="cb496"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb496-1"><a href="ggplot2.html#cb496-1" tabindex="-1"></a><span class="co"># prvi `ggplot2` graf, skraćeni način izgradnje grafa</span></span>
-<span id="cb496-2"><a href="ggplot2.html#cb496-2" tabindex="-1"></a><span class="fu">ggplot</span>(mtcars, <span class="fu">aes</span>(<span class="at">x =</span> wt, <span class="at">y =</span> mpg)) <span class="sc">+</span> <span class="fu">geom_point</span>()</span></code></pre></div>
-<p><img src="osnoveR_files/figure-html/unnamed-chunk-373-1.png" width="672" /></p>
+<div class="sourceCode" id="cb509"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb509-1"><a href="ggplot2.html#cb509-1" tabindex="-1"></a><span class="co"># prvi `ggplot2` graf, skraćeni način izgradnje grafa</span></span>
+<span id="cb509-2"><a href="ggplot2.html#cb509-2" tabindex="-1"></a><span class="fu">ggplot</span>(mtcars, <span class="fu">aes</span>(<span class="at">x =</span> wt, <span class="at">y =</span> mpg)) <span class="sc">+</span> <span class="fu">geom_point</span>()</span></code></pre></div>
+<p><img src="osnoveR_files/figure-html/unnamed-chunk-378-1.png" width="672" /></p>
 </div>
 <p>Postoji još jedan “pojednostavljeni” način stvaranja <code>ggplot</code> grafova, a to je uz pomoć funkcije <code>qplot</code> (od “*quick plot”). Ova funkcija zapravo je omotač koji omogućuje da <code>ggplot</code> grafove stvaramo sintaksom vrlo sličnom sintaksi funkcije <code>plot</code>.</p>
 <div class="fold o">
-<div class="sourceCode" id="cb497"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb497-1"><a href="ggplot2.html#cb497-1" tabindex="-1"></a><span class="co"># prvi `ggplot2` graf, funkcija `qplot`</span></span>
-<span id="cb497-2"><a href="ggplot2.html#cb497-2" tabindex="-1"></a><span class="fu">qplot</span>(<span class="at">x =</span> wt, <span class="at">y =</span> mpg, <span class="at">data =</span> mtcars)</span></code></pre></div>
+<div class="sourceCode" id="cb510"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb510-1"><a href="ggplot2.html#cb510-1" tabindex="-1"></a><span class="co"># prvi `ggplot2` graf, funkcija `qplot`</span></span>
+<span id="cb510-2"><a href="ggplot2.html#cb510-2" tabindex="-1"></a><span class="fu">qplot</span>(<span class="at">x =</span> wt, <span class="at">y =</span> mpg, <span class="at">data =</span> mtcars)</span></code></pre></div>
 <pre><code>## Warning: `qplot()` was deprecated in ggplot2 3.4.0.
 ## This warning is displayed once every 8 hours.
-## Call `lifecycle::last_lifecycle_warnings()` to see where this warning was
-## generated.</code></pre>
-<p><img src="osnoveR_files/figure-html/unnamed-chunk-374-1.png" width="672" /></p>
+## Call `lifecycle::last_lifecycle_warnings()` to see where this warning was generated.</code></pre>
+<p><img src="osnoveR_files/figure-html/unnamed-chunk-379-1.png" width="672" /></p>
 </div>
 <p>Glavni razlog postojanja ove funkcije jest orijentiranost korisnicima koji traže brzu i učinkovitu alternativu <code>plot</code> funkciji bez potrebe za učenjem novih koncepata. Iako se možda ovakav način stvaranja grafova možda čini zgodan i jednostavan, dugoročno se ipak isplati naučiti “pravu” <em>ggplot2</em> sintaksu budući da je <code>qplot</code> funkcija dosta limitirana i - poput funkcije <code>plot</code> - inicijalna jednostavnost se sve više gubi što više prilagodbi vizualizacije želimo provesti.</p>
 <p>Vratimo se sada na naš graf - što ako želimo na njemu prikazati dodatni stupac tj. varijablu? Npr. možemo vidjeti da svi auti imaju 4, 6 ili 8 cilindara. No graf koji imamo je dvodimenzionalan - kako dodati “treću dimenziju”? Odgovor je - koristimo neku dosad neiskorištenu estetiku, npr. boju, veličinu ili oblik točaka.</p>
 <hr />
 <p><strong>Zadatak 11.3 - Estetika oblika</strong></p>
-<div class="sourceCode" id="cb499"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb499-1"><a href="ggplot2.html#cb499-1" tabindex="-1"></a><span class="co"># stvorite `ggplot` graf skupa `mtcars` sa mapiranjima:  x = wt, y = mpg, shape = cyl</span></span>
-<span id="cb499-2"><a href="ggplot2.html#cb499-2" tabindex="-1"></a><span class="co"># koristite geometriju točke</span></span>
-<span id="cb499-3"><a href="ggplot2.html#cb499-3" tabindex="-1"></a><span class="co"># što se događa ako koristimo &quot;numeričku&quot; inačicu varijable `cyl` (`as.numeric(cyl)`)</span></span></code></pre></div>
+<div class="sourceCode" id="cb512"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb512-1"><a href="ggplot2.html#cb512-1" tabindex="-1"></a><span class="co"># stvorite `ggplot` graf skupa `mtcars` sa mapiranjima:  x = wt, y = mpg, shape = cyl</span></span>
+<span id="cb512-2"><a href="ggplot2.html#cb512-2" tabindex="-1"></a><span class="co"># koristite geometriju točke</span></span>
+<span id="cb512-3"><a href="ggplot2.html#cb512-3" tabindex="-1"></a><span class="co"># što se događa ako koristimo &quot;numeričku&quot; inačicu varijable `cyl` (`as.numeric(cyl)`)</span></span></code></pre></div>
 <div class="fold s o">
-<div class="sourceCode" id="cb500"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb500-1"><a href="ggplot2.html#cb500-1" tabindex="-1"></a><span class="fu">ggplot</span>(mtcars, <span class="fu">aes</span>(<span class="at">x =</span> wt, <span class="at">y =</span> mpg, <span class="at">shape =</span> cyl)) <span class="sc">+</span> <span class="fu">geom_point</span>()</span></code></pre></div>
-<p><img src="osnoveR_files/figure-html/unnamed-chunk-376-1.png" width="672" /></p>
+<div class="sourceCode" id="cb513"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb513-1"><a href="ggplot2.html#cb513-1" tabindex="-1"></a><span class="fu">ggplot</span>(mtcars, <span class="fu">aes</span>(<span class="at">x =</span> wt, <span class="at">y =</span> mpg, <span class="at">shape =</span> cyl)) <span class="sc">+</span> <span class="fu">geom_point</span>()</span></code></pre></div>
+<p><img src="osnoveR_files/figure-html/unnamed-chunk-381-1.png" width="672" /></p>
 </div>
 <hr />
 <p><strong>Zadatak 11.4 - Estetika boje</strong></p>
-<div class="sourceCode" id="cb501"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb501-1"><a href="ggplot2.html#cb501-1" tabindex="-1"></a><span class="co"># ponovite isti graf, ali umjesto estetike `shape` koristite estetiku `color`</span></span></code></pre></div>
+<div class="sourceCode" id="cb514"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb514-1"><a href="ggplot2.html#cb514-1" tabindex="-1"></a><span class="co"># ponovite isti graf, ali umjesto estetike `shape` koristite estetiku `color`</span></span></code></pre></div>
 <div class="fold s o">
-<div class="sourceCode" id="cb502"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb502-1"><a href="ggplot2.html#cb502-1" tabindex="-1"></a><span class="fu">ggplot</span>(mtcars, <span class="fu">aes</span>(<span class="at">x =</span> wt, <span class="at">y =</span> mpg, <span class="at">color =</span> cyl)) <span class="sc">+</span> <span class="fu">geom_point</span>()</span></code></pre></div>
-<p><img src="osnoveR_files/figure-html/unnamed-chunk-378-1.png" width="672" /></p>
+<div class="sourceCode" id="cb515"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb515-1"><a href="ggplot2.html#cb515-1" tabindex="-1"></a><span class="fu">ggplot</span>(mtcars, <span class="fu">aes</span>(<span class="at">x =</span> wt, <span class="at">y =</span> mpg, <span class="at">color =</span> cyl)) <span class="sc">+</span> <span class="fu">geom_point</span>()</span></code></pre></div>
+<p><img src="osnoveR_files/figure-html/unnamed-chunk-383-1.png" width="672" /></p>
 </div>
 <hr />
 <p><strong>Zadatak 11.5 - Kombiniranje estetika</strong></p>
-<div class="sourceCode" id="cb503"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb503-1"><a href="ggplot2.html#cb503-1" tabindex="-1"></a><span class="co"># ponovite isti graf, ali sada za `cyl` stupac kombinirajte i `shape` i `color` estetiku</span></span></code></pre></div>
+<div class="sourceCode" id="cb516"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb516-1"><a href="ggplot2.html#cb516-1" tabindex="-1"></a><span class="co"># ponovite isti graf, ali sada za `cyl` stupac kombinirajte i `shape` i `color` estetiku</span></span></code></pre></div>
 <div class="fold s o">
-<div class="sourceCode" id="cb504"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb504-1"><a href="ggplot2.html#cb504-1" tabindex="-1"></a><span class="fu">ggplot</span>(mtcars, <span class="fu">aes</span>(<span class="at">x =</span> wt, <span class="at">y =</span> mpg, <span class="at">color =</span> cyl, <span class="at">shape =</span> cyl)) <span class="sc">+</span> <span class="fu">geom_point</span>()</span></code></pre></div>
-<p><img src="osnoveR_files/figure-html/unnamed-chunk-380-1.png" width="672" /></p>
+<div class="sourceCode" id="cb517"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb517-1"><a href="ggplot2.html#cb517-1" tabindex="-1"></a><span class="fu">ggplot</span>(mtcars, <span class="fu">aes</span>(<span class="at">x =</span> wt, <span class="at">y =</span> mpg, <span class="at">color =</span> cyl, <span class="at">shape =</span> cyl)) <span class="sc">+</span> <span class="fu">geom_point</span>()</span></code></pre></div>
+<p><img src="osnoveR_files/figure-html/unnamed-chunk-385-1.png" width="672" /></p>
 </div>
 <hr />
 <p>Usporedbom grafova možemo zaključiti da je boju puno lakše vizualno interpetirati od oblika, što znači da je ona često preferirana estetika (ali nije primjerena ako nam grafovi moraju biti crno-bijeli). Isto tako, uočite da možemo lako kombinirati dvije estetike nad istom varijablom, ukoliko želimo.</p>
@@ -600,23 +616,23 @@ div.csl-indent {
 <div id="funkcija-labs" class="section level4 hasAnchor" number="11.3.1.2">
 <h4><span class="header-section-number">11.3.1.2</span> Funkcija <code>labs</code><a href="ggplot2.html#funkcija-labs" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Vidjeli smo kako <code>ggplot</code> automatski stvara legendu za svoje estetike te da imenuje osi imenom varijable (osi <em>x</em> i <em>y</em> također možemo smatrati svojevrsnim “legendama”). Ukoliko želimo ručno imenovati osi i legende, ali i dodati naslov grafu možemo se poslužiti funkcijom <code>labs</code> koju također dodajemo kao novi sloj i koja može imati sljedeću sintaksu:</p>
-<div class="sourceCode" id="cb505"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb505-1"><a href="ggplot2.html#cb505-1" tabindex="-1"></a><span class="fu">ggplot</span>(... ) <span class="sc">+</span> ...</span>
-<span id="cb505-2"><a href="ggplot2.html#cb505-2" tabindex="-1"></a></span>
-<span id="cb505-3"><a href="ggplot2.html#cb505-3" tabindex="-1"></a><span class="sc">+</span> <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;x os&quot;</span>, <span class="at">y =</span> <span class="st">&quot;y os&quot;</span>, <span class="at">title =</span> <span class="st">&quot;Naslov&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb518"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb518-1"><a href="ggplot2.html#cb518-1" tabindex="-1"></a><span class="fu">ggplot</span>(... ) <span class="sc">+</span> ...</span>
+<span id="cb518-2"><a href="ggplot2.html#cb518-2" tabindex="-1"></a></span>
+<span id="cb518-3"><a href="ggplot2.html#cb518-3" tabindex="-1"></a><span class="sc">+</span> <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;x os&quot;</span>, <span class="at">y =</span> <span class="st">&quot;y os&quot;</span>, <span class="at">title =</span> <span class="st">&quot;Naslov&quot;</span>)</span></code></pre></div>
 <p>Isprobajmo ovo na primjeru.</p>
 <p><strong>Zadatak 11.6 - funkcija ‘labs’</strong></p>
-<div class="sourceCode" id="cb506"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb506-1"><a href="ggplot2.html#cb506-1" tabindex="-1"></a><span class="co"># na sljedećem grafu preimenujte osi i legendu</span></span>
-<span id="cb506-2"><a href="ggplot2.html#cb506-2" tabindex="-1"></a><span class="co"># te dodajte adekvatni naslov (najbolje nešto što objašnjava graf)</span></span>
-<span id="cb506-3"><a href="ggplot2.html#cb506-3" tabindex="-1"></a><span class="fu">ggplot</span>(mtcars, <span class="fu">aes</span>(<span class="at">x =</span> wt, <span class="at">y =</span> mpg, <span class="at">color =</span> cyl, <span class="at">shape =</span> cyl)) <span class="sc">+</span> <span class="fu">geom_point</span>() </span></code></pre></div>
-<p><img src="osnoveR_files/figure-html/unnamed-chunk-382-1.png" width="672" /></p>
+<div class="sourceCode" id="cb519"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb519-1"><a href="ggplot2.html#cb519-1" tabindex="-1"></a><span class="co"># na sljedećem grafu preimenujte osi i legendu</span></span>
+<span id="cb519-2"><a href="ggplot2.html#cb519-2" tabindex="-1"></a><span class="co"># te dodajte adekvatni naslov (najbolje nešto što objašnjava graf)</span></span>
+<span id="cb519-3"><a href="ggplot2.html#cb519-3" tabindex="-1"></a><span class="fu">ggplot</span>(mtcars, <span class="fu">aes</span>(<span class="at">x =</span> wt, <span class="at">y =</span> mpg, <span class="at">color =</span> cyl, <span class="at">shape =</span> cyl)) <span class="sc">+</span> <span class="fu">geom_point</span>() </span></code></pre></div>
+<p><img src="osnoveR_files/figure-html/unnamed-chunk-387-1.png" width="672" /></p>
 <div class="fold s o">
-<div class="sourceCode" id="cb507"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb507-1"><a href="ggplot2.html#cb507-1" tabindex="-1"></a><span class="co"># na sljedećem grafu preimenujte osi i legendu</span></span>
-<span id="cb507-2"><a href="ggplot2.html#cb507-2" tabindex="-1"></a><span class="co"># te dodajte adekvatni naslov (najbolje nešto što objašnjava graf)</span></span>
-<span id="cb507-3"><a href="ggplot2.html#cb507-3" tabindex="-1"></a><span class="fu">ggplot</span>(mtcars, <span class="fu">aes</span>(<span class="at">x =</span> wt, <span class="at">y =</span> mpg, <span class="at">color =</span> cyl, <span class="at">shape =</span> cyl)) <span class="sc">+</span> <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb507-4"><a href="ggplot2.html#cb507-4" tabindex="-1"></a><span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Težina / 1000 lb&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Potrošnja / milja po galonu&quot;</span>,</span>
-<span id="cb507-5"><a href="ggplot2.html#cb507-5" tabindex="-1"></a>     <span class="at">color =</span> <span class="st">&quot;Broj cilindara&quot;</span>, <span class="at">shape =</span> <span class="st">&quot;Broj cilindara&quot;</span>,</span>
-<span id="cb507-6"><a href="ggplot2.html#cb507-6" tabindex="-1"></a>   <span class="at">title =</span> <span class="st">&quot;Teži auti više troše (manje milja na jedan galon benzina)&quot;</span>)</span></code></pre></div>
-<p><img src="osnoveR_files/figure-html/unnamed-chunk-383-1.png" width="672" /></p>
+<div class="sourceCode" id="cb520"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb520-1"><a href="ggplot2.html#cb520-1" tabindex="-1"></a><span class="co"># na sljedećem grafu preimenujte osi i legendu</span></span>
+<span id="cb520-2"><a href="ggplot2.html#cb520-2" tabindex="-1"></a><span class="co"># te dodajte adekvatni naslov (najbolje nešto što objašnjava graf)</span></span>
+<span id="cb520-3"><a href="ggplot2.html#cb520-3" tabindex="-1"></a><span class="fu">ggplot</span>(mtcars, <span class="fu">aes</span>(<span class="at">x =</span> wt, <span class="at">y =</span> mpg, <span class="at">color =</span> cyl, <span class="at">shape =</span> cyl)) <span class="sc">+</span> <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb520-4"><a href="ggplot2.html#cb520-4" tabindex="-1"></a><span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Težina / 1000 lb&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Potrošnja / milja po galonu&quot;</span>,</span>
+<span id="cb520-5"><a href="ggplot2.html#cb520-5" tabindex="-1"></a>     <span class="at">color =</span> <span class="st">&quot;Broj cilindara&quot;</span>, <span class="at">shape =</span> <span class="st">&quot;Broj cilindara&quot;</span>,</span>
+<span id="cb520-6"><a href="ggplot2.html#cb520-6" tabindex="-1"></a>   <span class="at">title =</span> <span class="st">&quot;Teži auti više troše (manje milja na jedan galon benzina)&quot;</span>)</span></code></pre></div>
+<p><img src="osnoveR_files/figure-html/unnamed-chunk-388-1.png" width="672" /></p>
 </div>
 <hr />
 </div>
@@ -626,24 +642,24 @@ div.csl-indent {
 <p>Prije nastavka, obratimo pažnju na jednu prilično važnu stvar koju do sada nismo razjasnili: što kada želimo utjecati na određene parametre odabrane geometrije, ali želimo ih odrediti fiksno, umjesto da budu povezani sa određenom estetikom, tj. mapiranjem na određenu varijablu? Ili, konkretno - što ako želim napraviti graf ovisnosti potrošnje o težini automobila, ali želim da graf ima točke crvene boje, ili oblika “X” - tj. da su boja i oblik fiksni, umjesto da ovise o nekoj varijabli? Odgovor je zapravo vrlo jednostavan - umjesto da za parametar postavimo ime varijable (npr. <code>wt</code>), mi ga inicijaliziramo na znakovnu ili numeričku vrijednost koja je smislena za taj parametar (npr. <code>"red"</code> ili <code>"#FF0000"</code> za boju, broj od 0 do 25 za oblik).</p>
 Primjer sintakse:
 <div class="fold o">
-<div class="sourceCode" id="cb508"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb508-1"><a href="ggplot2.html#cb508-1" tabindex="-1"></a><span class="fu">ggplot</span>(mtcars, <span class="fu">aes</span>(wt, mpg)) <span class="sc">+</span> <span class="fu">geom_point</span>(<span class="at">color =</span> <span class="st">&quot;blue&quot;</span>)</span></code></pre></div>
-<p><img src="osnoveR_files/figure-html/unnamed-chunk-384-1.png" width="672" /></p>
+<div class="sourceCode" id="cb521"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb521-1"><a href="ggplot2.html#cb521-1" tabindex="-1"></a><span class="fu">ggplot</span>(mtcars, <span class="fu">aes</span>(wt, mpg)) <span class="sc">+</span> <span class="fu">geom_point</span>(<span class="at">color =</span> <span class="st">&quot;blue&quot;</span>)</span></code></pre></div>
+<p><img src="osnoveR_files/figure-html/unnamed-chunk-389-1.png" width="672" /></p>
 </div>
 <p>Primjer <strong>krive</strong> sintakse:</p>
 <div class="fold o">
-<div class="sourceCode" id="cb509"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb509-1"><a href="ggplot2.html#cb509-1" tabindex="-1"></a><span class="co"># ggplot će raditi mapiranje riječi &quot;blue&quot; na estetiku `color`</span></span>
-<span id="cb509-2"><a href="ggplot2.html#cb509-2" tabindex="-1"></a><span class="fu">ggplot</span>(mtcars, <span class="fu">aes</span>(wt, mpg)) <span class="sc">+</span> <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">color =</span> <span class="st">&quot;blue&quot;</span>))</span></code></pre></div>
-<p><img src="osnoveR_files/figure-html/unnamed-chunk-385-1.png" width="672" /></p>
+<div class="sourceCode" id="cb522"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb522-1"><a href="ggplot2.html#cb522-1" tabindex="-1"></a><span class="co"># ggplot će raditi mapiranje riječi &quot;blue&quot; na estetiku `color`</span></span>
+<span id="cb522-2"><a href="ggplot2.html#cb522-2" tabindex="-1"></a><span class="fu">ggplot</span>(mtcars, <span class="fu">aes</span>(wt, mpg)) <span class="sc">+</span> <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">color =</span> <span class="st">&quot;blue&quot;</span>))</span></code></pre></div>
+<p><img src="osnoveR_files/figure-html/unnamed-chunk-390-1.png" width="672" /></p>
 </div>
 <p>Pokušajte ovo primijeniti na primjeru.</p>
 <hr />
 <p><strong>Zadatak 11.7 - fiksni parametri geometrije</strong></p>
-<div class="sourceCode" id="cb510"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb510-1"><a href="ggplot2.html#cb510-1" tabindex="-1"></a><span class="co"># nacrtajte graf ovisnosti potrošnje o težini automobila</span></span>
-<span id="cb510-2"><a href="ggplot2.html#cb510-2" tabindex="-1"></a><span class="co"># koristite geometriju točke</span></span>
-<span id="cb510-3"><a href="ggplot2.html#cb510-3" tabindex="-1"></a><span class="co"># točke neka budu crvene boje, neka oblik broj 4 (iksić) i veličinu 3</span></span></code></pre></div>
+<div class="sourceCode" id="cb523"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb523-1"><a href="ggplot2.html#cb523-1" tabindex="-1"></a><span class="co"># nacrtajte graf ovisnosti potrošnje o težini automobila</span></span>
+<span id="cb523-2"><a href="ggplot2.html#cb523-2" tabindex="-1"></a><span class="co"># koristite geometriju točke</span></span>
+<span id="cb523-3"><a href="ggplot2.html#cb523-3" tabindex="-1"></a><span class="co"># točke neka budu crvene boje, neka oblik broj 4 (iksić) i veličinu 3</span></span></code></pre></div>
 <div class="fold s o">
-<div class="sourceCode" id="cb511"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb511-1"><a href="ggplot2.html#cb511-1" tabindex="-1"></a><span class="fu">ggplot</span>(mtcars, <span class="fu">aes</span>(<span class="at">x =</span> wt, <span class="at">y =</span> mpg)) <span class="sc">+</span> <span class="fu">geom_point</span>(<span class="at">color =</span> <span class="st">&quot;red&quot;</span>, <span class="at">shape =</span> <span class="dv">4</span>, <span class="at">size =</span> <span class="dv">3</span>)</span></code></pre></div>
-<p><img src="osnoveR_files/figure-html/unnamed-chunk-387-1.png" width="672" /></p>
+<div class="sourceCode" id="cb524"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb524-1"><a href="ggplot2.html#cb524-1" tabindex="-1"></a><span class="fu">ggplot</span>(mtcars, <span class="fu">aes</span>(<span class="at">x =</span> wt, <span class="at">y =</span> mpg)) <span class="sc">+</span> <span class="fu">geom_point</span>(<span class="at">color =</span> <span class="st">&quot;red&quot;</span>, <span class="at">shape =</span> <span class="dv">4</span>, <span class="at">size =</span> <span class="dv">3</span>)</span></code></pre></div>
+<p><img src="osnoveR_files/figure-html/unnamed-chunk-392-1.png" width="672" /></p>
 </div>
 <hr />
 </div>
@@ -652,15 +668,15 @@ Primjer sintakse:
 <p>Vratimo se sada na prvi graf koji je uspoređivao težinu i potrošnju. Što ako smo htjeli ovu povezanost prikazati linijom? Pokušajte donjem pozivu dodati sloj koji koristi postojeće aspekte, ali koristi linijsku geometriju. Možete koristiti funkciju <code>layer</code> sa postavljenim <code>geom</code> parametrom na <code>"line"</code>, no popularniji pristup je korištenje pomoćne funkcije <code>geom_line</code> koja radi slično kao funkcija <code>geom_point</code>.</p>
 <hr />
 <p><strong>Zadatak 11.8 - dodavanje linijskog sloja</strong></p>
-<div class="sourceCode" id="cb512"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb512-1"><a href="ggplot2.html#cb512-1" tabindex="-1"></a><span class="co"># budući da stalno koristimo istu &quot;osnovicu&quot; grafa možemo ju</span></span>
-<span id="cb512-2"><a href="ggplot2.html#cb512-2" tabindex="-1"></a><span class="co"># pohraniti u zasebnu varijablu npr. imena `graf`</span></span>
-<span id="cb512-3"><a href="ggplot2.html#cb512-3" tabindex="-1"></a></span>
-<span id="cb512-4"><a href="ggplot2.html#cb512-4" tabindex="-1"></a>graf <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(mtcars, <span class="fu">aes</span>(<span class="at">x =</span> wt, <span class="at">y =</span> mpg)) </span>
-<span id="cb512-5"><a href="ggplot2.html#cb512-5" tabindex="-1"></a></span>
-<span id="cb512-6"><a href="ggplot2.html#cb512-6" tabindex="-1"></a><span class="co"># dodajte varijabli `graf` geometriju točaka a potom linijsku geometriju</span></span></code></pre></div>
+<div class="sourceCode" id="cb525"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb525-1"><a href="ggplot2.html#cb525-1" tabindex="-1"></a><span class="co"># budući da stalno koristimo istu &quot;osnovicu&quot; grafa možemo ju</span></span>
+<span id="cb525-2"><a href="ggplot2.html#cb525-2" tabindex="-1"></a><span class="co"># pohraniti u zasebnu varijablu npr. imena `graf`</span></span>
+<span id="cb525-3"><a href="ggplot2.html#cb525-3" tabindex="-1"></a></span>
+<span id="cb525-4"><a href="ggplot2.html#cb525-4" tabindex="-1"></a>graf <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(mtcars, <span class="fu">aes</span>(<span class="at">x =</span> wt, <span class="at">y =</span> mpg)) </span>
+<span id="cb525-5"><a href="ggplot2.html#cb525-5" tabindex="-1"></a></span>
+<span id="cb525-6"><a href="ggplot2.html#cb525-6" tabindex="-1"></a><span class="co"># dodajte varijabli `graf` geometriju točaka a potom linijsku geometriju</span></span></code></pre></div>
 <div class="fold s o">
-<div class="sourceCode" id="cb513"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb513-1"><a href="ggplot2.html#cb513-1" tabindex="-1"></a>graf <span class="sc">+</span> <span class="fu">geom_point</span>() <span class="sc">+</span> <span class="fu">geom_line</span>()</span></code></pre></div>
-<p><img src="osnoveR_files/figure-html/unnamed-chunk-389-1.png" width="672" /></p>
+<div class="sourceCode" id="cb526"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb526-1"><a href="ggplot2.html#cb526-1" tabindex="-1"></a>graf <span class="sc">+</span> <span class="fu">geom_point</span>() <span class="sc">+</span> <span class="fu">geom_line</span>()</span></code></pre></div>
+<p><img src="osnoveR_files/figure-html/unnamed-chunk-394-1.png" width="672" /></p>
 </div>
 <hr />
 <p>Dobili smo što smo tražili, no rezultat nije pretjerano uspješan jer je linija isprekidana i vizualno “zakrčuje” graf umjesto da nam donosi dodatnu informaciju (inače, linijska geometrija je vrlo popularna kada radimo sa vremenskim nizovima). Ono što bi nam vjerojatno bilo podesnije jest “izglađena” linija, tj. linija koja aproksimira položaje točaka koje opisuju težinu i potrošnju, umjesto da ih direktno opisuje. Za ovo su nam potrebni dodatni aspekti koje smo već vidjeli u inicijalnom pozivu funkcije <code>ggplot</code> (točnije, funkcije <code>layer</code>) a koje smo u tom trenutku zanemarili, a to su aspekti statistike i pozicije.</p>
@@ -678,31 +694,31 @@ Primjer sintakse:
 <p>Vratimo se na naš graf ovisnosti potrošnje o težini automobila, ali ovaj put umjesto dodavanja sloja linijske geometrije dodajmo sloj koji će prikazati “zaglađivanje” (tj. statistiku <code>smooth</code>). Ovo je odličan primjer korištenja statističkog aspekta - umjesto da se točke direktno povežu linijom, uz pomoć posebne funkcije ćemo “usrednjiti” vrijednosti a potom ćemo tako usrednjene vrijednosti povezati linijom ili krivuljom. Za ovo je idealna funkcija <code>stat_smooth</code> koja će - ukoliko koristimo default-ne parametre - stvoriti novi sloj sa “zaglađenim” prikazom osi <em>y</em> u ovisnosti o osi <em>x</em>, korištenjem tzv. <code>loess</code> metode, uz prikaz intervala pouzdanosti. Ovakav sloj možemo lako dodati već prije definiranoj varijabli graf.</p>
 <hr />
 <p><strong>Zadatak 11.9 - funkcija ‘stat_smooth’ i metoda ‘lm’</strong></p>
-<div class="sourceCode" id="cb514"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb514-1"><a href="ggplot2.html#cb514-1" tabindex="-1"></a><span class="co"># dodajte geometriju točaka na varijablu `graf`</span></span>
-<span id="cb514-2"><a href="ggplot2.html#cb514-2" tabindex="-1"></a><span class="co"># te potom dodatni sloj sa krivuljom zaglađivanja</span></span>
-<span id="cb514-3"><a href="ggplot2.html#cb514-3" tabindex="-1"></a><span class="co"># koristite funkciju `stat_smooth` uz parametar `method` </span></span>
-<span id="cb514-4"><a href="ggplot2.html#cb514-4" tabindex="-1"></a><span class="co"># postavljen na `&quot;lm&quot;` (linearno zaglađivanje)</span></span>
-<span id="cb514-5"><a href="ggplot2.html#cb514-5" tabindex="-1"></a><span class="co"># i parametar `formula` na `y~x`</span></span></code></pre></div>
+<div class="sourceCode" id="cb527"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb527-1"><a href="ggplot2.html#cb527-1" tabindex="-1"></a><span class="co"># dodajte geometriju točaka na varijablu `graf`</span></span>
+<span id="cb527-2"><a href="ggplot2.html#cb527-2" tabindex="-1"></a><span class="co"># te potom dodatni sloj sa krivuljom zaglađivanja</span></span>
+<span id="cb527-3"><a href="ggplot2.html#cb527-3" tabindex="-1"></a><span class="co"># koristite funkciju `stat_smooth` uz parametar `method` </span></span>
+<span id="cb527-4"><a href="ggplot2.html#cb527-4" tabindex="-1"></a><span class="co"># postavljen na `&quot;lm&quot;` (linearno zaglađivanje)</span></span>
+<span id="cb527-5"><a href="ggplot2.html#cb527-5" tabindex="-1"></a><span class="co"># i parametar `formula` na `y~x`</span></span></code></pre></div>
 <div class="fold s o">
-<div class="sourceCode" id="cb515"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb515-1"><a href="ggplot2.html#cb515-1" tabindex="-1"></a>graf <span class="sc">+</span> <span class="fu">geom_point</span>() <span class="sc">+</span> <span class="fu">stat_smooth</span>(<span class="at">formula =</span> y <span class="sc">~</span> x,<span class="at">method =</span> <span class="st">&#39;lm&#39;</span>)</span></code></pre></div>
-<p><img src="osnoveR_files/figure-html/unnamed-chunk-391-1.png" width="672" /></p>
+<div class="sourceCode" id="cb528"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb528-1"><a href="ggplot2.html#cb528-1" tabindex="-1"></a>graf <span class="sc">+</span> <span class="fu">geom_point</span>() <span class="sc">+</span> <span class="fu">stat_smooth</span>(<span class="at">formula =</span> y <span class="sc">~</span> x,<span class="at">method =</span> <span class="st">&#39;lm&#39;</span>)</span></code></pre></div>
+<p><img src="osnoveR_files/figure-html/unnamed-chunk-396-1.png" width="672" /></p>
 </div>
 <hr />
 <p><strong>Zadatak 11.10 - funkcija ‘stat_smooth’ i metoda ‘loess’</strong></p>
-<div class="sourceCode" id="cb516"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb516-1"><a href="ggplot2.html#cb516-1" tabindex="-1"></a><span class="co"># ponovite postupak ali metodu zaglađivanja</span></span>
-<span id="cb516-2"><a href="ggplot2.html#cb516-2" tabindex="-1"></a><span class="co"># postavite na `loess` </span></span></code></pre></div>
+<div class="sourceCode" id="cb529"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb529-1"><a href="ggplot2.html#cb529-1" tabindex="-1"></a><span class="co"># ponovite postupak ali metodu zaglađivanja</span></span>
+<span id="cb529-2"><a href="ggplot2.html#cb529-2" tabindex="-1"></a><span class="co"># postavite na `loess` </span></span></code></pre></div>
 <div class="fold s o">
-<div class="sourceCode" id="cb517"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb517-1"><a href="ggplot2.html#cb517-1" tabindex="-1"></a>graf <span class="sc">+</span> <span class="fu">geom_point</span>() <span class="sc">+</span> <span class="fu">stat_smooth</span>(<span class="at">formula =</span> y <span class="sc">~</span> x, <span class="at">method =</span> <span class="st">&#39;loess&#39;</span>)</span></code></pre></div>
-<p><img src="osnoveR_files/figure-html/unnamed-chunk-393-1.png" width="672" /></p>
+<div class="sourceCode" id="cb530"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb530-1"><a href="ggplot2.html#cb530-1" tabindex="-1"></a>graf <span class="sc">+</span> <span class="fu">geom_point</span>() <span class="sc">+</span> <span class="fu">stat_smooth</span>(<span class="at">formula =</span> y <span class="sc">~</span> x, <span class="at">method =</span> <span class="st">&#39;loess&#39;</span>)</span></code></pre></div>
+<p><img src="osnoveR_files/figure-html/unnamed-chunk-398-1.png" width="672" /></p>
 </div>
 <hr />
 <p><strong>Zadatak 11.11 - ‘group’ estetika</strong></p>
-<div class="sourceCode" id="cb518"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb518-1"><a href="ggplot2.html#cb518-1" tabindex="-1"></a><span class="co"># stvorite još jednom isti graf ali sloju zaglađivanja</span></span>
-<span id="cb518-2"><a href="ggplot2.html#cb518-2" tabindex="-1"></a><span class="co"># dodajte estetiku `group` postavljenu na `cyl`</span></span>
-<span id="cb518-3"><a href="ggplot2.html#cb518-3" tabindex="-1"></a><span class="co"># Što smo ovime postigli?</span></span></code></pre></div>
+<div class="sourceCode" id="cb531"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb531-1"><a href="ggplot2.html#cb531-1" tabindex="-1"></a><span class="co"># stvorite još jednom isti graf ali sloju zaglađivanja</span></span>
+<span id="cb531-2"><a href="ggplot2.html#cb531-2" tabindex="-1"></a><span class="co"># dodajte estetiku `group` postavljenu na `cyl`</span></span>
+<span id="cb531-3"><a href="ggplot2.html#cb531-3" tabindex="-1"></a><span class="co"># Što smo ovime postigli?</span></span></code></pre></div>
 <div class="fold s o">
-<div class="sourceCode" id="cb519"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb519-1"><a href="ggplot2.html#cb519-1" tabindex="-1"></a>graf <span class="sc">+</span> <span class="fu">geom_point</span>() <span class="sc">+</span> <span class="fu">stat_smooth</span>(<span class="at">formula =</span> y <span class="sc">~</span> x, <span class="fu">aes</span>(<span class="at">group =</span> cyl), <span class="at">method =</span> <span class="st">&#39;loess&#39;</span>)</span></code></pre></div>
-<p><img src="osnoveR_files/figure-html/unnamed-chunk-395-1.png" width="672" /></p>
+<div class="sourceCode" id="cb532"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb532-1"><a href="ggplot2.html#cb532-1" tabindex="-1"></a>graf <span class="sc">+</span> <span class="fu">geom_point</span>() <span class="sc">+</span> <span class="fu">stat_smooth</span>(<span class="at">formula =</span> y <span class="sc">~</span> x, <span class="fu">aes</span>(<span class="at">group =</span> cyl), <span class="at">method =</span> <span class="st">&#39;loess&#39;</span>)</span></code></pre></div>
+<p><img src="osnoveR_files/figure-html/unnamed-chunk-400-1.png" width="672" /></p>
 </div>
 <hr />
 <p>U zadnjem primjeru vidjeli smo tzv. <code>group</code> estetiku. Ona radi slično <em>group_by</em> funkciji iz SQL-a ili <code>dplyr</code>-a, tj. ako računamo agregacije nad nekim skupom podataka, onda se umjesto nad cijelim podatkovnim skupom one rade nad svakom definiranom grupom zasebno. Korištenjem ove estetike možemo na grafu prikazati zasebne izračune prema odabranoj grupi, pa tako je i u ovom primjeru zaglađivanje rađeno po “podgrupama” ovisno o broju cilindara.</p>
@@ -716,104 +732,104 @@ Primjer sintakse:
 <p>Pokušajmo sada napraviti stupčani graf (engl. <em>bar plot</em>) koji će visinom stupića prikazati broj pojavljivanja određene kategorije - npr. zastupljenost pojedinog broja cilindara u okviru <code>mtcars</code>. Za ovo koristimo pomoćnu funkciju <code>geom_bar</code> koja ima unaprijed postavljenu <code>count</code> statistiku.</p>
 <hr />
 <p><strong>Zadatak 11.12 - stupčasti graf</strong></p>
-<div class="sourceCode" id="cb520"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb520-1"><a href="ggplot2.html#cb520-1" tabindex="-1"></a><span class="co"># nacrtajte stupčani graf varijable `cyl` tablice `mtcars` </span></span>
-<span id="cb520-2"><a href="ggplot2.html#cb520-2" tabindex="-1"></a><span class="co"># koristite funkciju `geom_bar` ili `stat_count`</span></span></code></pre></div>
+<div class="sourceCode" id="cb533"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb533-1"><a href="ggplot2.html#cb533-1" tabindex="-1"></a><span class="co"># nacrtajte stupčani graf varijable `cyl` tablice `mtcars` </span></span>
+<span id="cb533-2"><a href="ggplot2.html#cb533-2" tabindex="-1"></a><span class="co"># koristite funkciju `geom_bar` ili `stat_count`</span></span></code></pre></div>
 <div class="fold s o">
-<div class="sourceCode" id="cb521"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb521-1"><a href="ggplot2.html#cb521-1" tabindex="-1"></a><span class="fu">ggplot</span>(mtcars, <span class="fu">aes</span>(<span class="at">x =</span> cyl)) <span class="sc">+</span> <span class="fu">geom_bar</span>()</span></code></pre></div>
-<p><img src="osnoveR_files/figure-html/unnamed-chunk-397-1.png" width="672" /></p>
+<div class="sourceCode" id="cb534"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb534-1"><a href="ggplot2.html#cb534-1" tabindex="-1"></a><span class="fu">ggplot</span>(mtcars, <span class="fu">aes</span>(<span class="at">x =</span> cyl)) <span class="sc">+</span> <span class="fu">geom_bar</span>()</span></code></pre></div>
+<p><img src="osnoveR_files/figure-html/unnamed-chunk-402-1.png" width="672" /></p>
 </div>
 <hr />
 <p>Na sličan način možemo prikazati i kontinuirane varijable. Za razliku od stupčanog grafa, gdje imamo jasno definirane kategorije, ovdje ćemo morati prvo grupirati vrijednosti u tzv. “ladice” (engl. <em>bins</em>) na osnovu kojih gradimo graf koji se zove <em>histogram</em>. Opet koristimo statistiku <code>bin</code>, a za samo stvaranje histograma koristit ćemo pomoćnu funkciju <code>geom_histogram</code>.</p>
 <hr />
 <p><strong>Zadatak 11.13 - histogram</strong></p>
-<div class="sourceCode" id="cb522"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb522-1"><a href="ggplot2.html#cb522-1" tabindex="-1"></a><span class="co"># nacrtajte histogram varijable `wt` tablice `mtcars`</span></span>
-<span id="cb522-2"><a href="ggplot2.html#cb522-2" tabindex="-1"></a><span class="co"># težine podijelite jednoliko u četiri ladice</span></span>
-<span id="cb522-3"><a href="ggplot2.html#cb522-3" tabindex="-1"></a><span class="co"># koristite funkciju `geom_histogram`</span></span></code></pre></div>
+<div class="sourceCode" id="cb535"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb535-1"><a href="ggplot2.html#cb535-1" tabindex="-1"></a><span class="co"># nacrtajte histogram varijable `wt` tablice `mtcars`</span></span>
+<span id="cb535-2"><a href="ggplot2.html#cb535-2" tabindex="-1"></a><span class="co"># težine podijelite jednoliko u četiri ladice</span></span>
+<span id="cb535-3"><a href="ggplot2.html#cb535-3" tabindex="-1"></a><span class="co"># koristite funkciju `geom_histogram`</span></span></code></pre></div>
 <div class="fold s o">
-<div class="sourceCode" id="cb523"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb523-1"><a href="ggplot2.html#cb523-1" tabindex="-1"></a><span class="fu">ggplot</span>(mtcars, <span class="fu">aes</span>(<span class="at">x =</span> wt)) <span class="sc">+</span> <span class="fu">geom_histogram</span>(<span class="at">bins =</span> <span class="dv">4</span>)</span></code></pre></div>
-<p><img src="osnoveR_files/figure-html/unnamed-chunk-399-1.png" width="672" /></p>
+<div class="sourceCode" id="cb536"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb536-1"><a href="ggplot2.html#cb536-1" tabindex="-1"></a><span class="fu">ggplot</span>(mtcars, <span class="fu">aes</span>(<span class="at">x =</span> wt)) <span class="sc">+</span> <span class="fu">geom_histogram</span>(<span class="at">bins =</span> <span class="dv">4</span>)</span></code></pre></div>
+<p><img src="osnoveR_files/figure-html/unnamed-chunk-404-1.png" width="672" /></p>
 </div>
 <hr />
 <p>Kako zapravo radi statistički aspekt? U pravilu se na osnovu postojećih varijabli izračunavaju jedna ili više novih, najčešće agregiranih varijabli. U dokumentaciji možemo naći konkretne informacije o nazivima tih novih varijabli i njihovom značenju. Na primjer, ako pogledamo dokumentaciju za funkciju <code>stat_bin</code>, možemo vidjeti da ona stvara varijable imena <code>count</code>, <code>ncount</code>, <code>density</code> i <code>ndensity</code>. Bilo koja od ovih varijabli može se koristiti kao “visina stupića”, tj. kao estetika <em>y</em>. Razlog zašto ovu estetiku nismo eksplicitno navodili u prethodnom primjeru jest činjenica da funkcija statistike automatski odabire onu agregatnu funkciju koja se očekivano najčešće koristi (u našem slučaju je to bila <code>count</code>). Ukoliko želimo obaviti neku drugu agregaciju, možemo i eksplicitno postaviti estetiku y na odabranu varijablu, samo moramo koristiti <code>ggplot2</code> konvenciju gdje takve varijable omatamo funkcijom <code>after_stat</code>, kao npr:</p>
-<div class="sourceCode" id="cb524"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb524-1"><a href="ggplot2.html#cb524-1" tabindex="-1"></a><span class="fu">aes</span>(<span class="at">x =</span> hp, <span class="fu">after_stat</span>(density)<span class="st">`</span><span class="at">)</span></span></code></pre></div>
+<div class="sourceCode" id="cb537"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb537-1"><a href="ggplot2.html#cb537-1" tabindex="-1"></a><span class="fu">aes</span>(<span class="at">x =</span> hp, <span class="fu">after_stat</span>(density)<span class="st">`</span><span class="at">)</span></span></code></pre></div>
 <p>Pokušajmo ovo isprobati na primjeru.</p>
 <p><strong>Zadatak 11.14 - histogram / ‘ncount’</strong></p>
-<div class="sourceCode" id="cb525"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb525-1"><a href="ggplot2.html#cb525-1" tabindex="-1"></a><span class="co"># nacrtajte histogram varijable `wt` tablice `mtcars`</span></span>
-<span id="cb525-2"><a href="ggplot2.html#cb525-2" tabindex="-1"></a><span class="co"># težine podijelite jednoliko u četiri ladice</span></span>
-<span id="cb525-3"><a href="ggplot2.html#cb525-3" tabindex="-1"></a><span class="co"># koristite funkciju `geom_histogram`</span></span>
-<span id="cb525-4"><a href="ggplot2.html#cb525-4" tabindex="-1"></a><span class="co"># za agregacijsku varijablu postavite `ncount` </span></span>
-<span id="cb525-5"><a href="ggplot2.html#cb525-5" tabindex="-1"></a><span class="co"># prokomentirajte dobiveni rezultat</span></span></code></pre></div>
+<div class="sourceCode" id="cb538"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb538-1"><a href="ggplot2.html#cb538-1" tabindex="-1"></a><span class="co"># nacrtajte histogram varijable `wt` tablice `mtcars`</span></span>
+<span id="cb538-2"><a href="ggplot2.html#cb538-2" tabindex="-1"></a><span class="co"># težine podijelite jednoliko u četiri ladice</span></span>
+<span id="cb538-3"><a href="ggplot2.html#cb538-3" tabindex="-1"></a><span class="co"># koristite funkciju `geom_histogram`</span></span>
+<span id="cb538-4"><a href="ggplot2.html#cb538-4" tabindex="-1"></a><span class="co"># za agregacijsku varijablu postavite `ncount` </span></span>
+<span id="cb538-5"><a href="ggplot2.html#cb538-5" tabindex="-1"></a><span class="co"># prokomentirajte dobiveni rezultat</span></span></code></pre></div>
 <div class="fold s o">
-<div class="sourceCode" id="cb526"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb526-1"><a href="ggplot2.html#cb526-1" tabindex="-1"></a><span class="fu">ggplot</span>(mtcars, <span class="fu">aes</span>(<span class="at">x =</span> wt, <span class="at">y =</span><span class="fu">after_stat</span>(ncount))) <span class="sc">+</span> <span class="fu">geom_histogram</span>(<span class="at">bins =</span> <span class="dv">4</span>)</span></code></pre></div>
-<p><img src="osnoveR_files/figure-html/unnamed-chunk-402-1.png" width="672" /></p>
+<div class="sourceCode" id="cb539"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb539-1"><a href="ggplot2.html#cb539-1" tabindex="-1"></a><span class="fu">ggplot</span>(mtcars, <span class="fu">aes</span>(<span class="at">x =</span> wt, <span class="at">y =</span><span class="fu">after_stat</span>(ncount))) <span class="sc">+</span> <span class="fu">geom_histogram</span>(<span class="at">bins =</span> <span class="dv">4</span>)</span></code></pre></div>
+<p><img src="osnoveR_files/figure-html/unnamed-chunk-407-1.png" width="672" /></p>
 </div>
 <hr />
 <p>Otiđimo sada korak dalje. Nacrtajte isti histogram (sa <em>default</em>-nom <code>count</code> agregacijom), no prikažite na njemu i koliko je unutar svake kategorije zastupljen koji broj cilindara. Ovo ćete lako izvesti dodavanjem estetike <code>fill</code> koja reprezentira “punjenje” stupića bojom (za razliku od estetike <code>color</code> koja bi u slučaju stupčanog grafa bojala linije oko pravokutnika).</p>
 <hr />
 <p><strong>Zadatak 11.15 - ‘fill’ estetika u histogramu</strong></p>
-<div class="sourceCode" id="cb527"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb527-1"><a href="ggplot2.html#cb527-1" tabindex="-1"></a><span class="co"># nacrtajte histogram varijable `wt`, uz dodanu varijablu `cyl` na estetici `fill`</span></span></code></pre></div>
+<div class="sourceCode" id="cb540"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb540-1"><a href="ggplot2.html#cb540-1" tabindex="-1"></a><span class="co"># nacrtajte histogram varijable `wt`, uz dodanu varijablu `cyl` na estetici `fill`</span></span></code></pre></div>
 <div class="fold s o">
-<div class="sourceCode" id="cb528"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb528-1"><a href="ggplot2.html#cb528-1" tabindex="-1"></a><span class="fu">ggplot</span>(mtcars, <span class="fu">aes</span>(<span class="at">x =</span> wt, <span class="at">fill =</span> cyl)) <span class="sc">+</span> <span class="fu">geom_histogram</span>(<span class="at">bins =</span> <span class="dv">4</span>)</span></code></pre></div>
-<p><img src="osnoveR_files/figure-html/unnamed-chunk-404-1.png" width="672" /></p>
+<div class="sourceCode" id="cb541"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb541-1"><a href="ggplot2.html#cb541-1" tabindex="-1"></a><span class="fu">ggplot</span>(mtcars, <span class="fu">aes</span>(<span class="at">x =</span> wt, <span class="at">fill =</span> cyl)) <span class="sc">+</span> <span class="fu">geom_histogram</span>(<span class="at">bins =</span> <span class="dv">4</span>)</span></code></pre></div>
+<p><img src="osnoveR_files/figure-html/unnamed-chunk-409-1.png" width="672" /></p>
 </div>
 <hr />
 <p>Ovdje vidimo primjer “kombiniranog” histograma - funkcija će zapravo izračunati frekvencije pojavljivanja za svaku kategoriju težine te za svaki broj cilindara. Jedan od načina kako ovo prikazati bio bi trodimenzionalni graf gdje bi u baznoj ravnini bile kombinacije dvije navedene varijable dok bi treća dimenzija bila rezervirana za visinu stupića - no kod projekcije takvog grafa na dvodimenzionalnu ravninu stupići bi se međusobno prekrivali. Kako bi se rezultati mogli učinkovito prikazati na dvodimenzionalnom grafu, stupići su “repozicionirani” tako da su je stupić za pojedine cilindre postavljen jedan na drugi u sklopu iste kategorije težine. Ovo je zapravo primjer korištenja tzv. <em>pozicijskog aspekta</em> ili jednostavno <em>pozicije</em>.</p>
 <p><strong>Pozicija</strong> je aspekt koji omogućuje “razmještanje” određenog aspekta grafa ukoliko je to potrebno zbog jasnoće prikaza. U prethodnom primjeru već smo uočili “raslojavanje” stupića prema kategorijskoj varijabli. U ovom slučaju funkcija je zapravo koristila pozicijski aspekt <code>"stack"</code> koji “male” stupiće razmješta tako da ih slaže jedan na drugi. Alternativa je postavljanje aspekta pozicije (<code>position</code>) na “izbjegavanje” - <code>"dodge"</code>- kod kojeg će stupići biti nacrtani u grupicama jedan pored drugog.</p>
 <hr />
 <p><strong>Zadatak 11.16 - pozicijski aspekt ‘dodge’</strong></p>
-<div class="sourceCode" id="cb529"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb529-1"><a href="ggplot2.html#cb529-1" tabindex="-1"></a><span class="co"># nacrtajte isti histogram, ali pozicijski aspekt `position` postavite na `&quot;dodge&quot;`</span></span></code></pre></div>
+<div class="sourceCode" id="cb542"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb542-1"><a href="ggplot2.html#cb542-1" tabindex="-1"></a><span class="co"># nacrtajte isti histogram, ali pozicijski aspekt `position` postavite na `&quot;dodge&quot;`</span></span></code></pre></div>
 <div class="fold s o">
-<div class="sourceCode" id="cb530"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb530-1"><a href="ggplot2.html#cb530-1" tabindex="-1"></a><span class="fu">ggplot</span>(mtcars, <span class="fu">aes</span>(<span class="at">x =</span> wt, <span class="at">fill =</span> cyl)) <span class="sc">+</span> <span class="fu">geom_histogram</span>(<span class="at">bins =</span> <span class="dv">4</span>, <span class="at">position =</span> <span class="st">&quot;dodge&quot;</span>)</span></code></pre></div>
-<p><img src="osnoveR_files/figure-html/unnamed-chunk-406-1.png" width="672" /></p>
+<div class="sourceCode" id="cb543"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb543-1"><a href="ggplot2.html#cb543-1" tabindex="-1"></a><span class="fu">ggplot</span>(mtcars, <span class="fu">aes</span>(<span class="at">x =</span> wt, <span class="at">fill =</span> cyl)) <span class="sc">+</span> <span class="fu">geom_histogram</span>(<span class="at">bins =</span> <span class="dv">4</span>, <span class="at">position =</span> <span class="st">&quot;dodge&quot;</span>)</span></code></pre></div>
+<p><img src="osnoveR_files/figure-html/unnamed-chunk-411-1.png" width="672" /></p>
 </div>
 <hr />
 <p>Uočite da smo korištenjem “izbjegavanja” izgubili precizan prikaz intervala pojedine ladice, ali smo dobili jasniji prikaz odnosa između zastupljenosti pojedinih kategorija unutar pojedine ladice.</p>
 <hr />
 <p><strong>Zadatak 11.17 - pozicijski aspekt ‘identity’</strong></p>
-<div class="sourceCode" id="cb531"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb531-1"><a href="ggplot2.html#cb531-1" tabindex="-1"></a><span class="co"># nacrtajte opet isti histogram, ali pozicijski aspekt </span></span>
-<span id="cb531-2"><a href="ggplot2.html#cb531-2" tabindex="-1"></a><span class="co"># `position` postavite na `&quot;identity&quot;`</span></span>
-<span id="cb531-3"><a href="ggplot2.html#cb531-3" tabindex="-1"></a><span class="co"># parametar geometrije `alpha` postavite na 0.2 </span></span></code></pre></div>
+<div class="sourceCode" id="cb544"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb544-1"><a href="ggplot2.html#cb544-1" tabindex="-1"></a><span class="co"># nacrtajte opet isti histogram, ali pozicijski aspekt </span></span>
+<span id="cb544-2"><a href="ggplot2.html#cb544-2" tabindex="-1"></a><span class="co"># `position` postavite na `&quot;identity&quot;`</span></span>
+<span id="cb544-3"><a href="ggplot2.html#cb544-3" tabindex="-1"></a><span class="co"># parametar geometrije `alpha` postavite na 0.2 </span></span></code></pre></div>
 <div class="fold s o">
-<div class="sourceCode" id="cb532"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb532-1"><a href="ggplot2.html#cb532-1" tabindex="-1"></a><span class="fu">ggplot</span>(mtcars, <span class="fu">aes</span>(<span class="at">x =</span> wt, <span class="at">fill =</span> cyl)) <span class="sc">+</span> </span>
-<span id="cb532-2"><a href="ggplot2.html#cb532-2" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">bins =</span> <span class="dv">4</span>, <span class="at">position =</span> <span class="st">&quot;identity&quot;</span>, <span class="at">alpha =</span> <span class="fl">0.4</span>)</span></code></pre></div>
-<p><img src="osnoveR_files/figure-html/unnamed-chunk-408-1.png" width="672" /></p>
+<div class="sourceCode" id="cb545"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb545-1"><a href="ggplot2.html#cb545-1" tabindex="-1"></a><span class="fu">ggplot</span>(mtcars, <span class="fu">aes</span>(<span class="at">x =</span> wt, <span class="at">fill =</span> cyl)) <span class="sc">+</span> </span>
+<span id="cb545-2"><a href="ggplot2.html#cb545-2" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">bins =</span> <span class="dv">4</span>, <span class="at">position =</span> <span class="st">&quot;identity&quot;</span>, <span class="at">alpha =</span> <span class="fl">0.4</span>)</span></code></pre></div>
+<p><img src="osnoveR_files/figure-html/unnamed-chunk-413-1.png" width="672" /></p>
 </div>
 <hr />
 <p>Kao što vidimo, pozicijski aspekt <code>"identity"</code> znači “bez repozicioniranja”.</p>
 <p>Pokažimo još jedan pozicijski aspekt - <code>"fill"</code> (nemojte ga miješati sa estetikom <code>fill</code>!).</p>
 <hr />
 <p><strong>Zadatak 11.18 - pozicijski aspekt ‘fill’</strong></p>
-<div class="sourceCode" id="cb533"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb533-1"><a href="ggplot2.html#cb533-1" tabindex="-1"></a><span class="co"># nacrtajte isti histogram, ali uz pozicijski aspekt postavljen na `fill`</span></span>
-<span id="cb533-2"><a href="ggplot2.html#cb533-2" tabindex="-1"></a><span class="co"># radi bolje vidljivosti pravokutnike uokvirite crnom linijom</span></span>
-<span id="cb533-3"><a href="ggplot2.html#cb533-3" tabindex="-1"></a><span class="co"># objasnite rezultat. Što smo postigli ovakvim histogramom?</span></span></code></pre></div>
+<div class="sourceCode" id="cb546"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb546-1"><a href="ggplot2.html#cb546-1" tabindex="-1"></a><span class="co"># nacrtajte isti histogram, ali uz pozicijski aspekt postavljen na `fill`</span></span>
+<span id="cb546-2"><a href="ggplot2.html#cb546-2" tabindex="-1"></a><span class="co"># radi bolje vidljivosti pravokutnike uokvirite crnom linijom</span></span>
+<span id="cb546-3"><a href="ggplot2.html#cb546-3" tabindex="-1"></a><span class="co"># objasnite rezultat. Što smo postigli ovakvim histogramom?</span></span></code></pre></div>
 <div class="fold s o">
-<div class="sourceCode" id="cb534"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb534-1"><a href="ggplot2.html#cb534-1" tabindex="-1"></a><span class="fu">ggplot</span>(mtcars, <span class="fu">aes</span>(<span class="at">x =</span> wt, <span class="at">fill =</span> cyl)) <span class="sc">+</span> </span>
-<span id="cb534-2"><a href="ggplot2.html#cb534-2" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">bins =</span> <span class="dv">4</span>, <span class="at">color =</span> <span class="st">&quot;Black&quot;</span>, <span class="at">position =</span> <span class="st">&quot;fill&quot;</span>)</span></code></pre></div>
-<p><img src="osnoveR_files/figure-html/unnamed-chunk-410-1.png" width="672" /></p>
+<div class="sourceCode" id="cb547"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb547-1"><a href="ggplot2.html#cb547-1" tabindex="-1"></a><span class="fu">ggplot</span>(mtcars, <span class="fu">aes</span>(<span class="at">x =</span> wt, <span class="at">fill =</span> cyl)) <span class="sc">+</span> </span>
+<span id="cb547-2"><a href="ggplot2.html#cb547-2" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">bins =</span> <span class="dv">4</span>, <span class="at">color =</span> <span class="st">&quot;Black&quot;</span>, <span class="at">position =</span> <span class="st">&quot;fill&quot;</span>)</span></code></pre></div>
+<p><img src="osnoveR_files/figure-html/unnamed-chunk-415-1.png" width="672" /></p>
 </div>
 <hr />
 <p>Konačni primjer pozicijskog aspekta kojeg ćemo prikazati je dodavanje “šuma” obzervacijama koje prikazujemo točkastim grafom a koje prekrivaju jedna drugu te djeluju kao jedna obzervacija. Dodavanjem pozicijskog aspekta <code>jitter</code> možemo bolje vizualno komunicirati da se radi o većem broju obzervacija (ovo je učinkovito za manje podatkovne skupove, za veće ćemo često bolje rezultate postići korištenjem parametra transparentnosti, smanjivanjem veličine točaka ili uzorkovanjem skupa prije vizualizacije).</p>
 <p>Za primjer ćemo stvoriti jedan “umjetni” podatkovni okvir od 100 “prekrivajućih” obzervacija.</p>
 <hr />
 <p><strong>Zadatak 11.19 - pozicijski aspekt ‘jitter’</strong></p>
-<div class="sourceCode" id="cb535"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb535-1"><a href="ggplot2.html#cb535-1" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>( <span class="at">x =</span> <span class="fu">c</span>(<span class="fu">rep</span>(<span class="dv">1</span>, <span class="dv">90</span>), <span class="fu">rep</span>(<span class="dv">2</span>, <span class="dv">9</span>), <span class="dv">3</span>),</span>
-<span id="cb535-2"><a href="ggplot2.html#cb535-2" tabindex="-1"></a>                  <span class="at">y =</span> <span class="fu">c</span>(<span class="fu">rep</span>(<span class="dv">1</span>, <span class="dv">70</span>), <span class="fu">rep</span>(<span class="dv">2</span>, <span class="dv">25</span>), <span class="fu">rep</span>(<span class="dv">3</span>, <span class="dv">5</span>)))</span>
-<span id="cb535-3"><a href="ggplot2.html#cb535-3" tabindex="-1"></a><span class="co"># prikažite navedeni okvir uz pomoć `scatterplot` grafa, tj. točkaste geometrije</span></span></code></pre></div>
+<div class="sourceCode" id="cb548"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb548-1"><a href="ggplot2.html#cb548-1" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>( <span class="at">x =</span> <span class="fu">c</span>(<span class="fu">rep</span>(<span class="dv">1</span>, <span class="dv">90</span>), <span class="fu">rep</span>(<span class="dv">2</span>, <span class="dv">9</span>), <span class="dv">3</span>),</span>
+<span id="cb548-2"><a href="ggplot2.html#cb548-2" tabindex="-1"></a>                  <span class="at">y =</span> <span class="fu">c</span>(<span class="fu">rep</span>(<span class="dv">1</span>, <span class="dv">70</span>), <span class="fu">rep</span>(<span class="dv">2</span>, <span class="dv">25</span>), <span class="fu">rep</span>(<span class="dv">3</span>, <span class="dv">5</span>)))</span>
+<span id="cb548-3"><a href="ggplot2.html#cb548-3" tabindex="-1"></a><span class="co"># prikažite navedeni okvir uz pomoć `scatterplot` grafa, tj. točkaste geometrije</span></span></code></pre></div>
 <div class="fold s o">
-<div class="sourceCode" id="cb536"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb536-1"><a href="ggplot2.html#cb536-1" tabindex="-1"></a><span class="fu">ggplot</span>(df, <span class="fu">aes</span>(<span class="at">x =</span> x, <span class="at">y =</span> y)) <span class="sc">+</span> <span class="fu">geom_point</span>()</span></code></pre></div>
-<p><img src="osnoveR_files/figure-html/unnamed-chunk-412-1.png" width="672" /></p>
+<div class="sourceCode" id="cb549"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb549-1"><a href="ggplot2.html#cb549-1" tabindex="-1"></a><span class="fu">ggplot</span>(df, <span class="fu">aes</span>(<span class="at">x =</span> x, <span class="at">y =</span> y)) <span class="sc">+</span> <span class="fu">geom_point</span>()</span></code></pre></div>
+<p><img src="osnoveR_files/figure-html/unnamed-chunk-417-1.png" width="672" /></p>
 </div>
 <hr />
 <p><strong>Zadatak 11.20 - pozicijski aspekt ‘jitter’ (2)</strong></p>
-<div class="sourceCode" id="cb537"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb537-1"><a href="ggplot2.html#cb537-1" tabindex="-1"></a><span class="co"># prikažite isti graf, ali umjesto `geom_point` upotrijebite</span></span>
-<span id="cb537-2"><a href="ggplot2.html#cb537-2" tabindex="-1"></a><span class="co"># pomoćnu funkciju `geom_jitter` koja ima ugrađen `jitter` pozicijski aspekt</span></span>
-<span id="cb537-3"><a href="ggplot2.html#cb537-3" tabindex="-1"></a><span class="co"># postavite `width` i `height` parametre na 0.3 (30% dodanog šuma)</span></span>
-<span id="cb537-4"><a href="ggplot2.html#cb537-4" tabindex="-1"></a><span class="co"># dodatno postavite `color` parametar geometrije na &quot;blue&quot; </span></span>
-<span id="cb537-5"><a href="ggplot2.html#cb537-5" tabindex="-1"></a><span class="co"># i `alpha` parametar (&quot;prozirnost&quot;) na 0.4 </span></span></code></pre></div>
+<div class="sourceCode" id="cb550"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb550-1"><a href="ggplot2.html#cb550-1" tabindex="-1"></a><span class="co"># prikažite isti graf, ali umjesto `geom_point` upotrijebite</span></span>
+<span id="cb550-2"><a href="ggplot2.html#cb550-2" tabindex="-1"></a><span class="co"># pomoćnu funkciju `geom_jitter` koja ima ugrađen `jitter` pozicijski aspekt</span></span>
+<span id="cb550-3"><a href="ggplot2.html#cb550-3" tabindex="-1"></a><span class="co"># postavite `width` i `height` parametre na 0.3 (30% dodanog šuma)</span></span>
+<span id="cb550-4"><a href="ggplot2.html#cb550-4" tabindex="-1"></a><span class="co"># dodatno postavite `color` parametar geometrije na &quot;blue&quot; </span></span>
+<span id="cb550-5"><a href="ggplot2.html#cb550-5" tabindex="-1"></a><span class="co"># i `alpha` parametar (&quot;prozirnost&quot;) na 0.4 </span></span></code></pre></div>
 <div class="fold s o">
-<div class="sourceCode" id="cb538"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb538-1"><a href="ggplot2.html#cb538-1" tabindex="-1"></a><span class="fu">ggplot</span>(df, <span class="fu">aes</span>(<span class="at">x =</span> x, <span class="at">y =</span> y)) <span class="sc">+</span> </span>
-<span id="cb538-2"><a href="ggplot2.html#cb538-2" tabindex="-1"></a>  <span class="fu">geom_jitter</span>(<span class="at">width =</span> <span class="fl">0.3</span>, <span class="at">height =</span> <span class="fl">0.3</span>, <span class="at">alpha =</span> <span class="fl">0.4</span>, <span class="at">color =</span> <span class="st">&quot;blue&quot;</span>)</span></code></pre></div>
-<p><img src="osnoveR_files/figure-html/unnamed-chunk-414-1.png" width="672" /></p>
+<div class="sourceCode" id="cb551"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb551-1"><a href="ggplot2.html#cb551-1" tabindex="-1"></a><span class="fu">ggplot</span>(df, <span class="fu">aes</span>(<span class="at">x =</span> x, <span class="at">y =</span> y)) <span class="sc">+</span> </span>
+<span id="cb551-2"><a href="ggplot2.html#cb551-2" tabindex="-1"></a>  <span class="fu">geom_jitter</span>(<span class="at">width =</span> <span class="fl">0.3</span>, <span class="at">height =</span> <span class="fl">0.3</span>, <span class="at">alpha =</span> <span class="fl">0.4</span>, <span class="at">color =</span> <span class="st">&quot;blue&quot;</span>)</span></code></pre></div>
+<p><img src="osnoveR_files/figure-html/unnamed-chunk-419-1.png" width="672" /></p>
 </div>
 <hr />
 <div id="spremanje-slike-u-datoteku" class="section level4 hasAnchor" number="11.3.4.1">
@@ -823,16 +839,16 @@ Primjer sintakse:
 <p>Spremanje grafova može se obaviti pozivom funkcije koja odgovara formatu u kojeg želimo pohraniti sliku (npr. funkcija <code>pdf</code> spremiti će <em>iduću</em> sliku u <em>pdf datoteku), no paket <code>ggplot2</code> nudi nešto praktičniji način - funkcija <code>ggsave</code> pohraniti će </em>zadnje iscrtani* graf u datoteku odabranog imena, pri čemu će format slike zaključiti sama iz ekstenzije datoteke koju odaberemo. Ovaj način je bolji utoliko što imamo šansu prvo vidjeti graf i tek onda se odlučiti na pohranu.</p>
 <hr />
 <p><strong>Zadatak 11.21 - spremanje grafa u datoteku</strong></p>
-<div class="sourceCode" id="cb539"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb539-1"><a href="ggplot2.html#cb539-1" tabindex="-1"></a><span class="co"># spremite sljedeći graf u datoteke `figure1.pdf`i `figure1.png`</span></span>
-<span id="cb539-2"><a href="ggplot2.html#cb539-2" tabindex="-1"></a><span class="fu">ggplot</span>(mtcars, <span class="fu">aes</span>(<span class="at">x =</span> hp, <span class="at">y =</span> mpg, <span class="at">col =</span> <span class="fu">as.factor</span>(cyl))) <span class="sc">+</span> </span>
-<span id="cb539-3"><a href="ggplot2.html#cb539-3" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span> </span>
-<span id="cb539-4"><a href="ggplot2.html#cb539-4" tabindex="-1"></a><span class="fu">geom_smooth</span>(<span class="at">formula =</span> y <span class="sc">~</span> x, <span class="fu">aes</span>(<span class="at">x =</span> hp, <span class="at">y =</span> mpg), <span class="at">method =</span> <span class="st">&#39;loess&#39;</span>, </span>
-<span id="cb539-5"><a href="ggplot2.html#cb539-5" tabindex="-1"></a>            <span class="at">linetype =</span> <span class="dv">4</span>, <span class="at">color =</span> <span class="st">&quot;grey&quot;</span>, <span class="at">se =</span> F, <span class="at">inherit.aes =</span> F) <span class="sc">+</span></span>
-<span id="cb539-6"><a href="ggplot2.html#cb539-6" tabindex="-1"></a><span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;broj konjskih snaga&quot;</span>, <span class="at">y =</span> <span class="st">&quot;potrošnja&quot;</span>, <span class="at">col =</span> <span class="st">&quot;broj cilindara&quot;</span>)</span></code></pre></div>
-<p><img src="osnoveR_files/figure-html/unnamed-chunk-415-1.png" width="672" /></p>
+<div class="sourceCode" id="cb552"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb552-1"><a href="ggplot2.html#cb552-1" tabindex="-1"></a><span class="co"># spremite sljedeći graf u datoteke `figure1.pdf`i `figure1.png`</span></span>
+<span id="cb552-2"><a href="ggplot2.html#cb552-2" tabindex="-1"></a><span class="fu">ggplot</span>(mtcars, <span class="fu">aes</span>(<span class="at">x =</span> hp, <span class="at">y =</span> mpg, <span class="at">col =</span> <span class="fu">as.factor</span>(cyl))) <span class="sc">+</span> </span>
+<span id="cb552-3"><a href="ggplot2.html#cb552-3" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span> </span>
+<span id="cb552-4"><a href="ggplot2.html#cb552-4" tabindex="-1"></a><span class="fu">geom_smooth</span>(<span class="at">formula =</span> y <span class="sc">~</span> x, <span class="fu">aes</span>(<span class="at">x =</span> hp, <span class="at">y =</span> mpg), <span class="at">method =</span> <span class="st">&#39;loess&#39;</span>, </span>
+<span id="cb552-5"><a href="ggplot2.html#cb552-5" tabindex="-1"></a>            <span class="at">linetype =</span> <span class="dv">4</span>, <span class="at">color =</span> <span class="st">&quot;grey&quot;</span>, <span class="at">se =</span> F, <span class="at">inherit.aes =</span> F) <span class="sc">+</span></span>
+<span id="cb552-6"><a href="ggplot2.html#cb552-6" tabindex="-1"></a><span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;broj konjskih snaga&quot;</span>, <span class="at">y =</span> <span class="st">&quot;potrošnja&quot;</span>, <span class="at">col =</span> <span class="st">&quot;broj cilindara&quot;</span>)</span></code></pre></div>
+<p><img src="osnoveR_files/figure-html/unnamed-chunk-420-1.png" width="672" /></p>
 <div class="fold s">
-<div class="sourceCode" id="cb540"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb540-1"><a href="ggplot2.html#cb540-1" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="st">&quot;figure1.pdf&quot;</span>)</span>
-<span id="cb540-2"><a href="ggplot2.html#cb540-2" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="st">&quot;figure1.png&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb553"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb553-1"><a href="ggplot2.html#cb553-1" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="st">&quot;figure1.pdf&quot;</span>)</span>
+<span id="cb553-2"><a href="ggplot2.html#cb553-2" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="st">&quot;figure1.png&quot;</span>)</span></code></pre></div>
 </div>
 <hr />
 </div>
@@ -861,11 +877,11 @@ Primjer sintakse:
 <p>Isprobajmo neke od navedenih funkcija na primjerima. Koristiti ćemo se podatkovnim skupom <code>diamonds</code> paketa <code>ggplot2</code>, kojeg smo upoznali u zadacima za vježbu iz prethodne lekcije, a koji opisuje značajke dijamanata uz njihovu procijenjenu vrijednost.</p>
 <hr />
 <p><strong>Zadatak 11.22 - upoznavanje sa podatkovnim skupom ‘diamonds’</strong></p>
-<div class="sourceCode" id="cb541"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb541-1"><a href="ggplot2.html#cb541-1" tabindex="-1"></a><span class="co"># proučite podatkovni okvir `diamonds`</span></span></code></pre></div>
+<div class="sourceCode" id="cb554"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb554-1"><a href="ggplot2.html#cb554-1" tabindex="-1"></a><span class="co"># proučite podatkovni okvir `diamonds`</span></span></code></pre></div>
 <div class="fold s o">
-<div class="sourceCode" id="cb542"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb542-1"><a href="ggplot2.html#cb542-1" tabindex="-1"></a><span class="co"># proučite podatkovni okvir `diamonds`</span></span>
-<span id="cb542-2"><a href="ggplot2.html#cb542-2" tabindex="-1"></a><span class="fu">glimpse</span>(diamonds)</span>
-<span id="cb542-3"><a href="ggplot2.html#cb542-3" tabindex="-1"></a><span class="fu">head</span>(diamonds)</span></code></pre></div>
+<div class="sourceCode" id="cb555"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb555-1"><a href="ggplot2.html#cb555-1" tabindex="-1"></a><span class="co"># proučite podatkovni okvir `diamonds`</span></span>
+<span id="cb555-2"><a href="ggplot2.html#cb555-2" tabindex="-1"></a><span class="fu">glimpse</span>(diamonds)</span>
+<span id="cb555-3"><a href="ggplot2.html#cb555-3" tabindex="-1"></a><span class="fu">head</span>(diamonds)</span></code></pre></div>
 <pre><code>## Rows: 53,940
 ## Columns: 10
 ## $ carat   &lt;dbl&gt; 0.23, 0.21, 0.23, 0.29, 0.31, 0.24, 0.24, 0.26, 0.22, 0.23, 0.…
@@ -890,37 +906,37 @@ Primjer sintakse:
 </div>
 <hr />
 <p><strong>Zadatak 11.23 - uzorkovanje skupa ‘diamonds’</strong></p>
-<div class="sourceCode" id="cb544"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb544-1"><a href="ggplot2.html#cb544-1" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">1001</span>)</span>
-<span id="cb544-2"><a href="ggplot2.html#cb544-2" tabindex="-1"></a><span class="co"># stvorite okvir `diamondsSample` u koji ćete staviti</span></span>
-<span id="cb544-3"><a href="ggplot2.html#cb544-3" tabindex="-1"></a><span class="co"># 5000 nasumičnih redaka iz okvira `diamonds`</span></span></code></pre></div>
+<div class="sourceCode" id="cb557"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb557-1"><a href="ggplot2.html#cb557-1" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">1001</span>)</span>
+<span id="cb557-2"><a href="ggplot2.html#cb557-2" tabindex="-1"></a><span class="co"># stvorite okvir `diamondsSample` u koji ćete staviti</span></span>
+<span id="cb557-3"><a href="ggplot2.html#cb557-3" tabindex="-1"></a><span class="co"># 5000 nasumičnih redaka iz okvira `diamonds`</span></span></code></pre></div>
 <div class="fold s o">
-<div class="sourceCode" id="cb545"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb545-1"><a href="ggplot2.html#cb545-1" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">1001</span>)</span>
-<span id="cb545-2"><a href="ggplot2.html#cb545-2" tabindex="-1"></a><span class="co"># stvorite okvir `diamondsSample` u koji ćete staviti</span></span>
-<span id="cb545-3"><a href="ggplot2.html#cb545-3" tabindex="-1"></a><span class="co"># 5000 nasumičnih redaka iz okvira `diamonds`</span></span>
-<span id="cb545-4"><a href="ggplot2.html#cb545-4" tabindex="-1"></a>diamondsSample <span class="ot">&lt;-</span> <span class="fu">slice_sample</span>(diamonds, <span class="at">n =</span> <span class="dv">5000</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb558"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb558-1"><a href="ggplot2.html#cb558-1" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">1001</span>)</span>
+<span id="cb558-2"><a href="ggplot2.html#cb558-2" tabindex="-1"></a><span class="co"># stvorite okvir `diamondsSample` u koji ćete staviti</span></span>
+<span id="cb558-3"><a href="ggplot2.html#cb558-3" tabindex="-1"></a><span class="co"># 5000 nasumičnih redaka iz okvira `diamonds`</span></span>
+<span id="cb558-4"><a href="ggplot2.html#cb558-4" tabindex="-1"></a>diamondsSample <span class="ot">&lt;-</span> <span class="fu">slice_sample</span>(diamonds, <span class="at">n =</span> <span class="dv">5000</span>)</span></code></pre></div>
 </div>
 <hr />
 <p><strong>Zadatak 11.24 - korištenje aspekta skale</strong></p>
-<div class="sourceCode" id="cb546"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb546-1"><a href="ggplot2.html#cb546-1" tabindex="-1"></a><span class="co"># &quot;popravite&quot; osi i legendu grafa koji prikazuje ovisnost </span></span>
-<span id="cb546-2"><a href="ggplot2.html#cb546-2" tabindex="-1"></a><span class="co"># veličine dijamanta, boje i cijene</span></span>
-<span id="cb546-3"><a href="ggplot2.html#cb546-3" tabindex="-1"></a><span class="co"># - osi x i y nazovite &quot;volumen u mm3&quot; i &quot;cijena u $&quot;</span></span>
-<span id="cb546-4"><a href="ggplot2.html#cb546-4" tabindex="-1"></a><span class="co"># - legendu nazovite &quot;kvaliteta boje&quot;</span></span>
-<span id="cb546-5"><a href="ggplot2.html#cb546-5" tabindex="-1"></a><span class="co"># - os x ograničite od 0 do 450</span></span>
-<span id="cb546-6"><a href="ggplot2.html#cb546-6" tabindex="-1"></a><span class="co"># - na osi y postavite crtice na 1000, 5000, 10000 i 15000</span></span>
-<span id="cb546-7"><a href="ggplot2.html#cb546-7" tabindex="-1"></a><span class="co"># - kategorije kvalitete boje postavite na brojeve </span></span>
-<span id="cb546-8"><a href="ggplot2.html#cb546-8" tabindex="-1"></a><span class="co"># od 1 do 7 gdje 1 predstavlja &quot;najbolju&quot; boju</span></span>
-<span id="cb546-9"><a href="ggplot2.html#cb546-9" tabindex="-1"></a><span class="fu">ggplot</span>(diamondsSample, <span class="fu">aes</span>(x<span class="sc">*</span>y<span class="sc">*</span>z, price, <span class="at">color =</span> color)) <span class="sc">+</span> <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.4</span>) </span></code></pre></div>
-<p><img src="osnoveR_files/figure-html/unnamed-chunk-421-1.png" width="672" /></p>
+<div class="sourceCode" id="cb559"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb559-1"><a href="ggplot2.html#cb559-1" tabindex="-1"></a><span class="co"># &quot;popravite&quot; osi i legendu grafa koji prikazuje ovisnost </span></span>
+<span id="cb559-2"><a href="ggplot2.html#cb559-2" tabindex="-1"></a><span class="co"># veličine dijamanta, boje i cijene</span></span>
+<span id="cb559-3"><a href="ggplot2.html#cb559-3" tabindex="-1"></a><span class="co"># - osi x i y nazovite &quot;volumen u mm3&quot; i &quot;cijena u $&quot;</span></span>
+<span id="cb559-4"><a href="ggplot2.html#cb559-4" tabindex="-1"></a><span class="co"># - legendu nazovite &quot;kvaliteta boje&quot;</span></span>
+<span id="cb559-5"><a href="ggplot2.html#cb559-5" tabindex="-1"></a><span class="co"># - os x ograničite od 0 do 450</span></span>
+<span id="cb559-6"><a href="ggplot2.html#cb559-6" tabindex="-1"></a><span class="co"># - na osi y postavite crtice na 1000, 5000, 10000 i 15000</span></span>
+<span id="cb559-7"><a href="ggplot2.html#cb559-7" tabindex="-1"></a><span class="co"># - kategorije kvalitete boje postavite na brojeve </span></span>
+<span id="cb559-8"><a href="ggplot2.html#cb559-8" tabindex="-1"></a><span class="co"># od 1 do 7 gdje 1 predstavlja &quot;najbolju&quot; boju</span></span>
+<span id="cb559-9"><a href="ggplot2.html#cb559-9" tabindex="-1"></a><span class="fu">ggplot</span>(diamondsSample, <span class="fu">aes</span>(x<span class="sc">*</span>y<span class="sc">*</span>z, price, <span class="at">color =</span> color)) <span class="sc">+</span> <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.4</span>) </span></code></pre></div>
+<p><img src="osnoveR_files/figure-html/unnamed-chunk-426-1.png" width="672" /></p>
 <div class="fold s o">
-<div class="sourceCode" id="cb547"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb547-1"><a href="ggplot2.html#cb547-1" tabindex="-1"></a><span class="fu">ggplot</span>(diamondsSample, <span class="fu">aes</span>(x<span class="sc">*</span>y<span class="sc">*</span>z, price, <span class="at">color =</span> color)) <span class="sc">+</span> </span>
-<span id="cb547-2"><a href="ggplot2.html#cb547-2" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.6</span>) <span class="sc">+</span></span>
-<span id="cb547-3"><a href="ggplot2.html#cb547-3" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">name =</span> <span class="st">&quot;volumen u mm3&quot;</span> , <span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">450</span>)) <span class="sc">+</span></span>
-<span id="cb547-4"><a href="ggplot2.html#cb547-4" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">name =</span> <span class="st">&quot;cijena u $&quot;</span>, </span>
-<span id="cb547-5"><a href="ggplot2.html#cb547-5" tabindex="-1"></a>                     <span class="at">breaks =</span> <span class="fu">c</span>(<span class="dv">1000</span>, <span class="dv">5000</span>, <span class="dv">10000</span>, <span class="dv">15000</span>)) <span class="sc">+</span></span>
-<span id="cb547-6"><a href="ggplot2.html#cb547-6" tabindex="-1"></a>  <span class="fu">scale_color_ordinal</span>(<span class="at">name =</span> <span class="st">&quot;kvaliteta boje&quot;</span>, <span class="at">labels =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">7</span>)</span></code></pre></div>
-<pre><code>## Warning: Removed 3 rows containing missing values or values outside the scale range
-## (`geom_point()`).</code></pre>
-<p><img src="osnoveR_files/figure-html/unnamed-chunk-422-1.png" width="672" /></p>
+<div class="sourceCode" id="cb560"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb560-1"><a href="ggplot2.html#cb560-1" tabindex="-1"></a><span class="fu">ggplot</span>(diamondsSample, <span class="fu">aes</span>(x<span class="sc">*</span>y<span class="sc">*</span>z, price, <span class="at">color =</span> color)) <span class="sc">+</span> </span>
+<span id="cb560-2"><a href="ggplot2.html#cb560-2" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.6</span>) <span class="sc">+</span></span>
+<span id="cb560-3"><a href="ggplot2.html#cb560-3" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">name =</span> <span class="st">&quot;volumen u mm3&quot;</span> , <span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">450</span>)) <span class="sc">+</span></span>
+<span id="cb560-4"><a href="ggplot2.html#cb560-4" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">name =</span> <span class="st">&quot;cijena u $&quot;</span>, </span>
+<span id="cb560-5"><a href="ggplot2.html#cb560-5" tabindex="-1"></a>                     <span class="at">breaks =</span> <span class="fu">c</span>(<span class="dv">1000</span>, <span class="dv">5000</span>, <span class="dv">10000</span>, <span class="dv">15000</span>)) <span class="sc">+</span></span>
+<span id="cb560-6"><a href="ggplot2.html#cb560-6" tabindex="-1"></a>  <span class="fu">scale_color_ordinal</span>(<span class="at">name =</span> <span class="st">&quot;kvaliteta boje&quot;</span>, <span class="at">labels =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">7</span>)</span></code></pre></div>
+<pre><code>## Warning: Removed 3 rows containing missing values or values outside the scale
+## range (`geom_point()`).</code></pre>
+<p><img src="osnoveR_files/figure-html/unnamed-chunk-427-1.png" width="672" /></p>
 </div>
 <hr />
 <p>Uočite kako <code>ggplot</code> za svaki slučaj javlja kako neke obzervacije nisu prikazane. Ukoliko želimo spriječiti ovo upozorenje, dovoljno je dodati argument <code>na.rm = T</code> u sloj geometrije.</p>
@@ -934,21 +950,21 @@ Primjer sintakse:
 </ul>
 <hr />
 <p><strong>Zadatak 11.25 - logaritamska skala</strong></p>
-<div class="sourceCode" id="cb549"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb549-1"><a href="ggplot2.html#cb549-1" tabindex="-1"></a><span class="co"># logaritmirajte cijenu dijamanta u prethodno izvedenom grafu</span></span>
-<span id="cb549-2"><a href="ggplot2.html#cb549-2" tabindex="-1"></a><span class="fu">ggplot</span>(diamondsSample, <span class="fu">aes</span>(x<span class="sc">*</span>y<span class="sc">*</span>z, price, <span class="at">color =</span> color)) <span class="sc">+</span> <span class="fu">geom_point</span>(<span class="at">na.rm =</span> T, <span class="at">alpha =</span> <span class="fl">0.6</span>) <span class="sc">+</span></span>
-<span id="cb549-3"><a href="ggplot2.html#cb549-3" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">name =</span> <span class="st">&quot;volumen u mm3&quot;</span> , <span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">450</span>)) <span class="sc">+</span></span>
-<span id="cb549-4"><a href="ggplot2.html#cb549-4" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">name =</span> <span class="st">&quot;cijena u $&quot;</span>, <span class="at">breaks =</span> <span class="fu">c</span>(<span class="dv">1000</span>, <span class="dv">5000</span>, <span class="dv">10000</span>, <span class="dv">15000</span>)) <span class="sc">+</span></span>
-<span id="cb549-5"><a href="ggplot2.html#cb549-5" tabindex="-1"></a>  <span class="fu">scale_color_ordinal</span>(<span class="at">name =</span> <span class="st">&quot;kvaliteta boje&quot;</span>, <span class="at">labels =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">7</span>)</span></code></pre></div>
-<p><img src="osnoveR_files/figure-html/unnamed-chunk-423-1.png" width="672" /></p>
+<div class="sourceCode" id="cb562"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb562-1"><a href="ggplot2.html#cb562-1" tabindex="-1"></a><span class="co"># logaritmirajte cijenu dijamanta u prethodno izvedenom grafu</span></span>
+<span id="cb562-2"><a href="ggplot2.html#cb562-2" tabindex="-1"></a><span class="fu">ggplot</span>(diamondsSample, <span class="fu">aes</span>(x<span class="sc">*</span>y<span class="sc">*</span>z, price, <span class="at">color =</span> color)) <span class="sc">+</span> <span class="fu">geom_point</span>(<span class="at">na.rm =</span> T, <span class="at">alpha =</span> <span class="fl">0.6</span>) <span class="sc">+</span></span>
+<span id="cb562-3"><a href="ggplot2.html#cb562-3" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">name =</span> <span class="st">&quot;volumen u mm3&quot;</span> , <span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">450</span>)) <span class="sc">+</span></span>
+<span id="cb562-4"><a href="ggplot2.html#cb562-4" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">name =</span> <span class="st">&quot;cijena u $&quot;</span>, <span class="at">breaks =</span> <span class="fu">c</span>(<span class="dv">1000</span>, <span class="dv">5000</span>, <span class="dv">10000</span>, <span class="dv">15000</span>)) <span class="sc">+</span></span>
+<span id="cb562-5"><a href="ggplot2.html#cb562-5" tabindex="-1"></a>  <span class="fu">scale_color_ordinal</span>(<span class="at">name =</span> <span class="st">&quot;kvaliteta boje&quot;</span>, <span class="at">labels =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">7</span>)</span></code></pre></div>
+<p><img src="osnoveR_files/figure-html/unnamed-chunk-428-1.png" width="672" /></p>
 <div class="fold s o">
-<div class="sourceCode" id="cb550"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb550-1"><a href="ggplot2.html#cb550-1" tabindex="-1"></a><span class="co"># logaritmirajte cijenu dijamanta u prethodno izvedenom grafu</span></span>
-<span id="cb550-2"><a href="ggplot2.html#cb550-2" tabindex="-1"></a><span class="fu">ggplot</span>(diamondsSample, <span class="fu">aes</span>(x<span class="sc">*</span>y<span class="sc">*</span>z, price, <span class="at">color =</span> color)) <span class="sc">+</span> </span>
-<span id="cb550-3"><a href="ggplot2.html#cb550-3" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">na.rm =</span> T, <span class="at">alpha =</span> <span class="fl">0.6</span>) <span class="sc">+</span></span>
-<span id="cb550-4"><a href="ggplot2.html#cb550-4" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">name =</span> <span class="st">&quot;volumen u mm3&quot;</span> , <span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">450</span>)) <span class="sc">+</span></span>
-<span id="cb550-5"><a href="ggplot2.html#cb550-5" tabindex="-1"></a>  <span class="fu">scale_y_log10</span>(<span class="at">name =</span> <span class="st">&quot;cijena u $&quot;</span>, </span>
-<span id="cb550-6"><a href="ggplot2.html#cb550-6" tabindex="-1"></a>                <span class="at">breaks =</span> <span class="fu">c</span>(<span class="dv">1000</span>, <span class="dv">5000</span>, <span class="dv">10000</span>, <span class="dv">15000</span>)) <span class="sc">+</span></span>
-<span id="cb550-7"><a href="ggplot2.html#cb550-7" tabindex="-1"></a>  <span class="fu">scale_color_ordinal</span>(<span class="at">name =</span> <span class="st">&quot;kvaliteta boje&quot;</span>, <span class="at">labels =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">7</span>)</span></code></pre></div>
-<p><img src="osnoveR_files/figure-html/unnamed-chunk-424-1.png" width="672" /></p>
+<div class="sourceCode" id="cb563"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb563-1"><a href="ggplot2.html#cb563-1" tabindex="-1"></a><span class="co"># logaritmirajte cijenu dijamanta u prethodno izvedenom grafu</span></span>
+<span id="cb563-2"><a href="ggplot2.html#cb563-2" tabindex="-1"></a><span class="fu">ggplot</span>(diamondsSample, <span class="fu">aes</span>(x<span class="sc">*</span>y<span class="sc">*</span>z, price, <span class="at">color =</span> color)) <span class="sc">+</span> </span>
+<span id="cb563-3"><a href="ggplot2.html#cb563-3" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">na.rm =</span> T, <span class="at">alpha =</span> <span class="fl">0.6</span>) <span class="sc">+</span></span>
+<span id="cb563-4"><a href="ggplot2.html#cb563-4" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">name =</span> <span class="st">&quot;volumen u mm3&quot;</span> , <span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">450</span>)) <span class="sc">+</span></span>
+<span id="cb563-5"><a href="ggplot2.html#cb563-5" tabindex="-1"></a>  <span class="fu">scale_y_log10</span>(<span class="at">name =</span> <span class="st">&quot;cijena u $&quot;</span>, </span>
+<span id="cb563-6"><a href="ggplot2.html#cb563-6" tabindex="-1"></a>                <span class="at">breaks =</span> <span class="fu">c</span>(<span class="dv">1000</span>, <span class="dv">5000</span>, <span class="dv">10000</span>, <span class="dv">15000</span>)) <span class="sc">+</span></span>
+<span id="cb563-7"><a href="ggplot2.html#cb563-7" tabindex="-1"></a>  <span class="fu">scale_color_ordinal</span>(<span class="at">name =</span> <span class="st">&quot;kvaliteta boje&quot;</span>, <span class="at">labels =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">7</span>)</span></code></pre></div>
+<p><img src="osnoveR_files/figure-html/unnamed-chunk-429-1.png" width="672" /></p>
 </div>
 <hr />
 <p>Jedna stvar koju vrlo često volimo “popravljati” na grafovima su boje - bilo da želimo bolje naglasiti informacije koje graf prenosi, uklopiti graf u okolinu u kojoj se nalazi, ili jednostavno želimo da nam graf koristi boje koje nalazimo estetski ugodnima. Upravo zbog toga estetike <code>color</code> i <code>fill</code> se vrlo često dodatno podešavaju uz pomoć skala. Za ovo imamo zgodne funkcije (dajemo primjere za <code>fill</code> estetike iako većina funkcija postoji i za <code>color</code>):</p>
@@ -960,39 +976,39 @@ Primjer sintakse:
 <li><code>scale_fill_grey</code> - za crno bijele vizualizacije</li>
 </ul>
 <p>Paket <code>RColorBrewer</code> je odličan alat za prilagodbu boja na vizualizacijama, a pomoću funkcije <code>display.brewer.all</code> možemo dobiti pregled dostupnih paleta:</p>
-<div class="sourceCode" id="cb551"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb551-1"><a href="ggplot2.html#cb551-1" tabindex="-1"></a><span class="fu">library</span>(RColorBrewer)</span>
-<span id="cb551-2"><a href="ggplot2.html#cb551-2" tabindex="-1"></a><span class="fu">display.brewer.all</span>() </span></code></pre></div>
+<div class="sourceCode" id="cb564"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb564-1"><a href="ggplot2.html#cb564-1" tabindex="-1"></a><span class="fu">library</span>(RColorBrewer)</span>
+<span id="cb564-2"><a href="ggplot2.html#cb564-2" tabindex="-1"></a><span class="fu">display.brewer.all</span>() </span></code></pre></div>
 <center>
 <img src="figures/RColorBrewer.png" width="294" />
 </center>
 <hr />
 <p><strong>Zadatak 11.26 - prilagodba boja na grafu</strong></p>
-<div class="sourceCode" id="cb552"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb552-1"><a href="ggplot2.html#cb552-1" tabindex="-1"></a><span class="co"># podesite `fill` estetiku sljedećeg grafa korištenjem </span></span>
-<span id="cb552-2"><a href="ggplot2.html#cb552-2" tabindex="-1"></a><span class="co"># funkcije `scale_fill_brewer`</span></span>
-<span id="cb552-3"><a href="ggplot2.html#cb552-3" tabindex="-1"></a><span class="co"># podesite `fill` estetiku sljedećeg grafa korištenjem funkcije `scale_fill_brewer`</span></span>
-<span id="cb552-4"><a href="ggplot2.html#cb552-4" tabindex="-1"></a><span class="co"># parametar `palette` postavite na jednu od gore prikazanih paleta</span></span>
-<span id="cb552-5"><a href="ggplot2.html#cb552-5" tabindex="-1"></a></span>
-<span id="cb552-6"><a href="ggplot2.html#cb552-6" tabindex="-1"></a><span class="fu">ggplot</span>(diamondsSample, <span class="fu">aes</span>(<span class="at">x =</span> x<span class="sc">*</span>y<span class="sc">*</span>z, <span class="at">fill =</span> color)) <span class="sc">+</span> </span>
-<span id="cb552-7"><a href="ggplot2.html#cb552-7" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">bins =</span> <span class="dv">30</span>, <span class="at">na.rm =</span> T) <span class="sc">+</span> </span>
-<span id="cb552-8"><a href="ggplot2.html#cb552-8" tabindex="-1"></a>  <span class="fu">xlim</span>(<span class="dv">0</span>, <span class="dv">500</span>)</span></code></pre></div>
-<p><img src="osnoveR_files/figure-html/unnamed-chunk-427-1.png" width="672" /></p>
+<div class="sourceCode" id="cb565"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb565-1"><a href="ggplot2.html#cb565-1" tabindex="-1"></a><span class="co"># podesite `fill` estetiku sljedećeg grafa korištenjem </span></span>
+<span id="cb565-2"><a href="ggplot2.html#cb565-2" tabindex="-1"></a><span class="co"># funkcije `scale_fill_brewer`</span></span>
+<span id="cb565-3"><a href="ggplot2.html#cb565-3" tabindex="-1"></a><span class="co"># podesite `fill` estetiku sljedećeg grafa korištenjem funkcije `scale_fill_brewer`</span></span>
+<span id="cb565-4"><a href="ggplot2.html#cb565-4" tabindex="-1"></a><span class="co"># parametar `palette` postavite na jednu od gore prikazanih paleta</span></span>
+<span id="cb565-5"><a href="ggplot2.html#cb565-5" tabindex="-1"></a></span>
+<span id="cb565-6"><a href="ggplot2.html#cb565-6" tabindex="-1"></a><span class="fu">ggplot</span>(diamondsSample, <span class="fu">aes</span>(<span class="at">x =</span> x<span class="sc">*</span>y<span class="sc">*</span>z, <span class="at">fill =</span> color)) <span class="sc">+</span> </span>
+<span id="cb565-7"><a href="ggplot2.html#cb565-7" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">bins =</span> <span class="dv">30</span>, <span class="at">na.rm =</span> T) <span class="sc">+</span> </span>
+<span id="cb565-8"><a href="ggplot2.html#cb565-8" tabindex="-1"></a>  <span class="fu">xlim</span>(<span class="dv">0</span>, <span class="dv">500</span>)</span></code></pre></div>
+<p><img src="osnoveR_files/figure-html/unnamed-chunk-432-1.png" width="672" /></p>
 <div class="fold s o">
-<div class="sourceCode" id="cb553"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb553-1"><a href="ggplot2.html#cb553-1" tabindex="-1"></a><span class="co"># podesite `fill` estetiku sljedećeg grafa korištenjem funkcije `scale_fill_brewer`</span></span>
-<span id="cb553-2"><a href="ggplot2.html#cb553-2" tabindex="-1"></a><span class="co"># parametar `palette` postavite na jednu od gore prikazanih paleta</span></span>
-<span id="cb553-3"><a href="ggplot2.html#cb553-3" tabindex="-1"></a></span>
-<span id="cb553-4"><a href="ggplot2.html#cb553-4" tabindex="-1"></a><span class="fu">ggplot</span>(diamondsSample, <span class="fu">aes</span>(<span class="at">x =</span> x<span class="sc">*</span>y<span class="sc">*</span>z, <span class="at">fill =</span> color)) <span class="sc">+</span> </span>
-<span id="cb553-5"><a href="ggplot2.html#cb553-5" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">bins =</span> <span class="dv">30</span>, <span class="at">na.rm =</span> T) <span class="sc">+</span> </span>
-<span id="cb553-6"><a href="ggplot2.html#cb553-6" tabindex="-1"></a>  <span class="fu">xlim</span>(<span class="dv">0</span>, <span class="dv">500</span>) <span class="sc">+</span> <span class="fu">scale_fill_brewer</span>(<span class="at">palette =</span> <span class="st">&quot;Greens&quot;</span>)</span></code></pre></div>
-<p><img src="osnoveR_files/figure-html/unnamed-chunk-428-1.png" width="672" /></p>
+<div class="sourceCode" id="cb566"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb566-1"><a href="ggplot2.html#cb566-1" tabindex="-1"></a><span class="co"># podesite `fill` estetiku sljedećeg grafa korištenjem funkcije `scale_fill_brewer`</span></span>
+<span id="cb566-2"><a href="ggplot2.html#cb566-2" tabindex="-1"></a><span class="co"># parametar `palette` postavite na jednu od gore prikazanih paleta</span></span>
+<span id="cb566-3"><a href="ggplot2.html#cb566-3" tabindex="-1"></a></span>
+<span id="cb566-4"><a href="ggplot2.html#cb566-4" tabindex="-1"></a><span class="fu">ggplot</span>(diamondsSample, <span class="fu">aes</span>(<span class="at">x =</span> x<span class="sc">*</span>y<span class="sc">*</span>z, <span class="at">fill =</span> color)) <span class="sc">+</span> </span>
+<span id="cb566-5"><a href="ggplot2.html#cb566-5" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">bins =</span> <span class="dv">30</span>, <span class="at">na.rm =</span> T) <span class="sc">+</span> </span>
+<span id="cb566-6"><a href="ggplot2.html#cb566-6" tabindex="-1"></a>  <span class="fu">xlim</span>(<span class="dv">0</span>, <span class="dv">500</span>) <span class="sc">+</span> <span class="fu">scale_fill_brewer</span>(<span class="at">palette =</span> <span class="st">&quot;Greens&quot;</span>)</span></code></pre></div>
+<p><img src="osnoveR_files/figure-html/unnamed-chunk-433-1.png" width="672" /></p>
 </div>
 <div class="fold s o">
-<div class="sourceCode" id="cb554"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb554-1"><a href="ggplot2.html#cb554-1" tabindex="-1"></a><span class="co"># podesite `fill` estetiku sljedećeg grafa korištenjem funkcije `scale_fill_brewer`</span></span>
-<span id="cb554-2"><a href="ggplot2.html#cb554-2" tabindex="-1"></a><span class="co"># parametar `palette` postavite na jednu od gore prikazanih paleta</span></span>
-<span id="cb554-3"><a href="ggplot2.html#cb554-3" tabindex="-1"></a></span>
-<span id="cb554-4"><a href="ggplot2.html#cb554-4" tabindex="-1"></a><span class="fu">ggplot</span>(diamondsSample, <span class="fu">aes</span>(<span class="at">x =</span> x<span class="sc">*</span>y<span class="sc">*</span>z, <span class="at">fill =</span> color)) <span class="sc">+</span> </span>
-<span id="cb554-5"><a href="ggplot2.html#cb554-5" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">bins =</span> <span class="dv">30</span>, <span class="at">na.rm =</span> T) <span class="sc">+</span> </span>
-<span id="cb554-6"><a href="ggplot2.html#cb554-6" tabindex="-1"></a>  <span class="fu">xlim</span>(<span class="dv">0</span>, <span class="dv">500</span>) <span class="sc">+</span> <span class="fu">scale_fill_brewer</span>(<span class="at">palette =</span> <span class="st">&quot;YlOrRd&quot;</span>)</span></code></pre></div>
-<p><img src="osnoveR_files/figure-html/unnamed-chunk-429-1.png" width="672" /></p>
+<div class="sourceCode" id="cb567"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb567-1"><a href="ggplot2.html#cb567-1" tabindex="-1"></a><span class="co"># podesite `fill` estetiku sljedećeg grafa korištenjem funkcije `scale_fill_brewer`</span></span>
+<span id="cb567-2"><a href="ggplot2.html#cb567-2" tabindex="-1"></a><span class="co"># parametar `palette` postavite na jednu od gore prikazanih paleta</span></span>
+<span id="cb567-3"><a href="ggplot2.html#cb567-3" tabindex="-1"></a></span>
+<span id="cb567-4"><a href="ggplot2.html#cb567-4" tabindex="-1"></a><span class="fu">ggplot</span>(diamondsSample, <span class="fu">aes</span>(<span class="at">x =</span> x<span class="sc">*</span>y<span class="sc">*</span>z, <span class="at">fill =</span> color)) <span class="sc">+</span> </span>
+<span id="cb567-5"><a href="ggplot2.html#cb567-5" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">bins =</span> <span class="dv">30</span>, <span class="at">na.rm =</span> T) <span class="sc">+</span> </span>
+<span id="cb567-6"><a href="ggplot2.html#cb567-6" tabindex="-1"></a>  <span class="fu">xlim</span>(<span class="dv">0</span>, <span class="dv">500</span>) <span class="sc">+</span> <span class="fu">scale_fill_brewer</span>(<span class="at">palette =</span> <span class="st">&quot;YlOrRd&quot;</span>)</span></code></pre></div>
+<p><img src="osnoveR_files/figure-html/unnamed-chunk-434-1.png" width="672" /></p>
 </div>
 <hr />
 <p>Aspekt <strong>koordinatnog sustava</strong> vrlo rijetko mijenjamo. Razlog tome je što u najvećem broju slučajeva želimo koristiti Kartezijev koordinatni sustav koji <code>ggplot</code> koristi po <em>default</em>-u. Ukoliko smatramo da naša vizualizacija zahtijeva nešto drugo - bilo da se radi o polarnom koordinatnom sustavu, ili želimo “izvrnuti” naš Kartezijev sustav na stranu, ili - što je posebno važno kod analize zemljopisnih podataka - želimo da naša vizualizacija prikazuje zemljopisnu kartu, možemo između ostalog koristiti sljedeće funkcije:</p>
@@ -1005,33 +1021,33 @@ Primjer sintakse:
 <p>Trenutno u ovim paketima nažalost još ne postoje karte Republike Hrvatske, no ambiciozniji čitatelji mogu pokušati stvoriti istu (i podijeliti sa lokalnom R zajednicom) prateći upute na <a href = "https://github.com/trulia/choroplethr/wiki/Mapmaking-for-R-Programmers"> ovoj </a> i <a href = "https://cran.r-project.org/web/packages/choroplethr/vignettes/h-creating-your-own-maps.html"> ovoj </a> poveznici.</p>
 <hr />
 <p><strong>Zadatak 11.27 - izvrnuti i polarni koordinatni sustavi</strong></p>
-<div class="sourceCode" id="cb555"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb555-1"><a href="ggplot2.html#cb555-1" tabindex="-1"></a><span class="co"># pogledajte kako sljedeći graf izgleda u &quot;izvrnutom&quot; a kako u polarnom koordinatnom sustavu</span></span>
-<span id="cb555-2"><a href="ggplot2.html#cb555-2" tabindex="-1"></a><span class="fu">ggplot</span>(diamondsSample, <span class="fu">aes</span>(<span class="at">x =</span> x<span class="sc">*</span>y<span class="sc">*</span>z, <span class="at">fill =</span> color)) <span class="sc">+</span> <span class="fu">geom_histogram</span>(<span class="at">bins =</span> <span class="dv">30</span>, <span class="at">na.rm =</span> T) <span class="sc">+</span> </span>
-<span id="cb555-3"><a href="ggplot2.html#cb555-3" tabindex="-1"></a>  <span class="fu">xlim</span>(<span class="dv">40</span>, <span class="dv">100</span>) </span></code></pre></div>
-<p><img src="osnoveR_files/figure-html/unnamed-chunk-430-1.png" width="672" /></p>
+<div class="sourceCode" id="cb568"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb568-1"><a href="ggplot2.html#cb568-1" tabindex="-1"></a><span class="co"># pogledajte kako sljedeći graf izgleda u &quot;izvrnutom&quot; a kako u polarnom koordinatnom sustavu</span></span>
+<span id="cb568-2"><a href="ggplot2.html#cb568-2" tabindex="-1"></a><span class="fu">ggplot</span>(diamondsSample, <span class="fu">aes</span>(<span class="at">x =</span> x<span class="sc">*</span>y<span class="sc">*</span>z, <span class="at">fill =</span> color)) <span class="sc">+</span> <span class="fu">geom_histogram</span>(<span class="at">bins =</span> <span class="dv">30</span>, <span class="at">na.rm =</span> T) <span class="sc">+</span> </span>
+<span id="cb568-3"><a href="ggplot2.html#cb568-3" tabindex="-1"></a>  <span class="fu">xlim</span>(<span class="dv">40</span>, <span class="dv">100</span>) </span></code></pre></div>
+<p><img src="osnoveR_files/figure-html/unnamed-chunk-435-1.png" width="672" /></p>
 <div class="fold s o">
-<div class="sourceCode" id="cb556"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb556-1"><a href="ggplot2.html#cb556-1" tabindex="-1"></a><span class="co"># pogledajte kako sljedeći graf izgleda u &quot;izvrnutom&quot; </span></span>
-<span id="cb556-2"><a href="ggplot2.html#cb556-2" tabindex="-1"></a><span class="co"># a kako u polarnom koordinatnom sustavu</span></span>
-<span id="cb556-3"><a href="ggplot2.html#cb556-3" tabindex="-1"></a><span class="fu">ggplot</span>(diamondsSample, <span class="fu">aes</span>(<span class="at">x =</span> x<span class="sc">*</span>y<span class="sc">*</span>z, <span class="at">fill =</span> color)) <span class="sc">+</span> </span>
-<span id="cb556-4"><a href="ggplot2.html#cb556-4" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">bins =</span> <span class="dv">30</span>, <span class="at">na.rm =</span> T) <span class="sc">+</span> </span>
-<span id="cb556-5"><a href="ggplot2.html#cb556-5" tabindex="-1"></a>  <span class="fu">xlim</span>(<span class="dv">40</span>, <span class="dv">100</span>) <span class="sc">+</span> <span class="fu">coord_polar</span>()</span></code></pre></div>
-<p><img src="osnoveR_files/figure-html/unnamed-chunk-431-1.png" width="672" /></p>
+<div class="sourceCode" id="cb569"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb569-1"><a href="ggplot2.html#cb569-1" tabindex="-1"></a><span class="co"># pogledajte kako sljedeći graf izgleda u &quot;izvrnutom&quot; </span></span>
+<span id="cb569-2"><a href="ggplot2.html#cb569-2" tabindex="-1"></a><span class="co"># a kako u polarnom koordinatnom sustavu</span></span>
+<span id="cb569-3"><a href="ggplot2.html#cb569-3" tabindex="-1"></a><span class="fu">ggplot</span>(diamondsSample, <span class="fu">aes</span>(<span class="at">x =</span> x<span class="sc">*</span>y<span class="sc">*</span>z, <span class="at">fill =</span> color)) <span class="sc">+</span> </span>
+<span id="cb569-4"><a href="ggplot2.html#cb569-4" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">bins =</span> <span class="dv">30</span>, <span class="at">na.rm =</span> T) <span class="sc">+</span> </span>
+<span id="cb569-5"><a href="ggplot2.html#cb569-5" tabindex="-1"></a>  <span class="fu">xlim</span>(<span class="dv">40</span>, <span class="dv">100</span>) <span class="sc">+</span> <span class="fu">coord_polar</span>()</span></code></pre></div>
+<p><img src="osnoveR_files/figure-html/unnamed-chunk-436-1.png" width="672" /></p>
 </div>
 <div class="fold s o">
-<div class="sourceCode" id="cb557"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb557-1"><a href="ggplot2.html#cb557-1" tabindex="-1"></a><span class="co"># pogledajte kako sljedeći graf izgleda u &quot;izvrnutom&quot; </span></span>
-<span id="cb557-2"><a href="ggplot2.html#cb557-2" tabindex="-1"></a><span class="co"># a kako u polarnom koordinatnom sustavu</span></span>
-<span id="cb557-3"><a href="ggplot2.html#cb557-3" tabindex="-1"></a><span class="fu">ggplot</span>(diamondsSample, <span class="fu">aes</span>(<span class="at">x =</span> x<span class="sc">*</span>y<span class="sc">*</span>z, <span class="at">fill =</span> color)) <span class="sc">+</span> </span>
-<span id="cb557-4"><a href="ggplot2.html#cb557-4" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">bins =</span> <span class="dv">30</span>, <span class="at">na.rm =</span> T) <span class="sc">+</span> </span>
-<span id="cb557-5"><a href="ggplot2.html#cb557-5" tabindex="-1"></a>  <span class="fu">xlim</span>(<span class="dv">40</span>, <span class="dv">100</span>) <span class="sc">+</span> <span class="fu">coord_flip</span>() </span></code></pre></div>
-<p><img src="osnoveR_files/figure-html/unnamed-chunk-432-1.png" width="672" /></p>
+<div class="sourceCode" id="cb570"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb570-1"><a href="ggplot2.html#cb570-1" tabindex="-1"></a><span class="co"># pogledajte kako sljedeći graf izgleda u &quot;izvrnutom&quot; </span></span>
+<span id="cb570-2"><a href="ggplot2.html#cb570-2" tabindex="-1"></a><span class="co"># a kako u polarnom koordinatnom sustavu</span></span>
+<span id="cb570-3"><a href="ggplot2.html#cb570-3" tabindex="-1"></a><span class="fu">ggplot</span>(diamondsSample, <span class="fu">aes</span>(<span class="at">x =</span> x<span class="sc">*</span>y<span class="sc">*</span>z, <span class="at">fill =</span> color)) <span class="sc">+</span> </span>
+<span id="cb570-4"><a href="ggplot2.html#cb570-4" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">bins =</span> <span class="dv">30</span>, <span class="at">na.rm =</span> T) <span class="sc">+</span> </span>
+<span id="cb570-5"><a href="ggplot2.html#cb570-5" tabindex="-1"></a>  <span class="fu">xlim</span>(<span class="dv">40</span>, <span class="dv">100</span>) <span class="sc">+</span> <span class="fu">coord_flip</span>() </span></code></pre></div>
+<p><img src="osnoveR_files/figure-html/unnamed-chunk-437-1.png" width="672" /></p>
 </div>
 <hr />
 <p>Uočimo da smo u prethodnom zadatku koristili funkciju <code>xlim()</code> koja je - slično funkciji <code>ylim()</code> - pomoćna funkcija za limitiranje <strong>raspona aspekta skale</strong>. Točnije, graf prikazuje samo opservacije koje se nalaze u tom opsegu, dok one koje nisu u tom opsegu tretira kao nedostajuće vrijednosti (zbog čega smo i dodavali parametar <code>na.rm = T</code> u geometriju).</p>
 <p>Ako pogledamo dokumentaciju pomoćnih funkcija za aspekt koordinatnog sustava, možemo vidjeti da one između ostalog spominju i parametre <code>xlim</code> i <code>ylim</code>, za koje je lako pogrešno pretpostaviti da rade na istom principu kao i istoimene funkcije. Razlika je u sljedećem - kroz aspekt koordinatnog sustava mi modificiramo “pogled” na već postojeći graf, kao što smo vidjeli kroz primjere izvrtanja ili preoblikovanja grafa. Parametri <code>xlim</code> i <code>ylim</code> ograničavaju pogled na odabrani segment grafa, pri čemu su ostale opservacije i dalje tu, samo nisu vidljive - efektivno postižemo “zumiranje” na odabrano područje.</p>
 <p>U sljedećem primjeru koristiti ćemo i funkciju <code>xlim</code> i parametar <code>xlim</code> - pogledajte rezultat i usporedite sa inicijalnim grafom iz prethodnog zadatka.</p>
-<div class="sourceCode" id="cb558"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb558-1"><a href="ggplot2.html#cb558-1" tabindex="-1"></a><span class="fu">ggplot</span>(diamondsSample, <span class="fu">aes</span>(<span class="at">x =</span> x<span class="sc">*</span>y<span class="sc">*</span>z, <span class="at">fill =</span> color)) <span class="sc">+</span> <span class="fu">geom_histogram</span>(<span class="at">bins =</span> <span class="dv">30</span>, <span class="at">na.rm =</span> T) <span class="sc">+</span> </span>
-<span id="cb558-2"><a href="ggplot2.html#cb558-2" tabindex="-1"></a>  <span class="fu">xlim</span>(<span class="dv">40</span>, <span class="dv">100</span>) <span class="sc">+</span> <span class="fu">coord_cartesian</span>(<span class="at">xlim =</span> <span class="fu">c</span>(<span class="dv">50</span>, <span class="dv">60</span>))</span></code></pre></div>
-<p><img src="osnoveR_files/figure-html/unnamed-chunk-433-1.png" width="672" /></p>
+<div class="sourceCode" id="cb571"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb571-1"><a href="ggplot2.html#cb571-1" tabindex="-1"></a><span class="fu">ggplot</span>(diamondsSample, <span class="fu">aes</span>(<span class="at">x =</span> x<span class="sc">*</span>y<span class="sc">*</span>z, <span class="at">fill =</span> color)) <span class="sc">+</span> <span class="fu">geom_histogram</span>(<span class="at">bins =</span> <span class="dv">30</span>, <span class="at">na.rm =</span> T) <span class="sc">+</span> </span>
+<span id="cb571-2"><a href="ggplot2.html#cb571-2" tabindex="-1"></a>  <span class="fu">xlim</span>(<span class="dv">40</span>, <span class="dv">100</span>) <span class="sc">+</span> <span class="fu">coord_cartesian</span>(<span class="at">xlim =</span> <span class="fu">c</span>(<span class="dv">50</span>, <span class="dv">60</span>))</span></code></pre></div>
+<p><img src="osnoveR_files/figure-html/unnamed-chunk-438-1.png" width="672" /></p>
 <hr />
 <p>Konačno <strong>aspekt teme grafa</strong> nam omogućuje da utječemo na sve vizualne aspekte grafa koji nisu povezani s podacima. To znači da možemo birati boju i izgled pozadine, font i veličinu slova, margine, poravnavanja i još niz drugih parametara grafa. Tema nam daje iznimno detaljnu kontrolu nad izgledom grafa, a budući da se zapravo radi o objektu (klase <code>theme</code>), temu grafa možemo pohraniti i reciklirati za sve buduće vizualizacije. Isto tako, <code>ggplot2</code> nudi niz već unaprijed pripremljenih tema za korištenje i daljnju prilagodbu, a koje dohvaćamo uz skup pomoćnih funkcija od kojih su neke:</p>
 <ul>
@@ -1042,33 +1058,33 @@ Primjer sintakse:
 </ul>
 <hr />
 <p><strong>Zadatak 11.28 - odabir druge teme grafa</strong></p>
-<div class="sourceCode" id="cb559"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb559-1"><a href="ggplot2.html#cb559-1" tabindex="-1"></a><span class="co"># promijenite temu sljedećem grafu na `theme_classic`</span></span>
-<span id="cb559-2"><a href="ggplot2.html#cb559-2" tabindex="-1"></a><span class="fu">ggplot</span>(diamondsSample, <span class="fu">aes</span>(<span class="at">x =</span> x<span class="sc">*</span>y<span class="sc">*</span>z, <span class="at">fill =</span> color)) <span class="sc">+</span> </span>
-<span id="cb559-3"><a href="ggplot2.html#cb559-3" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">bins =</span> <span class="dv">30</span>, <span class="at">na.rm =</span> T) <span class="sc">+</span> </span>
-<span id="cb559-4"><a href="ggplot2.html#cb559-4" tabindex="-1"></a>  <span class="fu">xlim</span>(<span class="dv">0</span>, <span class="dv">500</span>) </span></code></pre></div>
-<p><img src="osnoveR_files/figure-html/unnamed-chunk-434-1.png" width="672" /></p>
+<div class="sourceCode" id="cb572"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb572-1"><a href="ggplot2.html#cb572-1" tabindex="-1"></a><span class="co"># promijenite temu sljedećem grafu na `theme_classic`</span></span>
+<span id="cb572-2"><a href="ggplot2.html#cb572-2" tabindex="-1"></a><span class="fu">ggplot</span>(diamondsSample, <span class="fu">aes</span>(<span class="at">x =</span> x<span class="sc">*</span>y<span class="sc">*</span>z, <span class="at">fill =</span> color)) <span class="sc">+</span> </span>
+<span id="cb572-3"><a href="ggplot2.html#cb572-3" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">bins =</span> <span class="dv">30</span>, <span class="at">na.rm =</span> T) <span class="sc">+</span> </span>
+<span id="cb572-4"><a href="ggplot2.html#cb572-4" tabindex="-1"></a>  <span class="fu">xlim</span>(<span class="dv">0</span>, <span class="dv">500</span>) </span></code></pre></div>
+<p><img src="osnoveR_files/figure-html/unnamed-chunk-439-1.png" width="672" /></p>
 <div class="fold s o">
-<div class="sourceCode" id="cb560"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb560-1"><a href="ggplot2.html#cb560-1" tabindex="-1"></a><span class="co"># promijenite temu sljedećem grafu po izboru</span></span>
-<span id="cb560-2"><a href="ggplot2.html#cb560-2" tabindex="-1"></a><span class="fu">ggplot</span>(diamondsSample, <span class="fu">aes</span>(<span class="at">x =</span> x<span class="sc">*</span>y<span class="sc">*</span>z, <span class="at">fill =</span> color)) <span class="sc">+</span> </span>
-<span id="cb560-3"><a href="ggplot2.html#cb560-3" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">bins =</span> <span class="dv">30</span>, <span class="at">na.rm =</span> T) <span class="sc">+</span> </span>
-<span id="cb560-4"><a href="ggplot2.html#cb560-4" tabindex="-1"></a>  <span class="fu">xlim</span>(<span class="dv">0</span>, <span class="dv">500</span>) <span class="sc">+</span> <span class="fu">theme_classic</span>()</span></code></pre></div>
-<p><img src="osnoveR_files/figure-html/unnamed-chunk-435-1.png" width="672" /></p>
+<div class="sourceCode" id="cb573"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb573-1"><a href="ggplot2.html#cb573-1" tabindex="-1"></a><span class="co"># promijenite temu sljedećem grafu po izboru</span></span>
+<span id="cb573-2"><a href="ggplot2.html#cb573-2" tabindex="-1"></a><span class="fu">ggplot</span>(diamondsSample, <span class="fu">aes</span>(<span class="at">x =</span> x<span class="sc">*</span>y<span class="sc">*</span>z, <span class="at">fill =</span> color)) <span class="sc">+</span> </span>
+<span id="cb573-3"><a href="ggplot2.html#cb573-3" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">bins =</span> <span class="dv">30</span>, <span class="at">na.rm =</span> T) <span class="sc">+</span> </span>
+<span id="cb573-4"><a href="ggplot2.html#cb573-4" tabindex="-1"></a>  <span class="fu">xlim</span>(<span class="dv">0</span>, <span class="dv">500</span>) <span class="sc">+</span> <span class="fu">theme_classic</span>()</span></code></pre></div>
+<p><img src="osnoveR_files/figure-html/unnamed-chunk-440-1.png" width="672" /></p>
 </div>
 <p>Često želimo promijeniti samo neki od aspekata grafa koji nije vezan uz podatke (npr. veličina ili orijentacija slova, izgled crtica na osima i sl.). Za ove stvari koristimo funkciju <code>theme</code> koja sadrži vrlo bogati niz parametara (pogledati dokumentaciju!). Neke od tih parametara su tzv. “elementi” teme (npr. <code>element_line</code>, <code>element_text</code>) koje namještamo pozivom pripadne funkcije unutar poziva funkcije <code>theme</code>, npr:</p>
-<div class="sourceCode" id="cb561"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb561-1"><a href="ggplot2.html#cb561-1" tabindex="-1"></a><span class="co"># mijenjamo izgled naziva grafa </span></span>
-<span id="cb561-2"><a href="ggplot2.html#cb561-2" tabindex="-1"></a><span class="co"># (za obitelj fontova preporučeno koristiti </span></span>
-<span id="cb561-3"><a href="ggplot2.html#cb561-3" tabindex="-1"></a><span class="co">#`serif`, `sans` ili `mono`)</span></span>
-<span id="cb561-4"><a href="ggplot2.html#cb561-4" tabindex="-1"></a>... <span class="sc">+</span> <span class="fu">theme</span>( <span class="at">title =</span> <span class="fu">element_text</span>(<span class="at">family =</span> <span class="st">&#39;serif&#39;</span>, <span class="at">face =</span> <span class="st">&#39;bold.italic&#39;</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb574"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb574-1"><a href="ggplot2.html#cb574-1" tabindex="-1"></a><span class="co"># mijenjamo izgled naziva grafa </span></span>
+<span id="cb574-2"><a href="ggplot2.html#cb574-2" tabindex="-1"></a><span class="co"># (za obitelj fontova preporučeno koristiti </span></span>
+<span id="cb574-3"><a href="ggplot2.html#cb574-3" tabindex="-1"></a><span class="co">#`serif`, `sans` ili `mono`)</span></span>
+<span id="cb574-4"><a href="ggplot2.html#cb574-4" tabindex="-1"></a>... <span class="sc">+</span> <span class="fu">theme</span>( <span class="at">title =</span> <span class="fu">element_text</span>(<span class="at">family =</span> <span class="st">&#39;serif&#39;</span>, <span class="at">face =</span> <span class="st">&#39;bold.italic&#39;</span>))</span></code></pre></div>
 <hr />
 <p><strong>Zadatak 11.29 - izmjena elementa teme grafa</strong></p>
-<div class="sourceCode" id="cb562"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb562-1"><a href="ggplot2.html#cb562-1" tabindex="-1"></a><span class="co"># promijenite orijentaciju slova na x osi </span></span>
-<span id="cb562-2"><a href="ggplot2.html#cb562-2" tabindex="-1"></a><span class="co"># tako da budu pod kutem od 45 stupnjeva</span></span>
-<span id="cb562-3"><a href="ggplot2.html#cb562-3" tabindex="-1"></a><span class="fu">ggplot</span>(diamondsSample, <span class="fu">aes</span>(cut)) <span class="sc">+</span> <span class="fu">geom_bar</span>() </span></code></pre></div>
-<p><img src="osnoveR_files/figure-html/unnamed-chunk-437-1.png" width="672" /></p>
+<div class="sourceCode" id="cb575"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb575-1"><a href="ggplot2.html#cb575-1" tabindex="-1"></a><span class="co"># promijenite orijentaciju slova na x osi </span></span>
+<span id="cb575-2"><a href="ggplot2.html#cb575-2" tabindex="-1"></a><span class="co"># tako da budu pod kutem od 45 stupnjeva</span></span>
+<span id="cb575-3"><a href="ggplot2.html#cb575-3" tabindex="-1"></a><span class="fu">ggplot</span>(diamondsSample, <span class="fu">aes</span>(cut)) <span class="sc">+</span> <span class="fu">geom_bar</span>() </span></code></pre></div>
+<p><img src="osnoveR_files/figure-html/unnamed-chunk-442-1.png" width="672" /></p>
 <div class="fold s o">
-<div class="sourceCode" id="cb563"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb563-1"><a href="ggplot2.html#cb563-1" tabindex="-1"></a><span class="fu">ggplot</span>(diamondsSample, <span class="fu">aes</span>(cut)) <span class="sc">+</span> <span class="fu">geom_bar</span>() <span class="sc">+</span> </span>
-<span id="cb563-2"><a href="ggplot2.html#cb563-2" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">45</span>))</span></code></pre></div>
-<p><img src="osnoveR_files/figure-html/unnamed-chunk-438-1.png" width="672" /></p>
+<div class="sourceCode" id="cb576"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb576-1"><a href="ggplot2.html#cb576-1" tabindex="-1"></a><span class="fu">ggplot</span>(diamondsSample, <span class="fu">aes</span>(cut)) <span class="sc">+</span> <span class="fu">geom_bar</span>() <span class="sc">+</span> </span>
+<span id="cb576-2"><a href="ggplot2.html#cb576-2" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">45</span>))</span></code></pre></div>
+<p><img src="osnoveR_files/figure-html/unnamed-chunk-443-1.png" width="672" /></p>
 </div>
 <hr />
 </div>
@@ -1079,20 +1095,20 @@ Primjer sintakse:
 <p>Uvjetni (facetirani) grafovi rade na istom principu, ali razdvajanje po odabranoj varijabli (ili varijablama) radi se na način da se vizualizira više grafova koji se onda prikazuju jedan pored drugoga. Rezultantni grafovi prikazuju istu informaciju kao i estetika (implicitne ili eksplicitne) grupe, ali je ovako nešto lakše proučiti svaki podgraf zasebno.</p>
 <p>Prije demonstracije kako radimo uvjetno grafove moramo objasniti pojam tzv. “notacije statističkih formula” (<em>statistical formula notation</em>). Ova notacija se često koristi u R-u, pogotovo kod treniranja raznih statističkih modela, a radi se zapravo o formalnoj notaciji međuovisnosti varijabli nekog podatkovnog skupa zamišljenoj na način da se može na što kraći i jednostavniji način zapisati i ugraditi u programski kod.</p>
 <p>Formule ćemo detaljnije obrađivati kasnije, a za sada ćemo pokazati samo vrlo jednostavan primjer. Ako želimo zapisati “y u ovisnosti o x-u”, onda formula izgleda ovako:</p>
-<div class="sourceCode" id="cb564"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb564-1"><a href="ggplot2.html#cb564-1" tabindex="-1"></a>y <span class="sc">~</span> x          <span class="co"># znači &quot;y u ovisnosti o x-u&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb577"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb577-1"><a href="ggplot2.html#cb577-1" tabindex="-1"></a>y <span class="sc">~</span> x          <span class="co"># znači &quot;y u ovisnosti o x-u&quot;</span></span></code></pre></div>
 <p>ovo možemo čitati i kao “y kao funkcija od x” ili - u slučaju linearnih modela - “y = ax + b”. Dakle, znak tilda (<code>~</code>) zapravo znači “u ovisnosti o”.</p>
 <p>Prikažimo još neke jednostavnije oblike formula:</p>
-<div class="sourceCode" id="cb565"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb565-1"><a href="ggplot2.html#cb565-1" tabindex="-1"></a><span class="co"># z u ovisnost o x i y (plus ovdje nije aritmetičko zbrajanje!)</span></span>
-<span id="cb565-2"><a href="ggplot2.html#cb565-2" tabindex="-1"></a>z <span class="sc">~</span> x <span class="sc">+</span> y  </span>
-<span id="cb565-3"><a href="ggplot2.html#cb565-3" tabindex="-1"></a></span>
-<span id="cb565-4"><a href="ggplot2.html#cb565-4" tabindex="-1"></a><span class="co"># y u ovisnosti o &quot;svim ostalim varijablama&quot;</span></span>
-<span id="cb565-5"><a href="ggplot2.html#cb565-5" tabindex="-1"></a>y <span class="sc">~</span> . </span>
-<span id="cb565-6"><a href="ggplot2.html#cb565-6" tabindex="-1"></a></span>
-<span id="cb565-7"><a href="ggplot2.html#cb565-7" tabindex="-1"></a><span class="co"># &quot;sve ostale varijable&quot; u ovisnosti o y</span></span>
-<span id="cb565-8"><a href="ggplot2.html#cb565-8" tabindex="-1"></a>. <span class="sc">~</span> y   </span>
-<span id="cb565-9"><a href="ggplot2.html#cb565-9" tabindex="-1"></a></span>
-<span id="cb565-10"><a href="ggplot2.html#cb565-10" tabindex="-1"></a><span class="co"># tzv. &quot;jednostrana&quot; formula, &quot;u ovisnosti o y&quot;</span></span>
-<span id="cb565-11"><a href="ggplot2.html#cb565-11" tabindex="-1"></a><span class="sc">~</span> y        </span></code></pre></div>
+<div class="sourceCode" id="cb578"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb578-1"><a href="ggplot2.html#cb578-1" tabindex="-1"></a><span class="co"># z u ovisnost o x i y (plus ovdje nije aritmetičko zbrajanje!)</span></span>
+<span id="cb578-2"><a href="ggplot2.html#cb578-2" tabindex="-1"></a>z <span class="sc">~</span> x <span class="sc">+</span> y  </span>
+<span id="cb578-3"><a href="ggplot2.html#cb578-3" tabindex="-1"></a></span>
+<span id="cb578-4"><a href="ggplot2.html#cb578-4" tabindex="-1"></a><span class="co"># y u ovisnosti o &quot;svim ostalim varijablama&quot;</span></span>
+<span id="cb578-5"><a href="ggplot2.html#cb578-5" tabindex="-1"></a>y <span class="sc">~</span> . </span>
+<span id="cb578-6"><a href="ggplot2.html#cb578-6" tabindex="-1"></a></span>
+<span id="cb578-7"><a href="ggplot2.html#cb578-7" tabindex="-1"></a><span class="co"># &quot;sve ostale varijable&quot; u ovisnosti o y</span></span>
+<span id="cb578-8"><a href="ggplot2.html#cb578-8" tabindex="-1"></a>. <span class="sc">~</span> y   </span>
+<span id="cb578-9"><a href="ggplot2.html#cb578-9" tabindex="-1"></a></span>
+<span id="cb578-10"><a href="ggplot2.html#cb578-10" tabindex="-1"></a><span class="co"># tzv. &quot;jednostrana&quot; formula, &quot;u ovisnosti o y&quot;</span></span>
+<span id="cb578-11"><a href="ggplot2.html#cb578-11" tabindex="-1"></a><span class="sc">~</span> y        </span></code></pre></div>
 <p>Zadnja dva primjera je malo teže matematički definirati no znaju se koristiti u pozivima funkcija za različite svrhe, većinom zbog jednostavnog zapisa i lake interpretacije.</p>
 <p>Vratimo se sada na uvjetne grafove. Postoji dva osnovna načina stvaranja uvjetnih grafova, a to je uz pomoć funkcija</p>
 <ul>
@@ -1102,51 +1118,51 @@ Primjer sintakse:
 <p>Funkciju <code>facet_grid</code> koristimo kad podskupove radimo po jednoj ili dvije kategorijske varijable. Rastavljanje po dvije varijable prirodno radi “matricu”, dok rastavljanje po jednoj će napraviti redak ili stupac, što možemo kontrolirati formulom. Funkciju <code>facet_wrap</code> koristimo kada želimo rastaviti po jednoj varijabli, ali ne želimo da svi budu u jednom stupcu ili retku već ih želimo presložiti u više redaka (zato je i <em>wrap</em>, slično kao <em>word wrap</em> u uređivaču teksta koji prenosi tekst u drugi red).</p>
 <hr />
 <p><strong>Zadatak 11.30 - funkcija ‘facet_grid’</strong></p>
-<div class="sourceCode" id="cb566"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb566-1"><a href="ggplot2.html#cb566-1" tabindex="-1"></a><span class="co"># reduciramo uzorak kako bi radili sa </span></span>
-<span id="cb566-2"><a href="ggplot2.html#cb566-2" tabindex="-1"></a><span class="co"># faktorima sa manjim brojem razina</span></span>
-<span id="cb566-3"><a href="ggplot2.html#cb566-3" tabindex="-1"></a>diamondsSample <span class="sc">%&gt;%</span> </span>
-<span id="cb566-4"><a href="ggplot2.html#cb566-4" tabindex="-1"></a>  <span class="fu">filter</span>(color <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">&quot;G&quot;</span>, <span class="st">&quot;H&quot;</span>, <span class="st">&quot;I&quot;</span>, <span class="st">&quot;J&quot;</span>),</span>
-<span id="cb566-5"><a href="ggplot2.html#cb566-5" tabindex="-1"></a>         cut <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">&quot;Very Good&quot;</span>, </span>
-<span id="cb566-6"><a href="ggplot2.html#cb566-6" tabindex="-1"></a>                    <span class="st">&quot;Premium&quot;</span>, <span class="st">&quot;Ideal&quot;</span>)) <span class="ot">-&gt;</span> diamondsSample2</span>
-<span id="cb566-7"><a href="ggplot2.html#cb566-7" tabindex="-1"></a></span>
-<span id="cb566-8"><a href="ggplot2.html#cb566-8" tabindex="-1"></a><span class="co"># napravite uvjetni graf u ovisnosti o kombinaciji </span></span>
-<span id="cb566-9"><a href="ggplot2.html#cb566-9" tabindex="-1"></a><span class="co"># boje (`color`) i reza (`cut`)</span></span>
-<span id="cb566-10"><a href="ggplot2.html#cb566-10" tabindex="-1"></a><span class="co"># koristite funkciju `facet_grid` i </span></span>
-<span id="cb566-11"><a href="ggplot2.html#cb566-11" tabindex="-1"></a><span class="co"># formulu kao parametar</span></span>
-<span id="cb566-12"><a href="ggplot2.html#cb566-12" tabindex="-1"></a><span class="fu">ggplot</span>(diamondsSample2, <span class="fu">aes</span>(depth, <span class="at">fill =</span> clarity)) <span class="sc">+</span> </span>
-<span id="cb566-13"><a href="ggplot2.html#cb566-13" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">bins =</span> <span class="dv">5</span>,  <span class="at">position =</span> <span class="st">&#39;dodge&#39;</span>)</span></code></pre></div>
-<p><img src="osnoveR_files/figure-html/unnamed-chunk-441-1.png" width="672" /></p>
+<div class="sourceCode" id="cb579"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb579-1"><a href="ggplot2.html#cb579-1" tabindex="-1"></a><span class="co"># reduciramo uzorak kako bi radili sa </span></span>
+<span id="cb579-2"><a href="ggplot2.html#cb579-2" tabindex="-1"></a><span class="co"># faktorima sa manjim brojem razina</span></span>
+<span id="cb579-3"><a href="ggplot2.html#cb579-3" tabindex="-1"></a>diamondsSample <span class="sc">%&gt;%</span> </span>
+<span id="cb579-4"><a href="ggplot2.html#cb579-4" tabindex="-1"></a>  <span class="fu">filter</span>(color <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">&quot;G&quot;</span>, <span class="st">&quot;H&quot;</span>, <span class="st">&quot;I&quot;</span>, <span class="st">&quot;J&quot;</span>),</span>
+<span id="cb579-5"><a href="ggplot2.html#cb579-5" tabindex="-1"></a>         cut <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">&quot;Very Good&quot;</span>, </span>
+<span id="cb579-6"><a href="ggplot2.html#cb579-6" tabindex="-1"></a>                    <span class="st">&quot;Premium&quot;</span>, <span class="st">&quot;Ideal&quot;</span>)) <span class="ot">-&gt;</span> diamondsSample2</span>
+<span id="cb579-7"><a href="ggplot2.html#cb579-7" tabindex="-1"></a></span>
+<span id="cb579-8"><a href="ggplot2.html#cb579-8" tabindex="-1"></a><span class="co"># napravite uvjetni graf u ovisnosti o kombinaciji </span></span>
+<span id="cb579-9"><a href="ggplot2.html#cb579-9" tabindex="-1"></a><span class="co"># boje (`color`) i reza (`cut`)</span></span>
+<span id="cb579-10"><a href="ggplot2.html#cb579-10" tabindex="-1"></a><span class="co"># koristite funkciju `facet_grid` i </span></span>
+<span id="cb579-11"><a href="ggplot2.html#cb579-11" tabindex="-1"></a><span class="co"># formulu kao parametar</span></span>
+<span id="cb579-12"><a href="ggplot2.html#cb579-12" tabindex="-1"></a><span class="fu">ggplot</span>(diamondsSample2, <span class="fu">aes</span>(depth, <span class="at">fill =</span> clarity)) <span class="sc">+</span> </span>
+<span id="cb579-13"><a href="ggplot2.html#cb579-13" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">bins =</span> <span class="dv">5</span>,  <span class="at">position =</span> <span class="st">&#39;dodge&#39;</span>)</span></code></pre></div>
+<p><img src="osnoveR_files/figure-html/unnamed-chunk-446-1.png" width="672" /></p>
 <div class="fold s o">
-<div class="sourceCode" id="cb567"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb567-1"><a href="ggplot2.html#cb567-1" tabindex="-1"></a><span class="fu">ggplot</span>(diamondsSample2, <span class="fu">aes</span>(depth, <span class="at">fill =</span> clarity)) <span class="sc">+</span> </span>
-<span id="cb567-2"><a href="ggplot2.html#cb567-2" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">bins =</span> <span class="dv">5</span>,  <span class="at">position =</span> <span class="st">&#39;dodge&#39;</span>) <span class="sc">+</span> </span>
-<span id="cb567-3"><a href="ggplot2.html#cb567-3" tabindex="-1"></a>  <span class="fu">facet_grid</span>(color <span class="sc">~</span> cut)</span></code></pre></div>
-<p><img src="osnoveR_files/figure-html/unnamed-chunk-442-1.png" width="672" /></p>
+<div class="sourceCode" id="cb580"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb580-1"><a href="ggplot2.html#cb580-1" tabindex="-1"></a><span class="fu">ggplot</span>(diamondsSample2, <span class="fu">aes</span>(depth, <span class="at">fill =</span> clarity)) <span class="sc">+</span> </span>
+<span id="cb580-2"><a href="ggplot2.html#cb580-2" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">bins =</span> <span class="dv">5</span>,  <span class="at">position =</span> <span class="st">&#39;dodge&#39;</span>) <span class="sc">+</span> </span>
+<span id="cb580-3"><a href="ggplot2.html#cb580-3" tabindex="-1"></a>  <span class="fu">facet_grid</span>(color <span class="sc">~</span> cut)</span></code></pre></div>
+<p><img src="osnoveR_files/figure-html/unnamed-chunk-447-1.png" width="672" /></p>
 </div>
 <hr />
 <p><strong>Zadatak 11.31 - funkcija ‘facet_grid’ (2)</strong></p>
-<div class="sourceCode" id="cb568"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb568-1"><a href="ggplot2.html#cb568-1" tabindex="-1"></a><span class="co"># ponovite postupak, ali sada rastavite samo po boji</span></span>
-<span id="cb568-2"><a href="ggplot2.html#cb568-2" tabindex="-1"></a><span class="co"># grafove organizirajte u stupac</span></span>
-<span id="cb568-3"><a href="ggplot2.html#cb568-3" tabindex="-1"></a><span class="co"># koristite funkciju `facet_grid` i notaciju formule sa točkom</span></span>
-<span id="cb568-4"><a href="ggplot2.html#cb568-4" tabindex="-1"></a><span class="fu">ggplot</span>(diamondsSample2, <span class="fu">aes</span>(depth, <span class="at">fill =</span> clarity)) <span class="sc">+</span> </span>
-<span id="cb568-5"><a href="ggplot2.html#cb568-5" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">bins =</span> <span class="dv">5</span>,  <span class="at">position =</span> <span class="st">&#39;dodge&#39;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb581"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb581-1"><a href="ggplot2.html#cb581-1" tabindex="-1"></a><span class="co"># ponovite postupak, ali sada rastavite samo po boji</span></span>
+<span id="cb581-2"><a href="ggplot2.html#cb581-2" tabindex="-1"></a><span class="co"># grafove organizirajte u stupac</span></span>
+<span id="cb581-3"><a href="ggplot2.html#cb581-3" tabindex="-1"></a><span class="co"># koristite funkciju `facet_grid` i notaciju formule sa točkom</span></span>
+<span id="cb581-4"><a href="ggplot2.html#cb581-4" tabindex="-1"></a><span class="fu">ggplot</span>(diamondsSample2, <span class="fu">aes</span>(depth, <span class="at">fill =</span> clarity)) <span class="sc">+</span> </span>
+<span id="cb581-5"><a href="ggplot2.html#cb581-5" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">bins =</span> <span class="dv">5</span>,  <span class="at">position =</span> <span class="st">&#39;dodge&#39;</span>)</span></code></pre></div>
 <div class="fold s o">
-<div class="sourceCode" id="cb569"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb569-1"><a href="ggplot2.html#cb569-1" tabindex="-1"></a><span class="fu">ggplot</span>(diamondsSample2, <span class="fu">aes</span>(depth, <span class="at">fill =</span> clarity)) <span class="sc">+</span> </span>
-<span id="cb569-2"><a href="ggplot2.html#cb569-2" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">bins =</span> <span class="dv">5</span>,  <span class="at">position =</span> <span class="st">&#39;dodge&#39;</span>) <span class="sc">+</span> <span class="fu">facet_grid</span>(color <span class="sc">~</span> .)</span></code></pre></div>
-<p><img src="osnoveR_files/figure-html/unnamed-chunk-444-1.png" width="672" /></p>
+<div class="sourceCode" id="cb582"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb582-1"><a href="ggplot2.html#cb582-1" tabindex="-1"></a><span class="fu">ggplot</span>(diamondsSample2, <span class="fu">aes</span>(depth, <span class="at">fill =</span> clarity)) <span class="sc">+</span> </span>
+<span id="cb582-2"><a href="ggplot2.html#cb582-2" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">bins =</span> <span class="dv">5</span>,  <span class="at">position =</span> <span class="st">&#39;dodge&#39;</span>) <span class="sc">+</span> <span class="fu">facet_grid</span>(color <span class="sc">~</span> .)</span></code></pre></div>
+<p><img src="osnoveR_files/figure-html/unnamed-chunk-449-1.png" width="672" /></p>
 </div>
 <hr />
 <p>Uočite jednu bitnu značajku uvjetnih grafova - koordinatne osi (tj. skale) su poravnate. Naime, prije vizualizacije, <code>ggplot</code> prvo “trenira” skale na način da pronađe maksimalni raspon koji se onda koristi kao zajednička značajka svih grafova. Ukoliko to ne želimo, može određenu os (ili obje) učiniti slobodnom uz pomoć parametra <code>scales</code> kojeg postavimo na <code>"free"</code> (za obje osi) ili <code>"free_x"</code> odnosno <code>"free_y"</code> (ako želimo da samo jedna os bude poravnata a druga “slobodna”).</p>
 <p>Pogledajmo još kako radi funkcija <code>facet_wrap</code>:</p>
 <hr />
 <p><strong>Zadatak 11.32 - funkcija ‘facet_wrap’</strong></p>
-<div class="sourceCode" id="cb570"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb570-1"><a href="ggplot2.html#cb570-1" tabindex="-1"></a><span class="co"># razdvojite sljedeći graf u ovisnosti o prozirnosti (`clarity`)</span></span>
-<span id="cb570-2"><a href="ggplot2.html#cb570-2" tabindex="-1"></a><span class="co"># koristite funkciju `facet_wrap` i jednostranu formulu</span></span>
-<span id="cb570-3"><a href="ggplot2.html#cb570-3" tabindex="-1"></a><span class="fu">ggplot</span>(diamondsSample2, <span class="fu">aes</span>(x<span class="sc">*</span>y<span class="sc">*</span>z, price)) <span class="sc">+</span> <span class="fu">geom_point</span>() </span></code></pre></div>
-<p><img src="osnoveR_files/figure-html/unnamed-chunk-445-1.png" width="672" /></p>
+<div class="sourceCode" id="cb583"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb583-1"><a href="ggplot2.html#cb583-1" tabindex="-1"></a><span class="co"># razdvojite sljedeći graf u ovisnosti o prozirnosti (`clarity`)</span></span>
+<span id="cb583-2"><a href="ggplot2.html#cb583-2" tabindex="-1"></a><span class="co"># koristite funkciju `facet_wrap` i jednostranu formulu</span></span>
+<span id="cb583-3"><a href="ggplot2.html#cb583-3" tabindex="-1"></a><span class="fu">ggplot</span>(diamondsSample2, <span class="fu">aes</span>(x<span class="sc">*</span>y<span class="sc">*</span>z, price)) <span class="sc">+</span> <span class="fu">geom_point</span>() </span></code></pre></div>
+<p><img src="osnoveR_files/figure-html/unnamed-chunk-450-1.png" width="672" /></p>
 <div class="fold s o">
-<div class="sourceCode" id="cb571"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb571-1"><a href="ggplot2.html#cb571-1" tabindex="-1"></a><span class="fu">ggplot</span>(diamondsSample2, <span class="fu">aes</span>(x<span class="sc">*</span>y<span class="sc">*</span>z, price)) <span class="sc">+</span> </span>
-<span id="cb571-2"><a href="ggplot2.html#cb571-2" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span> <span class="fu">facet_wrap</span>( <span class="sc">~</span> clarity)</span></code></pre></div>
-<p><img src="osnoveR_files/figure-html/unnamed-chunk-446-1.png" width="672" /></p>
+<div class="sourceCode" id="cb584"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb584-1"><a href="ggplot2.html#cb584-1" tabindex="-1"></a><span class="fu">ggplot</span>(diamondsSample2, <span class="fu">aes</span>(x<span class="sc">*</span>y<span class="sc">*</span>z, price)) <span class="sc">+</span> </span>
+<span id="cb584-2"><a href="ggplot2.html#cb584-2" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span> <span class="fu">facet_wrap</span>( <span class="sc">~</span> clarity)</span></code></pre></div>
+<p><img src="osnoveR_files/figure-html/unnamed-chunk-451-1.png" width="672" /></p>
 </div>
 <hr />
 <p>Ovime završavamo priču o gramatičkoj geometriji, njezinim aspektima i primjeni uz pomoć paketa <code>ggplot2</code>. Ovdje nisu ni približno objašnjenje sve mogućnosti ovoga paketa, zbog čega se snažno preporučuje dodatno čitanje dokumentacije i referenciranje na podsjetnik koji sadrži niz geometrija i opcija za koje u ovim lekcijama nije bilo mjesta. Također, ne treba zaboraviti na niz dodatnih paketa koji dodatno proširuju mogućnosti paketa <code>ggplot2</code>, a koje bi trebalo potražiti u ovisnosti o našim zahtjevima i željama glede vizualizacija koje želimo stvoriti za naše projekte podatkovne analize. Za inspiraciju zgodno je pogledati galeriju grafova i slika nastalih uz pomoć jezika R, a koja je dostupna <a href = "http://www.r-graph-gallery.com/all-graphs/">na ovoj poveznici </a>.</p>
@@ -1157,13 +1173,13 @@ Primjer sintakse:
 <h2><span class="header-section-number">11.4</span> Grafovi u eksploratornoj analizi i izvještavanju<a href="ggplot2.html#grafovi-u-eksploratornoj-analizi-i-izvještavanju" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Za kraj možemo se kratko osvrnuti na razliku između grafova rađenih za eksploratornu analizu podataka i onih koje koristimo u izvještajima, za komunikaciju naših zaključaka drugim ljudima i prenošenje dobivenih saznanja.</p>
 <p>Kod eksploratorne analize podataka često je glavni cilj - kvantiteta. Već je rečeno da se eksploratorna analiza svodi na traženje odgovora za niz pitanja koje analitičar postavlja vezano uz podatke. Estetika ovdje često nije bitna - glavno je da grafovi imaju dovoljno informacija da se kod naknadnog pregledavanja može ono što je predočeno staviti u odgovarajući kontekst. Analitičar će također često isprobavati različite kombinacije estetika, geometrija i statistika. Ponekad je zgodno koristiti i dodatne pakete koji omogućuju prikaz većeg broja varijabli na istom grafu, npr. funkcija <code>ggpairs</code> paketa <code>GGally</code>:</p>
-<div class="sourceCode" id="cb572"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb572-1"><a href="ggplot2.html#cb572-1" tabindex="-1"></a><span class="co">#library(GGally)        #ako je potrebno</span></span>
-<span id="cb572-2"><a href="ggplot2.html#cb572-2" tabindex="-1"></a><span class="co"># uzimamo samo četiri stupca zbog jasnijeg prikaza</span></span>
-<span id="cb572-3"><a href="ggplot2.html#cb572-3" tabindex="-1"></a><span class="fu">ggpairs</span>(<span class="at">data =</span> diamondsSample[,<span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">5</span>, <span class="dv">7</span>)])</span></code></pre></div>
-<p><img src="osnoveR_files/figure-html/unnamed-chunk-447-1.png" width="672" /></p>
+<div class="sourceCode" id="cb585"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb585-1"><a href="ggplot2.html#cb585-1" tabindex="-1"></a><span class="co">#library(GGally)        #ako je potrebno</span></span>
+<span id="cb585-2"><a href="ggplot2.html#cb585-2" tabindex="-1"></a><span class="co"># uzimamo samo četiri stupca zbog jasnijeg prikaza</span></span>
+<span id="cb585-3"><a href="ggplot2.html#cb585-3" tabindex="-1"></a><span class="fu">ggpairs</span>(<span class="at">data =</span> diamondsSample[,<span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">5</span>, <span class="dv">7</span>)])</span></code></pre></div>
+<p><img src="osnoveR_files/figure-html/unnamed-chunk-452-1.png" width="672" /></p>
 <p>Eksploratorne grafove analitičar koristi radi predočavanja <strong>samih podataka</strong>, kako bi potražio uzorke, prepoznao distribucije ili prirodna grupiranja podataka ili uočio iskočne vrijednosti (tzv. <em>outlier</em>-e). Isto tako, eksploratorni grafovi se koriste za predočavanje raznih <strong>agregiranih statistika</strong>. Ukoliko se radi o prediktivnoj analizi podataka, tj. cilj analize jest razviti metodu predviđanja nekih varijabli na osnovu drugih varijabli podatkovnog skupa, analitičar će često u tijeku eksploratorne analize stvoriti nekoliko jednostavnijih prediktivnih modela koje će onda vizualizirati na grafu kako bi mogao slikom predočiti učinkovitost modela te na osnovu uočenih nedostataka razviti strategiju za daljnje korake analize.</p>
 <p>Kod izvještavanja s druge strane ključna je kvaliteta grafa u smislu jasnog i preglednog predstavljanja informacije. Izvještajne vizualizacije često su ključne za jasno i jezgrovito komuniciranje rezultata istraživanja što u određenom kontekstu može imati dalekosežne posljedice, kao što je slučaj kod jedne od najpoznatijih povijesnih vizualizacija, grafa kojeg je stvorila medicinska sestra i matematičarka Florence Nightingale kako bi popravila higijenske uvjete u vojnim bolnicama sredinom 19. stoljeća:</p>
-<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-448"></span>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-453"></span>
 <img src="figures/florence_nightingale_data_visualization_visionary_1050x700.png" alt="Diagram of the causes of mortality in the army in the East by Florence Nightingale, 1858, Wikimedia Commons" width="525" />
 <p class="caption">
 Slika 11.1: Diagram of the causes of mortality in the army in the East by Florence Nightingale, 1858, Wikimedia Commons
@@ -1172,29 +1188,29 @@ Slika 11.1: Diagram of the causes of mortality in the army in the East by Floren
 <p>Izvještajni graf mora jasno komunicirati informacije koje su njime predočene, uz pažljivo odabrana objašnjenja i pomno odabrano korištenje tzv. <strong>metapodataka</strong>, tj. dodatnog teksta i anotacija. Za stvaranje izvještajnih grafova preporučuje se koristiti dodatne <code>geom_text</code> slojeve za tekstualnim oznakama na odgovarajućim područjima grafa gdje one mogu najviše doprinijeti, a također i kreativno korištenje <code>geom_point</code>, <code>geom_hline</code>, <code>geom_vline</code>, <code>geom_rect</code> i sličnih geometrijskih slojeva koji će dodatno pojasniti određene segmente grafa. Isto tako, preporučuje se unaprijed pripremiti temu koju ćemo onda konzistentno primjenjivati na sve grafove.</p>
 <p>U velikom broju slučajeva grafovi u izvještajima su zapravo probrani i “uljepšani” grafovi dobiveni tijekom eksploratorne analize. No analitičar bi trebao posebnu pažnju posvetiti činjenici da se grafovi u izvještajima često rade za publiku koja je daleko manje upoznata sa podatkovnim skupom i raznim detaljnim saznanjima koje je analitičar dobio tijekom eksploratorne analize. Izvještajni grafovi stoga moraju biti orijentirani krajnjem korisniku, te s tim ciljem i pažljivo dizajnirani. Zbog toga se preporučuje da svi elementi grafa - uključujući i naslov, legende i sl. budu orijentirani komunikaciji informacije i razjašnjenju što graf prikazuje, a što je u skladu sa zaključcima koje publikacija iznosi.</p>
 <p>Konačno, ponekad želimo zbog štednje prostora unutar jedne slike staviti više različitih grafova. Ovo obično radimo uz pomoć više zasebnih slika koje slažemo unutar sučelja kojeg koristimo za pisanje publikacije čiji su dio navedeni grafovi, no možemo i unaprijed pripremiti grafove uz pomoć paketa <code>gridExtra</code>. Između ostalog, ovaj paket nudi funkciju <code>grid.arrange</code> uz pomoć koje grafove slažemo u matricu s odabranim brojem redaka i stupaca.</p>
-<div class="sourceCode" id="cb573"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb573-1"><a href="ggplot2.html#cb573-1" tabindex="-1"></a><span class="co">#library(gridExtra)    # ukoliko je potrebno</span></span>
-<span id="cb573-2"><a href="ggplot2.html#cb573-2" tabindex="-1"></a></span>
-<span id="cb573-3"><a href="ggplot2.html#cb573-3" tabindex="-1"></a><span class="co"># grafove koje slažem u matricu pohranjujem u varijable</span></span>
-<span id="cb573-4"><a href="ggplot2.html#cb573-4" tabindex="-1"></a>g1 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(diamondsSample, <span class="fu">aes</span>(x<span class="sc">*</span>y<span class="sc">*</span>z, price, <span class="at">color =</span> color)) <span class="sc">+</span> </span>
-<span id="cb573-5"><a href="ggplot2.html#cb573-5" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.6</span>)</span>
-<span id="cb573-6"><a href="ggplot2.html#cb573-6" tabindex="-1"></a></span>
-<span id="cb573-7"><a href="ggplot2.html#cb573-7" tabindex="-1"></a>g2 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(diamondsSample, <span class="fu">aes</span>(<span class="at">x =</span> x<span class="sc">*</span>y<span class="sc">*</span>z, <span class="at">fill =</span> color)) <span class="sc">+</span> </span>
-<span id="cb573-8"><a href="ggplot2.html#cb573-8" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">bins =</span> <span class="dv">30</span>, <span class="at">na.rm =</span> T) <span class="sc">+</span> </span>
-<span id="cb573-9"><a href="ggplot2.html#cb573-9" tabindex="-1"></a>  <span class="fu">scale_fill_brewer</span>(<span class="at">palette =</span> <span class="st">&quot;Greens&quot;</span>)</span>
-<span id="cb573-10"><a href="ggplot2.html#cb573-10" tabindex="-1"></a></span>
-<span id="cb573-11"><a href="ggplot2.html#cb573-11" tabindex="-1"></a>g3 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(diamondsSample, <span class="fu">aes</span>(<span class="at">x =</span> cut)) <span class="sc">+</span> </span>
-<span id="cb573-12"><a href="ggplot2.html#cb573-12" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">fill =</span> <span class="st">&quot;blue&quot;</span>, <span class="at">alpha =</span> <span class="fl">0.5</span>)</span>
-<span id="cb573-13"><a href="ggplot2.html#cb573-13" tabindex="-1"></a></span>
-<span id="cb573-14"><a href="ggplot2.html#cb573-14" tabindex="-1"></a>g4 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(diamondsSample, <span class="fu">aes</span>(<span class="at">x =</span> color, <span class="at">fill =</span> clarity)) <span class="sc">+</span> </span>
-<span id="cb573-15"><a href="ggplot2.html#cb573-15" tabindex="-1"></a>  <span class="fu">geom_bar</span>() <span class="sc">+</span> <span class="fu">coord_polar</span>()</span>
-<span id="cb573-16"><a href="ggplot2.html#cb573-16" tabindex="-1"></a></span>
-<span id="cb573-17"><a href="ggplot2.html#cb573-17" tabindex="-1"></a><span class="co"># pozivam funkciju `grid.arrange`</span></span>
-<span id="cb573-18"><a href="ggplot2.html#cb573-18" tabindex="-1"></a><span class="fu">grid.arrange</span>(g1, g2, g3, g4, <span class="at">nrow =</span> <span class="dv">2</span>, <span class="at">ncol =</span> <span class="dv">2</span>)</span></code></pre></div>
-<p><img src="osnoveR_files/figure-html/unnamed-chunk-449-1.png" width="672" /></p>
+<div class="sourceCode" id="cb586"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb586-1"><a href="ggplot2.html#cb586-1" tabindex="-1"></a><span class="co">#library(gridExtra)    # ukoliko je potrebno</span></span>
+<span id="cb586-2"><a href="ggplot2.html#cb586-2" tabindex="-1"></a></span>
+<span id="cb586-3"><a href="ggplot2.html#cb586-3" tabindex="-1"></a><span class="co"># grafove koje slažem u matricu pohranjujem u varijable</span></span>
+<span id="cb586-4"><a href="ggplot2.html#cb586-4" tabindex="-1"></a>g1 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(diamondsSample, <span class="fu">aes</span>(x<span class="sc">*</span>y<span class="sc">*</span>z, price, <span class="at">color =</span> color)) <span class="sc">+</span> </span>
+<span id="cb586-5"><a href="ggplot2.html#cb586-5" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.6</span>)</span>
+<span id="cb586-6"><a href="ggplot2.html#cb586-6" tabindex="-1"></a></span>
+<span id="cb586-7"><a href="ggplot2.html#cb586-7" tabindex="-1"></a>g2 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(diamondsSample, <span class="fu">aes</span>(<span class="at">x =</span> x<span class="sc">*</span>y<span class="sc">*</span>z, <span class="at">fill =</span> color)) <span class="sc">+</span> </span>
+<span id="cb586-8"><a href="ggplot2.html#cb586-8" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">bins =</span> <span class="dv">30</span>, <span class="at">na.rm =</span> T) <span class="sc">+</span> </span>
+<span id="cb586-9"><a href="ggplot2.html#cb586-9" tabindex="-1"></a>  <span class="fu">scale_fill_brewer</span>(<span class="at">palette =</span> <span class="st">&quot;Greens&quot;</span>)</span>
+<span id="cb586-10"><a href="ggplot2.html#cb586-10" tabindex="-1"></a></span>
+<span id="cb586-11"><a href="ggplot2.html#cb586-11" tabindex="-1"></a>g3 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(diamondsSample, <span class="fu">aes</span>(<span class="at">x =</span> cut)) <span class="sc">+</span> </span>
+<span id="cb586-12"><a href="ggplot2.html#cb586-12" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">fill =</span> <span class="st">&quot;blue&quot;</span>, <span class="at">alpha =</span> <span class="fl">0.5</span>)</span>
+<span id="cb586-13"><a href="ggplot2.html#cb586-13" tabindex="-1"></a></span>
+<span id="cb586-14"><a href="ggplot2.html#cb586-14" tabindex="-1"></a>g4 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(diamondsSample, <span class="fu">aes</span>(<span class="at">x =</span> color, <span class="at">fill =</span> clarity)) <span class="sc">+</span> </span>
+<span id="cb586-15"><a href="ggplot2.html#cb586-15" tabindex="-1"></a>  <span class="fu">geom_bar</span>() <span class="sc">+</span> <span class="fu">coord_polar</span>()</span>
+<span id="cb586-16"><a href="ggplot2.html#cb586-16" tabindex="-1"></a></span>
+<span id="cb586-17"><a href="ggplot2.html#cb586-17" tabindex="-1"></a><span class="co"># pozivam funkciju `grid.arrange`</span></span>
+<span id="cb586-18"><a href="ggplot2.html#cb586-18" tabindex="-1"></a><span class="fu">grid.arrange</span>(g1, g2, g3, g4, <span class="at">nrow =</span> <span class="dv">2</span>, <span class="at">ncol =</span> <span class="dv">2</span>)</span></code></pre></div>
+<p><img src="osnoveR_files/figure-html/unnamed-chunk-454-1.png" width="672" /></p>
 <hr />
 </div>
-<div id="zadaci-za-vježbu-9" class="section level2 unnumbered hasAnchor">
-<h2>Zadaci za vježbu<a href="ggplot2.html#zadaci-za-vježbu-9" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="zadaci-za-vježbu-8" class="section level2 unnumbered hasAnchor">
+<h2>Zadaci za vježbu<a href="ggplot2.html#zadaci-za-vježbu-8" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ol style="list-style-type: decimal">
 <li>Učitajte i proučite podatkovni skup <code>diamonds</code> koji dolazi zajedno s paketom <code>ggplot2</code>.</li>
 </ol>
@@ -1205,11 +1221,11 @@ Slika 11.1: Diagram of the causes of mortality in the army in the East by Floren
 <ol start="2" style="list-style-type: decimal">
 <li>Učitajte i proučite podatkovni skup <code>mpg</code>. Pokušajte rekonstruirati sljedeće grafove. Nepoznate geometrije identificirajte uz pomoć podsjetnika.</li>
 </ol>
-<p><img src="osnoveR_files/figure-html/unnamed-chunk-450-1.png" width="672" /></p>
+<p><img src="osnoveR_files/figure-html/unnamed-chunk-455-1.png" width="672" /></p>
 <hr />
-<p><img src="osnoveR_files/figure-html/unnamed-chunk-451-1.png" width="672" /></p>
+<p><img src="osnoveR_files/figure-html/unnamed-chunk-456-1.png" width="672" /></p>
 <hr />
-<p><img src="osnoveR_files/figure-html/unnamed-chunk-452-1.png" width="672" /></p>
+<p><img src="osnoveR_files/figure-html/unnamed-chunk-457-1.png" width="672" /></p>
 <hr />
 <ol start="3" style="list-style-type: decimal">
 <li>Uz pomoć funkcija skaliranja na sljedećem grafu:
@@ -1220,9 +1236,9 @@ Slika 11.1: Diagram of the causes of mortality in the army in the East by Floren
 <li>za boju pravokutnika odaberite paletu <code>"Dark2"</code></li>
 </ol></li>
 </ol>
-<div class="sourceCode" id="cb574"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb574-1"><a href="ggplot2.html#cb574-1" tabindex="-1"></a><span class="fu">ggplot</span>(mpg, <span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">as.factor</span>(cyl), </span>
-<span id="cb574-2"><a href="ggplot2.html#cb574-2" tabindex="-1"></a>                <span class="at">fill =</span> <span class="fu">as.factor</span>(year))) <span class="sc">+</span> <span class="fu">geom_bar</span>()</span></code></pre></div>
-<p><img src="osnoveR_files/figure-html/unnamed-chunk-453-1.png" width="672" /></p>
+<div class="sourceCode" id="cb587"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb587-1"><a href="ggplot2.html#cb587-1" tabindex="-1"></a><span class="fu">ggplot</span>(mpg, <span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">as.factor</span>(cyl), </span>
+<span id="cb587-2"><a href="ggplot2.html#cb587-2" tabindex="-1"></a>                <span class="at">fill =</span> <span class="fu">as.factor</span>(year))) <span class="sc">+</span> <span class="fu">geom_bar</span>()</span></code></pre></div>
+<p><img src="osnoveR_files/figure-html/unnamed-chunk-458-1.png" width="672" /></p>
 <ol start="4" style="list-style-type: decimal">
 <li>Promijenite temu sljedećeg grafa na sljedeći način:
 <ol style="list-style-type: lower-alpha">
@@ -1230,21 +1246,21 @@ Slika 11.1: Diagram of the causes of mortality in the army in the East by Floren
 <li>okrenite nazive na x osi vertikalno</li>
 </ol></li>
 </ol>
-<div class="sourceCode" id="cb575"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb575-1"><a href="ggplot2.html#cb575-1" tabindex="-1"></a><span class="fu">ggplot</span>(mpg, <span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">as.factor</span>(trans), <span class="at">y =</span> displ)) <span class="sc">+</span> </span>
-<span id="cb575-2"><a href="ggplot2.html#cb575-2" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>() </span></code></pre></div>
-<p><img src="osnoveR_files/figure-html/unnamed-chunk-454-1.png" width="672" /></p>
+<div class="sourceCode" id="cb588"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb588-1"><a href="ggplot2.html#cb588-1" tabindex="-1"></a><span class="fu">ggplot</span>(mpg, <span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">as.factor</span>(trans), <span class="at">y =</span> displ)) <span class="sc">+</span> </span>
+<span id="cb588-2"><a href="ggplot2.html#cb588-2" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>() </span></code></pre></div>
+<p><img src="osnoveR_files/figure-html/unnamed-chunk-459-1.png" width="672" /></p>
 <ol start="5" style="list-style-type: decimal">
 <li>Sljedeći graf prikazuje histogram potrošnje na autocesti pri čemu boja pravokutnika odražava broj cilindara. Pokušajte poboljšati interpretabilnost grafa tako da estetiku boje zamijenite prikazom više grafova uvjetovanih brojem cilindara. Grafove organizirajte u matricu 2 x 2.</li>
 </ol>
-<div class="sourceCode" id="cb576"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb576-1"><a href="ggplot2.html#cb576-1" tabindex="-1"></a><span class="fu">ggplot</span>(mpg, <span class="fu">aes</span>(hwy, <span class="at">fill =</span> <span class="fu">as.factor</span>(cyl))) <span class="sc">+</span> </span>
-<span id="cb576-2"><a href="ggplot2.html#cb576-2" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">bins =</span> <span class="dv">10</span>, <span class="at">position =</span> <span class="st">&quot;dodge&quot;</span>)</span></code></pre></div>
-<p><img src="osnoveR_files/figure-html/unnamed-chunk-455-1.png" width="672" /></p>
+<div class="sourceCode" id="cb589"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb589-1"><a href="ggplot2.html#cb589-1" tabindex="-1"></a><span class="fu">ggplot</span>(mpg, <span class="fu">aes</span>(hwy, <span class="at">fill =</span> <span class="fu">as.factor</span>(cyl))) <span class="sc">+</span> </span>
+<span id="cb589-2"><a href="ggplot2.html#cb589-2" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">bins =</span> <span class="dv">10</span>, <span class="at">position =</span> <span class="st">&quot;dodge&quot;</span>)</span></code></pre></div>
+<p><img src="osnoveR_files/figure-html/unnamed-chunk-460-1.png" width="672" /></p>
 <ol start="6" style="list-style-type: decimal">
 <li>Pretpostavimo da imamo sljedeći podatkovni okvir:</li>
 </ol>
-<div class="sourceCode" id="cb577"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb577-1"><a href="ggplot2.html#cb577-1" tabindex="-1"></a>prodaja <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">mjesec =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">12</span>,</span>
-<span id="cb577-2"><a href="ggplot2.html#cb577-2" tabindex="-1"></a>          <span class="at">ukupno =</span> <span class="fu">c</span>(<span class="dv">10000</span>, <span class="dv">5000</span>, <span class="dv">12000</span>, <span class="dv">3000</span>, <span class="dv">5000</span>, <span class="dv">7000</span>, </span>
-<span id="cb577-3"><a href="ggplot2.html#cb577-3" tabindex="-1"></a>                   <span class="dv">10000</span>, <span class="dv">2000</span>, <span class="dv">4000</span>, <span class="dv">8000</span>, <span class="dv">11000</span>, <span class="dv">14000</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb590"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb590-1"><a href="ggplot2.html#cb590-1" tabindex="-1"></a>prodaja <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">mjesec =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">12</span>,</span>
+<span id="cb590-2"><a href="ggplot2.html#cb590-2" tabindex="-1"></a>          <span class="at">ukupno =</span> <span class="fu">c</span>(<span class="dv">10000</span>, <span class="dv">5000</span>, <span class="dv">12000</span>, <span class="dv">3000</span>, <span class="dv">5000</span>, <span class="dv">7000</span>, </span>
+<span id="cb590-3"><a href="ggplot2.html#cb590-3" tabindex="-1"></a>                   <span class="dv">10000</span>, <span class="dv">2000</span>, <span class="dv">4000</span>, <span class="dv">8000</span>, <span class="dv">11000</span>, <span class="dv">14000</span>))</span></code></pre></div>
 <p>i da ga želimo predočiti stupčastim grafom (engl. <em>bar chart</em>), no funkcija <code>geom_bar</code> po <em>default</em>-u radi sa samo jednom varijablom za koju računa sumarne statistike. Kako riješiti ovaj problem? Predložite rješenje i stvorite odgovarajući stupčasti graf.</p>
 <hr />
 <p><a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Programirajmo u R-u</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://www.fer.unizg.hr/en/damir.pintar" property="cc:attributionName" rel="cc:attributionURL">Damir Pintar</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.<br />Based on a work at <a xmlns:dct="http://purl.org/dc/terms/" href="https://ratnip.github.io/FER_OPJR/" rel="dct:source">https://ratnip.github.io/FER_OPJR/</a></p>

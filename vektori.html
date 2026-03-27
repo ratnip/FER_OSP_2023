@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>3 Vektori, matrice i liste | Programirajmo u R-u</title>
   <meta name="description" content="Udžbenik za predmet ‘Uvod u znanost o podacima’ studija Primjenjene kognitivne znanosti na Fakultetu elektrotehnike i računarstva, Sveučilište u Zagrebu." />
-  <meta name="generator" content="bookdown 0.42 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
 
   <meta property="og:title" content="3 Vektori, matrice i liste | Programirajmo u R-u" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="Damir Pintar" />
 
 
-<meta name="date" content="2026-03-02" />
+<meta name="date" content="2026-03-27" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -331,13 +331,30 @@ div.csl-indent {
 </ul></li>
 <li class="chapter" data-level="8" data-path="datumi.html"><a href="datumi.html"><i class="fa fa-check"></i><b>8</b> Rad sa vremenskim podacima</a>
 <ul>
-<li class="chapter" data-level="8.1" data-path="datumi.html"><a href="datumi.html#rad-sa-datumima"><i class="fa fa-check"></i><b>8.1</b> Rad sa datumima</a>
+<li class="chapter" data-level="8.1" data-path="datumi.html"><a href="datumi.html#rad-sa-vremenskim-tipovima-podataka"><i class="fa fa-check"></i><b>8.1</b> Rad sa vremenskim tipovima podataka</a>
 <ul>
 <li class="chapter" data-level="8.1.1" data-path="datumi.html"><a href="datumi.html#klasa-date"><i class="fa fa-check"></i><b>8.1.1</b> Klasa <code>Date</code></a></li>
+<li class="chapter" data-level="8.1.2" data-path="datumi.html"><a href="datumi.html#formatska-specifikacija"><i class="fa fa-check"></i><b>8.1.2</b> Formatska specifikacija</a></li>
+<li class="chapter" data-level="8.1.3" data-path="datumi.html"><a href="datumi.html#klasa-posixct"><i class="fa fa-check"></i><b>8.1.3</b> Klasa <code>POSIXct</code></a></li>
+<li class="chapter" data-level="8.1.4" data-path="datumi.html"><a href="datumi.html#formatska-specifikacija-i-vremenske-zone"><i class="fa fa-check"></i><b>8.1.4</b> Formatska specifikacija i vremenske zone</a></li>
+<li class="chapter" data-level="8.1.5" data-path="datumi.html"><a href="datumi.html#aritmetika-sa-vremenskim-tipovima-podataka"><i class="fa fa-check"></i><b>8.1.5</b> Aritmetika sa vremenskim tipovima podataka</a></li>
+<li class="chapter" data-level="8.1.6" data-path="datumi.html"><a href="datumi.html#klasa-i-funkcija-difftime"><i class="fa fa-check"></i><b>8.1.6</b> Klasa i funkcija <code>difftime</code></a></li>
+<li class="chapter" data-level="8.1.7" data-path="datumi.html"><a href="datumi.html#funkcija-seq-i-vremenski-tipovi-podataka"><i class="fa fa-check"></i><b>8.1.7</b> Funkcija <code>seq</code> i vremenski tipovi podataka</a></li>
 </ul></li>
-<li class="chapter" data-level="8.2" data-path="datumi.html"><a href="datumi.html#klase-posixct-i-posixlt"><i class="fa fa-check"></i><b>8.2</b> Klase <code>POSIXct</code> i <code>POSIXlt</code></a></li>
-<li class="chapter" data-level="8.3" data-path="datumi.html"><a href="datumi.html#paket-lubridate"><i class="fa fa-check"></i><b>8.3</b> Paket <code>lubridate</code></a></li>
-<li class="chapter" data-level="" data-path="datumi.html"><a href="datumi.html#zadaci-za-vježbu-6"><i class="fa fa-check"></i>Zadaci za vježbu</a></li>
+<li class="chapter" data-level="8.2" data-path="datumi.html"><a href="datumi.html#paket-lubridate"><i class="fa fa-check"></i><b>8.2</b> Paket <code>lubridate</code></a>
+<ul>
+<li class="chapter" data-level="8.2.1" data-path="datumi.html"><a href="datumi.html#parsiranje-datuma-i-vremenskih-oznaka"><i class="fa fa-check"></i><b>8.2.1</b> Parsiranje datuma i vremenskih oznaka</a></li>
+<li class="chapter" data-level="8.2.2" data-path="datumi.html"><a href="datumi.html#paket-lubridate-i-vremenske-oznake"><i class="fa fa-check"></i><b>8.2.2</b> Paket <code>lubridate</code> i vremenske oznake</a></li>
+<li class="chapter" data-level="8.2.3" data-path="datumi.html"><a href="datumi.html#izvlačenje-i-postavljanje-segmenata-datuma-i-vremena"><i class="fa fa-check"></i><b>8.2.3</b> Izvlačenje i postavljanje segmenata datuma i vremena</a></li>
+</ul></li>
+<li class="chapter" data-level="8.3" data-path="datumi.html"><a href="datumi.html#trenutci-intervali-trajanja-i-periodi"><i class="fa fa-check"></i><b>8.3</b> Trenutci, intervali, trajanja i periodi</a>
+<ul>
+<li class="chapter" data-level="8.3.1" data-path="datumi.html"><a href="datumi.html#intervali"><i class="fa fa-check"></i><b>8.3.1</b> Intervali</a></li>
+<li class="chapter" data-level="8.3.2" data-path="datumi.html"><a href="datumi.html#period"><i class="fa fa-check"></i><b>8.3.2</b> Period</a></li>
+<li class="chapter" data-level="8.3.3" data-path="datumi.html"><a href="datumi.html#trajanje"><i class="fa fa-check"></i><b>8.3.3</b> Trajanje</a></li>
+<li class="chapter" data-level="8.3.4" data-path="datumi.html"><a href="datumi.html#pomoćne-funkcije-za-rad-sa-vremenskim-intervalima"><i class="fa fa-check"></i><b>8.3.4</b> Pomoćne funkcije za rad sa vremenskim intervalima</a></li>
+</ul></li>
+<li class="chapter" data-level="8.4" data-path="datumi.html"><a href="datumi.html#dodatna-literatura"><i class="fa fa-check"></i><b>8.4</b> Dodatna literatura</a></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="nizovi.html"><a href="nizovi.html"><i class="fa fa-check"></i><b>9</b> Obrada znakovnih nizova</a>
 <ul>
@@ -346,7 +363,7 @@ div.csl-indent {
 <li class="chapter" data-level="9.1.1" data-path="nizovi.html"><a href="nizovi.html#analiza-teksta-i-regularni-izrazi"><i class="fa fa-check"></i><b>9.1.1</b> Analiza teksta i regularni izrazi</a></li>
 <li class="chapter" data-level="9.1.2" data-path="nizovi.html"><a href="nizovi.html#paket-stringr"><i class="fa fa-check"></i><b>9.1.2</b> Paket <code>stringr</code></a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="nizovi.html"><a href="nizovi.html#zadaci-za-vježbu-7"><i class="fa fa-check"></i>Zadaci za vježbu</a></li>
+<li class="chapter" data-level="" data-path="nizovi.html"><a href="nizovi.html#zadaci-za-vježbu-6"><i class="fa fa-check"></i>Zadaci za vježbu</a></li>
 </ul></li>
 <li class="chapter" data-level="10" data-path="prilagodba-podatkovnih-skupova-uz-paket-dplyr.html"><a href="prilagodba-podatkovnih-skupova-uz-paket-dplyr.html"><i class="fa fa-check"></i><b>10</b> Prilagodba podatkovnih skupova uz paket <code>dplyr</code></a>
 <ul>
@@ -362,7 +379,7 @@ div.csl-indent {
 <li class="chapter" data-level="10.8.1" data-path="prilagodba-podatkovnih-skupova-uz-paket-dplyr.html"><a href="prilagodba-podatkovnih-skupova-uz-paket-dplyr.html#excel-datoteka-kao-izvor-odredište-podataka"><i class="fa fa-check"></i><b>10.8.1</b> Excel datoteka kao izvor (odredište) podataka</a></li>
 <li class="chapter" data-level="10.8.2" data-path="prilagodba-podatkovnih-skupova-uz-paket-dplyr.html"><a href="prilagodba-podatkovnih-skupova-uz-paket-dplyr.html#rad-sa-relacijskim-bazama"><i class="fa fa-check"></i><b>10.8.2</b> Rad sa relacijskim bazama</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="prilagodba-podatkovnih-skupova-uz-paket-dplyr.html"><a href="prilagodba-podatkovnih-skupova-uz-paket-dplyr.html#zadaci-za-vježbu-8"><i class="fa fa-check"></i>Zadaci za vježbu</a></li>
+<li class="chapter" data-level="" data-path="prilagodba-podatkovnih-skupova-uz-paket-dplyr.html"><a href="prilagodba-podatkovnih-skupova-uz-paket-dplyr.html#zadaci-za-vježbu-7"><i class="fa fa-check"></i>Zadaci za vježbu</a></li>
 </ul></li>
 <li class="chapter" data-level="11" data-path="ggplot2.html"><a href="ggplot2.html"><i class="fa fa-check"></i><b>11</b> Vizualizacija podataka uz paket <code>ggplot2</code></a>
 <ul>
@@ -378,7 +395,7 @@ div.csl-indent {
 <li class="chapter" data-level="11.3.6" data-path="ggplot2.html"><a href="ggplot2.html#uvjetni-facetirani-grafovi"><i class="fa fa-check"></i><b>11.3.6</b> Uvjetni (facetirani) grafovi</a></li>
 </ul></li>
 <li class="chapter" data-level="11.4" data-path="ggplot2.html"><a href="ggplot2.html#grafovi-u-eksploratornoj-analizi-i-izvještavanju"><i class="fa fa-check"></i><b>11.4</b> Grafovi u eksploratornoj analizi i izvještavanju</a></li>
-<li class="chapter" data-level="" data-path="ggplot2.html"><a href="ggplot2.html#zadaci-za-vježbu-9"><i class="fa fa-check"></i>Zadaci za vježbu</a></li>
+<li class="chapter" data-level="" data-path="ggplot2.html"><a href="ggplot2.html#zadaci-za-vježbu-8"><i class="fa fa-check"></i>Zadaci za vježbu</a></li>
 </ul></li>
 <li class="part"><span><b>III Statistika i strojno učenje u jeziku R</b></span></li>
 <li class="chapter" data-level="12" data-path="razdiobe.html"><a href="razdiobe.html"><i class="fa fa-check"></i><b>12</b> Razdiobe i simulacije</a>
@@ -389,7 +406,7 @@ div.csl-indent {
 <li class="chapter" data-level="12.4" data-path="razdiobe.html"><a href="razdiobe.html#normalna-razdioba"><i class="fa fa-check"></i><b>12.4</b> Normalna razdioba</a></li>
 <li class="chapter" data-level="12.5" data-path="razdiobe.html"><a href="razdiobe.html#procjena-funkcije-gustoće-razdiobe-i-kvantil-kvantil-graf"><i class="fa fa-check"></i><b>12.5</b> Procjena funkcije gustoće razdiobe i kvantil-kvantil graf</a></li>
 <li class="chapter" data-level="12.6" data-path="razdiobe.html"><a href="razdiobe.html#monte-carlo-simulacije"><i class="fa fa-check"></i><b>12.6</b> Monte Carlo Simulacije</a></li>
-<li class="chapter" data-level="" data-path="razdiobe.html"><a href="razdiobe.html#zadaci-za-vježbu-10"><i class="fa fa-check"></i>Zadaci za vježbu</a></li>
+<li class="chapter" data-level="" data-path="razdiobe.html"><a href="razdiobe.html#zadaci-za-vježbu-9"><i class="fa fa-check"></i>Zadaci za vježbu</a></li>
 </ul></li>
 <li class="part"><span><b>IV Strojno učenje i prediktivna analitika</b></span></li>
 <li class="chapter" data-level="13" data-path="regresija.html"><a href="regresija.html"><i class="fa fa-check"></i><b>13</b> Odabrane metode strojnog učenja: regresijska analiza</a>
@@ -401,7 +418,7 @@ div.csl-indent {
 <li class="chapter" data-level="13.1.3" data-path="regresija.html"><a href="regresija.html#linearna-regresija-i-kategorijske-varijable"><i class="fa fa-check"></i><b>13.1.3</b> Linearna regresija i kategorijske varijable</a></li>
 </ul></li>
 <li class="chapter" data-level="13.2" data-path="regresija.html"><a href="regresija.html#višestruka-multipla-linearna-regresija"><i class="fa fa-check"></i><b>13.2</b> Višestruka (multipla) linearna regresija</a></li>
-<li class="chapter" data-level="" data-path="regresija.html"><a href="regresija.html#zadaci-za-vježbu-11"><i class="fa fa-check"></i>Zadaci za vježbu</a></li>
+<li class="chapter" data-level="" data-path="regresija.html"><a href="regresija.html#zadaci-za-vježbu-10"><i class="fa fa-check"></i>Zadaci za vježbu</a></li>
 </ul></li>
 <li class="chapter" data-level="14" data-path="prediktivno_modeliranje.html"><a href="prediktivno_modeliranje.html"><i class="fa fa-check"></i><b>14</b> Uvod u prediktivno modeliranje</a>
 <ul>

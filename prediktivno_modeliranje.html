@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>14 Uvod u prediktivno modeliranje | Programirajmo u R-u</title>
   <meta name="description" content="Udžbenik za predmet ‘Uvod u znanost o podacima’ studija Primjenjene kognitivne znanosti na Fakultetu elektrotehnike i računarstva, Sveučilište u Zagrebu." />
-  <meta name="generator" content="bookdown 0.42 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
 
   <meta property="og:title" content="14 Uvod u prediktivno modeliranje | Programirajmo u R-u" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="Damir Pintar" />
 
 
-<meta name="date" content="2026-03-02" />
+<meta name="date" content="2026-03-27" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -331,13 +331,30 @@ div.csl-indent {
 </ul></li>
 <li class="chapter" data-level="8" data-path="datumi.html"><a href="datumi.html"><i class="fa fa-check"></i><b>8</b> Rad sa vremenskim podacima</a>
 <ul>
-<li class="chapter" data-level="8.1" data-path="datumi.html"><a href="datumi.html#rad-sa-datumima"><i class="fa fa-check"></i><b>8.1</b> Rad sa datumima</a>
+<li class="chapter" data-level="8.1" data-path="datumi.html"><a href="datumi.html#rad-sa-vremenskim-tipovima-podataka"><i class="fa fa-check"></i><b>8.1</b> Rad sa vremenskim tipovima podataka</a>
 <ul>
 <li class="chapter" data-level="8.1.1" data-path="datumi.html"><a href="datumi.html#klasa-date"><i class="fa fa-check"></i><b>8.1.1</b> Klasa <code>Date</code></a></li>
+<li class="chapter" data-level="8.1.2" data-path="datumi.html"><a href="datumi.html#formatska-specifikacija"><i class="fa fa-check"></i><b>8.1.2</b> Formatska specifikacija</a></li>
+<li class="chapter" data-level="8.1.3" data-path="datumi.html"><a href="datumi.html#klasa-posixct"><i class="fa fa-check"></i><b>8.1.3</b> Klasa <code>POSIXct</code></a></li>
+<li class="chapter" data-level="8.1.4" data-path="datumi.html"><a href="datumi.html#formatska-specifikacija-i-vremenske-zone"><i class="fa fa-check"></i><b>8.1.4</b> Formatska specifikacija i vremenske zone</a></li>
+<li class="chapter" data-level="8.1.5" data-path="datumi.html"><a href="datumi.html#aritmetika-sa-vremenskim-tipovima-podataka"><i class="fa fa-check"></i><b>8.1.5</b> Aritmetika sa vremenskim tipovima podataka</a></li>
+<li class="chapter" data-level="8.1.6" data-path="datumi.html"><a href="datumi.html#klasa-i-funkcija-difftime"><i class="fa fa-check"></i><b>8.1.6</b> Klasa i funkcija <code>difftime</code></a></li>
+<li class="chapter" data-level="8.1.7" data-path="datumi.html"><a href="datumi.html#funkcija-seq-i-vremenski-tipovi-podataka"><i class="fa fa-check"></i><b>8.1.7</b> Funkcija <code>seq</code> i vremenski tipovi podataka</a></li>
 </ul></li>
-<li class="chapter" data-level="8.2" data-path="datumi.html"><a href="datumi.html#klase-posixct-i-posixlt"><i class="fa fa-check"></i><b>8.2</b> Klase <code>POSIXct</code> i <code>POSIXlt</code></a></li>
-<li class="chapter" data-level="8.3" data-path="datumi.html"><a href="datumi.html#paket-lubridate"><i class="fa fa-check"></i><b>8.3</b> Paket <code>lubridate</code></a></li>
-<li class="chapter" data-level="" data-path="datumi.html"><a href="datumi.html#zadaci-za-vježbu-6"><i class="fa fa-check"></i>Zadaci za vježbu</a></li>
+<li class="chapter" data-level="8.2" data-path="datumi.html"><a href="datumi.html#paket-lubridate"><i class="fa fa-check"></i><b>8.2</b> Paket <code>lubridate</code></a>
+<ul>
+<li class="chapter" data-level="8.2.1" data-path="datumi.html"><a href="datumi.html#parsiranje-datuma-i-vremenskih-oznaka"><i class="fa fa-check"></i><b>8.2.1</b> Parsiranje datuma i vremenskih oznaka</a></li>
+<li class="chapter" data-level="8.2.2" data-path="datumi.html"><a href="datumi.html#paket-lubridate-i-vremenske-oznake"><i class="fa fa-check"></i><b>8.2.2</b> Paket <code>lubridate</code> i vremenske oznake</a></li>
+<li class="chapter" data-level="8.2.3" data-path="datumi.html"><a href="datumi.html#izvlačenje-i-postavljanje-segmenata-datuma-i-vremena"><i class="fa fa-check"></i><b>8.2.3</b> Izvlačenje i postavljanje segmenata datuma i vremena</a></li>
+</ul></li>
+<li class="chapter" data-level="8.3" data-path="datumi.html"><a href="datumi.html#trenutci-intervali-trajanja-i-periodi"><i class="fa fa-check"></i><b>8.3</b> Trenutci, intervali, trajanja i periodi</a>
+<ul>
+<li class="chapter" data-level="8.3.1" data-path="datumi.html"><a href="datumi.html#intervali"><i class="fa fa-check"></i><b>8.3.1</b> Intervali</a></li>
+<li class="chapter" data-level="8.3.2" data-path="datumi.html"><a href="datumi.html#period"><i class="fa fa-check"></i><b>8.3.2</b> Period</a></li>
+<li class="chapter" data-level="8.3.3" data-path="datumi.html"><a href="datumi.html#trajanje"><i class="fa fa-check"></i><b>8.3.3</b> Trajanje</a></li>
+<li class="chapter" data-level="8.3.4" data-path="datumi.html"><a href="datumi.html#pomoćne-funkcije-za-rad-sa-vremenskim-intervalima"><i class="fa fa-check"></i><b>8.3.4</b> Pomoćne funkcije za rad sa vremenskim intervalima</a></li>
+</ul></li>
+<li class="chapter" data-level="8.4" data-path="datumi.html"><a href="datumi.html#dodatna-literatura"><i class="fa fa-check"></i><b>8.4</b> Dodatna literatura</a></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="nizovi.html"><a href="nizovi.html"><i class="fa fa-check"></i><b>9</b> Obrada znakovnih nizova</a>
 <ul>
@@ -346,7 +363,7 @@ div.csl-indent {
 <li class="chapter" data-level="9.1.1" data-path="nizovi.html"><a href="nizovi.html#analiza-teksta-i-regularni-izrazi"><i class="fa fa-check"></i><b>9.1.1</b> Analiza teksta i regularni izrazi</a></li>
 <li class="chapter" data-level="9.1.2" data-path="nizovi.html"><a href="nizovi.html#paket-stringr"><i class="fa fa-check"></i><b>9.1.2</b> Paket <code>stringr</code></a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="nizovi.html"><a href="nizovi.html#zadaci-za-vježbu-7"><i class="fa fa-check"></i>Zadaci za vježbu</a></li>
+<li class="chapter" data-level="" data-path="nizovi.html"><a href="nizovi.html#zadaci-za-vježbu-6"><i class="fa fa-check"></i>Zadaci za vježbu</a></li>
 </ul></li>
 <li class="chapter" data-level="10" data-path="prilagodba-podatkovnih-skupova-uz-paket-dplyr.html"><a href="prilagodba-podatkovnih-skupova-uz-paket-dplyr.html"><i class="fa fa-check"></i><b>10</b> Prilagodba podatkovnih skupova uz paket <code>dplyr</code></a>
 <ul>
@@ -362,7 +379,7 @@ div.csl-indent {
 <li class="chapter" data-level="10.8.1" data-path="prilagodba-podatkovnih-skupova-uz-paket-dplyr.html"><a href="prilagodba-podatkovnih-skupova-uz-paket-dplyr.html#excel-datoteka-kao-izvor-odredište-podataka"><i class="fa fa-check"></i><b>10.8.1</b> Excel datoteka kao izvor (odredište) podataka</a></li>
 <li class="chapter" data-level="10.8.2" data-path="prilagodba-podatkovnih-skupova-uz-paket-dplyr.html"><a href="prilagodba-podatkovnih-skupova-uz-paket-dplyr.html#rad-sa-relacijskim-bazama"><i class="fa fa-check"></i><b>10.8.2</b> Rad sa relacijskim bazama</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="prilagodba-podatkovnih-skupova-uz-paket-dplyr.html"><a href="prilagodba-podatkovnih-skupova-uz-paket-dplyr.html#zadaci-za-vježbu-8"><i class="fa fa-check"></i>Zadaci za vježbu</a></li>
+<li class="chapter" data-level="" data-path="prilagodba-podatkovnih-skupova-uz-paket-dplyr.html"><a href="prilagodba-podatkovnih-skupova-uz-paket-dplyr.html#zadaci-za-vježbu-7"><i class="fa fa-check"></i>Zadaci za vježbu</a></li>
 </ul></li>
 <li class="chapter" data-level="11" data-path="ggplot2.html"><a href="ggplot2.html"><i class="fa fa-check"></i><b>11</b> Vizualizacija podataka uz paket <code>ggplot2</code></a>
 <ul>
@@ -378,7 +395,7 @@ div.csl-indent {
 <li class="chapter" data-level="11.3.6" data-path="ggplot2.html"><a href="ggplot2.html#uvjetni-facetirani-grafovi"><i class="fa fa-check"></i><b>11.3.6</b> Uvjetni (facetirani) grafovi</a></li>
 </ul></li>
 <li class="chapter" data-level="11.4" data-path="ggplot2.html"><a href="ggplot2.html#grafovi-u-eksploratornoj-analizi-i-izvještavanju"><i class="fa fa-check"></i><b>11.4</b> Grafovi u eksploratornoj analizi i izvještavanju</a></li>
-<li class="chapter" data-level="" data-path="ggplot2.html"><a href="ggplot2.html#zadaci-za-vježbu-9"><i class="fa fa-check"></i>Zadaci za vježbu</a></li>
+<li class="chapter" data-level="" data-path="ggplot2.html"><a href="ggplot2.html#zadaci-za-vježbu-8"><i class="fa fa-check"></i>Zadaci za vježbu</a></li>
 </ul></li>
 <li class="part"><span><b>III Statistika i strojno učenje u jeziku R</b></span></li>
 <li class="chapter" data-level="12" data-path="razdiobe.html"><a href="razdiobe.html"><i class="fa fa-check"></i><b>12</b> Razdiobe i simulacije</a>
@@ -389,7 +406,7 @@ div.csl-indent {
 <li class="chapter" data-level="12.4" data-path="razdiobe.html"><a href="razdiobe.html#normalna-razdioba"><i class="fa fa-check"></i><b>12.4</b> Normalna razdioba</a></li>
 <li class="chapter" data-level="12.5" data-path="razdiobe.html"><a href="razdiobe.html#procjena-funkcije-gustoće-razdiobe-i-kvantil-kvantil-graf"><i class="fa fa-check"></i><b>12.5</b> Procjena funkcije gustoće razdiobe i kvantil-kvantil graf</a></li>
 <li class="chapter" data-level="12.6" data-path="razdiobe.html"><a href="razdiobe.html#monte-carlo-simulacije"><i class="fa fa-check"></i><b>12.6</b> Monte Carlo Simulacije</a></li>
-<li class="chapter" data-level="" data-path="razdiobe.html"><a href="razdiobe.html#zadaci-za-vježbu-10"><i class="fa fa-check"></i>Zadaci za vježbu</a></li>
+<li class="chapter" data-level="" data-path="razdiobe.html"><a href="razdiobe.html#zadaci-za-vježbu-9"><i class="fa fa-check"></i>Zadaci za vježbu</a></li>
 </ul></li>
 <li class="part"><span><b>IV Strojno učenje i prediktivna analitika</b></span></li>
 <li class="chapter" data-level="13" data-path="regresija.html"><a href="regresija.html"><i class="fa fa-check"></i><b>13</b> Odabrane metode strojnog učenja: regresijska analiza</a>
@@ -401,7 +418,7 @@ div.csl-indent {
 <li class="chapter" data-level="13.1.3" data-path="regresija.html"><a href="regresija.html#linearna-regresija-i-kategorijske-varijable"><i class="fa fa-check"></i><b>13.1.3</b> Linearna regresija i kategorijske varijable</a></li>
 </ul></li>
 <li class="chapter" data-level="13.2" data-path="regresija.html"><a href="regresija.html#višestruka-multipla-linearna-regresija"><i class="fa fa-check"></i><b>13.2</b> Višestruka (multipla) linearna regresija</a></li>
-<li class="chapter" data-level="" data-path="regresija.html"><a href="regresija.html#zadaci-za-vježbu-11"><i class="fa fa-check"></i>Zadaci za vježbu</a></li>
+<li class="chapter" data-level="" data-path="regresija.html"><a href="regresija.html#zadaci-za-vježbu-10"><i class="fa fa-check"></i>Zadaci za vježbu</a></li>
 </ul></li>
 <li class="chapter" data-level="14" data-path="prediktivno_modeliranje.html"><a href="prediktivno_modeliranje.html"><i class="fa fa-check"></i><b>14</b> Uvod u prediktivno modeliranje</a>
 <ul>
@@ -473,17 +490,17 @@ div.csl-indent {
 <p>Pokušajmo sada primjeniti ova saznanja na razvoju modela linearne regresije pri čemu ćemu usporediti njegovu učinkovitost nad trening skupom, a potom nad testnim podacima. Za ovo ćemo se poslužiti novim skupom podataka vezanim uz karakteristike i kvalitetu vina, <code>wines.csv</code>. Ovaj skup nastao je prilagodbom skupa “Wine Quality Data Set” sa portala “UCI Machine Learning Repository”, dostupnom na <a href="https://archive.ics.uci.edu/ml/datasets/wine+quality">ovoj poveznici</a>.</p>
 <p>U sljedećem zadatku učitati ćemo ovaj skup te napraviti neke prilagodbe - kategorizirati ćemo stupce koji očito sadržavaju kategorijsku varijablu te izbaciti retke sa nedostajućim vrijednostima. Retci sa nedostajućim vrijednostima često zahtijevaju malo više pažnje te sofisticiraniji pristup od jednostavnog uklanjanja, pogotovo kod veće količine nedostajućih vrijednosti ili potencijalnih dodatnih informacija koje te vrijednosti donose. No u našem slučaju ovakvih redaka je iznimno malo, a kod primjene određenih metoda prediktivnog modeliranja mogu stvarati probleme, tako da ćemo ih jednostavno ukloniti. Jedan od brzih načina kako ovo provesti je korištenje funkcije <code>complete.cases</code>, koja za dani podatkovni okvir vraća indekse svih redaka koji <em>nemaju niti jednu nedostajuću vrijednost</em>.</p>
 <p><strong>Zadatak 14.1 - skup <code>wine quality</code></strong></p>
-<div class="sourceCode" id="cb679"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb679-1"><a href="prediktivno_modeliranje.html#cb679-1" tabindex="-1"></a><span class="co"># u varijablu `wine` učitajte podatke iz datoteke `wines.csv`</span></span>
-<span id="cb679-2"><a href="prediktivno_modeliranje.html#cb679-2" tabindex="-1"></a><span class="co"># proučite učitani podatkovni okvir</span></span>
-<span id="cb679-3"><a href="prediktivno_modeliranje.html#cb679-3" tabindex="-1"></a><span class="co"># kategorizirajte stupce prema potrebi</span></span>
-<span id="cb679-4"><a href="prediktivno_modeliranje.html#cb679-4" tabindex="-1"></a><span class="co"># i uklonite retke sa nedostajućim vrijednostima ako ih ima</span></span></code></pre></div>
+<div class="sourceCode" id="cb692"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb692-1"><a href="prediktivno_modeliranje.html#cb692-1" tabindex="-1"></a><span class="co"># u varijablu `wine` učitajte podatke iz datoteke `wines.csv`</span></span>
+<span id="cb692-2"><a href="prediktivno_modeliranje.html#cb692-2" tabindex="-1"></a><span class="co"># proučite učitani podatkovni okvir</span></span>
+<span id="cb692-3"><a href="prediktivno_modeliranje.html#cb692-3" tabindex="-1"></a><span class="co"># kategorizirajte stupce prema potrebi</span></span>
+<span id="cb692-4"><a href="prediktivno_modeliranje.html#cb692-4" tabindex="-1"></a><span class="co"># i uklonite retke sa nedostajućim vrijednostima ako ih ima</span></span></code></pre></div>
 <div class="fold s o">
-<div class="sourceCode" id="cb680"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb680-1"><a href="prediktivno_modeliranje.html#cb680-1" tabindex="-1"></a>wine <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;wines.csv&quot;</span>)</span>
-<span id="cb680-2"><a href="prediktivno_modeliranje.html#cb680-2" tabindex="-1"></a><span class="fu">glimpse</span>(wine)</span>
-<span id="cb680-3"><a href="prediktivno_modeliranje.html#cb680-3" tabindex="-1"></a>wine<span class="sc">$</span>type <span class="ot">&lt;-</span> <span class="fu">factor</span>(wine<span class="sc">$</span>type)</span>
-<span id="cb680-4"><a href="prediktivno_modeliranje.html#cb680-4" tabindex="-1"></a>wine <span class="ot">&lt;-</span> wine[<span class="fu">complete.cases</span>(wine),]</span></code></pre></div>
+<div class="sourceCode" id="cb693"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb693-1"><a href="prediktivno_modeliranje.html#cb693-1" tabindex="-1"></a>wine <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;wines.csv&quot;</span>)</span>
+<span id="cb693-2"><a href="prediktivno_modeliranje.html#cb693-2" tabindex="-1"></a><span class="fu">glimpse</span>(wine)</span>
+<span id="cb693-3"><a href="prediktivno_modeliranje.html#cb693-3" tabindex="-1"></a>wine<span class="sc">$</span>type <span class="ot">&lt;-</span> <span class="fu">factor</span>(wine<span class="sc">$</span>type)</span>
+<span id="cb693-4"><a href="prediktivno_modeliranje.html#cb693-4" tabindex="-1"></a>wine <span class="ot">&lt;-</span> wine[<span class="fu">complete.cases</span>(wine),]</span></code></pre></div>
 <pre><code>## Rows: 6497 Columns: 13
-## ── Column specification ──────────────────────────────────────────────────────────
+## ── Column specification ──────────────────────────────────────────────────────────────────────────
 ## Delimiter: &quot;,&quot;
 ## chr  (1): type
 ## dbl (12): fixedAcidity, volatileAcidity, citricAcid, residualSugar, chloride...
@@ -508,38 +525,38 @@ div.csl-indent {
 </div>
 <p>Pretpostavimo da je atribut <code>quality</code> ciljna varijabla, a svi ostali stupci potencijalni prediktori.</p>
 <p>Kako rastaviti ovaj skup nasumičnim odabirom na skup za treniranje i skup za testiranje? Postoji više načina kako ovo provesti, pa čak i specijaliziranih funkcija i paketa za ovu svrhu, no mi ćemo naučiti jednostavno i lako razumljivu metodu koja koristi funkciju <code>sample</code>. Ako prepostavimo da je <code>df</code> podatkovni okvir koje želimo rastaviti na trening i test skup koje ćemo pohraniti u varijable <code>df.train</code> i <code>df.test</code>, onda rastavljanje nasumičnim odabirom možemo provesti ovako:</p>
-<div class="sourceCode" id="cb683"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb683-1"><a href="prediktivno_modeliranje.html#cb683-1" tabindex="-1"></a>train_size <span class="ot">&lt;-</span> <span class="fl">0.7</span> <span class="sc">*</span> <span class="fu">nrow</span>(df) <span class="sc">%&gt;%</span> round   <span class="co"># otprilike 70%</span></span>
-<span id="cb683-2"><a href="prediktivno_modeliranje.html#cb683-2" tabindex="-1"></a>train_ind <span class="ot">&lt;-</span> <span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(df), train_size) <span class="co"># indeksi trening opservacija</span></span>
-<span id="cb683-3"><a href="prediktivno_modeliranje.html#cb683-3" tabindex="-1"></a></span>
-<span id="cb683-4"><a href="prediktivno_modeliranje.html#cb683-4" tabindex="-1"></a>df.train <span class="ot">&lt;-</span> df[train_ind, ]</span>
-<span id="cb683-5"><a href="prediktivno_modeliranje.html#cb683-5" tabindex="-1"></a>df.test <span class="ot">&lt;-</span> df[<span class="sc">-</span>train_ind, ]</span></code></pre></div>
+<div class="sourceCode" id="cb696"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb696-1"><a href="prediktivno_modeliranje.html#cb696-1" tabindex="-1"></a>train_size <span class="ot">&lt;-</span> <span class="fl">0.7</span> <span class="sc">*</span> <span class="fu">nrow</span>(df) <span class="sc">%&gt;%</span> round   <span class="co"># otprilike 70%</span></span>
+<span id="cb696-2"><a href="prediktivno_modeliranje.html#cb696-2" tabindex="-1"></a>train_ind <span class="ot">&lt;-</span> <span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(df), train_size) <span class="co"># indeksi trening opservacija</span></span>
+<span id="cb696-3"><a href="prediktivno_modeliranje.html#cb696-3" tabindex="-1"></a></span>
+<span id="cb696-4"><a href="prediktivno_modeliranje.html#cb696-4" tabindex="-1"></a>df.train <span class="ot">&lt;-</span> df[train_ind, ]</span>
+<span id="cb696-5"><a href="prediktivno_modeliranje.html#cb696-5" tabindex="-1"></a>df.test <span class="ot">&lt;-</span> df[<span class="sc">-</span>train_ind, ]</span></code></pre></div>
 <p>Primjenimo to na našem podakovnom skupu o vinima, a potom istrenirajmo model linearne regresije na trening skupu.</p>
 <p><strong>Zadatak 14.2 - Rezanje ulaznog skupa i treniranje modela</strong></p>
-<div class="sourceCode" id="cb684"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb684-1"><a href="prediktivno_modeliranje.html#cb684-1" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">1234</span>)</span>
-<span id="cb684-2"><a href="prediktivno_modeliranje.html#cb684-2" tabindex="-1"></a></span>
-<span id="cb684-3"><a href="prediktivno_modeliranje.html#cb684-3" tabindex="-1"></a><span class="co"># rastavite podatkovni okvir `wine` na `wine.train` i `wine.test`</span></span>
-<span id="cb684-4"><a href="prediktivno_modeliranje.html#cb684-4" tabindex="-1"></a><span class="co"># metodom nasumičnog odabira prema omjeru 70:30</span></span>
-<span id="cb684-5"><a href="prediktivno_modeliranje.html#cb684-5" tabindex="-1"></a></span>
-<span id="cb684-6"><a href="prediktivno_modeliranje.html#cb684-6" tabindex="-1"></a><span class="co"># istrenirajte model linearne regresije `linMod` nad skupom `wine.train`</span></span>
-<span id="cb684-7"><a href="prediktivno_modeliranje.html#cb684-7" tabindex="-1"></a><span class="co"># ciljna varijabla je `quality` a sve ostale prediktori</span></span>
-<span id="cb684-8"><a href="prediktivno_modeliranje.html#cb684-8" tabindex="-1"></a><span class="co"># proučite sažetak dobivenog modela</span></span></code></pre></div>
+<div class="sourceCode" id="cb697"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb697-1"><a href="prediktivno_modeliranje.html#cb697-1" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">1234</span>)</span>
+<span id="cb697-2"><a href="prediktivno_modeliranje.html#cb697-2" tabindex="-1"></a></span>
+<span id="cb697-3"><a href="prediktivno_modeliranje.html#cb697-3" tabindex="-1"></a><span class="co"># rastavite podatkovni okvir `wine` na `wine.train` i `wine.test`</span></span>
+<span id="cb697-4"><a href="prediktivno_modeliranje.html#cb697-4" tabindex="-1"></a><span class="co"># metodom nasumičnog odabira prema omjeru 70:30</span></span>
+<span id="cb697-5"><a href="prediktivno_modeliranje.html#cb697-5" tabindex="-1"></a></span>
+<span id="cb697-6"><a href="prediktivno_modeliranje.html#cb697-6" tabindex="-1"></a><span class="co"># istrenirajte model linearne regresije `linMod` nad skupom `wine.train`</span></span>
+<span id="cb697-7"><a href="prediktivno_modeliranje.html#cb697-7" tabindex="-1"></a><span class="co"># ciljna varijabla je `quality` a sve ostale prediktori</span></span>
+<span id="cb697-8"><a href="prediktivno_modeliranje.html#cb697-8" tabindex="-1"></a><span class="co"># proučite sažetak dobivenog modela</span></span></code></pre></div>
 <div class="fold s o">
-<div class="sourceCode" id="cb685"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb685-1"><a href="prediktivno_modeliranje.html#cb685-1" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">1234</span>)</span>
-<span id="cb685-2"><a href="prediktivno_modeliranje.html#cb685-2" tabindex="-1"></a></span>
-<span id="cb685-3"><a href="prediktivno_modeliranje.html#cb685-3" tabindex="-1"></a><span class="co"># rastavite podatkovni okvir `wine` na `wine.train` i `wine.test`</span></span>
-<span id="cb685-4"><a href="prediktivno_modeliranje.html#cb685-4" tabindex="-1"></a><span class="co"># metodom nasumičnog odabira prema omjeru 70:30</span></span>
-<span id="cb685-5"><a href="prediktivno_modeliranje.html#cb685-5" tabindex="-1"></a></span>
-<span id="cb685-6"><a href="prediktivno_modeliranje.html#cb685-6" tabindex="-1"></a>train_ind <span class="ot">&lt;-</span> <span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(wine), <span class="fl">0.7</span> <span class="sc">*</span> <span class="fu">nrow</span>(wine) <span class="sc">%&gt;%</span> round) <span class="co"># indeksi trening opservacija</span></span>
-<span id="cb685-7"><a href="prediktivno_modeliranje.html#cb685-7" tabindex="-1"></a>wine.train <span class="ot">&lt;-</span> wine[train_ind, ]</span>
-<span id="cb685-8"><a href="prediktivno_modeliranje.html#cb685-8" tabindex="-1"></a>wine.test <span class="ot">&lt;-</span> wine[<span class="sc">-</span>train_ind, ]</span></code></pre></div>
+<div class="sourceCode" id="cb698"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb698-1"><a href="prediktivno_modeliranje.html#cb698-1" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">1234</span>)</span>
+<span id="cb698-2"><a href="prediktivno_modeliranje.html#cb698-2" tabindex="-1"></a></span>
+<span id="cb698-3"><a href="prediktivno_modeliranje.html#cb698-3" tabindex="-1"></a><span class="co"># rastavite podatkovni okvir `wine` na `wine.train` i `wine.test`</span></span>
+<span id="cb698-4"><a href="prediktivno_modeliranje.html#cb698-4" tabindex="-1"></a><span class="co"># metodom nasumičnog odabira prema omjeru 70:30</span></span>
+<span id="cb698-5"><a href="prediktivno_modeliranje.html#cb698-5" tabindex="-1"></a></span>
+<span id="cb698-6"><a href="prediktivno_modeliranje.html#cb698-6" tabindex="-1"></a>train_ind <span class="ot">&lt;-</span> <span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(wine), <span class="fl">0.7</span> <span class="sc">*</span> <span class="fu">nrow</span>(wine) <span class="sc">%&gt;%</span> round) <span class="co"># indeksi trening opservacija</span></span>
+<span id="cb698-7"><a href="prediktivno_modeliranje.html#cb698-7" tabindex="-1"></a>wine.train <span class="ot">&lt;-</span> wine[train_ind, ]</span>
+<span id="cb698-8"><a href="prediktivno_modeliranje.html#cb698-8" tabindex="-1"></a>wine.test <span class="ot">&lt;-</span> wine[<span class="sc">-</span>train_ind, ]</span></code></pre></div>
 </div>
 <div class="fold s o">
-<div class="sourceCode" id="cb686"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb686-1"><a href="prediktivno_modeliranje.html#cb686-1" tabindex="-1"></a><span class="co"># istrenirajte model linearne regresije `linMod` nad skupom `wine.train`</span></span>
-<span id="cb686-2"><a href="prediktivno_modeliranje.html#cb686-2" tabindex="-1"></a><span class="co"># ciljna varijabla je `quality` a sve ostale prediktori</span></span>
-<span id="cb686-3"><a href="prediktivno_modeliranje.html#cb686-3" tabindex="-1"></a><span class="co"># proučite sažetak dobivenog modela</span></span>
-<span id="cb686-4"><a href="prediktivno_modeliranje.html#cb686-4" tabindex="-1"></a></span>
-<span id="cb686-5"><a href="prediktivno_modeliranje.html#cb686-5" tabindex="-1"></a>linMod <span class="ot">&lt;-</span> <span class="fu">lm</span>(quality <span class="sc">~</span> ., <span class="at">data =</span> wine.train)</span>
-<span id="cb686-6"><a href="prediktivno_modeliranje.html#cb686-6" tabindex="-1"></a><span class="fu">summary</span>(linMod)</span></code></pre></div>
+<div class="sourceCode" id="cb699"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb699-1"><a href="prediktivno_modeliranje.html#cb699-1" tabindex="-1"></a><span class="co"># istrenirajte model linearne regresije `linMod` nad skupom `wine.train`</span></span>
+<span id="cb699-2"><a href="prediktivno_modeliranje.html#cb699-2" tabindex="-1"></a><span class="co"># ciljna varijabla je `quality` a sve ostale prediktori</span></span>
+<span id="cb699-3"><a href="prediktivno_modeliranje.html#cb699-3" tabindex="-1"></a><span class="co"># proučite sažetak dobivenog modela</span></span>
+<span id="cb699-4"><a href="prediktivno_modeliranje.html#cb699-4" tabindex="-1"></a></span>
+<span id="cb699-5"><a href="prediktivno_modeliranje.html#cb699-5" tabindex="-1"></a>linMod <span class="ot">&lt;-</span> <span class="fu">lm</span>(quality <span class="sc">~</span> ., <span class="at">data =</span> wine.train)</span>
+<span id="cb699-6"><a href="prediktivno_modeliranje.html#cb699-6" tabindex="-1"></a><span class="fu">summary</span>(linMod)</span></code></pre></div>
 <pre><code>## 
 ## Call:
 ## lm(formula = quality ~ ., data = wine.train)
@@ -579,33 +596,33 @@ div.csl-indent {
 <p>Mjera <strong>MAE</strong> je ponešto intuitivnija, ali i matematički složenija kod provođenja optimizacijskih funkcija. Isto tako, <strong>RMSE</strong> mjeri dajemo prednost kada želimo jače penalizirati veće pogreške.</p>
 <p>Iako postoje paketi koji sadrže funkcije za izračun ovih mjera, možemo ih vrlo jednostavno i samostalno isprogramirati. U nastavku ćemo se usredotočiti na mjeru <strong>RMSE</strong>, a mjeru <strong>MAE</strong> ostavljamo za vježbu.</p>
 <p><strong>Zadatak 14.3 - Funkcija za računanje RMSE mjere</strong></p>
-<div class="sourceCode" id="cb688"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb688-1"><a href="prediktivno_modeliranje.html#cb688-1" tabindex="-1"></a><span class="co"># stvorite funkciju `rmse` koja će za zadane vektore `pred` i `stv`</span></span>
-<span id="cb688-2"><a href="prediktivno_modeliranje.html#cb688-2" tabindex="-1"></a><span class="co"># izračunati RMSE mjeru prema gornjoj formuli</span></span></code></pre></div>
+<div class="sourceCode" id="cb701"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb701-1"><a href="prediktivno_modeliranje.html#cb701-1" tabindex="-1"></a><span class="co"># stvorite funkciju `rmse` koja će za zadane vektore `pred` i `stv`</span></span>
+<span id="cb701-2"><a href="prediktivno_modeliranje.html#cb701-2" tabindex="-1"></a><span class="co"># izračunati RMSE mjeru prema gornjoj formuli</span></span></code></pre></div>
 <div class="fold s o">
-<div class="sourceCode" id="cb689"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb689-1"><a href="prediktivno_modeliranje.html#cb689-1" tabindex="-1"></a>rmse <span class="ot">&lt;-</span> <span class="cf">function</span>(pred, stv) <span class="fu">sqrt</span>(<span class="fu">mean</span>((pred <span class="sc">-</span> stv) <span class="sc">**</span> <span class="dv">2</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb702"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb702-1"><a href="prediktivno_modeliranje.html#cb702-1" tabindex="-1"></a>rmse <span class="ot">&lt;-</span> <span class="cf">function</span>(pred, stv) <span class="fu">sqrt</span>(<span class="fu">mean</span>((pred <span class="sc">-</span> stv) <span class="sc">**</span> <span class="dv">2</span>))</span></code></pre></div>
 </div>
 <p>Dodajmo sada skupovima <code>wine.train</code> i <code>wine.test</code> stupac koji će sadržavati predikcije dobivene našim modelom linearne regresije, a potom izračunajmo vrijednost RMSE mjere nad jednim i drugim skupom.</p>
 <p><strong>Zadatak 14.4 - Evaluacija modela na trening i test skupu</strong></p>
-<div class="sourceCode" id="cb690"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb690-1"><a href="prediktivno_modeliranje.html#cb690-1" tabindex="-1"></a><span class="co"># uz pomoć funkcije `predict` i modela `linMod`</span></span>
-<span id="cb690-2"><a href="prediktivno_modeliranje.html#cb690-2" tabindex="-1"></a><span class="co"># skupovima `wine.train` i `wine.test` dodajte stupac `predQualityLR`</span></span>
-<span id="cb690-3"><a href="prediktivno_modeliranje.html#cb690-3" tabindex="-1"></a><span class="co"># koji će sadržavati predikciju kvalitete vina</span></span>
-<span id="cb690-4"><a href="prediktivno_modeliranje.html#cb690-4" tabindex="-1"></a></span>
-<span id="cb690-5"><a href="prediktivno_modeliranje.html#cb690-5" tabindex="-1"></a><span class="co"># ispišite vrijednost RMSE mjere za jedan i drugi skup</span></span>
-<span id="cb690-6"><a href="prediktivno_modeliranje.html#cb690-6" tabindex="-1"></a></span>
-<span id="cb690-7"><a href="prediktivno_modeliranje.html#cb690-7" tabindex="-1"></a><span class="co"># uklonite stupac `predQualityLR` iz skupa `wine.train`</span></span></code></pre></div>
+<div class="sourceCode" id="cb703"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb703-1"><a href="prediktivno_modeliranje.html#cb703-1" tabindex="-1"></a><span class="co"># uz pomoć funkcije `predict` i modela `linMod`</span></span>
+<span id="cb703-2"><a href="prediktivno_modeliranje.html#cb703-2" tabindex="-1"></a><span class="co"># skupovima `wine.train` i `wine.test` dodajte stupac `predQualityLR`</span></span>
+<span id="cb703-3"><a href="prediktivno_modeliranje.html#cb703-3" tabindex="-1"></a><span class="co"># koji će sadržavati predikciju kvalitete vina</span></span>
+<span id="cb703-4"><a href="prediktivno_modeliranje.html#cb703-4" tabindex="-1"></a></span>
+<span id="cb703-5"><a href="prediktivno_modeliranje.html#cb703-5" tabindex="-1"></a><span class="co"># ispišite vrijednost RMSE mjere za jedan i drugi skup</span></span>
+<span id="cb703-6"><a href="prediktivno_modeliranje.html#cb703-6" tabindex="-1"></a></span>
+<span id="cb703-7"><a href="prediktivno_modeliranje.html#cb703-7" tabindex="-1"></a><span class="co"># uklonite stupac `predQualityLR` iz skupa `wine.train`</span></span></code></pre></div>
 <div class="fold s o">
-<div class="sourceCode" id="cb691"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb691-1"><a href="prediktivno_modeliranje.html#cb691-1" tabindex="-1"></a><span class="co"># uz pomoć funkcije `predict` i modela `linMod`</span></span>
-<span id="cb691-2"><a href="prediktivno_modeliranje.html#cb691-2" tabindex="-1"></a><span class="co"># skupovima `wine.train` i `wine.test` dodajte stupac `predQualityLR`</span></span>
-<span id="cb691-3"><a href="prediktivno_modeliranje.html#cb691-3" tabindex="-1"></a><span class="co"># koji će sadržavati predikciju kvalitete vina</span></span>
-<span id="cb691-4"><a href="prediktivno_modeliranje.html#cb691-4" tabindex="-1"></a>wine.train<span class="sc">$</span>predQualityLR <span class="ot">&lt;-</span> <span class="fu">predict</span>(linMod, wine.train)</span>
-<span id="cb691-5"><a href="prediktivno_modeliranje.html#cb691-5" tabindex="-1"></a>wine.test<span class="sc">$</span>predQualityLR <span class="ot">&lt;-</span> <span class="fu">predict</span>(linMod, wine.test)</span>
-<span id="cb691-6"><a href="prediktivno_modeliranje.html#cb691-6" tabindex="-1"></a></span>
-<span id="cb691-7"><a href="prediktivno_modeliranje.html#cb691-7" tabindex="-1"></a><span class="co"># ispišite vrijednost RMSE mjere za jedan i drugi skup</span></span>
-<span id="cb691-8"><a href="prediktivno_modeliranje.html#cb691-8" tabindex="-1"></a><span class="fu">rmse</span>(wine.train<span class="sc">$</span>predQualityLR, wine.train<span class="sc">$</span>quality)</span>
-<span id="cb691-9"><a href="prediktivno_modeliranje.html#cb691-9" tabindex="-1"></a><span class="fu">rmse</span>(wine.test<span class="sc">$</span>predQualityLR, wine.test<span class="sc">$</span>quality)</span>
-<span id="cb691-10"><a href="prediktivno_modeliranje.html#cb691-10" tabindex="-1"></a></span>
-<span id="cb691-11"><a href="prediktivno_modeliranje.html#cb691-11" tabindex="-1"></a><span class="co"># uklonite stupac `predQualityLR` iz skupa `wine.train`</span></span>
-<span id="cb691-12"><a href="prediktivno_modeliranje.html#cb691-12" tabindex="-1"></a>wine.train<span class="sc">$</span>predQualityLR <span class="ot">&lt;-</span> <span class="cn">NULL</span></span></code></pre></div>
+<div class="sourceCode" id="cb704"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb704-1"><a href="prediktivno_modeliranje.html#cb704-1" tabindex="-1"></a><span class="co"># uz pomoć funkcije `predict` i modela `linMod`</span></span>
+<span id="cb704-2"><a href="prediktivno_modeliranje.html#cb704-2" tabindex="-1"></a><span class="co"># skupovima `wine.train` i `wine.test` dodajte stupac `predQualityLR`</span></span>
+<span id="cb704-3"><a href="prediktivno_modeliranje.html#cb704-3" tabindex="-1"></a><span class="co"># koji će sadržavati predikciju kvalitete vina</span></span>
+<span id="cb704-4"><a href="prediktivno_modeliranje.html#cb704-4" tabindex="-1"></a>wine.train<span class="sc">$</span>predQualityLR <span class="ot">&lt;-</span> <span class="fu">predict</span>(linMod, wine.train)</span>
+<span id="cb704-5"><a href="prediktivno_modeliranje.html#cb704-5" tabindex="-1"></a>wine.test<span class="sc">$</span>predQualityLR <span class="ot">&lt;-</span> <span class="fu">predict</span>(linMod, wine.test)</span>
+<span id="cb704-6"><a href="prediktivno_modeliranje.html#cb704-6" tabindex="-1"></a></span>
+<span id="cb704-7"><a href="prediktivno_modeliranje.html#cb704-7" tabindex="-1"></a><span class="co"># ispišite vrijednost RMSE mjere za jedan i drugi skup</span></span>
+<span id="cb704-8"><a href="prediktivno_modeliranje.html#cb704-8" tabindex="-1"></a><span class="fu">rmse</span>(wine.train<span class="sc">$</span>predQualityLR, wine.train<span class="sc">$</span>quality)</span>
+<span id="cb704-9"><a href="prediktivno_modeliranje.html#cb704-9" tabindex="-1"></a><span class="fu">rmse</span>(wine.test<span class="sc">$</span>predQualityLR, wine.test<span class="sc">$</span>quality)</span>
+<span id="cb704-10"><a href="prediktivno_modeliranje.html#cb704-10" tabindex="-1"></a></span>
+<span id="cb704-11"><a href="prediktivno_modeliranje.html#cb704-11" tabindex="-1"></a><span class="co"># uklonite stupac `predQualityLR` iz skupa `wine.train`</span></span>
+<span id="cb704-12"><a href="prediktivno_modeliranje.html#cb704-12" tabindex="-1"></a>wine.train<span class="sc">$</span>predQualityLR <span class="ot">&lt;-</span> <span class="cn">NULL</span></span></code></pre></div>
 <pre><code>## [1] 0.7281868
 ## [1] 0.7435729</code></pre>
 </div>
@@ -619,41 +636,41 @@ div.csl-indent {
 <p>Jedna podjela podatkovnog skupa na trening i test skup nam može dati dojam koliko model dobro generalizira, no uvijek se može postaviti pitanje da li je baš takva podjela koju smo odredili jedinstvenim rezom dovoljno reprezentativna, tj. koliko bi se performanse i svojstva modela promijenila ukoliko bismo opet napravili podjelu istom skupa pri čemu bi se zbog slučajnog odabira treniralo i testiralo na nešto drugačijim podskupovima podataka.</p>
 <p>Pojam <strong>unakrsne validacije</strong> ili <strong>krosvalidacije</strong> odnosi se na ideju treniranja niza modela na istim podacima kako bi se dobio bolji dojam o stabilnosti modela i sposobnosti generalizacije. Jedna od poznatijih metoda ovakve validacije je tzv. <strong>K-fold krosvalidacija</strong>, kod koje podatkovni skup podijelimo na <code>K</code> (pod)jednakih dijelova te potom treniramo <code>K</code> modela, gdje se kod svakog jedan od <code>K</code> dijelova ostavlja za testiranje, a preostalih <code>K-1</code> se koristi za treniranje modela. Na ovaj način možemo dobiti <code>K</code> zasebnih evaluacija koje možemo zasebno analizirati (npr. gledati njihovu sredinu i standardnu devijaciju) što će nam dati bolji uvid u funkcioniranje modela.</p>
 <p>Kako bismo dobili bolji uvid u funkcioniranje <em>K-fold krosvalidacije</em> pokušajmo ju provesti ručno, sličnim načinom kao što smo napravili jedno rezanje na trening i test skup. Za potrebe rezanja skupa na <code>K</code> dijelova možemo se koristiti funkcijama <code>split</code> i <code>cut</code> - varijantu funkcije <code>cut</code> smo već upoznali u poglavlju o upravljanju podatkovnim skupovima gdje smo saznali kako ista pretvara numerički vektor u kategorijski s jednakom zastupljenosti broja opservacija, dok funkcija <code>split</code> može koristiti rezultat funkcije <code>cut</code> kako bi originalni vektor razrezala na jednake dijelove. Konkretno, pogledajmo kako razrezati vektor <code>1:99</code> na 10 gotovo jednakih dijelova, pri čemu će indeksi unutar svakog dijela biti nasumično odabrani.</p>
-<div class="sourceCode" id="cb693"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb693-1"><a href="prediktivno_modeliranje.html#cb693-1" tabindex="-1"></a>v <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">99</span></span>
-<span id="cb693-2"><a href="prediktivno_modeliranje.html#cb693-2" tabindex="-1"></a>v <span class="ot">&lt;-</span> <span class="fu">sample</span>(v, <span class="fu">length</span>(v), F) <span class="co"># &quot;miješanje&quot; elemenata</span></span>
-<span id="cb693-3"><a href="prediktivno_modeliranje.html#cb693-3" tabindex="-1"></a>k <span class="ot">&lt;-</span> <span class="dv">10</span></span>
-<span id="cb693-4"><a href="prediktivno_modeliranje.html#cb693-4" tabindex="-1"></a></span>
-<span id="cb693-5"><a href="prediktivno_modeliranje.html#cb693-5" tabindex="-1"></a>folds <span class="ot">&lt;-</span> <span class="fu">split</span>(v, <span class="fu">cut</span>(<span class="dv">1</span><span class="sc">:</span><span class="fu">length</span>(v), k, <span class="at">labels =</span> F))</span>
-<span id="cb693-6"><a href="prediktivno_modeliranje.html#cb693-6" tabindex="-1"></a>folds[[<span class="dv">1</span>]] <span class="co"># primjer jednog podskupa</span></span></code></pre></div>
+<div class="sourceCode" id="cb706"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb706-1"><a href="prediktivno_modeliranje.html#cb706-1" tabindex="-1"></a>v <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">99</span></span>
+<span id="cb706-2"><a href="prediktivno_modeliranje.html#cb706-2" tabindex="-1"></a>v <span class="ot">&lt;-</span> <span class="fu">sample</span>(v, <span class="fu">length</span>(v), F) <span class="co"># &quot;miješanje&quot; elemenata</span></span>
+<span id="cb706-3"><a href="prediktivno_modeliranje.html#cb706-3" tabindex="-1"></a>k <span class="ot">&lt;-</span> <span class="dv">10</span></span>
+<span id="cb706-4"><a href="prediktivno_modeliranje.html#cb706-4" tabindex="-1"></a></span>
+<span id="cb706-5"><a href="prediktivno_modeliranje.html#cb706-5" tabindex="-1"></a>folds <span class="ot">&lt;-</span> <span class="fu">split</span>(v, <span class="fu">cut</span>(<span class="dv">1</span><span class="sc">:</span><span class="fu">length</span>(v), k, <span class="at">labels =</span> F))</span>
+<span id="cb706-6"><a href="prediktivno_modeliranje.html#cb706-6" tabindex="-1"></a>folds[[<span class="dv">1</span>]] <span class="co"># primjer jednog podskupa</span></span></code></pre></div>
 <pre><code>##  [1] 84  2 98 89 47 31 22 74 32  9</code></pre>
 <p>Vidimo da su elementi vektora <code>v</code> prvo “promiješani” preko funkcije <code>sample</code>, a potom preko kombinacije <code>split</code> i <code>cut</code> smješteni u listu od <code>k</code> elemenata gdje svaki element predstavlja podskup elemenata originalnog vektora <code>v</code>. Ako vektor <code>v</code> sadrži indekse naših opservacija smještenih u podatkovni okvir <code>df</code>, onda <code>folds[[i]]</code> sadrži indekse nasumičnog odabranih testnih opservacija <code>i</code>-tog segmenta, pa će u <code>i</code>-toj iteraciji naše rezanje na trening i test skup izgledati ovako:</p>
-<div class="sourceCode" id="cb695"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb695-1"><a href="prediktivno_modeliranje.html#cb695-1" tabindex="-1"></a>trening <span class="ot">&lt;-</span> df[<span class="sc">-</span>folds[[i]], ]</span>
-<span id="cb695-2"><a href="prediktivno_modeliranje.html#cb695-2" tabindex="-1"></a>test <span class="ot">&lt;-</span> df[folds[[i]], ]</span></code></pre></div>
+<div class="sourceCode" id="cb708"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb708-1"><a href="prediktivno_modeliranje.html#cb708-1" tabindex="-1"></a>trening <span class="ot">&lt;-</span> df[<span class="sc">-</span>folds[[i]], ]</span>
+<span id="cb708-2"><a href="prediktivno_modeliranje.html#cb708-2" tabindex="-1"></a>test <span class="ot">&lt;-</span> df[folds[[i]], ]</span></code></pre></div>
 <p><strong>Zadatak 14.5 - K-fold krosvalidacija</strong></p>
-<div class="sourceCode" id="cb696"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb696-1"><a href="prediktivno_modeliranje.html#cb696-1" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">1234</span>)</span>
-<span id="cb696-2"><a href="prediktivno_modeliranje.html#cb696-2" tabindex="-1"></a>k <span class="ot">&lt;-</span> <span class="dv">5</span></span>
-<span id="cb696-3"><a href="prediktivno_modeliranje.html#cb696-3" tabindex="-1"></a></span>
-<span id="cb696-4"><a href="prediktivno_modeliranje.html#cb696-4" tabindex="-1"></a><span class="co"># uz pomoć for petlje i gornjih primjera programskog koda </span></span>
-<span id="cb696-5"><a href="prediktivno_modeliranje.html#cb696-5" tabindex="-1"></a><span class="co"># ručno provedite k-fold krosvalidaciju linearnog modela okvira `wine`</span></span>
-<span id="cb696-6"><a href="prediktivno_modeliranje.html#cb696-6" tabindex="-1"></a><span class="co"># koji će procijenjivati vrijednost varijable `quality`</span></span>
-<span id="cb696-7"><a href="prediktivno_modeliranje.html#cb696-7" tabindex="-1"></a><span class="co"># naspram svih ostalih varijabli kao prediktora</span></span>
-<span id="cb696-8"><a href="prediktivno_modeliranje.html#cb696-8" tabindex="-1"></a><span class="co"># za svaki model izračunajte i ispišite RMSE mjeru testnog skupa</span></span></code></pre></div>
+<div class="sourceCode" id="cb709"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb709-1"><a href="prediktivno_modeliranje.html#cb709-1" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">1234</span>)</span>
+<span id="cb709-2"><a href="prediktivno_modeliranje.html#cb709-2" tabindex="-1"></a>k <span class="ot">&lt;-</span> <span class="dv">5</span></span>
+<span id="cb709-3"><a href="prediktivno_modeliranje.html#cb709-3" tabindex="-1"></a></span>
+<span id="cb709-4"><a href="prediktivno_modeliranje.html#cb709-4" tabindex="-1"></a><span class="co"># uz pomoć for petlje i gornjih primjera programskog koda </span></span>
+<span id="cb709-5"><a href="prediktivno_modeliranje.html#cb709-5" tabindex="-1"></a><span class="co"># ručno provedite k-fold krosvalidaciju linearnog modela okvira `wine`</span></span>
+<span id="cb709-6"><a href="prediktivno_modeliranje.html#cb709-6" tabindex="-1"></a><span class="co"># koji će procijenjivati vrijednost varijable `quality`</span></span>
+<span id="cb709-7"><a href="prediktivno_modeliranje.html#cb709-7" tabindex="-1"></a><span class="co"># naspram svih ostalih varijabli kao prediktora</span></span>
+<span id="cb709-8"><a href="prediktivno_modeliranje.html#cb709-8" tabindex="-1"></a><span class="co"># za svaki model izračunajte i ispišite RMSE mjeru testnog skupa</span></span></code></pre></div>
 <div class="fold s o">
-<div class="sourceCode" id="cb697"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb697-1"><a href="prediktivno_modeliranje.html#cb697-1" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">1234</span>)</span>
-<span id="cb697-2"><a href="prediktivno_modeliranje.html#cb697-2" tabindex="-1"></a>k <span class="ot">&lt;-</span> <span class="dv">5</span></span>
-<span id="cb697-3"><a href="prediktivno_modeliranje.html#cb697-3" tabindex="-1"></a></span>
-<span id="cb697-4"><a href="prediktivno_modeliranje.html#cb697-4" tabindex="-1"></a></span>
-<span id="cb697-5"><a href="prediktivno_modeliranje.html#cb697-5" tabindex="-1"></a>ind <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(wine)</span>
-<span id="cb697-6"><a href="prediktivno_modeliranje.html#cb697-6" tabindex="-1"></a>ind <span class="ot">&lt;-</span> <span class="fu">sample</span>(ind, <span class="fu">length</span>(ind), F) <span class="co"># &quot;miješanje&quot; elemenata</span></span>
-<span id="cb697-7"><a href="prediktivno_modeliranje.html#cb697-7" tabindex="-1"></a>folds <span class="ot">&lt;-</span> <span class="fu">split</span>(ind, <span class="fu">cut</span>(ind, k, <span class="at">labels =</span> F))</span>
-<span id="cb697-8"><a href="prediktivno_modeliranje.html#cb697-8" tabindex="-1"></a></span>
-<span id="cb697-9"><a href="prediktivno_modeliranje.html#cb697-9" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>k) {</span>
-<span id="cb697-10"><a href="prediktivno_modeliranje.html#cb697-10" tabindex="-1"></a>  wine.train <span class="ot">&lt;-</span> wine[<span class="sc">-</span>folds[[i]], ]</span>
-<span id="cb697-11"><a href="prediktivno_modeliranje.html#cb697-11" tabindex="-1"></a>  wine.test <span class="ot">&lt;-</span> wine[folds[[i]], ]</span>
-<span id="cb697-12"><a href="prediktivno_modeliranje.html#cb697-12" tabindex="-1"></a>  linMod <span class="ot">&lt;-</span> <span class="fu">lm</span>(quality <span class="sc">~</span> ., <span class="at">data =</span> wine.train)</span>
-<span id="cb697-13"><a href="prediktivno_modeliranje.html#cb697-13" tabindex="-1"></a>  wine.test<span class="sc">$</span>predQualityLR <span class="ot">&lt;-</span> <span class="fu">predict</span>(linMod, wine.test)</span>
-<span id="cb697-14"><a href="prediktivno_modeliranje.html#cb697-14" tabindex="-1"></a>  <span class="fu">rmse</span>(wine.test<span class="sc">$</span>predQualityLR, wine.test<span class="sc">$</span>quality) <span class="sc">%&gt;%</span> print</span>
-<span id="cb697-15"><a href="prediktivno_modeliranje.html#cb697-15" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb710"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb710-1"><a href="prediktivno_modeliranje.html#cb710-1" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">1234</span>)</span>
+<span id="cb710-2"><a href="prediktivno_modeliranje.html#cb710-2" tabindex="-1"></a>k <span class="ot">&lt;-</span> <span class="dv">5</span></span>
+<span id="cb710-3"><a href="prediktivno_modeliranje.html#cb710-3" tabindex="-1"></a></span>
+<span id="cb710-4"><a href="prediktivno_modeliranje.html#cb710-4" tabindex="-1"></a></span>
+<span id="cb710-5"><a href="prediktivno_modeliranje.html#cb710-5" tabindex="-1"></a>ind <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(wine)</span>
+<span id="cb710-6"><a href="prediktivno_modeliranje.html#cb710-6" tabindex="-1"></a>ind <span class="ot">&lt;-</span> <span class="fu">sample</span>(ind, <span class="fu">length</span>(ind), F) <span class="co"># &quot;miješanje&quot; elemenata</span></span>
+<span id="cb710-7"><a href="prediktivno_modeliranje.html#cb710-7" tabindex="-1"></a>folds <span class="ot">&lt;-</span> <span class="fu">split</span>(ind, <span class="fu">cut</span>(ind, k, <span class="at">labels =</span> F))</span>
+<span id="cb710-8"><a href="prediktivno_modeliranje.html#cb710-8" tabindex="-1"></a></span>
+<span id="cb710-9"><a href="prediktivno_modeliranje.html#cb710-9" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>k) {</span>
+<span id="cb710-10"><a href="prediktivno_modeliranje.html#cb710-10" tabindex="-1"></a>  wine.train <span class="ot">&lt;-</span> wine[<span class="sc">-</span>folds[[i]], ]</span>
+<span id="cb710-11"><a href="prediktivno_modeliranje.html#cb710-11" tabindex="-1"></a>  wine.test <span class="ot">&lt;-</span> wine[folds[[i]], ]</span>
+<span id="cb710-12"><a href="prediktivno_modeliranje.html#cb710-12" tabindex="-1"></a>  linMod <span class="ot">&lt;-</span> <span class="fu">lm</span>(quality <span class="sc">~</span> ., <span class="at">data =</span> wine.train)</span>
+<span id="cb710-13"><a href="prediktivno_modeliranje.html#cb710-13" tabindex="-1"></a>  wine.test<span class="sc">$</span>predQualityLR <span class="ot">&lt;-</span> <span class="fu">predict</span>(linMod, wine.test)</span>
+<span id="cb710-14"><a href="prediktivno_modeliranje.html#cb710-14" tabindex="-1"></a>  <span class="fu">rmse</span>(wine.test<span class="sc">$</span>predQualityLR, wine.test<span class="sc">$</span>quality) <span class="sc">%&gt;%</span> print</span>
+<span id="cb710-15"><a href="prediktivno_modeliranje.html#cb710-15" tabindex="-1"></a>}</span></code></pre></div>
 <pre><code>## [1] 0.7121545
 ## [1] 0.7978801
 ## [1] 0.7723553
@@ -667,27 +684,27 @@ div.csl-indent {
 <p>Još jedan način krosvalidacije je tzv. <strong>LOOCV krosvalidacija</strong> (eng. <em>leave one out crossvalidation</em>). Ova krosvalidacija je zapravo granični slučaj K-fold krosvalidacije gdje radimo onoliko podskupova koliko ima opservacija, tj. za <code>n</code> opservacija treniramo <code>n</code> modela, pri čemu kod svakog treniranja jednu opservaciju ostavljamo sa strane te na njoj testiramo. Ovakav način krosvalidacije je moguć kada su resursi računalne platforme dovoljno jaki (ili treniranje modela dovoljno skromno glede zahtjeva nad istima) da se u razumnom vremenu može trenirati toliko veliki broj modela.</p>
 <p>Isprobajmo ovakav način krosvalidacije na našem podatkovnom skupu, opet uz korištenje RMSE mjere za procjenu kvalitete modela. Obzirom da ćemo sada dobiti veliki broj rezultantnih mjera, umjesto ispisa na zaslon pohraniti ćemo ih u zaseban vektor te na kraju ispisati njegovu sredinu i standardnu devijaciju.</p>
 <p><strong>Zadatak 14.6 - K-fold krosvalidacija</strong></p>
-<div class="sourceCode" id="cb699"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb699-1"><a href="prediktivno_modeliranje.html#cb699-1" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">1234</span>)</span>
-<span id="cb699-2"><a href="prediktivno_modeliranje.html#cb699-2" tabindex="-1"></a>RMSEsve <span class="ot">&lt;-</span> <span class="fu">numeric</span>(<span class="fu">nrow</span>(wine))</span>
-<span id="cb699-3"><a href="prediktivno_modeliranje.html#cb699-3" tabindex="-1"></a></span>
-<span id="cb699-4"><a href="prediktivno_modeliranje.html#cb699-4" tabindex="-1"></a><span class="co"># uz pomoć for petlje ručno provedite LOOCV krosvalidaciju </span></span>
-<span id="cb699-5"><a href="prediktivno_modeliranje.html#cb699-5" tabindex="-1"></a><span class="co"># linearnog modela okvira `wine` koji će procijenjivati vrijednost varijable `quality`</span></span>
-<span id="cb699-6"><a href="prediktivno_modeliranje.html#cb699-6" tabindex="-1"></a><span class="co"># naspram svih ostalih varijabli kao prediktora</span></span>
-<span id="cb699-7"><a href="prediktivno_modeliranje.html#cb699-7" tabindex="-1"></a><span class="co"># izračunajte RMSE mjeru za svaki model i pohranite ju u rezultantni vektor `RMSEsve`</span></span>
-<span id="cb699-8"><a href="prediktivno_modeliranje.html#cb699-8" tabindex="-1"></a><span class="co"># a potom ispišite sredinu i standardnu devijaciju svih rezultata</span></span></code></pre></div>
+<div class="sourceCode" id="cb712"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb712-1"><a href="prediktivno_modeliranje.html#cb712-1" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">1234</span>)</span>
+<span id="cb712-2"><a href="prediktivno_modeliranje.html#cb712-2" tabindex="-1"></a>RMSEsve <span class="ot">&lt;-</span> <span class="fu">numeric</span>(<span class="fu">nrow</span>(wine))</span>
+<span id="cb712-3"><a href="prediktivno_modeliranje.html#cb712-3" tabindex="-1"></a></span>
+<span id="cb712-4"><a href="prediktivno_modeliranje.html#cb712-4" tabindex="-1"></a><span class="co"># uz pomoć for petlje ručno provedite LOOCV krosvalidaciju </span></span>
+<span id="cb712-5"><a href="prediktivno_modeliranje.html#cb712-5" tabindex="-1"></a><span class="co"># linearnog modela okvira `wine` koji će procijenjivati vrijednost varijable `quality`</span></span>
+<span id="cb712-6"><a href="prediktivno_modeliranje.html#cb712-6" tabindex="-1"></a><span class="co"># naspram svih ostalih varijabli kao prediktora</span></span>
+<span id="cb712-7"><a href="prediktivno_modeliranje.html#cb712-7" tabindex="-1"></a><span class="co"># izračunajte RMSE mjeru za svaki model i pohranite ju u rezultantni vektor `RMSEsve`</span></span>
+<span id="cb712-8"><a href="prediktivno_modeliranje.html#cb712-8" tabindex="-1"></a><span class="co"># a potom ispišite sredinu i standardnu devijaciju svih rezultata</span></span></code></pre></div>
 <div class="fold s o">
-<div class="sourceCode" id="cb700"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb700-1"><a href="prediktivno_modeliranje.html#cb700-1" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">1234</span>)</span>
-<span id="cb700-2"><a href="prediktivno_modeliranje.html#cb700-2" tabindex="-1"></a>RMSEsve <span class="ot">&lt;-</span> <span class="fu">numeric</span>(<span class="fu">nrow</span>(wine))</span>
-<span id="cb700-3"><a href="prediktivno_modeliranje.html#cb700-3" tabindex="-1"></a></span>
-<span id="cb700-4"><a href="prediktivno_modeliranje.html#cb700-4" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(wine)) {</span>
-<span id="cb700-5"><a href="prediktivno_modeliranje.html#cb700-5" tabindex="-1"></a>  wine.train <span class="ot">&lt;-</span> wine[<span class="sc">-</span>i, ]</span>
-<span id="cb700-6"><a href="prediktivno_modeliranje.html#cb700-6" tabindex="-1"></a>  wine.test <span class="ot">&lt;-</span> wine[i, ]</span>
-<span id="cb700-7"><a href="prediktivno_modeliranje.html#cb700-7" tabindex="-1"></a>  linMod <span class="ot">&lt;-</span> <span class="fu">lm</span>(quality <span class="sc">~</span> ., <span class="at">data =</span> wine.train)</span>
-<span id="cb700-8"><a href="prediktivno_modeliranje.html#cb700-8" tabindex="-1"></a>  RMSEsve[i] <span class="ot">&lt;-</span> <span class="fu">rmse</span>(<span class="fu">predict</span>(linMod, wine.test), wine[i, ]<span class="sc">$</span>quality)</span>
-<span id="cb700-9"><a href="prediktivno_modeliranje.html#cb700-9" tabindex="-1"></a>}</span>
-<span id="cb700-10"><a href="prediktivno_modeliranje.html#cb700-10" tabindex="-1"></a></span>
-<span id="cb700-11"><a href="prediktivno_modeliranje.html#cb700-11" tabindex="-1"></a><span class="fu">cat</span>(<span class="fu">str_c</span>(<span class="st">&quot;Prosječni RMSE: &quot;</span>, <span class="fu">mean</span>(RMSEsve) <span class="sc">%&gt;%</span> <span class="fu">round</span>(<span class="dv">2</span>)))</span>
-<span id="cb700-12"><a href="prediktivno_modeliranje.html#cb700-12" tabindex="-1"></a><span class="fu">cat</span>(<span class="fu">str_c</span>(<span class="st">&quot;</span><span class="sc">\n</span><span class="st">St.dev. RMSE: &quot;</span>, <span class="fu">sd</span>(RMSEsve) <span class="sc">%&gt;%</span> <span class="fu">round</span>(<span class="dv">2</span>)))</span></code></pre></div>
+<div class="sourceCode" id="cb713"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb713-1"><a href="prediktivno_modeliranje.html#cb713-1" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">1234</span>)</span>
+<span id="cb713-2"><a href="prediktivno_modeliranje.html#cb713-2" tabindex="-1"></a>RMSEsve <span class="ot">&lt;-</span> <span class="fu">numeric</span>(<span class="fu">nrow</span>(wine))</span>
+<span id="cb713-3"><a href="prediktivno_modeliranje.html#cb713-3" tabindex="-1"></a></span>
+<span id="cb713-4"><a href="prediktivno_modeliranje.html#cb713-4" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(wine)) {</span>
+<span id="cb713-5"><a href="prediktivno_modeliranje.html#cb713-5" tabindex="-1"></a>  wine.train <span class="ot">&lt;-</span> wine[<span class="sc">-</span>i, ]</span>
+<span id="cb713-6"><a href="prediktivno_modeliranje.html#cb713-6" tabindex="-1"></a>  wine.test <span class="ot">&lt;-</span> wine[i, ]</span>
+<span id="cb713-7"><a href="prediktivno_modeliranje.html#cb713-7" tabindex="-1"></a>  linMod <span class="ot">&lt;-</span> <span class="fu">lm</span>(quality <span class="sc">~</span> ., <span class="at">data =</span> wine.train)</span>
+<span id="cb713-8"><a href="prediktivno_modeliranje.html#cb713-8" tabindex="-1"></a>  RMSEsve[i] <span class="ot">&lt;-</span> <span class="fu">rmse</span>(<span class="fu">predict</span>(linMod, wine.test), wine[i, ]<span class="sc">$</span>quality)</span>
+<span id="cb713-9"><a href="prediktivno_modeliranje.html#cb713-9" tabindex="-1"></a>}</span>
+<span id="cb713-10"><a href="prediktivno_modeliranje.html#cb713-10" tabindex="-1"></a></span>
+<span id="cb713-11"><a href="prediktivno_modeliranje.html#cb713-11" tabindex="-1"></a><span class="fu">cat</span>(<span class="fu">str_c</span>(<span class="st">&quot;Prosječni RMSE: &quot;</span>, <span class="fu">mean</span>(RMSEsve) <span class="sc">%&gt;%</span> <span class="fu">round</span>(<span class="dv">2</span>)))</span>
+<span id="cb713-12"><a href="prediktivno_modeliranje.html#cb713-12" tabindex="-1"></a><span class="fu">cat</span>(<span class="fu">str_c</span>(<span class="st">&quot;</span><span class="sc">\n</span><span class="st">St.dev. RMSE: &quot;</span>, <span class="fu">sd</span>(RMSEsve) <span class="sc">%&gt;%</span> <span class="fu">round</span>(<span class="dv">2</span>)))</span></code></pre></div>
 <pre><code>## Prosječni RMSE: 0.57
 ## St.dev. RMSE: 0.46</code></pre>
 </div>
@@ -707,24 +724,24 @@ div.csl-indent {
 <p>Detalje o ovom paketu možemo naći na <a href="https://topepo.github.io/caret/index.html">ovoj poveznici</a>, a u nastavku ćemo dati samo kratki uvid u neke od impresivnih mogućnosti ovog paketa.</p>
 <p>Kako bi demonstrirali deklarativnu prirodu prediktivnog modeliranja uz pomoć ovog paketa, pobliže ćemo pogledati dvije funkcije: <code>train</code> i <code>trainControl</code>.</p>
 <p>Funkcija <code>train</code> zapravo predstavlja jedinstveno sučelje prema velikom broju prediktivnih modela (popis svih modela koje funkcija trenutno podržava možemo naći <a href="http://topepo.github.io/caret/train-models-by-tag.html">ovdje</a>). U velikom broju slučajeva poziv ove funkcije ne razlikuje se bitno od poziva funkcija metoda prediktivnog modeliranja koje smo do sada upoznali. U nastavku ćemo upoznati složeniji oblik ove funkcije, ali za početak prikažimo njen pojednostavljeni oblik:</p>
-<div class="sourceCode" id="cb702"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb702-1"><a href="prediktivno_modeliranje.html#cb702-1" tabindex="-1"></a>model <span class="ot">&lt;-</span> <span class="fu">train</span>(formula, </span>
-<span id="cb702-2"><a href="prediktivno_modeliranje.html#cb702-2" tabindex="-1"></a>               <span class="at">data =</span> trening_podaci, </span>
-<span id="cb702-3"><a href="prediktivno_modeliranje.html#cb702-3" tabindex="-1"></a>               <span class="at">method =</span> odabrana_metoda)</span></code></pre></div>
+<div class="sourceCode" id="cb715"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb715-1"><a href="prediktivno_modeliranje.html#cb715-1" tabindex="-1"></a>model <span class="ot">&lt;-</span> <span class="fu">train</span>(formula, </span>
+<span id="cb715-2"><a href="prediktivno_modeliranje.html#cb715-2" tabindex="-1"></a>               <span class="at">data =</span> trening_podaci, </span>
+<span id="cb715-3"><a href="prediktivno_modeliranje.html#cb715-3" tabindex="-1"></a>               <span class="at">method =</span> odabrana_metoda)</span></code></pre></div>
 <p>Pokušajmo trenirati model linearne regresije uz pomoć funkcije <code>train</code> i već pripremljenog skupa <code>wine.train</code>.</p>
 <p><strong>Zadatak 14.7 - Funkcija <code>train</code> i linearna regresija</strong></p>
-<div class="sourceCode" id="cb703"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb703-1"><a href="prediktivno_modeliranje.html#cb703-1" tabindex="-1"></a>train_ind <span class="ot">&lt;-</span> <span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(wine), <span class="fl">0.7</span> <span class="sc">*</span> <span class="fu">nrow</span>(wine) <span class="sc">%&gt;%</span> round) <span class="co"># indeksi trening opservacija</span></span>
-<span id="cb703-2"><a href="prediktivno_modeliranje.html#cb703-2" tabindex="-1"></a>wine.train <span class="ot">&lt;-</span> wine[train_ind, ]</span>
-<span id="cb703-3"><a href="prediktivno_modeliranje.html#cb703-3" tabindex="-1"></a></span>
-<span id="cb703-4"><a href="prediktivno_modeliranje.html#cb703-4" tabindex="-1"></a><span class="co"># uz pomoć funkcije `train` paketa `caret`</span></span>
-<span id="cb703-5"><a href="prediktivno_modeliranje.html#cb703-5" tabindex="-1"></a><span class="co"># istrenirajte model linearne regresije `linMod` nad skupom `wine.train`</span></span>
-<span id="cb703-6"><a href="prediktivno_modeliranje.html#cb703-6" tabindex="-1"></a><span class="co"># ciljna varijabla je `quality` a sve ostale prediktori</span></span>
-<span id="cb703-7"><a href="prediktivno_modeliranje.html#cb703-7" tabindex="-1"></a><span class="co"># parametar `method` postavite na `&quot;lm&quot;`</span></span>
-<span id="cb703-8"><a href="prediktivno_modeliranje.html#cb703-8" tabindex="-1"></a></span>
-<span id="cb703-9"><a href="prediktivno_modeliranje.html#cb703-9" tabindex="-1"></a><span class="co"># proučite sažetak dobivenog modela</span></span></code></pre></div>
+<div class="sourceCode" id="cb716"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb716-1"><a href="prediktivno_modeliranje.html#cb716-1" tabindex="-1"></a>train_ind <span class="ot">&lt;-</span> <span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(wine), <span class="fl">0.7</span> <span class="sc">*</span> <span class="fu">nrow</span>(wine) <span class="sc">%&gt;%</span> round) <span class="co"># indeksi trening opservacija</span></span>
+<span id="cb716-2"><a href="prediktivno_modeliranje.html#cb716-2" tabindex="-1"></a>wine.train <span class="ot">&lt;-</span> wine[train_ind, ]</span>
+<span id="cb716-3"><a href="prediktivno_modeliranje.html#cb716-3" tabindex="-1"></a></span>
+<span id="cb716-4"><a href="prediktivno_modeliranje.html#cb716-4" tabindex="-1"></a><span class="co"># uz pomoć funkcije `train` paketa `caret`</span></span>
+<span id="cb716-5"><a href="prediktivno_modeliranje.html#cb716-5" tabindex="-1"></a><span class="co"># istrenirajte model linearne regresije `linMod` nad skupom `wine.train`</span></span>
+<span id="cb716-6"><a href="prediktivno_modeliranje.html#cb716-6" tabindex="-1"></a><span class="co"># ciljna varijabla je `quality` a sve ostale prediktori</span></span>
+<span id="cb716-7"><a href="prediktivno_modeliranje.html#cb716-7" tabindex="-1"></a><span class="co"># parametar `method` postavite na `&quot;lm&quot;`</span></span>
+<span id="cb716-8"><a href="prediktivno_modeliranje.html#cb716-8" tabindex="-1"></a></span>
+<span id="cb716-9"><a href="prediktivno_modeliranje.html#cb716-9" tabindex="-1"></a><span class="co"># proučite sažetak dobivenog modela</span></span></code></pre></div>
 <div class="fold s o">
-<div class="sourceCode" id="cb704"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb704-1"><a href="prediktivno_modeliranje.html#cb704-1" tabindex="-1"></a>linMod <span class="ot">&lt;-</span> <span class="fu">train</span>(quality <span class="sc">~</span> ., <span class="at">data =</span> wine.train, <span class="at">method =</span> <span class="st">&quot;lm&quot;</span>)</span>
-<span id="cb704-2"><a href="prediktivno_modeliranje.html#cb704-2" tabindex="-1"></a></span>
-<span id="cb704-3"><a href="prediktivno_modeliranje.html#cb704-3" tabindex="-1"></a><span class="fu">summary</span>(linMod)</span></code></pre></div>
+<div class="sourceCode" id="cb717"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb717-1"><a href="prediktivno_modeliranje.html#cb717-1" tabindex="-1"></a>linMod <span class="ot">&lt;-</span> <span class="fu">train</span>(quality <span class="sc">~</span> ., <span class="at">data =</span> wine.train, <span class="at">method =</span> <span class="st">&quot;lm&quot;</span>)</span>
+<span id="cb717-2"><a href="prediktivno_modeliranje.html#cb717-2" tabindex="-1"></a></span>
+<span id="cb717-3"><a href="prediktivno_modeliranje.html#cb717-3" tabindex="-1"></a><span class="fu">summary</span>(linMod)</span></code></pre></div>
 <pre><code>## 
 ## Call:
 ## lm(formula = .outcome ~ ., data = dat)
@@ -756,35 +773,35 @@ div.csl-indent {
 ## F-statistic: 170.2 on 12 and 4533 DF,  p-value: &lt; 2.2e-16</code></pre>
 </div>
 <p>Vidimo da smo dobili naizgled identičan rezultat kao kada smo pozvali funkciju <code>lm</code> direktno na početku ovog poglavlja, no ovdje moramo uočiti jednu stvar - dobiveni objekt nije “samo” model, to je objekt klase <code>train</code> koji u sebi sadrži niz dodatnih informacija koje možemo prikupiti uz pomoć različitih funkcija ili direktnim izvlačenjem elemenata uz pomoć operatora <code>$</code> (sjetimo se da su kompleksni objekti u R-u uglavnom samo “uljepšane” liste). Primjerice, ako želimo iz <code>train</code> objekta izvući samo model (možda kako bi ga radi dijagnostičkog procesa ubacili u funkciju <code>augment</code> paketa <code>broom</code>), onda to možemo jednostavno napraviti na sljedeći način:</p>
-<div class="sourceCode" id="cb706"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb706-1"><a href="prediktivno_modeliranje.html#cb706-1" tabindex="-1"></a>model <span class="ot">&lt;-</span> linMod<span class="sc">$</span>finalModel</span></code></pre></div>
+<div class="sourceCode" id="cb719"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb719-1"><a href="prediktivno_modeliranje.html#cb719-1" tabindex="-1"></a>model <span class="ot">&lt;-</span> linMod<span class="sc">$</span>finalModel</span></code></pre></div>
 <p>Na prikazanom primjeru propustili smo upotrijebiti veliki broj parametara funkcije <code>train</code> koje možemo vidjeti u dokumentaciji. Primjerice, parametar <code>preprocess</code> može automatski obaviti neke postupke pripreme podataka, kao što je normalizacija, BoxCox transformacija, imputiranje nedostajućih vrijednosti i sl.</p>
 <p>Pokušajmo sada istrenirati malo kompleksniji prediktivni model. Prvo objasnim pojam “kontrolnog objekta” kojeg stvaramo preko funkcije <code>trainControl</code>.</p>
 <p>Funkciju <code>trainControl</code> možemo zamisliti kao funkciju za stvaranje “kontrolne ploče” koja nam omogućuje fino podešavanje svih parametara vezanih uz treniranje našeg prediktivnog modela. Primjerice, uz pomoć ovog objekta možemo deklarativno zatražiti K-fold krosvalidaciju bez potrebe da ju programiramo ručno:</p>
-<div class="sourceCode" id="cb707"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb707-1"><a href="prediktivno_modeliranje.html#cb707-1" tabindex="-1"></a><span class="co"># u treniranju želimo provesti K-fold krosvalidaciju sa 10 podskupova</span></span>
-<span id="cb707-2"><a href="prediktivno_modeliranje.html#cb707-2" tabindex="-1"></a>ctrl <span class="ot">&lt;-</span> <span class="fu">trainControl</span>(<span class="at">method =</span> <span class="st">&quot;cv&quot;</span>,</span>
-<span id="cb707-3"><a href="prediktivno_modeliranje.html#cb707-3" tabindex="-1"></a>                     <span class="at">number =</span> <span class="dv">10</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb720"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb720-1"><a href="prediktivno_modeliranje.html#cb720-1" tabindex="-1"></a><span class="co"># u treniranju želimo provesti K-fold krosvalidaciju sa 10 podskupova</span></span>
+<span id="cb720-2"><a href="prediktivno_modeliranje.html#cb720-2" tabindex="-1"></a>ctrl <span class="ot">&lt;-</span> <span class="fu">trainControl</span>(<span class="at">method =</span> <span class="st">&quot;cv&quot;</span>,</span>
+<span id="cb720-3"><a href="prediktivno_modeliranje.html#cb720-3" tabindex="-1"></a>                     <span class="at">number =</span> <span class="dv">10</span>)</span></code></pre></div>
 <p>Pored ovoga imamo mogućnost odabira dodatnih parametara, kao npr. koju funkciju sažetka želimo primjeniti nad modelom, ili da li želimo da model (u slučaju klasifikacije) vraća vjerojatnosti ili same predikcije kategorija. Kada složimo jedan ovakav “kontrolni objekt”, onda ga možemo reciklirati koliko god želimo puta u daljnjim koracima prediktivnog modeliranja. Pogledajmo sada kako izgleda potpuniji potpis funkcije <code>train</code> u kojem možemo vidjeti kontrolni objekt, ali i neke dodatne parametre koje ćemo upoznati kasnije.</p>
-<div class="sourceCode" id="cb708"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb708-1"><a href="prediktivno_modeliranje.html#cb708-1" tabindex="-1"></a>model <span class="ot">&lt;-</span> <span class="fu">train</span>(formula, </span>
-<span id="cb708-2"><a href="prediktivno_modeliranje.html#cb708-2" tabindex="-1"></a>               <span class="at">data =</span> trening_podaci, </span>
-<span id="cb708-3"><a href="prediktivno_modeliranje.html#cb708-3" tabindex="-1"></a>               <span class="at">method =</span> odabrana_metoda, </span>
-<span id="cb708-4"><a href="prediktivno_modeliranje.html#cb708-4" tabindex="-1"></a>               <span class="at">preProcess =</span> koraci_pretprocesiranja,</span>
-<span id="cb708-5"><a href="prediktivno_modeliranje.html#cb708-5" tabindex="-1"></a>               <span class="at">trControl =</span> kontrolni_objekt</span>
-<span id="cb708-6"><a href="prediktivno_modeliranje.html#cb708-6" tabindex="-1"></a>               <span class="at">tuneGrid =</span> rešetka_hiperparametara)</span></code></pre></div>
+<div class="sourceCode" id="cb721"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb721-1"><a href="prediktivno_modeliranje.html#cb721-1" tabindex="-1"></a>model <span class="ot">&lt;-</span> <span class="fu">train</span>(formula, </span>
+<span id="cb721-2"><a href="prediktivno_modeliranje.html#cb721-2" tabindex="-1"></a>               <span class="at">data =</span> trening_podaci, </span>
+<span id="cb721-3"><a href="prediktivno_modeliranje.html#cb721-3" tabindex="-1"></a>               <span class="at">method =</span> odabrana_metoda, </span>
+<span id="cb721-4"><a href="prediktivno_modeliranje.html#cb721-4" tabindex="-1"></a>               <span class="at">preProcess =</span> koraci_pretprocesiranja,</span>
+<span id="cb721-5"><a href="prediktivno_modeliranje.html#cb721-5" tabindex="-1"></a>               <span class="at">trControl =</span> kontrolni_objekt</span>
+<span id="cb721-6"><a href="prediktivno_modeliranje.html#cb721-6" tabindex="-1"></a>               <span class="at">tuneGrid =</span> rešetka_hiperparametara)</span></code></pre></div>
 <p><strong>Zadatak 14.8 - K-fold krosvalidacija uz paket <code>caret</code></strong></p>
-<div class="sourceCode" id="cb709"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb709-1"><a href="prediktivno_modeliranje.html#cb709-1" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">1234</span>)</span>
-<span id="cb709-2"><a href="prediktivno_modeliranje.html#cb709-2" tabindex="-1"></a>k <span class="ot">&lt;-</span> <span class="dv">5</span></span>
-<span id="cb709-3"><a href="prediktivno_modeliranje.html#cb709-3" tabindex="-1"></a></span>
-<span id="cb709-4"><a href="prediktivno_modeliranje.html#cb709-4" tabindex="-1"></a><span class="co"># uz pomoć funkcije train i kontrolnog objekta iz paketa `caret`</span></span>
-<span id="cb709-5"><a href="prediktivno_modeliranje.html#cb709-5" tabindex="-1"></a><span class="co"># provedite k-fold krosvalidaciju linearnog modela okvira `wine`</span></span>
-<span id="cb709-6"><a href="prediktivno_modeliranje.html#cb709-6" tabindex="-1"></a><span class="co"># koji će procijenjivati vrijednost varijable `quality`</span></span>
-<span id="cb709-7"><a href="prediktivno_modeliranje.html#cb709-7" tabindex="-1"></a><span class="co"># naspram svih ostalih varijabli kao prediktora</span></span>
-<span id="cb709-8"><a href="prediktivno_modeliranje.html#cb709-8" tabindex="-1"></a><span class="co"># ispišite konačni model na zaslon</span></span></code></pre></div>
+<div class="sourceCode" id="cb722"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb722-1"><a href="prediktivno_modeliranje.html#cb722-1" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">1234</span>)</span>
+<span id="cb722-2"><a href="prediktivno_modeliranje.html#cb722-2" tabindex="-1"></a>k <span class="ot">&lt;-</span> <span class="dv">5</span></span>
+<span id="cb722-3"><a href="prediktivno_modeliranje.html#cb722-3" tabindex="-1"></a></span>
+<span id="cb722-4"><a href="prediktivno_modeliranje.html#cb722-4" tabindex="-1"></a><span class="co"># uz pomoć funkcije train i kontrolnog objekta iz paketa `caret`</span></span>
+<span id="cb722-5"><a href="prediktivno_modeliranje.html#cb722-5" tabindex="-1"></a><span class="co"># provedite k-fold krosvalidaciju linearnog modela okvira `wine`</span></span>
+<span id="cb722-6"><a href="prediktivno_modeliranje.html#cb722-6" tabindex="-1"></a><span class="co"># koji će procijenjivati vrijednost varijable `quality`</span></span>
+<span id="cb722-7"><a href="prediktivno_modeliranje.html#cb722-7" tabindex="-1"></a><span class="co"># naspram svih ostalih varijabli kao prediktora</span></span>
+<span id="cb722-8"><a href="prediktivno_modeliranje.html#cb722-8" tabindex="-1"></a><span class="co"># ispišite konačni model na zaslon</span></span></code></pre></div>
 <div class="fold s o">
-<div class="sourceCode" id="cb710"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb710-1"><a href="prediktivno_modeliranje.html#cb710-1" tabindex="-1"></a><span class="co">#library(caret)  # ako je potrebno</span></span>
-<span id="cb710-2"><a href="prediktivno_modeliranje.html#cb710-2" tabindex="-1"></a>ctrl <span class="ot">&lt;-</span> <span class="fu">trainControl</span>(<span class="at">method =</span> <span class="st">&quot;cv&quot;</span>, <span class="at">number =</span> <span class="dv">5</span>)</span>
-<span id="cb710-3"><a href="prediktivno_modeliranje.html#cb710-3" tabindex="-1"></a>linMod <span class="ot">&lt;-</span> <span class="fu">train</span>(quality <span class="sc">~</span> ., <span class="at">data =</span> wine, <span class="at">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="at">trControl =</span> ctrl)</span>
-<span id="cb710-4"><a href="prediktivno_modeliranje.html#cb710-4" tabindex="-1"></a></span>
-<span id="cb710-5"><a href="prediktivno_modeliranje.html#cb710-5" tabindex="-1"></a><span class="fu">print</span>(linMod)</span></code></pre></div>
+<div class="sourceCode" id="cb723"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb723-1"><a href="prediktivno_modeliranje.html#cb723-1" tabindex="-1"></a><span class="co">#library(caret)  # ako je potrebno</span></span>
+<span id="cb723-2"><a href="prediktivno_modeliranje.html#cb723-2" tabindex="-1"></a>ctrl <span class="ot">&lt;-</span> <span class="fu">trainControl</span>(<span class="at">method =</span> <span class="st">&quot;cv&quot;</span>, <span class="at">number =</span> <span class="dv">5</span>)</span>
+<span id="cb723-3"><a href="prediktivno_modeliranje.html#cb723-3" tabindex="-1"></a>linMod <span class="ot">&lt;-</span> <span class="fu">train</span>(quality <span class="sc">~</span> ., <span class="at">data =</span> wine, <span class="at">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="at">trControl =</span> ctrl)</span>
+<span id="cb723-4"><a href="prediktivno_modeliranje.html#cb723-4" tabindex="-1"></a></span>
+<span id="cb723-5"><a href="prediktivno_modeliranje.html#cb723-5" tabindex="-1"></a><span class="fu">print</span>(linMod)</span></code></pre></div>
 <pre><code>## Linear Regression 
 ## 
 ## 6495 samples
@@ -801,7 +818,7 @@ div.csl-indent {
 ## Tuning parameter &#39;intercept&#39; was held constant at a value of TRUE</code></pre>
 </div>
 <p>Možemo vidjeti da se ispis modela kojeg smo dobili ponešto razlikuje od modela kojeg smo dobili jednostavnim pozivom funkcije <code>lm</code>. Kao što smo ranije već naveli, ovo je objekt klase <code>train</code>, a između ostalog on je “svjestan” toga da je nastao uz pomoć krosvalidacijske tehnike treniranja te čuva relevantne podatke - ispis mjera <code>RMSE</code>, <code>Rsquared</code> i <code>MAE</code> nije ispis nastao na trening skupu, već agregacija mjera dobivenih kroz proces krosvalidacije. Ukoliko želimo vidjeti statistiku po podskupovima, to možemo ispisivanjem elementa naziva <code>resample</code>:</p>
-<div class="sourceCode" id="cb712"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb712-1"><a href="prediktivno_modeliranje.html#cb712-1" tabindex="-1"></a>linMod<span class="sc">$</span>resample</span></code></pre></div>
+<div class="sourceCode" id="cb725"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb725-1"><a href="prediktivno_modeliranje.html#cb725-1" tabindex="-1"></a>linMod<span class="sc">$</span>resample</span></code></pre></div>
 <pre><code>##        RMSE  Rsquared       MAE Resample
 ## 1 0.7292928 0.2889040 0.5668937    Fold1
 ## 2 0.7531330 0.2893715 0.5899459    Fold2
@@ -811,7 +828,7 @@ div.csl-indent {
 <p>Paket <code>caret</code> omogućuje nam korištenje i puno naprednijih metoda prediktivnog modeliranja, kao i fino podešavanje raznih aspekata stvaranja modela. Iscrpni pregled svih mogućih opcija izlazi iz okvira ovog udžbenika, no u nastavku ćemo pružiti kratki uvid u neke od naprednijih mogućnosti koje nudi ovaj paket, kao i sam programski jezik R.</p>
 <p>Prije prikaza nekih od naprednijih metoda, spomenimo pojam <strong>hiperparametra</strong> metode strojnog učenja. Ovaj naziv označava parametar metode koji se ne saznaje direktno iz ulaznih podataka, već ga zadaje sam analitičar. Budući da se često ne zna unaprijed koja će vrijednost hiperparametra rezultirati boljim modelima, analitičar će često tijekom treniranja isprobati više potencijalnih vrijednosti (ili više kombinacija vrijednosti, ako se radi o većem broju hiperparametara) te u konačni model ugraditi one koje se pokažu najbolje s obzirom na testiranje nad novim podacima. Ovaj postupak može i uvjetovati složeniji pristup od do sada prikazanih, tako da možemo imati skup za treniranje, tzv. “validacijski” skup nad kojim testiramo razne hiperparametre, te konačni “testni” skup za završno testiranje.</p>
 <p>Kada pričamo o različitim kombinacijama hiperparametara, često spominjemo pojam “rešetke” (eng. <em>grid</em>). U programskom smislu ovo nije ništa drugo nego dodatni podatkovni okvir sa svim kombinacijama hiperparametara kojeg trening metoda onda koristi tijekom treniranja. Funkcija za stvaranje rešetke je <code>expand.grid</code>, a dovoljno joj je proslijediti vektore sa skupovima vrijednosti koje želimo isprobati.</p>
-<div class="sourceCode" id="cb714"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb714-1"><a href="prediktivno_modeliranje.html#cb714-1" tabindex="-1"></a><span class="fu">expand.grid</span>(<span class="at">C =</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">8</span>), <span class="at">sigma =</span> <span class="fu">c</span>(<span class="fl">0.25</span>, <span class="dv">1</span>, <span class="dv">2</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb727"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb727-1"><a href="prediktivno_modeliranje.html#cb727-1" tabindex="-1"></a><span class="fu">expand.grid</span>(<span class="at">C =</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">8</span>), <span class="at">sigma =</span> <span class="fu">c</span>(<span class="fl">0.25</span>, <span class="dv">1</span>, <span class="dv">2</span>))</span></code></pre></div>
 <pre><code>##   C sigma
 ## 1 2  0.25
 ## 2 4  0.25
@@ -824,62 +841,62 @@ div.csl-indent {
 ## 9 8  2.00</code></pre>
 <p>Ovaj objekt (tj. podatkovni okvir) ćemo opcionalno staviti pod parametar <code>tuneGrid</code> funkcije <code>train</code>.</p>
 <p>Prikažimo za kraj dvije naprednije metode prediktivnog modeliranja - metodu slučajne šume (metoda <code>ranger</code> iz istoimeng paketa) i metodu potpornih vektora (metoda <code>svmRadial</code> iz paketa <code>kernlab</code>). Nećemo ulaziti dublje u same detalje vezane uz ove metode, već ćemo se usredotočiti na način njihovog pozivanja uz pomoć funkcija <code>trainCtrl</code> i <code>train</code>. Također, uočite da smo kod treniranja SVM modela također definirali i parametar predobrade podataka (<code>preProcess</code>), budući da ovaj model ima bolje performanse ako numeričke podatke standardiziramo - više o ovome ćemo reći u poglavlju o klasifikaciji.</p>
-<div class="sourceCode" id="cb716"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb716-1"><a href="prediktivno_modeliranje.html#cb716-1" tabindex="-1"></a><span class="co">#library(ranger) # ukoliko je potrebno</span></span>
-<span id="cb716-2"><a href="prediktivno_modeliranje.html#cb716-2" tabindex="-1"></a><span class="co">#library(kernlab) # ukoliko je potrebno</span></span>
-<span id="cb716-3"><a href="prediktivno_modeliranje.html#cb716-3" tabindex="-1"></a></span>
-<span id="cb716-4"><a href="prediktivno_modeliranje.html#cb716-4" tabindex="-1"></a><span class="co"># jednostavno rastavljanje na trening i test skup</span></span>
-<span id="cb716-5"><a href="prediktivno_modeliranje.html#cb716-5" tabindex="-1"></a>train_ind <span class="ot">&lt;-</span> <span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(wine), <span class="fl">0.7</span> <span class="sc">*</span> <span class="fu">nrow</span>(wine) <span class="sc">%&gt;%</span> round) <span class="co"># indeksi trening opservacija</span></span>
-<span id="cb716-6"><a href="prediktivno_modeliranje.html#cb716-6" tabindex="-1"></a>wine.train <span class="ot">&lt;-</span> wine[train_ind, ]</span>
-<span id="cb716-7"><a href="prediktivno_modeliranje.html#cb716-7" tabindex="-1"></a>wine.test <span class="ot">&lt;-</span> wine[<span class="sc">-</span>train_ind, ]</span>
-<span id="cb716-8"><a href="prediktivno_modeliranje.html#cb716-8" tabindex="-1"></a></span>
-<span id="cb716-9"><a href="prediktivno_modeliranje.html#cb716-9" tabindex="-1"></a><span class="co"># koristiti ćemo isti kontrolni objekt za oba treniranja</span></span>
-<span id="cb716-10"><a href="prediktivno_modeliranje.html#cb716-10" tabindex="-1"></a><span class="co"># postaviti `verboseIter` na TRUE </span></span>
-<span id="cb716-11"><a href="prediktivno_modeliranje.html#cb716-11" tabindex="-1"></a><span class="co"># za bolji uvid u brzinu treniranja!</span></span>
-<span id="cb716-12"><a href="prediktivno_modeliranje.html#cb716-12" tabindex="-1"></a>ctrl <span class="ot">&lt;-</span> <span class="fu">trainControl</span>(</span>
-<span id="cb716-13"><a href="prediktivno_modeliranje.html#cb716-13" tabindex="-1"></a>  <span class="at">method =</span> <span class="st">&quot;repeatedcv&quot;</span>,</span>
-<span id="cb716-14"><a href="prediktivno_modeliranje.html#cb716-14" tabindex="-1"></a>  <span class="at">number =</span> <span class="dv">5</span>,</span>
-<span id="cb716-15"><a href="prediktivno_modeliranje.html#cb716-15" tabindex="-1"></a>  <span class="at">repeats =</span> <span class="dv">2</span>,</span>
-<span id="cb716-16"><a href="prediktivno_modeliranje.html#cb716-16" tabindex="-1"></a>  <span class="at">verboseIter =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb716-17"><a href="prediktivno_modeliranje.html#cb716-17" tabindex="-1"></a></span>
-<span id="cb716-18"><a href="prediktivno_modeliranje.html#cb716-18" tabindex="-1"></a><span class="co"># treniramo model slučajne šume</span></span>
-<span id="cb716-19"><a href="prediktivno_modeliranje.html#cb716-19" tabindex="-1"></a>rfMod <span class="ot">&lt;-</span> <span class="fu">train</span>(quality <span class="sc">~</span> ., </span>
-<span id="cb716-20"><a href="prediktivno_modeliranje.html#cb716-20" tabindex="-1"></a>                 <span class="at">data =</span> wine.train,</span>
-<span id="cb716-21"><a href="prediktivno_modeliranje.html#cb716-21" tabindex="-1"></a>                 <span class="at">method =</span> <span class="st">&#39;ranger&#39;</span>,</span>
-<span id="cb716-22"><a href="prediktivno_modeliranje.html#cb716-22" tabindex="-1"></a>                 <span class="at">tuneLength =</span> <span class="dv">10</span>, </span>
-<span id="cb716-23"><a href="prediktivno_modeliranje.html#cb716-23" tabindex="-1"></a>                 <span class="at">trControl =</span> ctrl,</span>
-<span id="cb716-24"><a href="prediktivno_modeliranje.html#cb716-24" tabindex="-1"></a>                 <span class="at">num.trees =</span> <span class="dv">10</span>)</span>
-<span id="cb716-25"><a href="prediktivno_modeliranje.html#cb716-25" tabindex="-1"></a></span>
-<span id="cb716-26"><a href="prediktivno_modeliranje.html#cb716-26" tabindex="-1"></a><span class="co"># treniramo model potpornih vektora</span></span>
-<span id="cb716-27"><a href="prediktivno_modeliranje.html#cb716-27" tabindex="-1"></a><span class="co"># koristimo &quot;mrežu&quot; hiperparametara</span></span>
-<span id="cb716-28"><a href="prediktivno_modeliranje.html#cb716-28" tabindex="-1"></a><span class="co"># i pretprocesiranje normalizacijom</span></span>
-<span id="cb716-29"><a href="prediktivno_modeliranje.html#cb716-29" tabindex="-1"></a></span>
-<span id="cb716-30"><a href="prediktivno_modeliranje.html#cb716-30" tabindex="-1"></a>svm.grid <span class="ot">&lt;-</span> <span class="fu">expand.grid</span>(<span class="at">C =</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">8</span>), <span class="at">sigma =</span> <span class="fu">c</span>(<span class="fl">0.25</span>, <span class="dv">1</span>, <span class="dv">2</span>))</span>
-<span id="cb716-31"><a href="prediktivno_modeliranje.html#cb716-31" tabindex="-1"></a>svmMod <span class="ot">&lt;-</span> <span class="fu">train</span>(quality <span class="sc">~</span> ., </span>
-<span id="cb716-32"><a href="prediktivno_modeliranje.html#cb716-32" tabindex="-1"></a>                   <span class="at">data =</span> wine.train, </span>
-<span id="cb716-33"><a href="prediktivno_modeliranje.html#cb716-33" tabindex="-1"></a>                   <span class="at">method =</span> <span class="st">&quot;svmRadial&quot;</span>,</span>
-<span id="cb716-34"><a href="prediktivno_modeliranje.html#cb716-34" tabindex="-1"></a>                   <span class="at">trControl =</span> ctrl, </span>
-<span id="cb716-35"><a href="prediktivno_modeliranje.html#cb716-35" tabindex="-1"></a>                   <span class="at">tuneGrid =</span> svm.grid,</span>
-<span id="cb716-36"><a href="prediktivno_modeliranje.html#cb716-36" tabindex="-1"></a>                   <span class="at">preProcess =</span> <span class="fu">c</span>(<span class="st">&quot;center&quot;</span>, <span class="st">&quot;scale&quot;</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb729"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb729-1"><a href="prediktivno_modeliranje.html#cb729-1" tabindex="-1"></a><span class="co">#library(ranger) # ukoliko je potrebno</span></span>
+<span id="cb729-2"><a href="prediktivno_modeliranje.html#cb729-2" tabindex="-1"></a><span class="co">#library(kernlab) # ukoliko je potrebno</span></span>
+<span id="cb729-3"><a href="prediktivno_modeliranje.html#cb729-3" tabindex="-1"></a></span>
+<span id="cb729-4"><a href="prediktivno_modeliranje.html#cb729-4" tabindex="-1"></a><span class="co"># jednostavno rastavljanje na trening i test skup</span></span>
+<span id="cb729-5"><a href="prediktivno_modeliranje.html#cb729-5" tabindex="-1"></a>train_ind <span class="ot">&lt;-</span> <span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(wine), <span class="fl">0.7</span> <span class="sc">*</span> <span class="fu">nrow</span>(wine) <span class="sc">%&gt;%</span> round) <span class="co"># indeksi trening opservacija</span></span>
+<span id="cb729-6"><a href="prediktivno_modeliranje.html#cb729-6" tabindex="-1"></a>wine.train <span class="ot">&lt;-</span> wine[train_ind, ]</span>
+<span id="cb729-7"><a href="prediktivno_modeliranje.html#cb729-7" tabindex="-1"></a>wine.test <span class="ot">&lt;-</span> wine[<span class="sc">-</span>train_ind, ]</span>
+<span id="cb729-8"><a href="prediktivno_modeliranje.html#cb729-8" tabindex="-1"></a></span>
+<span id="cb729-9"><a href="prediktivno_modeliranje.html#cb729-9" tabindex="-1"></a><span class="co"># koristiti ćemo isti kontrolni objekt za oba treniranja</span></span>
+<span id="cb729-10"><a href="prediktivno_modeliranje.html#cb729-10" tabindex="-1"></a><span class="co"># postaviti `verboseIter` na TRUE </span></span>
+<span id="cb729-11"><a href="prediktivno_modeliranje.html#cb729-11" tabindex="-1"></a><span class="co"># za bolji uvid u brzinu treniranja!</span></span>
+<span id="cb729-12"><a href="prediktivno_modeliranje.html#cb729-12" tabindex="-1"></a>ctrl <span class="ot">&lt;-</span> <span class="fu">trainControl</span>(</span>
+<span id="cb729-13"><a href="prediktivno_modeliranje.html#cb729-13" tabindex="-1"></a>  <span class="at">method =</span> <span class="st">&quot;repeatedcv&quot;</span>,</span>
+<span id="cb729-14"><a href="prediktivno_modeliranje.html#cb729-14" tabindex="-1"></a>  <span class="at">number =</span> <span class="dv">5</span>,</span>
+<span id="cb729-15"><a href="prediktivno_modeliranje.html#cb729-15" tabindex="-1"></a>  <span class="at">repeats =</span> <span class="dv">2</span>,</span>
+<span id="cb729-16"><a href="prediktivno_modeliranje.html#cb729-16" tabindex="-1"></a>  <span class="at">verboseIter =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb729-17"><a href="prediktivno_modeliranje.html#cb729-17" tabindex="-1"></a></span>
+<span id="cb729-18"><a href="prediktivno_modeliranje.html#cb729-18" tabindex="-1"></a><span class="co"># treniramo model slučajne šume</span></span>
+<span id="cb729-19"><a href="prediktivno_modeliranje.html#cb729-19" tabindex="-1"></a>rfMod <span class="ot">&lt;-</span> <span class="fu">train</span>(quality <span class="sc">~</span> ., </span>
+<span id="cb729-20"><a href="prediktivno_modeliranje.html#cb729-20" tabindex="-1"></a>                 <span class="at">data =</span> wine.train,</span>
+<span id="cb729-21"><a href="prediktivno_modeliranje.html#cb729-21" tabindex="-1"></a>                 <span class="at">method =</span> <span class="st">&#39;ranger&#39;</span>,</span>
+<span id="cb729-22"><a href="prediktivno_modeliranje.html#cb729-22" tabindex="-1"></a>                 <span class="at">tuneLength =</span> <span class="dv">10</span>, </span>
+<span id="cb729-23"><a href="prediktivno_modeliranje.html#cb729-23" tabindex="-1"></a>                 <span class="at">trControl =</span> ctrl,</span>
+<span id="cb729-24"><a href="prediktivno_modeliranje.html#cb729-24" tabindex="-1"></a>                 <span class="at">num.trees =</span> <span class="dv">10</span>)</span>
+<span id="cb729-25"><a href="prediktivno_modeliranje.html#cb729-25" tabindex="-1"></a></span>
+<span id="cb729-26"><a href="prediktivno_modeliranje.html#cb729-26" tabindex="-1"></a><span class="co"># treniramo model potpornih vektora</span></span>
+<span id="cb729-27"><a href="prediktivno_modeliranje.html#cb729-27" tabindex="-1"></a><span class="co"># koristimo &quot;mrežu&quot; hiperparametara</span></span>
+<span id="cb729-28"><a href="prediktivno_modeliranje.html#cb729-28" tabindex="-1"></a><span class="co"># i pretprocesiranje normalizacijom</span></span>
+<span id="cb729-29"><a href="prediktivno_modeliranje.html#cb729-29" tabindex="-1"></a></span>
+<span id="cb729-30"><a href="prediktivno_modeliranje.html#cb729-30" tabindex="-1"></a>svm.grid <span class="ot">&lt;-</span> <span class="fu">expand.grid</span>(<span class="at">C =</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">8</span>), <span class="at">sigma =</span> <span class="fu">c</span>(<span class="fl">0.25</span>, <span class="dv">1</span>, <span class="dv">2</span>))</span>
+<span id="cb729-31"><a href="prediktivno_modeliranje.html#cb729-31" tabindex="-1"></a>svmMod <span class="ot">&lt;-</span> <span class="fu">train</span>(quality <span class="sc">~</span> ., </span>
+<span id="cb729-32"><a href="prediktivno_modeliranje.html#cb729-32" tabindex="-1"></a>                   <span class="at">data =</span> wine.train, </span>
+<span id="cb729-33"><a href="prediktivno_modeliranje.html#cb729-33" tabindex="-1"></a>                   <span class="at">method =</span> <span class="st">&quot;svmRadial&quot;</span>,</span>
+<span id="cb729-34"><a href="prediktivno_modeliranje.html#cb729-34" tabindex="-1"></a>                   <span class="at">trControl =</span> ctrl, </span>
+<span id="cb729-35"><a href="prediktivno_modeliranje.html#cb729-35" tabindex="-1"></a>                   <span class="at">tuneGrid =</span> svm.grid,</span>
+<span id="cb729-36"><a href="prediktivno_modeliranje.html#cb729-36" tabindex="-1"></a>                   <span class="at">preProcess =</span> <span class="fu">c</span>(<span class="st">&quot;center&quot;</span>, <span class="st">&quot;scale&quot;</span>))</span></code></pre></div>
 <p>Konačno, provedimo jednostavnu evaluaciju modela uz pomoć mjere RMSE.</p>
 <p><strong>Zadatak 14.9 - Jednostavna evaluacija modela</strong></p>
-<div class="sourceCode" id="cb717"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb717-1"><a href="prediktivno_modeliranje.html#cb717-1" tabindex="-1"></a><span class="co"># uz pomoć funkcije `predict` i modela `rfMod` i `svmMod`</span></span>
-<span id="cb717-2"><a href="prediktivno_modeliranje.html#cb717-2" tabindex="-1"></a><span class="co"># skupu `wine.test` dodajte stupce `predQualityRF` i `predQualitySVM`</span></span>
-<span id="cb717-3"><a href="prediktivno_modeliranje.html#cb717-3" tabindex="-1"></a><span class="co"># koji će sadržavati predikciju kvalitete vina</span></span>
-<span id="cb717-4"><a href="prediktivno_modeliranje.html#cb717-4" tabindex="-1"></a></span>
-<span id="cb717-5"><a href="prediktivno_modeliranje.html#cb717-5" tabindex="-1"></a><span class="co"># ispišite vrijednost RMSE mjere za sve dobivene modele (regresija, slučajne šume, SVM)</span></span></code></pre></div>
+<div class="sourceCode" id="cb730"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb730-1"><a href="prediktivno_modeliranje.html#cb730-1" tabindex="-1"></a><span class="co"># uz pomoć funkcije `predict` i modela `rfMod` i `svmMod`</span></span>
+<span id="cb730-2"><a href="prediktivno_modeliranje.html#cb730-2" tabindex="-1"></a><span class="co"># skupu `wine.test` dodajte stupce `predQualityRF` i `predQualitySVM`</span></span>
+<span id="cb730-3"><a href="prediktivno_modeliranje.html#cb730-3" tabindex="-1"></a><span class="co"># koji će sadržavati predikciju kvalitete vina</span></span>
+<span id="cb730-4"><a href="prediktivno_modeliranje.html#cb730-4" tabindex="-1"></a></span>
+<span id="cb730-5"><a href="prediktivno_modeliranje.html#cb730-5" tabindex="-1"></a><span class="co"># ispišite vrijednost RMSE mjere za sve dobivene modele (regresija, slučajne šume, SVM)</span></span></code></pre></div>
 <div class="fold s o">
-<div class="sourceCode" id="cb718"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb718-1"><a href="prediktivno_modeliranje.html#cb718-1" tabindex="-1"></a><span class="co"># uz pomoć funkcije `predict`, modela `linMod`, `rfMod` i `svmMod`</span></span>
-<span id="cb718-2"><a href="prediktivno_modeliranje.html#cb718-2" tabindex="-1"></a><span class="co"># skupu `wine.test` dodajte stupce `predQualityLR`, `predQualityRF` i `predQualitySVM`</span></span>
-<span id="cb718-3"><a href="prediktivno_modeliranje.html#cb718-3" tabindex="-1"></a><span class="co"># koji će sadržavati predikciju kvalitete vina</span></span>
-<span id="cb718-4"><a href="prediktivno_modeliranje.html#cb718-4" tabindex="-1"></a>wine.test<span class="sc">$</span>predQualityLR <span class="ot">&lt;-</span> <span class="fu">predict</span>(linMod, wine.test)</span>
-<span id="cb718-5"><a href="prediktivno_modeliranje.html#cb718-5" tabindex="-1"></a>wine.test<span class="sc">$</span>predQualityRF <span class="ot">&lt;-</span> <span class="fu">predict</span>(rfMod, wine.test)</span>
-<span id="cb718-6"><a href="prediktivno_modeliranje.html#cb718-6" tabindex="-1"></a>wine.test<span class="sc">$</span>predQualitySVM <span class="ot">&lt;-</span> <span class="fu">predict</span>(svmMod, wine.test)</span>
-<span id="cb718-7"><a href="prediktivno_modeliranje.html#cb718-7" tabindex="-1"></a></span>
-<span id="cb718-8"><a href="prediktivno_modeliranje.html#cb718-8" tabindex="-1"></a></span>
-<span id="cb718-9"><a href="prediktivno_modeliranje.html#cb718-9" tabindex="-1"></a><span class="co"># ispišite vrijednost RMSE mjere za sve dobivene modele</span></span>
-<span id="cb718-10"><a href="prediktivno_modeliranje.html#cb718-10" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">&quot;RMSE Linearna regresija: &quot;</span>, <span class="fu">rmse</span>(wine.test<span class="sc">$</span>predQualityLR, wine.test<span class="sc">$</span>quality))</span>
-<span id="cb718-11"><a href="prediktivno_modeliranje.html#cb718-11" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">&quot;</span><span class="sc">\n</span><span class="st">RMSE Slučajna šuma: &quot;</span>, <span class="fu">rmse</span>(wine.test<span class="sc">$</span>predQualityRF, wine.test<span class="sc">$</span>quality))</span>
-<span id="cb718-12"><a href="prediktivno_modeliranje.html#cb718-12" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">&quot;</span><span class="sc">\n</span><span class="st">RMSE Potporni vektori: &quot;</span>, <span class="fu">rmse</span>(wine.test<span class="sc">$</span>predQualitySVM, wine.test<span class="sc">$</span>quality))</span></code></pre></div>
+<div class="sourceCode" id="cb731"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb731-1"><a href="prediktivno_modeliranje.html#cb731-1" tabindex="-1"></a><span class="co"># uz pomoć funkcije `predict`, modela `linMod`, `rfMod` i `svmMod`</span></span>
+<span id="cb731-2"><a href="prediktivno_modeliranje.html#cb731-2" tabindex="-1"></a><span class="co"># skupu `wine.test` dodajte stupce `predQualityLR`, `predQualityRF` i `predQualitySVM`</span></span>
+<span id="cb731-3"><a href="prediktivno_modeliranje.html#cb731-3" tabindex="-1"></a><span class="co"># koji će sadržavati predikciju kvalitete vina</span></span>
+<span id="cb731-4"><a href="prediktivno_modeliranje.html#cb731-4" tabindex="-1"></a>wine.test<span class="sc">$</span>predQualityLR <span class="ot">&lt;-</span> <span class="fu">predict</span>(linMod, wine.test)</span>
+<span id="cb731-5"><a href="prediktivno_modeliranje.html#cb731-5" tabindex="-1"></a>wine.test<span class="sc">$</span>predQualityRF <span class="ot">&lt;-</span> <span class="fu">predict</span>(rfMod, wine.test)</span>
+<span id="cb731-6"><a href="prediktivno_modeliranje.html#cb731-6" tabindex="-1"></a>wine.test<span class="sc">$</span>predQualitySVM <span class="ot">&lt;-</span> <span class="fu">predict</span>(svmMod, wine.test)</span>
+<span id="cb731-7"><a href="prediktivno_modeliranje.html#cb731-7" tabindex="-1"></a></span>
+<span id="cb731-8"><a href="prediktivno_modeliranje.html#cb731-8" tabindex="-1"></a></span>
+<span id="cb731-9"><a href="prediktivno_modeliranje.html#cb731-9" tabindex="-1"></a><span class="co"># ispišite vrijednost RMSE mjere za sve dobivene modele</span></span>
+<span id="cb731-10"><a href="prediktivno_modeliranje.html#cb731-10" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">&quot;RMSE Linearna regresija: &quot;</span>, <span class="fu">rmse</span>(wine.test<span class="sc">$</span>predQualityLR, wine.test<span class="sc">$</span>quality))</span>
+<span id="cb731-11"><a href="prediktivno_modeliranje.html#cb731-11" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">&quot;</span><span class="sc">\n</span><span class="st">RMSE Slučajna šuma: &quot;</span>, <span class="fu">rmse</span>(wine.test<span class="sc">$</span>predQualityRF, wine.test<span class="sc">$</span>quality))</span>
+<span id="cb731-12"><a href="prediktivno_modeliranje.html#cb731-12" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">&quot;</span><span class="sc">\n</span><span class="st">RMSE Potporni vektori: &quot;</span>, <span class="fu">rmse</span>(wine.test<span class="sc">$</span>predQualitySVM, wine.test<span class="sc">$</span>quality))</span></code></pre></div>
 <pre><code>## RMSE Linearna regresija:  0.7428275
 ## RMSE Slučajna šuma:  0.6456906
 ## RMSE Potporni vektori:  0.6655414</code></pre>
@@ -892,25 +909,25 @@ div.csl-indent {
 <p>U ovom dijelu usredotočiti ćemo se na jednu drugu, također vrlo popularnu klasifikacijsku metodu, čiji način rada je vrlo intuitivan i lako objašnjiv, ali koja omogućuje uvid u niz zanimljivih elemenata prediktivnog modeliranja koje do sada nismo spominjali. Radi se o metodi “k najbližih susjeda”, ili “kNN klasifikaciji” (engl. <em>K nearest neighbours</em>).</p>
 <p>Ova metoda radi na vrlo jednostavan način. Ako ne znamo kategoriju neke opservacije, jednostavno pronađemo određeni broj opservacija “najbližih” toj novoj opservaciji, pogledamo njihove kategorije i potom većinskim glasovanjem odredimo koju kategoriju pridijeliti novoj opservaciji. Pokušajmo ovo vizualizirati.</p>
 <p><strong>Zadatak 14.10 - Vizualizacija ideje metode kNN klasifikacije</strong></p>
-<div class="sourceCode" id="cb720"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb720-1"><a href="prediktivno_modeliranje.html#cb720-1" tabindex="-1"></a><span class="co"># jednostavno rastavljanje na trening i test skup</span></span>
-<span id="cb720-2"><a href="prediktivno_modeliranje.html#cb720-2" tabindex="-1"></a>train_ind <span class="ot">&lt;-</span> <span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(wine), <span class="fl">0.7</span> <span class="sc">*</span> <span class="fu">nrow</span>(wine) <span class="sc">%&gt;%</span> round) <span class="co"># indeksi trening opservacija</span></span>
-<span id="cb720-3"><a href="prediktivno_modeliranje.html#cb720-3" tabindex="-1"></a>wine.train <span class="ot">&lt;-</span> wine[train_ind, ]</span>
-<span id="cb720-4"><a href="prediktivno_modeliranje.html#cb720-4" tabindex="-1"></a>wine.test <span class="ot">&lt;-</span> wine[<span class="sc">-</span>train_ind, ]</span>
-<span id="cb720-5"><a href="prediktivno_modeliranje.html#cb720-5" tabindex="-1"></a></span>
-<span id="cb720-6"><a href="prediktivno_modeliranje.html#cb720-6" tabindex="-1"></a><span class="co"># nacrtajte točkasti graf skupa `wine.train`</span></span>
-<span id="cb720-7"><a href="prediktivno_modeliranje.html#cb720-7" tabindex="-1"></a><span class="co"># postavite `chlorides` na os x</span></span>
-<span id="cb720-8"><a href="prediktivno_modeliranje.html#cb720-8" tabindex="-1"></a><span class="co"># i `volatile.acidity` na os y</span></span>
-<span id="cb720-9"><a href="prediktivno_modeliranje.html#cb720-9" tabindex="-1"></a><span class="co"># točke obojajte prema tipu vina</span></span>
-<span id="cb720-10"><a href="prediktivno_modeliranje.html#cb720-10" tabindex="-1"></a><span class="co"># postavite prozirnost točaka na 0.5</span></span></code></pre></div>
+<div class="sourceCode" id="cb733"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb733-1"><a href="prediktivno_modeliranje.html#cb733-1" tabindex="-1"></a><span class="co"># jednostavno rastavljanje na trening i test skup</span></span>
+<span id="cb733-2"><a href="prediktivno_modeliranje.html#cb733-2" tabindex="-1"></a>train_ind <span class="ot">&lt;-</span> <span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(wine), <span class="fl">0.7</span> <span class="sc">*</span> <span class="fu">nrow</span>(wine) <span class="sc">%&gt;%</span> round) <span class="co"># indeksi trening opservacija</span></span>
+<span id="cb733-3"><a href="prediktivno_modeliranje.html#cb733-3" tabindex="-1"></a>wine.train <span class="ot">&lt;-</span> wine[train_ind, ]</span>
+<span id="cb733-4"><a href="prediktivno_modeliranje.html#cb733-4" tabindex="-1"></a>wine.test <span class="ot">&lt;-</span> wine[<span class="sc">-</span>train_ind, ]</span>
+<span id="cb733-5"><a href="prediktivno_modeliranje.html#cb733-5" tabindex="-1"></a></span>
+<span id="cb733-6"><a href="prediktivno_modeliranje.html#cb733-6" tabindex="-1"></a><span class="co"># nacrtajte točkasti graf skupa `wine.train`</span></span>
+<span id="cb733-7"><a href="prediktivno_modeliranje.html#cb733-7" tabindex="-1"></a><span class="co"># postavite `chlorides` na os x</span></span>
+<span id="cb733-8"><a href="prediktivno_modeliranje.html#cb733-8" tabindex="-1"></a><span class="co"># i `volatile.acidity` na os y</span></span>
+<span id="cb733-9"><a href="prediktivno_modeliranje.html#cb733-9" tabindex="-1"></a><span class="co"># točke obojajte prema tipu vina</span></span>
+<span id="cb733-10"><a href="prediktivno_modeliranje.html#cb733-10" tabindex="-1"></a><span class="co"># postavite prozirnost točaka na 0.5</span></span></code></pre></div>
 <div class="fold s o">
-<div class="sourceCode" id="cb721"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb721-1"><a href="prediktivno_modeliranje.html#cb721-1" tabindex="-1"></a><span class="co"># nacrtajte točkasti graf skupa `wine.train`</span></span>
-<span id="cb721-2"><a href="prediktivno_modeliranje.html#cb721-2" tabindex="-1"></a><span class="co"># postavite `chlorides` na os x</span></span>
-<span id="cb721-3"><a href="prediktivno_modeliranje.html#cb721-3" tabindex="-1"></a><span class="co"># i `volatile.acidity` na os y</span></span>
-<span id="cb721-4"><a href="prediktivno_modeliranje.html#cb721-4" tabindex="-1"></a><span class="co"># točke obojajte prema tipu vina</span></span>
-<span id="cb721-5"><a href="prediktivno_modeliranje.html#cb721-5" tabindex="-1"></a><span class="co"># postavite prozirnost točaka na 0.5</span></span>
-<span id="cb721-6"><a href="prediktivno_modeliranje.html#cb721-6" tabindex="-1"></a></span>
-<span id="cb721-7"><a href="prediktivno_modeliranje.html#cb721-7" tabindex="-1"></a><span class="fu">ggplot</span>(wine.train, <span class="fu">aes</span>(chlorides, volatileAcidity, <span class="at">col =</span> type)) <span class="sc">+</span> <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.5</span>)</span></code></pre></div>
-<p><img src="osnoveR_files/figure-html/unnamed-chunk-565-1.png" width="672" /></p>
+<div class="sourceCode" id="cb734"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb734-1"><a href="prediktivno_modeliranje.html#cb734-1" tabindex="-1"></a><span class="co"># nacrtajte točkasti graf skupa `wine.train`</span></span>
+<span id="cb734-2"><a href="prediktivno_modeliranje.html#cb734-2" tabindex="-1"></a><span class="co"># postavite `chlorides` na os x</span></span>
+<span id="cb734-3"><a href="prediktivno_modeliranje.html#cb734-3" tabindex="-1"></a><span class="co"># i `volatile.acidity` na os y</span></span>
+<span id="cb734-4"><a href="prediktivno_modeliranje.html#cb734-4" tabindex="-1"></a><span class="co"># točke obojajte prema tipu vina</span></span>
+<span id="cb734-5"><a href="prediktivno_modeliranje.html#cb734-5" tabindex="-1"></a><span class="co"># postavite prozirnost točaka na 0.5</span></span>
+<span id="cb734-6"><a href="prediktivno_modeliranje.html#cb734-6" tabindex="-1"></a></span>
+<span id="cb734-7"><a href="prediktivno_modeliranje.html#cb734-7" tabindex="-1"></a><span class="fu">ggplot</span>(wine.train, <span class="fu">aes</span>(chlorides, volatileAcidity, <span class="at">col =</span> type)) <span class="sc">+</span> <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.5</span>)</span></code></pre></div>
+<p><img src="osnoveR_files/figure-html/unnamed-chunk-570-1.png" width="672" /></p>
 </div>
 <p>Na grafu možemo jasno vidjeti kako točke formiraju “grozdove” istih boja na određenim područjima. Ako bismo uzeli novu opservaciju vezanu uz vino nepoznatog tipa, ali poznatih vrijednosti mjera postavljenih na osi x i y grafa, gledanjem njenog neposrednog susjedstva mogli bismo zaključiti o kojem se tipu vina radi. Opservacija koja se nalazi duboko unutar jednog od “oblaka” vrlo vjerojatno pripada prikazanom tipu (iako vidimo da ima iznimaka!). S druge strane, opservacija koja se nalazi unutar “graničnih” područja ima puno veću vjerojatnost da će biti pogrešno klasificirana, a različit odabir broja susjeda mogao bi rezultirati različiti rezultatom klasifikacije.</p>
 <p>kNN klasifikacija zasniva se na <strong>konceptu udaljenosti</strong>. Iako postoje različite opcije za odabir udaljenosti, često se oslanjamo na tzv. “Euklidsku udaljenost”, koju u dvo- i trodimenzionalnom kartezijevom sustavu vrlo lako predočimo najkraćim putem između dvije točke, a samu vrijednost računamo uz pomoć njihovih koordinata i Pitagorinog teorema. Ova udaljenost lako se primjenjuje na n-dimenzionalne prostore, tako da iako ne možemo lako predočiti točke u prostoru čija dimenzija odgovara broju prediktora, i dalje možemo lako izračunati vrijednost Euklidske udaljenosti između točaka.</p>
@@ -930,39 +947,39 @@ div.csl-indent {
 <li>napravimo konačnu evaluaciju nad testnim skupom</li>
 </ul>
 <p>Iako navedeno pretprocesiranje podataka kao i odabir najboljeg hiperparametra možemo raditi samostalno, u praksi često ovo prepuštamo funkcijama koje taj dio posla obave automatski, kao što je i slučaj sa već upoznatom funkcijom <code>train</code> iz paketa <code>caret</code>. Podsjetimo se, pojednostavljeni prikaz ove funkcije jest:</p>
-<div class="sourceCode" id="cb722"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb722-1"><a href="prediktivno_modeliranje.html#cb722-1" tabindex="-1"></a>model <span class="ot">&lt;-</span> <span class="fu">train</span>(formula, </span>
-<span id="cb722-2"><a href="prediktivno_modeliranje.html#cb722-2" tabindex="-1"></a>               <span class="at">data =</span> trening_podaci, </span>
-<span id="cb722-3"><a href="prediktivno_modeliranje.html#cb722-3" tabindex="-1"></a>               <span class="at">method =</span> odabrana_metoda, </span>
-<span id="cb722-4"><a href="prediktivno_modeliranje.html#cb722-4" tabindex="-1"></a>               <span class="at">preProcess =</span> koraci_pretprocesiranja,</span>
-<span id="cb722-5"><a href="prediktivno_modeliranje.html#cb722-5" tabindex="-1"></a>               <span class="at">trControl =</span> kontrolni_objekt</span>
-<span id="cb722-6"><a href="prediktivno_modeliranje.html#cb722-6" tabindex="-1"></a>               <span class="at">tuneGrid =</span> rešetka_hiperparametara)</span></code></pre></div>
+<div class="sourceCode" id="cb735"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb735-1"><a href="prediktivno_modeliranje.html#cb735-1" tabindex="-1"></a>model <span class="ot">&lt;-</span> <span class="fu">train</span>(formula, </span>
+<span id="cb735-2"><a href="prediktivno_modeliranje.html#cb735-2" tabindex="-1"></a>               <span class="at">data =</span> trening_podaci, </span>
+<span id="cb735-3"><a href="prediktivno_modeliranje.html#cb735-3" tabindex="-1"></a>               <span class="at">method =</span> odabrana_metoda, </span>
+<span id="cb735-4"><a href="prediktivno_modeliranje.html#cb735-4" tabindex="-1"></a>               <span class="at">preProcess =</span> koraci_pretprocesiranja,</span>
+<span id="cb735-5"><a href="prediktivno_modeliranje.html#cb735-5" tabindex="-1"></a>               <span class="at">trControl =</span> kontrolni_objekt</span>
+<span id="cb735-6"><a href="prediktivno_modeliranje.html#cb735-6" tabindex="-1"></a>               <span class="at">tuneGrid =</span> rešetka_hiperparametara)</span></code></pre></div>
 <p>U našem slučaju za korake pretprocesiranja možemo proslijediti znakovni vektor <code>c("center", "scale")</code>, dok za hiperparametre šaljemo podatkovni okvir sa vrijednostima parametra <code>k</code> koje želimo isprobati, npr. <code>data.frame(k = c(1, 2, 3))</code>.</p>
 <p>Jednom kada stvorimo model možemo ga testirati nad novim podacima preko već upoznate funkcije <code>predict</code>:</p>
-<div class="sourceCode" id="cb723"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb723-1"><a href="prediktivno_modeliranje.html#cb723-1" tabindex="-1"></a>predikcije <span class="ot">&lt;-</span> <span class="fu">predict</span>(model, </span>
-<span id="cb723-2"><a href="prediktivno_modeliranje.html#cb723-2" tabindex="-1"></a>                      <span class="at">newdata =</span> testni_podaci, </span>
-<span id="cb723-3"><a href="prediktivno_modeliranje.html#cb723-3" tabindex="-1"></a>                      dodatni_parametri)</span></code></pre></div>
+<div class="sourceCode" id="cb736"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb736-1"><a href="prediktivno_modeliranje.html#cb736-1" tabindex="-1"></a>predikcije <span class="ot">&lt;-</span> <span class="fu">predict</span>(model, </span>
+<span id="cb736-2"><a href="prediktivno_modeliranje.html#cb736-2" tabindex="-1"></a>                      <span class="at">newdata =</span> testni_podaci, </span>
+<span id="cb736-3"><a href="prediktivno_modeliranje.html#cb736-3" tabindex="-1"></a>                      dodatni_parametri)</span></code></pre></div>
 <p>pri čemu kod ovog klasifikacijskog modela za dodatne parametre možemo postaviti <code>type = "raw"</code> ako želimo da model odmah upiše pretpostavljenu klasu, ili <code>type = "prob"</code> ako želimo dobiti uvid u vjerojatnosti pripadnosti klasi.</p>
 <p><strong>Zadatak 14.11 - Stvaranje modela za kNN klasifikaciju</strong></p>
-<div class="sourceCode" id="cb724"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb724-1"><a href="prediktivno_modeliranje.html#cb724-1" tabindex="-1"></a><span class="co"># korištenjem funkcije `train` paketa `caret`</span></span>
-<span id="cb724-2"><a href="prediktivno_modeliranje.html#cb724-2" tabindex="-1"></a><span class="co"># stvorite varijablu `kNNMod` koja će predstavljati </span></span>
-<span id="cb724-3"><a href="prediktivno_modeliranje.html#cb724-3" tabindex="-1"></a><span class="co"># rezultat korištenja metode `knn` nad skupom `wine.train`</span></span>
-<span id="cb724-4"><a href="prediktivno_modeliranje.html#cb724-4" tabindex="-1"></a><span class="co"># ciljna varijabla je `type`</span></span>
-<span id="cb724-5"><a href="prediktivno_modeliranje.html#cb724-5" tabindex="-1"></a><span class="co"># a prediktori su sve ostale varijable osim `quality`</span></span>
-<span id="cb724-6"><a href="prediktivno_modeliranje.html#cb724-6" tabindex="-1"></a></span>
-<span id="cb724-7"><a href="prediktivno_modeliranje.html#cb724-7" tabindex="-1"></a><span class="co"># za korake pretprocesiranja odaberite &quot;center&quot; i &quot;scale&quot;</span></span>
-<span id="cb724-8"><a href="prediktivno_modeliranje.html#cb724-8" tabindex="-1"></a><span class="co"># a za parametar k isprobajte vrijednosti 3, 5, 7, 10, 20 i 100</span></span>
-<span id="cb724-9"><a href="prediktivno_modeliranje.html#cb724-9" tabindex="-1"></a></span>
-<span id="cb724-10"><a href="prediktivno_modeliranje.html#cb724-10" tabindex="-1"></a><span class="co"># ispišite na zaslon konačni model</span></span>
-<span id="cb724-11"><a href="prediktivno_modeliranje.html#cb724-11" tabindex="-1"></a></span>
-<span id="cb724-12"><a href="prediktivno_modeliranje.html#cb724-12" tabindex="-1"></a><span class="co"># proslijedite model funkciji `plot` i objasnite što je prikazano</span></span></code></pre></div>
+<div class="sourceCode" id="cb737"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb737-1"><a href="prediktivno_modeliranje.html#cb737-1" tabindex="-1"></a><span class="co"># korištenjem funkcije `train` paketa `caret`</span></span>
+<span id="cb737-2"><a href="prediktivno_modeliranje.html#cb737-2" tabindex="-1"></a><span class="co"># stvorite varijablu `kNNMod` koja će predstavljati </span></span>
+<span id="cb737-3"><a href="prediktivno_modeliranje.html#cb737-3" tabindex="-1"></a><span class="co"># rezultat korištenja metode `knn` nad skupom `wine.train`</span></span>
+<span id="cb737-4"><a href="prediktivno_modeliranje.html#cb737-4" tabindex="-1"></a><span class="co"># ciljna varijabla je `type`</span></span>
+<span id="cb737-5"><a href="prediktivno_modeliranje.html#cb737-5" tabindex="-1"></a><span class="co"># a prediktori su sve ostale varijable osim `quality`</span></span>
+<span id="cb737-6"><a href="prediktivno_modeliranje.html#cb737-6" tabindex="-1"></a></span>
+<span id="cb737-7"><a href="prediktivno_modeliranje.html#cb737-7" tabindex="-1"></a><span class="co"># za korake pretprocesiranja odaberite &quot;center&quot; i &quot;scale&quot;</span></span>
+<span id="cb737-8"><a href="prediktivno_modeliranje.html#cb737-8" tabindex="-1"></a><span class="co"># a za parametar k isprobajte vrijednosti 3, 5, 7, 10, 20 i 100</span></span>
+<span id="cb737-9"><a href="prediktivno_modeliranje.html#cb737-9" tabindex="-1"></a></span>
+<span id="cb737-10"><a href="prediktivno_modeliranje.html#cb737-10" tabindex="-1"></a><span class="co"># ispišite na zaslon konačni model</span></span>
+<span id="cb737-11"><a href="prediktivno_modeliranje.html#cb737-11" tabindex="-1"></a></span>
+<span id="cb737-12"><a href="prediktivno_modeliranje.html#cb737-12" tabindex="-1"></a><span class="co"># proslijedite model funkciji `plot` i objasnite što je prikazano</span></span></code></pre></div>
 <div class="fold s o">
-<div class="sourceCode" id="cb725"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb725-1"><a href="prediktivno_modeliranje.html#cb725-1" tabindex="-1"></a><span class="co">#library(caret)   # ako je potrebno</span></span>
-<span id="cb725-2"><a href="prediktivno_modeliranje.html#cb725-2" tabindex="-1"></a>kNNMod <span class="ot">&lt;-</span> <span class="fu">train</span>(type <span class="sc">~</span> . <span class="sc">-</span> quality, </span>
-<span id="cb725-3"><a href="prediktivno_modeliranje.html#cb725-3" tabindex="-1"></a>                 <span class="at">data =</span> wine.train, </span>
-<span id="cb725-4"><a href="prediktivno_modeliranje.html#cb725-4" tabindex="-1"></a>                 <span class="at">preProcess =</span> <span class="fu">c</span>(<span class="st">&quot;center&quot;</span>, <span class="st">&quot;scale&quot;</span>),</span>
-<span id="cb725-5"><a href="prediktivno_modeliranje.html#cb725-5" tabindex="-1"></a>                 <span class="at">method =</span> <span class="st">&quot;knn&quot;</span>, <span class="at">tuneGrid =</span> <span class="fu">data.frame</span>(<span class="at">k =</span> <span class="fu">c</span>(<span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">7</span>, <span class="dv">10</span>, <span class="dv">20</span>, <span class="dv">100</span>)))</span>
-<span id="cb725-6"><a href="prediktivno_modeliranje.html#cb725-6" tabindex="-1"></a></span>
-<span id="cb725-7"><a href="prediktivno_modeliranje.html#cb725-7" tabindex="-1"></a><span class="fu">print</span>(kNNMod)</span></code></pre></div>
+<div class="sourceCode" id="cb738"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb738-1"><a href="prediktivno_modeliranje.html#cb738-1" tabindex="-1"></a><span class="co">#library(caret)   # ako je potrebno</span></span>
+<span id="cb738-2"><a href="prediktivno_modeliranje.html#cb738-2" tabindex="-1"></a>kNNMod <span class="ot">&lt;-</span> <span class="fu">train</span>(type <span class="sc">~</span> . <span class="sc">-</span> quality, </span>
+<span id="cb738-3"><a href="prediktivno_modeliranje.html#cb738-3" tabindex="-1"></a>                 <span class="at">data =</span> wine.train, </span>
+<span id="cb738-4"><a href="prediktivno_modeliranje.html#cb738-4" tabindex="-1"></a>                 <span class="at">preProcess =</span> <span class="fu">c</span>(<span class="st">&quot;center&quot;</span>, <span class="st">&quot;scale&quot;</span>),</span>
+<span id="cb738-5"><a href="prediktivno_modeliranje.html#cb738-5" tabindex="-1"></a>                 <span class="at">method =</span> <span class="st">&quot;knn&quot;</span>, <span class="at">tuneGrid =</span> <span class="fu">data.frame</span>(<span class="at">k =</span> <span class="fu">c</span>(<span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">7</span>, <span class="dv">10</span>, <span class="dv">20</span>, <span class="dv">100</span>)))</span>
+<span id="cb738-6"><a href="prediktivno_modeliranje.html#cb738-6" tabindex="-1"></a></span>
+<span id="cb738-7"><a href="prediktivno_modeliranje.html#cb738-7" tabindex="-1"></a><span class="fu">print</span>(kNNMod)</span></code></pre></div>
 <pre><code>## k-Nearest Neighbors 
 ## 
 ## 4546 samples
@@ -986,19 +1003,19 @@ div.csl-indent {
 ## The final value used for the model was k = 10.</code></pre>
 </div>
 <div class="fold s o">
-<div class="sourceCode" id="cb727"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb727-1"><a href="prediktivno_modeliranje.html#cb727-1" tabindex="-1"></a><span class="fu">plot</span>(kNNMod)</span></code></pre></div>
-<p><img src="osnoveR_files/figure-html/unnamed-chunk-570-1.png" width="672" /></p>
+<div class="sourceCode" id="cb740"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb740-1"><a href="prediktivno_modeliranje.html#cb740-1" tabindex="-1"></a><span class="fu">plot</span>(kNNMod)</span></code></pre></div>
+<p><img src="osnoveR_files/figure-html/unnamed-chunk-575-1.png" width="672" /></p>
 </div>
 <p><strong>Zadatak 14.12 - Klasifikacija novih opservacija uz pomoć kNN modela</strong></p>
-<div class="sourceCode" id="cb728"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb728-1"><a href="prediktivno_modeliranje.html#cb728-1" tabindex="-1"></a><span class="co"># skupu `wine.test` dodajte stupac `predictedType`</span></span>
-<span id="cb728-2"><a href="prediktivno_modeliranje.html#cb728-2" tabindex="-1"></a><span class="co"># u kojem će biti rezultat primjene klasifikatora `kNNMod`</span></span>
-<span id="cb728-3"><a href="prediktivno_modeliranje.html#cb728-3" tabindex="-1"></a><span class="co"># nad tim skupom</span></span>
-<span id="cb728-4"><a href="prediktivno_modeliranje.html#cb728-4" tabindex="-1"></a><span class="co"># postavite parametar `type` na `&quot;raw&quot;`</span></span>
-<span id="cb728-5"><a href="prediktivno_modeliranje.html#cb728-5" tabindex="-1"></a></span>
-<span id="cb728-6"><a href="prediktivno_modeliranje.html#cb728-6" tabindex="-1"></a><span class="co"># ispišite sve retke kod kojih klasifikator nije uspješno pogodio klasu</span></span></code></pre></div>
+<div class="sourceCode" id="cb741"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb741-1"><a href="prediktivno_modeliranje.html#cb741-1" tabindex="-1"></a><span class="co"># skupu `wine.test` dodajte stupac `predictedType`</span></span>
+<span id="cb741-2"><a href="prediktivno_modeliranje.html#cb741-2" tabindex="-1"></a><span class="co"># u kojem će biti rezultat primjene klasifikatora `kNNMod`</span></span>
+<span id="cb741-3"><a href="prediktivno_modeliranje.html#cb741-3" tabindex="-1"></a><span class="co"># nad tim skupom</span></span>
+<span id="cb741-4"><a href="prediktivno_modeliranje.html#cb741-4" tabindex="-1"></a><span class="co"># postavite parametar `type` na `&quot;raw&quot;`</span></span>
+<span id="cb741-5"><a href="prediktivno_modeliranje.html#cb741-5" tabindex="-1"></a></span>
+<span id="cb741-6"><a href="prediktivno_modeliranje.html#cb741-6" tabindex="-1"></a><span class="co"># ispišite sve retke kod kojih klasifikator nije uspješno pogodio klasu</span></span></code></pre></div>
 <div class="fold s o">
-<div class="sourceCode" id="cb729"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb729-1"><a href="prediktivno_modeliranje.html#cb729-1" tabindex="-1"></a>wine.test<span class="sc">$</span>predictedType <span class="ot">&lt;-</span> <span class="fu">predict</span>(kNNMod, <span class="at">newdata =</span> wine.test, <span class="at">type =</span> <span class="st">&quot;raw&quot;</span>)</span>
-<span id="cb729-2"><a href="prediktivno_modeliranje.html#cb729-2" tabindex="-1"></a>wine.test <span class="sc">%&gt;%</span> <span class="fu">filter</span>(type <span class="sc">!=</span> predictedType)</span></code></pre></div>
+<div class="sourceCode" id="cb742"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb742-1"><a href="prediktivno_modeliranje.html#cb742-1" tabindex="-1"></a>wine.test<span class="sc">$</span>predictedType <span class="ot">&lt;-</span> <span class="fu">predict</span>(kNNMod, <span class="at">newdata =</span> wine.test, <span class="at">type =</span> <span class="st">&quot;raw&quot;</span>)</span>
+<span id="cb742-2"><a href="prediktivno_modeliranje.html#cb742-2" tabindex="-1"></a>wine.test <span class="sc">%&gt;%</span> <span class="fu">filter</span>(type <span class="sc">!=</span> predictedType)</span></code></pre></div>
 <pre><code>## # A tibble: 16 × 14
 ##    fixedAcidity volatileAcidity citricAcid residualSugar chlorides
 ##           &lt;dbl&gt;           &lt;dbl&gt;      &lt;dbl&gt;         &lt;dbl&gt;     &lt;dbl&gt;
@@ -1024,10 +1041,10 @@ div.csl-indent {
 </div>
 <p>Kako možemo procijeniti uspješnost klasifikatora? Tipična procedura (kod binarnih klasifikatora) jest izrada tzv. “matrice konfuzije” (engl. <em>confusion matrix</em>). Ovo jednostavno znači da ćemo napraviti tablicu koja će pokazati koliko se dobro poklapaju predviđene vrijednosti sa stvarnim vrijednostima. Najlakši način za izradu ove tablice jest jednostavno pozvati funkciju <code>table</code> sa stupcem predikcija i stupcem stvarnih vrijednosti kao parametrima.</p>
 <p><strong>Zadatak 14.13 - Jednostavna matrica konfuzije</strong></p>
-<div class="sourceCode" id="cb731"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb731-1"><a href="prediktivno_modeliranje.html#cb731-1" tabindex="-1"></a><span class="co"># ispišite matricu konfuzije pozivom funkcije `table`</span></span>
-<span id="cb731-2"><a href="prediktivno_modeliranje.html#cb731-2" tabindex="-1"></a><span class="co"># nad odgovarajućim stupcima skupa `wine.test`</span></span></code></pre></div>
+<div class="sourceCode" id="cb744"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb744-1"><a href="prediktivno_modeliranje.html#cb744-1" tabindex="-1"></a><span class="co"># ispišite matricu konfuzije pozivom funkcije `table`</span></span>
+<span id="cb744-2"><a href="prediktivno_modeliranje.html#cb744-2" tabindex="-1"></a><span class="co"># nad odgovarajućim stupcima skupa `wine.test`</span></span></code></pre></div>
 <div class="fold s o">
-<div class="sourceCode" id="cb732"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb732-1"><a href="prediktivno_modeliranje.html#cb732-1" tabindex="-1"></a><span class="fu">table</span>(wine.test<span class="sc">$</span>predictedType, wine.test<span class="sc">$</span>type)</span></code></pre></div>
+<div class="sourceCode" id="cb745"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb745-1"><a href="prediktivno_modeliranje.html#cb745-1" tabindex="-1"></a><span class="fu">table</span>(wine.test<span class="sc">$</span>predictedType, wine.test<span class="sc">$</span>type)</span></code></pre></div>
 <pre><code>##        
 ##          red white
 ##   red    471     5
@@ -1045,18 +1062,18 @@ div.csl-indent {
 <p>Iako je točnost možda najlogičniji odabir (jer nam zapravo daje postotak “pogođenih” kategorija), vrlo često moramo biti oprezni jer nam može davati iskrivljenu sliku učinkovitosti klasifikatora, pogotovo kod velikog disbalansa kategorija ili slučajeva kada nam je jedan tip pogrešaka puno opasniji od drugog. Tipičan primjer je dijagnostika rijetke bolesti - ako se bolest javlja u samo 0.1% slučajeva, onda trivijalni klasifikator koji za sve opservacije dijagnosticira da bolest nije prisutna dobro radi u 99.9% slučajeva. Isto tako, ako se radi o opasnoj bolesti, onda nam je <em>FP</em> greška (bolest je dijagnosticirana iako nije prisutna) daleko manje važna od <em>FN</em> greške (bolest je prisutna ali nije prepoznata). U ovim slučajevima odabir neke druge mjere (npr. “osjetljivost” ili “udio negativnih pogrešaka”) je često puno bolji pokazatelj kvalitete klasifikatora.</p>
 <p>Uz pomoć jezika R vrlo je lako “ručno” izračunati sve ove mjere. No funkcija <code>confusionMatrix</code> paketa <code>caret</code> (koja se usput naslanja na paket <code>e1071</code>) nam daje isti rezultat kao i funkcija <code>table</code>, ali uz dodatnu pogodnost izračuna velikog broja mjera koju nam mogu pomoći pri procjeni kvalitete klasifikatora.</p>
 <p><strong>Zadatak 14.14 - Funkcija <code>confusionMatrix</code></strong></p>
-<div class="sourceCode" id="cb734"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb734-1"><a href="prediktivno_modeliranje.html#cb734-1" tabindex="-1"></a><span class="co"># u varijablu `confMat` učitajte matricu konfuzije</span></span>
-<span id="cb734-2"><a href="prediktivno_modeliranje.html#cb734-2" tabindex="-1"></a><span class="co"># nastalu pozivom funkcije `confusionMatrix`</span></span>
-<span id="cb734-3"><a href="prediktivno_modeliranje.html#cb734-3" tabindex="-1"></a><span class="co"># nad odgovarajućim stupcima skupa `wine.test`</span></span>
-<span id="cb734-4"><a href="prediktivno_modeliranje.html#cb734-4" tabindex="-1"></a></span>
-<span id="cb734-5"><a href="prediktivno_modeliranje.html#cb734-5" tabindex="-1"></a><span class="co"># ispišite varijablu `confMat`</span></span></code></pre></div>
+<div class="sourceCode" id="cb747"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb747-1"><a href="prediktivno_modeliranje.html#cb747-1" tabindex="-1"></a><span class="co"># u varijablu `confMat` učitajte matricu konfuzije</span></span>
+<span id="cb747-2"><a href="prediktivno_modeliranje.html#cb747-2" tabindex="-1"></a><span class="co"># nastalu pozivom funkcije `confusionMatrix`</span></span>
+<span id="cb747-3"><a href="prediktivno_modeliranje.html#cb747-3" tabindex="-1"></a><span class="co"># nad odgovarajućim stupcima skupa `wine.test`</span></span>
+<span id="cb747-4"><a href="prediktivno_modeliranje.html#cb747-4" tabindex="-1"></a></span>
+<span id="cb747-5"><a href="prediktivno_modeliranje.html#cb747-5" tabindex="-1"></a><span class="co"># ispišite varijablu `confMat`</span></span></code></pre></div>
 <div class="fold s o">
-<div class="sourceCode" id="cb735"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb735-1"><a href="prediktivno_modeliranje.html#cb735-1" tabindex="-1"></a><span class="co">#library(e1071)  # ako je potrebno</span></span>
-<span id="cb735-2"><a href="prediktivno_modeliranje.html#cb735-2" tabindex="-1"></a><span class="co">#library(caret)  # ako je potrebno</span></span>
-<span id="cb735-3"><a href="prediktivno_modeliranje.html#cb735-3" tabindex="-1"></a>confMat <span class="ot">&lt;-</span> <span class="fu">confusionMatrix</span>(wine.test<span class="sc">$</span>predictedType, wine.test<span class="sc">$</span>type)</span>
-<span id="cb735-4"><a href="prediktivno_modeliranje.html#cb735-4" tabindex="-1"></a></span>
-<span id="cb735-5"><a href="prediktivno_modeliranje.html#cb735-5" tabindex="-1"></a><span class="co"># ispišite varijablu `confMat`</span></span>
-<span id="cb735-6"><a href="prediktivno_modeliranje.html#cb735-6" tabindex="-1"></a>confMat</span></code></pre></div>
+<div class="sourceCode" id="cb748"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb748-1"><a href="prediktivno_modeliranje.html#cb748-1" tabindex="-1"></a><span class="co">#library(e1071)  # ako je potrebno</span></span>
+<span id="cb748-2"><a href="prediktivno_modeliranje.html#cb748-2" tabindex="-1"></a><span class="co">#library(caret)  # ako je potrebno</span></span>
+<span id="cb748-3"><a href="prediktivno_modeliranje.html#cb748-3" tabindex="-1"></a>confMat <span class="ot">&lt;-</span> <span class="fu">confusionMatrix</span>(wine.test<span class="sc">$</span>predictedType, wine.test<span class="sc">$</span>type)</span>
+<span id="cb748-4"><a href="prediktivno_modeliranje.html#cb748-4" tabindex="-1"></a></span>
+<span id="cb748-5"><a href="prediktivno_modeliranje.html#cb748-5" tabindex="-1"></a><span class="co"># ispišite varijablu `confMat`</span></span>
+<span id="cb748-6"><a href="prediktivno_modeliranje.html#cb748-6" tabindex="-1"></a>confMat</span></code></pre></div>
 <pre><code>## Confusion Matrix and Statistics
 ## 
 ##           Reference
@@ -1090,24 +1107,24 @@ div.csl-indent {
 <div id="napredne-klasifikacijske-metode" class="section level2 hasAnchor" number="14.7">
 <h2><span class="header-section-number">14.7</span> Napredne klasifikacijske metode<a href="prediktivno_modeliranje.html#napredne-klasifikacijske-metode" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Slično kao kod regresijskih metoda, uz pomoć paketa <code>caret</code> možemo vrlo lako testirati i naprednije klasifikacijske metode, bitno je samo da korektno definiramo ulazne parametre, pripazimo na pretprocesiranje podataka, rešetke hiperparametara te sve ostale specifičnosti modela kojeg koristimo. Primjerice, ukoliko želimo prethodni zadatak riješiti kroz klasifikator zasnovan na neuronskim mrežama, to možemo učiniti ovako:</p>
-<div class="sourceCode" id="cb737"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb737-1"><a href="prediktivno_modeliranje.html#cb737-1" tabindex="-1"></a><span class="co"># model neuronske mreže iz paketa `nnet`</span></span>
-<span id="cb737-2"><a href="prediktivno_modeliranje.html#cb737-2" tabindex="-1"></a></span>
-<span id="cb737-3"><a href="prediktivno_modeliranje.html#cb737-3" tabindex="-1"></a>nnGrid <span class="ot">&lt;-</span> <span class="fu">expand.grid</span>(</span>
-<span id="cb737-4"><a href="prediktivno_modeliranje.html#cb737-4" tabindex="-1"></a>  <span class="at">size =</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">6</span>),       <span class="co"># broj jedinica u skrivenom sloju</span></span>
-<span id="cb737-5"><a href="prediktivno_modeliranje.html#cb737-5" tabindex="-1"></a>  <span class="at">decay =</span> <span class="fu">c</span>(<span class="fl">0.0</span>, <span class="fl">0.1</span>, <span class="fl">0.5</span>) <span class="co"># regularizacija, manji broj daje veću fleksibilnost</span></span>
-<span id="cb737-6"><a href="prediktivno_modeliranje.html#cb737-6" tabindex="-1"></a>)</span>
-<span id="cb737-7"><a href="prediktivno_modeliranje.html#cb737-7" tabindex="-1"></a>nnMod <span class="ot">&lt;-</span> <span class="fu">train</span>(</span>
-<span id="cb737-8"><a href="prediktivno_modeliranje.html#cb737-8" tabindex="-1"></a>  type <span class="sc">~</span> . <span class="sc">-</span> quality,</span>
-<span id="cb737-9"><a href="prediktivno_modeliranje.html#cb737-9" tabindex="-1"></a>  <span class="at">data =</span> wine.train,</span>
-<span id="cb737-10"><a href="prediktivno_modeliranje.html#cb737-10" tabindex="-1"></a>  <span class="at">method =</span> <span class="st">&quot;nnet&quot;</span>,</span>
-<span id="cb737-11"><a href="prediktivno_modeliranje.html#cb737-11" tabindex="-1"></a>  <span class="at">trControl =</span> <span class="fu">trainControl</span>(<span class="at">method =</span> <span class="st">&quot;cv&quot;</span>, <span class="at">number =</span> <span class="dv">5</span>),</span>
-<span id="cb737-12"><a href="prediktivno_modeliranje.html#cb737-12" tabindex="-1"></a>  <span class="at">preProcess =</span> <span class="fu">c</span>(<span class="st">&quot;center&quot;</span>, <span class="st">&quot;scale&quot;</span>),</span>
-<span id="cb737-13"><a href="prediktivno_modeliranje.html#cb737-13" tabindex="-1"></a>  <span class="at">tuneGrid =</span> nnGrid,</span>
-<span id="cb737-14"><a href="prediktivno_modeliranje.html#cb737-14" tabindex="-1"></a>  <span class="at">trace =</span> <span class="cn">FALSE</span></span>
-<span id="cb737-15"><a href="prediktivno_modeliranje.html#cb737-15" tabindex="-1"></a>)</span>
-<span id="cb737-16"><a href="prediktivno_modeliranje.html#cb737-16" tabindex="-1"></a></span>
-<span id="cb737-17"><a href="prediktivno_modeliranje.html#cb737-17" tabindex="-1"></a>wine.test<span class="sc">$</span>predictedTypeNN <span class="ot">&lt;-</span> <span class="fu">predict</span>(nnMod, <span class="at">newdata =</span> wine.test, <span class="at">type =</span> <span class="st">&quot;raw&quot;</span>)</span>
-<span id="cb737-18"><a href="prediktivno_modeliranje.html#cb737-18" tabindex="-1"></a><span class="fu">table</span>(wine.test<span class="sc">$</span>predictedTypeNN, wine.test<span class="sc">$</span>type)</span></code></pre></div>
+<div class="sourceCode" id="cb750"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb750-1"><a href="prediktivno_modeliranje.html#cb750-1" tabindex="-1"></a><span class="co"># model neuronske mreže iz paketa `nnet`</span></span>
+<span id="cb750-2"><a href="prediktivno_modeliranje.html#cb750-2" tabindex="-1"></a></span>
+<span id="cb750-3"><a href="prediktivno_modeliranje.html#cb750-3" tabindex="-1"></a>nnGrid <span class="ot">&lt;-</span> <span class="fu">expand.grid</span>(</span>
+<span id="cb750-4"><a href="prediktivno_modeliranje.html#cb750-4" tabindex="-1"></a>  <span class="at">size =</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">6</span>),       <span class="co"># broj jedinica u skrivenom sloju</span></span>
+<span id="cb750-5"><a href="prediktivno_modeliranje.html#cb750-5" tabindex="-1"></a>  <span class="at">decay =</span> <span class="fu">c</span>(<span class="fl">0.0</span>, <span class="fl">0.1</span>, <span class="fl">0.5</span>) <span class="co"># regularizacija, manji broj daje veću fleksibilnost</span></span>
+<span id="cb750-6"><a href="prediktivno_modeliranje.html#cb750-6" tabindex="-1"></a>)</span>
+<span id="cb750-7"><a href="prediktivno_modeliranje.html#cb750-7" tabindex="-1"></a>nnMod <span class="ot">&lt;-</span> <span class="fu">train</span>(</span>
+<span id="cb750-8"><a href="prediktivno_modeliranje.html#cb750-8" tabindex="-1"></a>  type <span class="sc">~</span> . <span class="sc">-</span> quality,</span>
+<span id="cb750-9"><a href="prediktivno_modeliranje.html#cb750-9" tabindex="-1"></a>  <span class="at">data =</span> wine.train,</span>
+<span id="cb750-10"><a href="prediktivno_modeliranje.html#cb750-10" tabindex="-1"></a>  <span class="at">method =</span> <span class="st">&quot;nnet&quot;</span>,</span>
+<span id="cb750-11"><a href="prediktivno_modeliranje.html#cb750-11" tabindex="-1"></a>  <span class="at">trControl =</span> <span class="fu">trainControl</span>(<span class="at">method =</span> <span class="st">&quot;cv&quot;</span>, <span class="at">number =</span> <span class="dv">5</span>),</span>
+<span id="cb750-12"><a href="prediktivno_modeliranje.html#cb750-12" tabindex="-1"></a>  <span class="at">preProcess =</span> <span class="fu">c</span>(<span class="st">&quot;center&quot;</span>, <span class="st">&quot;scale&quot;</span>),</span>
+<span id="cb750-13"><a href="prediktivno_modeliranje.html#cb750-13" tabindex="-1"></a>  <span class="at">tuneGrid =</span> nnGrid,</span>
+<span id="cb750-14"><a href="prediktivno_modeliranje.html#cb750-14" tabindex="-1"></a>  <span class="at">trace =</span> <span class="cn">FALSE</span></span>
+<span id="cb750-15"><a href="prediktivno_modeliranje.html#cb750-15" tabindex="-1"></a>)</span>
+<span id="cb750-16"><a href="prediktivno_modeliranje.html#cb750-16" tabindex="-1"></a></span>
+<span id="cb750-17"><a href="prediktivno_modeliranje.html#cb750-17" tabindex="-1"></a>wine.test<span class="sc">$</span>predictedTypeNN <span class="ot">&lt;-</span> <span class="fu">predict</span>(nnMod, <span class="at">newdata =</span> wine.test, <span class="at">type =</span> <span class="st">&quot;raw&quot;</span>)</span>
+<span id="cb750-18"><a href="prediktivno_modeliranje.html#cb750-18" tabindex="-1"></a><span class="fu">table</span>(wine.test<span class="sc">$</span>predictedTypeNN, wine.test<span class="sc">$</span>type)</span></code></pre></div>
 <pre><code>##        
 ##          red white
 ##   red    475     1

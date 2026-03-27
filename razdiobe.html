@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>12 Razdiobe i simulacije | Programirajmo u R-u</title>
   <meta name="description" content="Udžbenik za predmet ‘Uvod u znanost o podacima’ studija Primjenjene kognitivne znanosti na Fakultetu elektrotehnike i računarstva, Sveučilište u Zagrebu." />
-  <meta name="generator" content="bookdown 0.42 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
 
   <meta property="og:title" content="12 Razdiobe i simulacije | Programirajmo u R-u" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="Damir Pintar" />
 
 
-<meta name="date" content="2026-03-02" />
+<meta name="date" content="2026-03-27" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -331,13 +331,30 @@ div.csl-indent {
 </ul></li>
 <li class="chapter" data-level="8" data-path="datumi.html"><a href="datumi.html"><i class="fa fa-check"></i><b>8</b> Rad sa vremenskim podacima</a>
 <ul>
-<li class="chapter" data-level="8.1" data-path="datumi.html"><a href="datumi.html#rad-sa-datumima"><i class="fa fa-check"></i><b>8.1</b> Rad sa datumima</a>
+<li class="chapter" data-level="8.1" data-path="datumi.html"><a href="datumi.html#rad-sa-vremenskim-tipovima-podataka"><i class="fa fa-check"></i><b>8.1</b> Rad sa vremenskim tipovima podataka</a>
 <ul>
 <li class="chapter" data-level="8.1.1" data-path="datumi.html"><a href="datumi.html#klasa-date"><i class="fa fa-check"></i><b>8.1.1</b> Klasa <code>Date</code></a></li>
+<li class="chapter" data-level="8.1.2" data-path="datumi.html"><a href="datumi.html#formatska-specifikacija"><i class="fa fa-check"></i><b>8.1.2</b> Formatska specifikacija</a></li>
+<li class="chapter" data-level="8.1.3" data-path="datumi.html"><a href="datumi.html#klasa-posixct"><i class="fa fa-check"></i><b>8.1.3</b> Klasa <code>POSIXct</code></a></li>
+<li class="chapter" data-level="8.1.4" data-path="datumi.html"><a href="datumi.html#formatska-specifikacija-i-vremenske-zone"><i class="fa fa-check"></i><b>8.1.4</b> Formatska specifikacija i vremenske zone</a></li>
+<li class="chapter" data-level="8.1.5" data-path="datumi.html"><a href="datumi.html#aritmetika-sa-vremenskim-tipovima-podataka"><i class="fa fa-check"></i><b>8.1.5</b> Aritmetika sa vremenskim tipovima podataka</a></li>
+<li class="chapter" data-level="8.1.6" data-path="datumi.html"><a href="datumi.html#klasa-i-funkcija-difftime"><i class="fa fa-check"></i><b>8.1.6</b> Klasa i funkcija <code>difftime</code></a></li>
+<li class="chapter" data-level="8.1.7" data-path="datumi.html"><a href="datumi.html#funkcija-seq-i-vremenski-tipovi-podataka"><i class="fa fa-check"></i><b>8.1.7</b> Funkcija <code>seq</code> i vremenski tipovi podataka</a></li>
 </ul></li>
-<li class="chapter" data-level="8.2" data-path="datumi.html"><a href="datumi.html#klase-posixct-i-posixlt"><i class="fa fa-check"></i><b>8.2</b> Klase <code>POSIXct</code> i <code>POSIXlt</code></a></li>
-<li class="chapter" data-level="8.3" data-path="datumi.html"><a href="datumi.html#paket-lubridate"><i class="fa fa-check"></i><b>8.3</b> Paket <code>lubridate</code></a></li>
-<li class="chapter" data-level="" data-path="datumi.html"><a href="datumi.html#zadaci-za-vježbu-6"><i class="fa fa-check"></i>Zadaci za vježbu</a></li>
+<li class="chapter" data-level="8.2" data-path="datumi.html"><a href="datumi.html#paket-lubridate"><i class="fa fa-check"></i><b>8.2</b> Paket <code>lubridate</code></a>
+<ul>
+<li class="chapter" data-level="8.2.1" data-path="datumi.html"><a href="datumi.html#parsiranje-datuma-i-vremenskih-oznaka"><i class="fa fa-check"></i><b>8.2.1</b> Parsiranje datuma i vremenskih oznaka</a></li>
+<li class="chapter" data-level="8.2.2" data-path="datumi.html"><a href="datumi.html#paket-lubridate-i-vremenske-oznake"><i class="fa fa-check"></i><b>8.2.2</b> Paket <code>lubridate</code> i vremenske oznake</a></li>
+<li class="chapter" data-level="8.2.3" data-path="datumi.html"><a href="datumi.html#izvlačenje-i-postavljanje-segmenata-datuma-i-vremena"><i class="fa fa-check"></i><b>8.2.3</b> Izvlačenje i postavljanje segmenata datuma i vremena</a></li>
+</ul></li>
+<li class="chapter" data-level="8.3" data-path="datumi.html"><a href="datumi.html#trenutci-intervali-trajanja-i-periodi"><i class="fa fa-check"></i><b>8.3</b> Trenutci, intervali, trajanja i periodi</a>
+<ul>
+<li class="chapter" data-level="8.3.1" data-path="datumi.html"><a href="datumi.html#intervali"><i class="fa fa-check"></i><b>8.3.1</b> Intervali</a></li>
+<li class="chapter" data-level="8.3.2" data-path="datumi.html"><a href="datumi.html#period"><i class="fa fa-check"></i><b>8.3.2</b> Period</a></li>
+<li class="chapter" data-level="8.3.3" data-path="datumi.html"><a href="datumi.html#trajanje"><i class="fa fa-check"></i><b>8.3.3</b> Trajanje</a></li>
+<li class="chapter" data-level="8.3.4" data-path="datumi.html"><a href="datumi.html#pomoćne-funkcije-za-rad-sa-vremenskim-intervalima"><i class="fa fa-check"></i><b>8.3.4</b> Pomoćne funkcije za rad sa vremenskim intervalima</a></li>
+</ul></li>
+<li class="chapter" data-level="8.4" data-path="datumi.html"><a href="datumi.html#dodatna-literatura"><i class="fa fa-check"></i><b>8.4</b> Dodatna literatura</a></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="nizovi.html"><a href="nizovi.html"><i class="fa fa-check"></i><b>9</b> Obrada znakovnih nizova</a>
 <ul>
@@ -346,7 +363,7 @@ div.csl-indent {
 <li class="chapter" data-level="9.1.1" data-path="nizovi.html"><a href="nizovi.html#analiza-teksta-i-regularni-izrazi"><i class="fa fa-check"></i><b>9.1.1</b> Analiza teksta i regularni izrazi</a></li>
 <li class="chapter" data-level="9.1.2" data-path="nizovi.html"><a href="nizovi.html#paket-stringr"><i class="fa fa-check"></i><b>9.1.2</b> Paket <code>stringr</code></a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="nizovi.html"><a href="nizovi.html#zadaci-za-vježbu-7"><i class="fa fa-check"></i>Zadaci za vježbu</a></li>
+<li class="chapter" data-level="" data-path="nizovi.html"><a href="nizovi.html#zadaci-za-vježbu-6"><i class="fa fa-check"></i>Zadaci za vježbu</a></li>
 </ul></li>
 <li class="chapter" data-level="10" data-path="prilagodba-podatkovnih-skupova-uz-paket-dplyr.html"><a href="prilagodba-podatkovnih-skupova-uz-paket-dplyr.html"><i class="fa fa-check"></i><b>10</b> Prilagodba podatkovnih skupova uz paket <code>dplyr</code></a>
 <ul>
@@ -362,7 +379,7 @@ div.csl-indent {
 <li class="chapter" data-level="10.8.1" data-path="prilagodba-podatkovnih-skupova-uz-paket-dplyr.html"><a href="prilagodba-podatkovnih-skupova-uz-paket-dplyr.html#excel-datoteka-kao-izvor-odredište-podataka"><i class="fa fa-check"></i><b>10.8.1</b> Excel datoteka kao izvor (odredište) podataka</a></li>
 <li class="chapter" data-level="10.8.2" data-path="prilagodba-podatkovnih-skupova-uz-paket-dplyr.html"><a href="prilagodba-podatkovnih-skupova-uz-paket-dplyr.html#rad-sa-relacijskim-bazama"><i class="fa fa-check"></i><b>10.8.2</b> Rad sa relacijskim bazama</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="prilagodba-podatkovnih-skupova-uz-paket-dplyr.html"><a href="prilagodba-podatkovnih-skupova-uz-paket-dplyr.html#zadaci-za-vježbu-8"><i class="fa fa-check"></i>Zadaci za vježbu</a></li>
+<li class="chapter" data-level="" data-path="prilagodba-podatkovnih-skupova-uz-paket-dplyr.html"><a href="prilagodba-podatkovnih-skupova-uz-paket-dplyr.html#zadaci-za-vježbu-7"><i class="fa fa-check"></i>Zadaci za vježbu</a></li>
 </ul></li>
 <li class="chapter" data-level="11" data-path="ggplot2.html"><a href="ggplot2.html"><i class="fa fa-check"></i><b>11</b> Vizualizacija podataka uz paket <code>ggplot2</code></a>
 <ul>
@@ -378,7 +395,7 @@ div.csl-indent {
 <li class="chapter" data-level="11.3.6" data-path="ggplot2.html"><a href="ggplot2.html#uvjetni-facetirani-grafovi"><i class="fa fa-check"></i><b>11.3.6</b> Uvjetni (facetirani) grafovi</a></li>
 </ul></li>
 <li class="chapter" data-level="11.4" data-path="ggplot2.html"><a href="ggplot2.html#grafovi-u-eksploratornoj-analizi-i-izvještavanju"><i class="fa fa-check"></i><b>11.4</b> Grafovi u eksploratornoj analizi i izvještavanju</a></li>
-<li class="chapter" data-level="" data-path="ggplot2.html"><a href="ggplot2.html#zadaci-za-vježbu-9"><i class="fa fa-check"></i>Zadaci za vježbu</a></li>
+<li class="chapter" data-level="" data-path="ggplot2.html"><a href="ggplot2.html#zadaci-za-vježbu-8"><i class="fa fa-check"></i>Zadaci za vježbu</a></li>
 </ul></li>
 <li class="part"><span><b>III Statistika i strojno učenje u jeziku R</b></span></li>
 <li class="chapter" data-level="12" data-path="razdiobe.html"><a href="razdiobe.html"><i class="fa fa-check"></i><b>12</b> Razdiobe i simulacije</a>
@@ -389,7 +406,7 @@ div.csl-indent {
 <li class="chapter" data-level="12.4" data-path="razdiobe.html"><a href="razdiobe.html#normalna-razdioba"><i class="fa fa-check"></i><b>12.4</b> Normalna razdioba</a></li>
 <li class="chapter" data-level="12.5" data-path="razdiobe.html"><a href="razdiobe.html#procjena-funkcije-gustoće-razdiobe-i-kvantil-kvantil-graf"><i class="fa fa-check"></i><b>12.5</b> Procjena funkcije gustoće razdiobe i kvantil-kvantil graf</a></li>
 <li class="chapter" data-level="12.6" data-path="razdiobe.html"><a href="razdiobe.html#monte-carlo-simulacije"><i class="fa fa-check"></i><b>12.6</b> Monte Carlo Simulacije</a></li>
-<li class="chapter" data-level="" data-path="razdiobe.html"><a href="razdiobe.html#zadaci-za-vježbu-10"><i class="fa fa-check"></i>Zadaci za vježbu</a></li>
+<li class="chapter" data-level="" data-path="razdiobe.html"><a href="razdiobe.html#zadaci-za-vježbu-9"><i class="fa fa-check"></i>Zadaci za vježbu</a></li>
 </ul></li>
 <li class="part"><span><b>IV Strojno učenje i prediktivna analitika</b></span></li>
 <li class="chapter" data-level="13" data-path="regresija.html"><a href="regresija.html"><i class="fa fa-check"></i><b>13</b> Odabrane metode strojnog učenja: regresijska analiza</a>
@@ -401,7 +418,7 @@ div.csl-indent {
 <li class="chapter" data-level="13.1.3" data-path="regresija.html"><a href="regresija.html#linearna-regresija-i-kategorijske-varijable"><i class="fa fa-check"></i><b>13.1.3</b> Linearna regresija i kategorijske varijable</a></li>
 </ul></li>
 <li class="chapter" data-level="13.2" data-path="regresija.html"><a href="regresija.html#višestruka-multipla-linearna-regresija"><i class="fa fa-check"></i><b>13.2</b> Višestruka (multipla) linearna regresija</a></li>
-<li class="chapter" data-level="" data-path="regresija.html"><a href="regresija.html#zadaci-za-vježbu-11"><i class="fa fa-check"></i>Zadaci za vježbu</a></li>
+<li class="chapter" data-level="" data-path="regresija.html"><a href="regresija.html#zadaci-za-vježbu-10"><i class="fa fa-check"></i>Zadaci za vježbu</a></li>
 </ul></li>
 <li class="chapter" data-level="14" data-path="prediktivno_modeliranje.html"><a href="prediktivno_modeliranje.html"><i class="fa fa-check"></i><b>14</b> Uvod u prediktivno modeliranje</a>
 <ul>
@@ -444,41 +461,41 @@ div.csl-indent {
 <pre><code>sample(x, size, replace = FALSE, prob = NULL)</code></pre>
 <p>U potpisu funkcije <code>x</code> je vektor iz kojeg slučajno odabiremo vrijednosti, <code>size</code> je željenja veličina niza, <code>replace</code> parametar opisuje želimo li odabir sa ponavljanjem ili bez (<code>TRUE</code> znači da ista vrijednost može biti odabrana više puta), a <code>prob</code> omogućuje da eksplicitno definiramo vjerojatnosti odabira pojedinih vrijednosti (ako ostavimo vrijednost <code>NULL</code> svaki član vektora <code>x</code> ima istu vjerojatnost odabira).</p>
 <p><strong>Zadatak 12.1 - Funkcija <code>sample</code></strong></p>
-<div class="sourceCode" id="cb579"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb579-1"><a href="razdiobe.html#cb579-1" tabindex="-1"></a><span class="co"># inicijaliziramo algoritam generiranja slučajnih brojeva sa vrijednosti 1234</span></span>
-<span id="cb579-2"><a href="razdiobe.html#cb579-2" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">1234</span>)</span>
-<span id="cb579-3"><a href="razdiobe.html#cb579-3" tabindex="-1"></a></span>
-<span id="cb579-4"><a href="razdiobe.html#cb579-4" tabindex="-1"></a><span class="co"># ispišite 10 nasumičnih brojeva iz intervala od 1 do 100, odabiranih bez ponavljanja</span></span>
-<span id="cb579-5"><a href="razdiobe.html#cb579-5" tabindex="-1"></a></span>
-<span id="cb579-6"><a href="razdiobe.html#cb579-6" tabindex="-1"></a><span class="co"># reinicijalizirajte algoritam sa vrijednosti 1234, i ponovite gornji upit</span></span></code></pre></div>
+<div class="sourceCode" id="cb592"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb592-1"><a href="razdiobe.html#cb592-1" tabindex="-1"></a><span class="co"># inicijaliziramo algoritam generiranja slučajnih brojeva sa vrijednosti 1234</span></span>
+<span id="cb592-2"><a href="razdiobe.html#cb592-2" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">1234</span>)</span>
+<span id="cb592-3"><a href="razdiobe.html#cb592-3" tabindex="-1"></a></span>
+<span id="cb592-4"><a href="razdiobe.html#cb592-4" tabindex="-1"></a><span class="co"># ispišite 10 nasumičnih brojeva iz intervala od 1 do 100, odabiranih bez ponavljanja</span></span>
+<span id="cb592-5"><a href="razdiobe.html#cb592-5" tabindex="-1"></a></span>
+<span id="cb592-6"><a href="razdiobe.html#cb592-6" tabindex="-1"></a><span class="co"># reinicijalizirajte algoritam sa vrijednosti 1234, i ponovite gornji upit</span></span></code></pre></div>
 <div class="fold s o">
 
 </div>
 <p>Uz pomoć funkcije <code>sample</code> možemo raditi jednostavne simulacije slučajnih događaja gdje događaje modeliramo uz pomoć odgovarajućeg vektora (npr. novčić može biti logički vektor <code>c(T, F)</code>, gdje <code>TRUE</code> označava glavu, kockica može biti numerički vektor <code>1:6</code>). Simulacijom možemo provjeriti zakon velikih brojeva koji kaže da se velikim brojem ponavljanja eksperimenta omjer broja pojavljivanja događaja i ukupnog broja eksperimenata približavamo stvarnoj vjerojatnosti događaja.</p>
 <p><strong>Zadatak 12.2 - Jednostavna simulacija bacanja kockice</strong></p>
-<div class="sourceCode" id="cb580"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb580-1"><a href="razdiobe.html#cb580-1" tabindex="-1"></a><span class="co"># uz pomoć funkcije `sample` simulirajte bacanje kockice 100 puta</span></span>
-<span id="cb580-2"><a href="razdiobe.html#cb580-2" tabindex="-1"></a><span class="co"># i ispišite koliko puta ste dobili broj 6</span></span>
-<span id="cb580-3"><a href="razdiobe.html#cb580-3" tabindex="-1"></a><span class="co"># da li dobivena vjerojatnost odgovara očekivanoj?</span></span>
-<span id="cb580-4"><a href="razdiobe.html#cb580-4" tabindex="-1"></a></span>
-<span id="cb580-5"><a href="razdiobe.html#cb580-5" tabindex="-1"></a><span class="co"># naputak: spremite rezultate bacanja u novi vektor, a onda prebrojite </span></span>
-<span id="cb580-6"><a href="razdiobe.html#cb580-6" tabindex="-1"></a><span class="co"># koliko puta se pojavio broj 6</span></span></code></pre></div>
+<div class="sourceCode" id="cb593"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb593-1"><a href="razdiobe.html#cb593-1" tabindex="-1"></a><span class="co"># uz pomoć funkcije `sample` simulirajte bacanje kockice 100 puta</span></span>
+<span id="cb593-2"><a href="razdiobe.html#cb593-2" tabindex="-1"></a><span class="co"># i ispišite koliko puta ste dobili broj 6</span></span>
+<span id="cb593-3"><a href="razdiobe.html#cb593-3" tabindex="-1"></a><span class="co"># da li dobivena vjerojatnost odgovara očekivanoj?</span></span>
+<span id="cb593-4"><a href="razdiobe.html#cb593-4" tabindex="-1"></a></span>
+<span id="cb593-5"><a href="razdiobe.html#cb593-5" tabindex="-1"></a><span class="co"># naputak: spremite rezultate bacanja u novi vektor, a onda prebrojite </span></span>
+<span id="cb593-6"><a href="razdiobe.html#cb593-6" tabindex="-1"></a><span class="co"># koliko puta se pojavio broj 6</span></span></code></pre></div>
 <div class="fold s o">
-<div class="sourceCode" id="cb581"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb581-1"><a href="razdiobe.html#cb581-1" tabindex="-1"></a>bacanja <span class="ot">&lt;-</span> <span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>, <span class="dv">100</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>) </span>
-<span id="cb581-2"><a href="razdiobe.html#cb581-2" tabindex="-1"></a>(bacanja <span class="sc">==</span> <span class="dv">6</span>) <span class="sc">%&gt;%</span> mean</span></code></pre></div>
+<div class="sourceCode" id="cb594"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb594-1"><a href="razdiobe.html#cb594-1" tabindex="-1"></a>bacanja <span class="ot">&lt;-</span> <span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>, <span class="dv">100</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>) </span>
+<span id="cb594-2"><a href="razdiobe.html#cb594-2" tabindex="-1"></a>(bacanja <span class="sc">==</span> <span class="dv">6</span>) <span class="sc">%&gt;%</span> mean</span></code></pre></div>
 <pre><code>## [1] 0.25</code></pre>
 </div>
 <p>Očekivana vjerojatnost je 0.166667, tj. 16.67%, no vjerojatno smo dobili vrijednost koja je blizu, ali ne istovjetna navedenoj. Razlog tome je što 100 bacanja nije dovoljno veliki broj da bismo sa velikom pouzdanosti dobili pravu vjerojatnost; ako ponovimo gornji zadatak sa (puno) većim brojem bacanja, možemo vidjeti da će se vjerojatnost puno izraženije približiti očekivanoj.</p>
 <p>U prethodnim zadacima svi ishodi imali su jednaku vjerojatnost pojave. Uz pomoć parametra <code>prob</code> možemo utjecati na vjerojatnost ishoda pojedinih događaja. Tako npr. možemo uz <code>prob = c(0.8, 0.2)</code> stvoriti “lažni” novčić kod kojeg je vjerojatnost glave 80%, a vjerojatnost pisma samo 20%. Vektor <code>prob</code> mora imati istu duljinu kao i vektor <code>x</code>, ali ne moramo nužno unositi same vjerojatnosti, možemo se izraziti i “težinama” iz kojih će se automatski izračunati vjerojatnosti, npr. <code>prob = c(5, 2, 1)</code> znači da će vjerojatnost prvog ishoda biti pet, a drugog dva puta veća od vjerojatnosti trećeg ishoda, tj. ovo je istovjetno kao da smo napisali <code>prob = c(0.625, 0.25, 0.125)</code>.</p>
 <p><strong>Zadatak 12.3 - Parametar <code>prob</code></strong></p>
-<div class="sourceCode" id="cb583"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb583-1"><a href="razdiobe.html#cb583-1" tabindex="-1"></a><span class="co"># pretpostavite da je u nekom gradu za bilo koji dan u godini vjerojatnost</span></span>
-<span id="cb583-2"><a href="razdiobe.html#cb583-2" tabindex="-1"></a><span class="co"># sunčanog vremena četiri puta veća od vjerojatnosti oblačnog vremena</span></span>
-<span id="cb583-3"><a href="razdiobe.html#cb583-3" tabindex="-1"></a><span class="co"># i osam puta veća od vjerojatnosti kišnog vgremena</span></span>
-<span id="cb583-4"><a href="razdiobe.html#cb583-4" tabindex="-1"></a><span class="co"># simulirajte ishode vremenske prognoze za period od jedne godine (365 dana)</span></span>
-<span id="cb583-5"><a href="razdiobe.html#cb583-5" tabindex="-1"></a><span class="co"># i ispišite frekvencije svakog od ishoda</span></span>
-<span id="cb583-6"><a href="razdiobe.html#cb583-6" tabindex="-1"></a></span>
-<span id="cb583-7"><a href="razdiobe.html#cb583-7" tabindex="-1"></a>ishodi <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;sunčano&quot;</span>, <span class="st">&quot;oblačno&quot;</span>, <span class="st">&quot;kiša&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb596"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb596-1"><a href="razdiobe.html#cb596-1" tabindex="-1"></a><span class="co"># pretpostavite da je u nekom gradu za bilo koji dan u godini vjerojatnost</span></span>
+<span id="cb596-2"><a href="razdiobe.html#cb596-2" tabindex="-1"></a><span class="co"># sunčanog vremena četiri puta veća od vjerojatnosti oblačnog vremena</span></span>
+<span id="cb596-3"><a href="razdiobe.html#cb596-3" tabindex="-1"></a><span class="co"># i osam puta veća od vjerojatnosti kišnog vgremena</span></span>
+<span id="cb596-4"><a href="razdiobe.html#cb596-4" tabindex="-1"></a><span class="co"># simulirajte ishode vremenske prognoze za period od jedne godine (365 dana)</span></span>
+<span id="cb596-5"><a href="razdiobe.html#cb596-5" tabindex="-1"></a><span class="co"># i ispišite frekvencije svakog od ishoda</span></span>
+<span id="cb596-6"><a href="razdiobe.html#cb596-6" tabindex="-1"></a></span>
+<span id="cb596-7"><a href="razdiobe.html#cb596-7" tabindex="-1"></a>ishodi <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;sunčano&quot;</span>, <span class="st">&quot;oblačno&quot;</span>, <span class="st">&quot;kiša&quot;</span>)</span></code></pre></div>
 <div class="fold s o">
-<div class="sourceCode" id="cb584"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb584-1"><a href="razdiobe.html#cb584-1" tabindex="-1"></a>ishodi <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;sunčano&quot;</span>, <span class="st">&quot;oblačno&quot;</span>, <span class="st">&quot;kiša&quot;</span>)</span>
-<span id="cb584-2"><a href="razdiobe.html#cb584-2" tabindex="-1"></a><span class="fu">sample</span>(ishodi, <span class="dv">365</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>, <span class="at">prob =</span> <span class="fu">c</span>(<span class="dv">8</span>, <span class="dv">4</span>, <span class="dv">1</span>)) <span class="sc">%&gt;%</span> table</span></code></pre></div>
+<div class="sourceCode" id="cb597"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb597-1"><a href="razdiobe.html#cb597-1" tabindex="-1"></a>ishodi <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;sunčano&quot;</span>, <span class="st">&quot;oblačno&quot;</span>, <span class="st">&quot;kiša&quot;</span>)</span>
+<span id="cb597-2"><a href="razdiobe.html#cb597-2" tabindex="-1"></a><span class="fu">sample</span>(ishodi, <span class="dv">365</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>, <span class="at">prob =</span> <span class="fu">c</span>(<span class="dv">8</span>, <span class="dv">4</span>, <span class="dv">1</span>)) <span class="sc">%&gt;%</span> table</span></code></pre></div>
 <pre><code>## .
 ##    kiša oblačno sunčano 
 ##      36     112     217</code></pre>
@@ -490,7 +507,7 @@ div.csl-indent {
 <p>U ovom dijelu lekcije prikazat ćemo podršku jezika R za rad sa različitim razdiobama vjerojatnosti. Važno je naglasiti da se ovdje nećemo baviti temeljitim pregledom teorije vezanim uz pojmove razdiobe vjerojatnosti diskretne i kontinuirane slučajne varijable (već spomenuti izvor <a href = "https://www.openintro.org/stat/textbook.php?stat_book=os">“OpenIntro Statistics”</a> može pružiti vrlo kvalitetan uvod ove tematike). Cilj lekcije koja slijedi primarno je prikazati što jezik R - ili konkretnije paket <code>stats</code> - nudi kao podršku za lak i učinkovit rad sa razdiobama.</p>
 <p>Kao što smo naveli u prethodnom dijelu, pojam <em>razdiobe vjerojatnosti</em> predstavlja funkciju koja opisuje vjerojatnost pojave nekog slučajnog događaja. Tako kod bacanja novčića imamo dva moguća ishoda - “pismo” ili “glava”, a ako je novčić regularan vjerojatnost pojedinog ishoda jest 0.5, tj. 50%. Zbroj brojeva kod bacanja dvije kockice može biti od 2 do 12, pri čemu svi ishodi nemaju istu vjerojatnost; npr. broj 7 ima najveću vjerojatnost (17%) dok 2 i 12 imaju najmanju (samo 3%).</p>
 <p>Možemo razlikovati <em>diskretne</em> i <em>kontinuirane</em> razdiobe vjerojatnosti, u ovisnosti o tome da li je skup mogućih ishoda nekog slučajnog događaja konačan ili beskonačan (gdje pod “beskonačnosti” uglavnom mislimo na primanje vrijednosti iz beskonačnog skupa realnih brojeva).</p>
-<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-462"></span>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-467"></span>
 <img src="figures/razdiobe.png" alt="Diskretna i kontinuirana razdioba" width="276" />
 <p class="caption">
 Slika 12.1: Diskretna i kontinuirana razdioba
@@ -505,7 +522,7 @@ i to na način da integriramo površinu ispod krivulje na intervalu <span class=
 <p>Postoji veliki broj razdioba vjerojatnosti koje nam mogu poslužiti u različitim scenarijima. <em>Binomna razdioba</em> opisuje vjerojatnost uočavanja nekog događaja u eksperimentu kojeg ponavljamo određeni broj puta (npr. vjerojatnost da u 10 bacanja novčića dobijemo pismo 8 puta). <em>Geometrijska razdioba</em> opisuje vjerojatnost broja ponavljanja nekog eksperimenta dok ne dočekamo neki ishod ishoda (npr. vjerojatnost da se prvo “pismo” pojavi tek u petom bacanju novčića). Konačno, možda najpoznatija razdioba je <em>Gaussova</em> ili <em>normalna razdioba</em> koja se često pojavljuje u prirodi i koju statističari vrlo često koriste za potrebe inferencijalne statistike.</p>
 <p>Poznavanje funkcija za rad sa različitim razdiobama može nam uvelike pomoći u različitim scenarijima. Na sreću, ne moramo poznavati veliki broj razdiobi niti u detalje učiti matematičku podlogu svake od njih. Dovoljno je početi sa nekoliko osnovnih razdiobi (npr. normalna i uniformna) a potom polako širiti znanje o ostalim razdiobama kada se suočimo sa problemima gdje se one mogu pokazati korisnima. Jezik R nam ovdje prilično pomaže budući da koristi jedinstven predložak za podršku svim funkcijama razdiobe koje imamo na raspolaganju tako da kad naučimo upravljati podrškom za jednu razdiobu imamo kvalitetnu podlogu za korištenje bilo koje druge razdiobe, jednom kad se upoznamo s njenim specifičnostima i scenarijima uporabe.</p>
 <p>Broj razdiobi koje imaju ugrađenu podršku u jeziku R je prilično velik. Popis razdiobi koje imamo na raspolaganju - ne računajući dodatne CRAN pakete! - možemo dobiti naredbom:</p>
-<div class="sourceCode" id="cb586"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb586-1"><a href="razdiobe.html#cb586-1" tabindex="-1"></a><span class="fu">help</span>(Distributions)</span></code></pre></div>
+<div class="sourceCode" id="cb599"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb599-1"><a href="razdiobe.html#cb599-1" tabindex="-1"></a><span class="fu">help</span>(Distributions)</span></code></pre></div>
 <p>U pravilu za svaku raspodjelu imamo na raspolaganju četiri funkcije koje prate isti uzorak imenovanja - funkcije slijede naziv distribucije (npr. <code>norm</code> za normalnu razdiobu, <code>unif</code> za uniformnu, <code>binom</code> za binomnu i sl.). Ovom nazivu daje se prefiks od jednog slova kako slijedi:</p>
 <ul>
 <li><code>d</code> - za funkciju razdiobe tj. gustoće razdiobe
@@ -554,17 +571,17 @@ i to na način da integriramo površinu ispod krivulje na intervalu <span class=
 </ul></li>
 </ul>
 <p><strong>Zadatak 12.4 - Binomna razdioba</strong></p>
-<div class="sourceCode" id="cb587"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb587-1"><a href="razdiobe.html#cb587-1" tabindex="-1"></a><span class="co"># koja je vjerojatnost da u 10 bacanja novčića vrijednost &quot;pismo&quot; dobijete točno jednom?</span></span>
-<span id="cb587-2"><a href="razdiobe.html#cb587-2" tabindex="-1"></a></span>
-<span id="cb587-3"><a href="razdiobe.html#cb587-3" tabindex="-1"></a><span class="co"># koja je vjerojatnost da u 10 bacanja novčića vrijednost &quot;pismo&quot; dobijete pet puta?</span></span>
-<span id="cb587-4"><a href="razdiobe.html#cb587-4" tabindex="-1"></a></span>
-<span id="cb587-5"><a href="razdiobe.html#cb587-5" tabindex="-1"></a><span class="co"># koja je vjerojatnost da u 20 bacanja novčića broj dobivanja vrijednosti &quot;pismo&quot; bude manji ili jednak 10?</span></span></code></pre></div>
+<div class="sourceCode" id="cb600"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb600-1"><a href="razdiobe.html#cb600-1" tabindex="-1"></a><span class="co"># koja je vjerojatnost da u 10 bacanja novčića vrijednost &quot;pismo&quot; dobijete točno jednom?</span></span>
+<span id="cb600-2"><a href="razdiobe.html#cb600-2" tabindex="-1"></a></span>
+<span id="cb600-3"><a href="razdiobe.html#cb600-3" tabindex="-1"></a><span class="co"># koja je vjerojatnost da u 10 bacanja novčića vrijednost &quot;pismo&quot; dobijete pet puta?</span></span>
+<span id="cb600-4"><a href="razdiobe.html#cb600-4" tabindex="-1"></a></span>
+<span id="cb600-5"><a href="razdiobe.html#cb600-5" tabindex="-1"></a><span class="co"># koja je vjerojatnost da u 20 bacanja novčića broj dobivanja vrijednosti &quot;pismo&quot; bude manji ili jednak 10?</span></span></code></pre></div>
 <div class="fold s o">
-<div class="sourceCode" id="cb588"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb588-1"><a href="razdiobe.html#cb588-1" tabindex="-1"></a><span class="fu">dbinom</span>(<span class="at">x =</span> <span class="dv">1</span>, <span class="at">size =</span> <span class="dv">10</span>, <span class="at">prob =</span> <span class="fl">0.5</span>)</span>
-<span id="cb588-2"><a href="razdiobe.html#cb588-2" tabindex="-1"></a></span>
-<span id="cb588-3"><a href="razdiobe.html#cb588-3" tabindex="-1"></a><span class="fu">dbinom</span>(<span class="at">x =</span> <span class="dv">5</span>, <span class="at">size =</span> <span class="dv">10</span>, <span class="at">prob =</span> <span class="fl">0.5</span>)</span>
-<span id="cb588-4"><a href="razdiobe.html#cb588-4" tabindex="-1"></a></span>
-<span id="cb588-5"><a href="razdiobe.html#cb588-5" tabindex="-1"></a><span class="fu">pbinom</span>(<span class="at">q =</span> <span class="dv">10</span>, <span class="at">size =</span> <span class="dv">20</span>, <span class="at">prob =</span> <span class="fl">0.5</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb601"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb601-1"><a href="razdiobe.html#cb601-1" tabindex="-1"></a><span class="fu">dbinom</span>(<span class="at">x =</span> <span class="dv">1</span>, <span class="at">size =</span> <span class="dv">10</span>, <span class="at">prob =</span> <span class="fl">0.5</span>)</span>
+<span id="cb601-2"><a href="razdiobe.html#cb601-2" tabindex="-1"></a></span>
+<span id="cb601-3"><a href="razdiobe.html#cb601-3" tabindex="-1"></a><span class="fu">dbinom</span>(<span class="at">x =</span> <span class="dv">5</span>, <span class="at">size =</span> <span class="dv">10</span>, <span class="at">prob =</span> <span class="fl">0.5</span>)</span>
+<span id="cb601-4"><a href="razdiobe.html#cb601-4" tabindex="-1"></a></span>
+<span id="cb601-5"><a href="razdiobe.html#cb601-5" tabindex="-1"></a><span class="fu">pbinom</span>(<span class="at">q =</span> <span class="dv">10</span>, <span class="at">size =</span> <span class="dv">20</span>, <span class="at">prob =</span> <span class="fl">0.5</span>)</span></code></pre></div>
 <pre><code>## [1] 0.009765625
 ## [1] 0.2460938
 ## [1] 0.5880985</code></pre>
@@ -581,23 +598,23 @@ i to na način da integriramo površinu ispod krivulje na intervalu <span class=
 </ul></li>
 </ul>
 <p><strong>Zadatak 12.5 - Crtanje grafa binomne razdiobe</strong></p>
-<div class="sourceCode" id="cb590"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb590-1"><a href="razdiobe.html#cb590-1" tabindex="-1"></a><span class="co"># nacrtajte funkciju razdiobe eksperimenta bacanja novčića 10 puta</span></span>
-<span id="cb590-2"><a href="razdiobe.html#cb590-2" tabindex="-1"></a><span class="co"># NAPUTAK: vektor ishoda je broj svih mogućih pojava &quot;glava&quot; (od 0 do 10)</span></span>
-<span id="cb590-3"><a href="razdiobe.html#cb590-3" tabindex="-1"></a><span class="co">#          a vektor vjerojatnosti možemo dobiti uz pomoć funkcije `dbinom`</span></span></code></pre></div>
+<div class="sourceCode" id="cb603"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb603-1"><a href="razdiobe.html#cb603-1" tabindex="-1"></a><span class="co"># nacrtajte funkciju razdiobe eksperimenta bacanja novčića 10 puta</span></span>
+<span id="cb603-2"><a href="razdiobe.html#cb603-2" tabindex="-1"></a><span class="co"># NAPUTAK: vektor ishoda je broj svih mogućih pojava &quot;glava&quot; (od 0 do 10)</span></span>
+<span id="cb603-3"><a href="razdiobe.html#cb603-3" tabindex="-1"></a><span class="co">#          a vektor vjerojatnosti možemo dobiti uz pomoć funkcije `dbinom`</span></span></code></pre></div>
 <div class="fold s o">
-<div class="sourceCode" id="cb591"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb591-1"><a href="razdiobe.html#cb591-1" tabindex="-1"></a><span class="fu">data.frame</span>(<span class="at">ishodi =</span> <span class="dv">0</span><span class="sc">:</span><span class="dv">10</span>, <span class="at">vjerojatnosti =</span> <span class="fu">dbinom</span>(<span class="dv">0</span><span class="sc">:</span><span class="dv">10</span>, <span class="dv">10</span>, <span class="fl">0.5</span>)) <span class="sc">%&gt;%</span> </span>
-<span id="cb591-2"><a href="razdiobe.html#cb591-2" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> ishodi, <span class="at">y =</span> vjerojatnosti)) <span class="sc">+</span> <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">&quot;identity&quot;</span>) </span></code></pre></div>
-<p><img src="osnoveR_files/figure-html/unnamed-chunk-467-1.png" width="672" /></p>
+<div class="sourceCode" id="cb604"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb604-1"><a href="razdiobe.html#cb604-1" tabindex="-1"></a><span class="fu">data.frame</span>(<span class="at">ishodi =</span> <span class="dv">0</span><span class="sc">:</span><span class="dv">10</span>, <span class="at">vjerojatnosti =</span> <span class="fu">dbinom</span>(<span class="dv">0</span><span class="sc">:</span><span class="dv">10</span>, <span class="dv">10</span>, <span class="fl">0.5</span>)) <span class="sc">%&gt;%</span> </span>
+<span id="cb604-2"><a href="razdiobe.html#cb604-2" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> ishodi, <span class="at">y =</span> vjerojatnosti)) <span class="sc">+</span> <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">&quot;identity&quot;</span>) </span></code></pre></div>
+<p><img src="osnoveR_files/figure-html/unnamed-chunk-472-1.png" width="672" /></p>
 </div>
 <p><strong>Zadatak 12.6 - Nasumični odabir opservacija binomne razdiobe</strong></p>
-<div class="sourceCode" id="cb592"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb592-1"><a href="razdiobe.html#cb592-1" tabindex="-1"></a><span class="co"># vjerojatnost pogotka koša iz slobodnog bacanja za nekog košarkaša je 30%</span></span>
-<span id="cb592-2"><a href="razdiobe.html#cb592-2" tabindex="-1"></a><span class="co"># u svakoj seriji pokušaja košarkašu je dozvoljeno 3 bacanja</span></span>
-<span id="cb592-3"><a href="razdiobe.html#cb592-3" tabindex="-1"></a></span>
-<span id="cb592-4"><a href="razdiobe.html#cb592-4" tabindex="-1"></a><span class="co"># trening košarkaša uključuje 20 serija od 3 bacanja</span></span>
-<span id="cb592-5"><a href="razdiobe.html#cb592-5" tabindex="-1"></a><span class="co"># simulirajte ovaj trening i ispišite koliko puta je uspio promašiti sva tri koša u seriji</span></span></code></pre></div>
+<div class="sourceCode" id="cb605"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb605-1"><a href="razdiobe.html#cb605-1" tabindex="-1"></a><span class="co"># vjerojatnost pogotka koša iz slobodnog bacanja za nekog košarkaša je 30%</span></span>
+<span id="cb605-2"><a href="razdiobe.html#cb605-2" tabindex="-1"></a><span class="co"># u svakoj seriji pokušaja košarkašu je dozvoljeno 3 bacanja</span></span>
+<span id="cb605-3"><a href="razdiobe.html#cb605-3" tabindex="-1"></a></span>
+<span id="cb605-4"><a href="razdiobe.html#cb605-4" tabindex="-1"></a><span class="co"># trening košarkaša uključuje 20 serija od 3 bacanja</span></span>
+<span id="cb605-5"><a href="razdiobe.html#cb605-5" tabindex="-1"></a><span class="co"># simulirajte ovaj trening i ispišite koliko puta je uspio promašiti sva tri koša u seriji</span></span></code></pre></div>
 <div class="fold s o">
-<div class="sourceCode" id="cb593"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb593-1"><a href="razdiobe.html#cb593-1" tabindex="-1"></a>bacanja <span class="ot">&lt;-</span> <span class="fu">rbinom</span>(<span class="dv">20</span>, <span class="dv">3</span>, <span class="fl">0.3</span>)</span>
-<span id="cb593-2"><a href="razdiobe.html#cb593-2" tabindex="-1"></a>(bacanja <span class="sc">==</span> <span class="dv">0</span>) <span class="sc">%&gt;%</span> sum</span></code></pre></div>
+<div class="sourceCode" id="cb606"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb606-1"><a href="razdiobe.html#cb606-1" tabindex="-1"></a>bacanja <span class="ot">&lt;-</span> <span class="fu">rbinom</span>(<span class="dv">20</span>, <span class="dv">3</span>, <span class="fl">0.3</span>)</span>
+<span id="cb606-2"><a href="razdiobe.html#cb606-2" tabindex="-1"></a>(bacanja <span class="sc">==</span> <span class="dv">0</span>) <span class="sc">%&gt;%</span> sum</span></code></pre></div>
 <pre><code>## [1] 6</code></pre>
 </div>
 <p>Na sličan se način možemo poigrati i sa drugim diskretnim razdiobama, potrebno je samo u dokumentaciji provjeriti koje specifične parametre koriste.</p>
@@ -632,21 +649,21 @@ i to na način da integriramo površinu ispod krivulje na intervalu <span class=
 <p>Osnovna razlika između normalne razdiobe (kao kontinuirane) i binomne (kao diskretne) jest da funkciju sa prefiksom <code>d</code> <strong>ne možemo koristiti za izračun vjerojatnosti konkretnog ishoda</strong>. Možemo računati vjerojatnost pripadnosti intervalu, za što koristimo funkciju sa prefiksom <code>p</code>. Funkciju sa prefiksom <code>d</code> možemo koristiti kada želimo vizualizirati samu funkciju gustoće razdiobe, budući da nam vraća vrijednosti koje mapiramo na os y.</p>
 <hr />
 <p><strong>Zadatak 12.7 - Normalna razdioba</strong></p>
-<div class="sourceCode" id="cb595"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb595-1"><a href="razdiobe.html#cb595-1" tabindex="-1"></a><span class="co"># u ženskoj odbojkaškog ligi prosječna visina sportašice ravna se po normalnoj razdiobi</span></span>
-<span id="cb595-2"><a href="razdiobe.html#cb595-2" tabindex="-1"></a><span class="co"># sa sredinom od 180 cm i standardnom devijacijom od 6 cm</span></span>
-<span id="cb595-3"><a href="razdiobe.html#cb595-3" tabindex="-1"></a></span>
-<span id="cb595-4"><a href="razdiobe.html#cb595-4" tabindex="-1"></a><span class="co"># koja je vjerojatnost da će nasumično odabrana sportašica biti niža od 175 cm,</span></span>
-<span id="cb595-5"><a href="razdiobe.html#cb595-5" tabindex="-1"></a><span class="co"># koja da će biti viša od 195 cm, a koja da će biti između 175 i 185 cm?</span></span>
-<span id="cb595-6"><a href="razdiobe.html#cb595-6" tabindex="-1"></a></span>
-<span id="cb595-7"><a href="razdiobe.html#cb595-7" tabindex="-1"></a><span class="co"># vjerojatnosti ispišite u obliku postotka i zaokruženu na dvije decimale, npr. `65.23%`</span></span></code></pre></div>
+<div class="sourceCode" id="cb608"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb608-1"><a href="razdiobe.html#cb608-1" tabindex="-1"></a><span class="co"># u ženskoj odbojkaškog ligi prosječna visina sportašice ravna se po normalnoj razdiobi</span></span>
+<span id="cb608-2"><a href="razdiobe.html#cb608-2" tabindex="-1"></a><span class="co"># sa sredinom od 180 cm i standardnom devijacijom od 6 cm</span></span>
+<span id="cb608-3"><a href="razdiobe.html#cb608-3" tabindex="-1"></a></span>
+<span id="cb608-4"><a href="razdiobe.html#cb608-4" tabindex="-1"></a><span class="co"># koja je vjerojatnost da će nasumično odabrana sportašica biti niža od 175 cm,</span></span>
+<span id="cb608-5"><a href="razdiobe.html#cb608-5" tabindex="-1"></a><span class="co"># koja da će biti viša od 195 cm, a koja da će biti između 175 i 185 cm?</span></span>
+<span id="cb608-6"><a href="razdiobe.html#cb608-6" tabindex="-1"></a></span>
+<span id="cb608-7"><a href="razdiobe.html#cb608-7" tabindex="-1"></a><span class="co"># vjerojatnosti ispišite u obliku postotka i zaokruženu na dvije decimale, npr. `65.23%`</span></span></code></pre></div>
 <div class="fold s o">
-<div class="sourceCode" id="cb596"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb596-1"><a href="razdiobe.html#cb596-1" tabindex="-1"></a>postotak <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
-<span id="cb596-2"><a href="razdiobe.html#cb596-2" tabindex="-1"></a>  (x <span class="sc">*</span> <span class="dv">100</span>) <span class="sc">%&gt;%</span> <span class="fu">round</span>(<span class="dv">2</span>) <span class="sc">%&gt;%</span> <span class="fu">str_c</span>(<span class="st">&quot;%&quot;</span>)</span>
-<span id="cb596-3"><a href="razdiobe.html#cb596-3" tabindex="-1"></a>}</span>
-<span id="cb596-4"><a href="razdiobe.html#cb596-4" tabindex="-1"></a></span>
-<span id="cb596-5"><a href="razdiobe.html#cb596-5" tabindex="-1"></a><span class="fu">pnorm</span>(<span class="dv">175</span>, <span class="at">mean =</span> <span class="dv">180</span>, <span class="at">sd =</span> <span class="dv">6</span>) <span class="sc">%&gt;%</span> postotak</span>
-<span id="cb596-6"><a href="razdiobe.html#cb596-6" tabindex="-1"></a><span class="fu">pnorm</span>(<span class="dv">195</span>, <span class="at">mean =</span> <span class="dv">180</span>, <span class="at">sd =</span> <span class="dv">6</span>, <span class="at">lower.tail =</span> <span class="cn">FALSE</span>) <span class="sc">%&gt;%</span> postotak</span>
-<span id="cb596-7"><a href="razdiobe.html#cb596-7" tabindex="-1"></a>(<span class="fu">pnorm</span>(<span class="dv">185</span>, <span class="at">mean =</span> <span class="dv">180</span>, <span class="at">sd =</span> <span class="dv">6</span>) <span class="sc">-</span> <span class="fu">pnorm</span>(<span class="dv">175</span>, <span class="at">mean =</span> <span class="dv">180</span>, <span class="at">sd =</span> <span class="dv">6</span>)) <span class="sc">%&gt;%</span> postotak</span></code></pre></div>
+<div class="sourceCode" id="cb609"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb609-1"><a href="razdiobe.html#cb609-1" tabindex="-1"></a>postotak <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
+<span id="cb609-2"><a href="razdiobe.html#cb609-2" tabindex="-1"></a>  (x <span class="sc">*</span> <span class="dv">100</span>) <span class="sc">%&gt;%</span> <span class="fu">round</span>(<span class="dv">2</span>) <span class="sc">%&gt;%</span> <span class="fu">str_c</span>(<span class="st">&quot;%&quot;</span>)</span>
+<span id="cb609-3"><a href="razdiobe.html#cb609-3" tabindex="-1"></a>}</span>
+<span id="cb609-4"><a href="razdiobe.html#cb609-4" tabindex="-1"></a></span>
+<span id="cb609-5"><a href="razdiobe.html#cb609-5" tabindex="-1"></a><span class="fu">pnorm</span>(<span class="dv">175</span>, <span class="at">mean =</span> <span class="dv">180</span>, <span class="at">sd =</span> <span class="dv">6</span>) <span class="sc">%&gt;%</span> postotak</span>
+<span id="cb609-6"><a href="razdiobe.html#cb609-6" tabindex="-1"></a><span class="fu">pnorm</span>(<span class="dv">195</span>, <span class="at">mean =</span> <span class="dv">180</span>, <span class="at">sd =</span> <span class="dv">6</span>, <span class="at">lower.tail =</span> <span class="cn">FALSE</span>) <span class="sc">%&gt;%</span> postotak</span>
+<span id="cb609-7"><a href="razdiobe.html#cb609-7" tabindex="-1"></a>(<span class="fu">pnorm</span>(<span class="dv">185</span>, <span class="at">mean =</span> <span class="dv">180</span>, <span class="at">sd =</span> <span class="dv">6</span>) <span class="sc">-</span> <span class="fu">pnorm</span>(<span class="dv">175</span>, <span class="at">mean =</span> <span class="dv">180</span>, <span class="at">sd =</span> <span class="dv">6</span>)) <span class="sc">%&gt;%</span> postotak</span></code></pre></div>
 <pre><code>## [1] &quot;20.23%&quot;
 ## [1] &quot;0.62%&quot;
 ## [1] &quot;59.53%&quot;</code></pre>
@@ -667,39 +684,39 @@ elemenata na intervalu od 70 do 130 (što će obuhvatiti 99.7% ishoda)</li>
 </ul></li>
 </ul>
 <p><strong>Zadatak 12.8 - Crtanje grafa normalne razdiobe</strong></p>
-<div class="sourceCode" id="cb598"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb598-1"><a href="razdiobe.html#cb598-1" tabindex="-1"></a><span class="co"># na jednom grafu prikažite funkcije gustoće razdiobe sa sljedećim parametrima</span></span>
-<span id="cb598-2"><a href="razdiobe.html#cb598-2" tabindex="-1"></a><span class="co">#   - sredina: 50, st.dev: 5   (plava linija)</span></span>
-<span id="cb598-3"><a href="razdiobe.html#cb598-3" tabindex="-1"></a><span class="co">#   - sredina: 50, st.dev: 20  (crvena linija)</span></span>
-<span id="cb598-4"><a href="razdiobe.html#cb598-4" tabindex="-1"></a><span class="co">#   - sredina: 70, st.dev: 5   (zelena linija)</span></span>
-<span id="cb598-5"><a href="razdiobe.html#cb598-5" tabindex="-1"></a><span class="co">#</span></span>
-<span id="cb598-6"><a href="razdiobe.html#cb598-6" tabindex="-1"></a><span class="co"># NAPUTAK: stvorite jedan vektor ishoda za sve tri krivulje na adekvatno odabranom intervalu</span></span>
-<span id="cb598-7"><a href="razdiobe.html#cb598-7" tabindex="-1"></a><span class="co">#          u podatkovni okvir složite vektor ishoda i tri stupca sa vjerojatnostima,</span></span>
-<span id="cb598-8"><a href="razdiobe.html#cb598-8" tabindex="-1"></a><span class="co">#          svaki vezan uz jednu od razdioba</span></span>
-<span id="cb598-9"><a href="razdiobe.html#cb598-9" tabindex="-1"></a><span class="co">#          na isti graf stavite tri geometrije sa redefinicijom y estetike</span></span></code></pre></div>
+<div class="sourceCode" id="cb611"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb611-1"><a href="razdiobe.html#cb611-1" tabindex="-1"></a><span class="co"># na jednom grafu prikažite funkcije gustoće razdiobe sa sljedećim parametrima</span></span>
+<span id="cb611-2"><a href="razdiobe.html#cb611-2" tabindex="-1"></a><span class="co">#   - sredina: 50, st.dev: 5   (plava linija)</span></span>
+<span id="cb611-3"><a href="razdiobe.html#cb611-3" tabindex="-1"></a><span class="co">#   - sredina: 50, st.dev: 20  (crvena linija)</span></span>
+<span id="cb611-4"><a href="razdiobe.html#cb611-4" tabindex="-1"></a><span class="co">#   - sredina: 70, st.dev: 5   (zelena linija)</span></span>
+<span id="cb611-5"><a href="razdiobe.html#cb611-5" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb611-6"><a href="razdiobe.html#cb611-6" tabindex="-1"></a><span class="co"># NAPUTAK: stvorite jedan vektor ishoda za sve tri krivulje na adekvatno odabranom intervalu</span></span>
+<span id="cb611-7"><a href="razdiobe.html#cb611-7" tabindex="-1"></a><span class="co">#          u podatkovni okvir složite vektor ishoda i tri stupca sa vjerojatnostima,</span></span>
+<span id="cb611-8"><a href="razdiobe.html#cb611-8" tabindex="-1"></a><span class="co">#          svaki vezan uz jednu od razdioba</span></span>
+<span id="cb611-9"><a href="razdiobe.html#cb611-9" tabindex="-1"></a><span class="co">#          na isti graf stavite tri geometrije sa redefinicijom y estetike</span></span></code></pre></div>
 <div class="fold s o">
-<div class="sourceCode" id="cb599"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb599-1"><a href="razdiobe.html#cb599-1" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">100</span>, <span class="fl">0.5</span>)</span>
-<span id="cb599-2"><a href="razdiobe.html#cb599-2" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">x =</span> x, <span class="at">y1 =</span> <span class="fu">dnorm</span>(x, <span class="dv">50</span>, <span class="dv">5</span>), <span class="at">y2 =</span> <span class="fu">dnorm</span>(x, <span class="dv">50</span>, <span class="dv">20</span>), <span class="at">y3 =</span> <span class="fu">dnorm</span>(x, <span class="dv">70</span>, <span class="dv">5</span>))</span>
-<span id="cb599-3"><a href="razdiobe.html#cb599-3" tabindex="-1"></a></span>
-<span id="cb599-4"><a href="razdiobe.html#cb599-4" tabindex="-1"></a><span class="fu">ggplot</span>(df, <span class="fu">aes</span>(<span class="at">x =</span> x)) <span class="sc">+</span> <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">y =</span> y1), <span class="at">color =</span> <span class="st">&quot;blue&quot;</span>) <span class="sc">+</span></span>
-<span id="cb599-5"><a href="razdiobe.html#cb599-5" tabindex="-1"></a>        <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">y =</span> y2), <span class="at">color =</span> <span class="st">&quot;red&quot;</span>) <span class="sc">+</span> <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">y =</span> y3), <span class="at">color =</span> <span class="st">&quot;green&quot;</span>) </span></code></pre></div>
-<p><img src="osnoveR_files/figure-html/unnamed-chunk-473-1.png" width="672" /></p>
+<div class="sourceCode" id="cb612"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb612-1"><a href="razdiobe.html#cb612-1" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">100</span>, <span class="fl">0.5</span>)</span>
+<span id="cb612-2"><a href="razdiobe.html#cb612-2" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">x =</span> x, <span class="at">y1 =</span> <span class="fu">dnorm</span>(x, <span class="dv">50</span>, <span class="dv">5</span>), <span class="at">y2 =</span> <span class="fu">dnorm</span>(x, <span class="dv">50</span>, <span class="dv">20</span>), <span class="at">y3 =</span> <span class="fu">dnorm</span>(x, <span class="dv">70</span>, <span class="dv">5</span>))</span>
+<span id="cb612-3"><a href="razdiobe.html#cb612-3" tabindex="-1"></a></span>
+<span id="cb612-4"><a href="razdiobe.html#cb612-4" tabindex="-1"></a><span class="fu">ggplot</span>(df, <span class="fu">aes</span>(<span class="at">x =</span> x)) <span class="sc">+</span> <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">y =</span> y1), <span class="at">color =</span> <span class="st">&quot;blue&quot;</span>) <span class="sc">+</span></span>
+<span id="cb612-5"><a href="razdiobe.html#cb612-5" tabindex="-1"></a>        <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">y =</span> y2), <span class="at">color =</span> <span class="st">&quot;red&quot;</span>) <span class="sc">+</span> <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">y =</span> y3), <span class="at">color =</span> <span class="st">&quot;green&quot;</span>) </span></code></pre></div>
+<p><img src="osnoveR_files/figure-html/unnamed-chunk-478-1.png" width="672" /></p>
 </div>
 <hr />
 <p>Pojam <strong>kvantila</strong> daje nam uvid u to kako su podaci raspoređeni unutar neke razdiobe na način da znamo koliki udio populacije se nalazi iznad, odnosno ispod određene vrijednosti. Najpoznatija takva vrijednost je <strong>medijan</strong> koji dijeli populaciju na dvije jednake populacije, a često se spominju i <strong>kvartili</strong> - prvi kvartil (Q1) ispod kojeg je 25%, i treći kvartil (Q3) ispod kojeg je 75% populacije. Za veću zrnatost često koristimo <strong>percentile</strong>, tako da vrijednost 99. percentila označava onu vrijednost ispod koje je 99% skupa.</p>
 <p>U programskom jeziku R za normalnu razdiobu lako nalazimo kvantile (tj. percentile) uz pomoć funkcije <code>qnorm</code>.</p>
 <p><strong>Zadatak 12.9 - Kvantili normalne razdiobe</strong></p>
-<div class="sourceCode" id="cb600"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb600-1"><a href="razdiobe.html#cb600-1" tabindex="-1"></a><span class="co"># uspjeh na prijemnom ispitu jednog fakulteta ravna se po normalnoj razdiobi </span></span>
-<span id="cb600-2"><a href="razdiobe.html#cb600-2" tabindex="-1"></a><span class="co"># sa sredinom 80 i standardnom devijacijom 10</span></span>
-<span id="cb600-3"><a href="razdiobe.html#cb600-3" tabindex="-1"></a></span>
-<span id="cb600-4"><a href="razdiobe.html#cb600-4" tabindex="-1"></a><span class="co"># ispišite broj bodova koji se nalazi na medijanu</span></span>
-<span id="cb600-5"><a href="razdiobe.html#cb600-5" tabindex="-1"></a></span>
-<span id="cb600-6"><a href="razdiobe.html#cb600-6" tabindex="-1"></a><span class="co"># ispišite broj bodova na 5. percentilu i broj bodova na 95. percentilu</span></span></code></pre></div>
+<div class="sourceCode" id="cb613"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb613-1"><a href="razdiobe.html#cb613-1" tabindex="-1"></a><span class="co"># uspjeh na prijemnom ispitu jednog fakulteta ravna se po normalnoj razdiobi </span></span>
+<span id="cb613-2"><a href="razdiobe.html#cb613-2" tabindex="-1"></a><span class="co"># sa sredinom 80 i standardnom devijacijom 10</span></span>
+<span id="cb613-3"><a href="razdiobe.html#cb613-3" tabindex="-1"></a></span>
+<span id="cb613-4"><a href="razdiobe.html#cb613-4" tabindex="-1"></a><span class="co"># ispišite broj bodova koji se nalazi na medijanu</span></span>
+<span id="cb613-5"><a href="razdiobe.html#cb613-5" tabindex="-1"></a></span>
+<span id="cb613-6"><a href="razdiobe.html#cb613-6" tabindex="-1"></a><span class="co"># ispišite broj bodova na 5. percentilu i broj bodova na 95. percentilu</span></span></code></pre></div>
 <div class="fold s o">
-<div class="sourceCode" id="cb601"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb601-1"><a href="razdiobe.html#cb601-1" tabindex="-1"></a><span class="fu">qnorm</span>(<span class="fl">0.5</span>, <span class="at">mean =</span> <span class="dv">80</span>, <span class="at">sd =</span> <span class="dv">10</span>)</span>
-<span id="cb601-2"><a href="razdiobe.html#cb601-2" tabindex="-1"></a></span>
-<span id="cb601-3"><a href="razdiobe.html#cb601-3" tabindex="-1"></a><span class="fu">qnorm</span>(<span class="fl">0.05</span>, <span class="at">mean =</span> <span class="dv">80</span>, <span class="at">sd =</span> <span class="dv">10</span>)</span>
-<span id="cb601-4"><a href="razdiobe.html#cb601-4" tabindex="-1"></a></span>
-<span id="cb601-5"><a href="razdiobe.html#cb601-5" tabindex="-1"></a><span class="fu">qnorm</span>(<span class="fl">0.95</span>, <span class="at">mean =</span> <span class="dv">80</span>, <span class="at">sd =</span> <span class="dv">10</span>) <span class="co"># može i qnorm(0.05, mean = 80, sd = 5, lower.tail = TRUE)</span></span></code></pre></div>
+<div class="sourceCode" id="cb614"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb614-1"><a href="razdiobe.html#cb614-1" tabindex="-1"></a><span class="fu">qnorm</span>(<span class="fl">0.5</span>, <span class="at">mean =</span> <span class="dv">80</span>, <span class="at">sd =</span> <span class="dv">10</span>)</span>
+<span id="cb614-2"><a href="razdiobe.html#cb614-2" tabindex="-1"></a></span>
+<span id="cb614-3"><a href="razdiobe.html#cb614-3" tabindex="-1"></a><span class="fu">qnorm</span>(<span class="fl">0.05</span>, <span class="at">mean =</span> <span class="dv">80</span>, <span class="at">sd =</span> <span class="dv">10</span>)</span>
+<span id="cb614-4"><a href="razdiobe.html#cb614-4" tabindex="-1"></a></span>
+<span id="cb614-5"><a href="razdiobe.html#cb614-5" tabindex="-1"></a><span class="fu">qnorm</span>(<span class="fl">0.95</span>, <span class="at">mean =</span> <span class="dv">80</span>, <span class="at">sd =</span> <span class="dv">10</span>) <span class="co"># može i qnorm(0.05, mean = 80, sd = 5, lower.tail = TRUE)</span></span></code></pre></div>
 <pre><code>## [1] 80
 ## [1] 63.55146
 ## [1] 96.44854</code></pre>
@@ -711,35 +728,35 @@ elemenata na intervalu od 70 do 130 (što će obuhvatiti 99.7% ishoda)</li>
 <p>Kada radimo sa realnim podacima kontinuiranog tipa, često želimo provjeriti odgovaraju li oni nekoj normalnoj razdiobi. Jedan od načina kako ovo izvesti jest uz pomoć histograma koje smo već spominjali u poglavlju o vizualizaciji te kojima ćemo se vratiti u poglavlju o deskriptivnoj statistici. Drugi način jest koristiti funkciju <code>geom_density</code> paketa <code>ggplot2</code> koja će uz pomoć posebnog algoritma pokušati “pogoditi” funkciju razdiobe te ju vizualizirati na grafu.</p>
 <p>Prikažimo kako uz pomoć spomenute funkcije vizualno provjeriti da li se skup vrijednosti nekih obzervacija ravna po nekoj normalnoj razdiobi.</p>
 <p><strong>Zadatak 12.10 - Funkcija <code>geom_density</code></strong></p>
-<div class="sourceCode" id="cb603"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb603-1"><a href="razdiobe.html#cb603-1" tabindex="-1"></a><span class="co"># učitajte podatke iz datoteke &quot;podaci.csv&quot; i prikažite izgled</span></span>
-<span id="cb603-2"><a href="razdiobe.html#cb603-2" tabindex="-1"></a><span class="co"># procjenjene funkcije razdiobe za svaki od stupaca</span></span>
-<span id="cb603-3"><a href="razdiobe.html#cb603-3" tabindex="-1"></a><span class="co"># komentirajte izgled tj. prirodu prikazanih razdiobi</span></span></code></pre></div>
+<div class="sourceCode" id="cb616"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb616-1"><a href="razdiobe.html#cb616-1" tabindex="-1"></a><span class="co"># učitajte podatke iz datoteke &quot;podaci.csv&quot; i prikažite izgled</span></span>
+<span id="cb616-2"><a href="razdiobe.html#cb616-2" tabindex="-1"></a><span class="co"># procjenjene funkcije razdiobe za svaki od stupaca</span></span>
+<span id="cb616-3"><a href="razdiobe.html#cb616-3" tabindex="-1"></a><span class="co"># komentirajte izgled tj. prirodu prikazanih razdiobi</span></span></code></pre></div>
 <div class="fold s o">
-<div class="sourceCode" id="cb604"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb604-1"><a href="razdiobe.html#cb604-1" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;podaci.csv&quot;</span>, <span class="at">show_col_types =</span> F)</span>
-<span id="cb604-2"><a href="razdiobe.html#cb604-2" tabindex="-1"></a></span>
-<span id="cb604-3"><a href="razdiobe.html#cb604-3" tabindex="-1"></a><span class="co"># grafove ćemo složiti u 2 x 2 matricu radi bolje preglednosti</span></span>
-<span id="cb604-4"><a href="razdiobe.html#cb604-4" tabindex="-1"></a>g1 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(df, <span class="fu">aes</span>(x1)) <span class="sc">+</span> <span class="fu">geom_density</span>() <span class="sc">+</span> <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;&quot;</span>, <span class="at">title =</span> <span class="st">&quot;Normalna&quot;</span>) <span class="sc">+</span> <span class="fu">xlim</span>(<span class="fu">c</span>(<span class="dv">160</span>, <span class="dv">180</span>))</span>
-<span id="cb604-5"><a href="razdiobe.html#cb604-5" tabindex="-1"></a>g2 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(df, <span class="fu">aes</span>(x2)) <span class="sc">+</span> <span class="fu">geom_density</span>() <span class="sc">+</span> <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;&quot;</span>, <span class="at">title =</span> <span class="st">&quot;Lijevo nagnuta&quot;</span>) <span class="sc">+</span> <span class="fu">xlim</span>(<span class="fu">c</span>(<span class="dv">170</span>, <span class="dv">176</span>))</span>
-<span id="cb604-6"><a href="razdiobe.html#cb604-6" tabindex="-1"></a>g3 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(df, <span class="fu">aes</span>(x3))<span class="sc">+</span> <span class="fu">geom_density</span>() <span class="sc">+</span> <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;&quot;</span>, <span class="at">title =</span> <span class="st">&quot;Desno nagnuta&quot;</span>) <span class="sc">+</span> <span class="fu">xlim</span>(<span class="fu">c</span>(<span class="dv">160</span>, <span class="dv">170</span>))</span>
-<span id="cb604-7"><a href="razdiobe.html#cb604-7" tabindex="-1"></a>g4 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(df, <span class="fu">aes</span>(x4)) <span class="sc">+</span> <span class="fu">geom_density</span>() <span class="sc">+</span> <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;&quot;</span>, <span class="at">title =</span> <span class="st">&quot;Bimodalna&quot;</span>) <span class="sc">+</span> <span class="fu">xlim</span>(<span class="fu">c</span>(<span class="dv">90</span>, <span class="dv">190</span>))</span>
-<span id="cb604-8"><a href="razdiobe.html#cb604-8" tabindex="-1"></a></span>
-<span id="cb604-9"><a href="razdiobe.html#cb604-9" tabindex="-1"></a><span class="fu">grid.arrange</span>(g1, g2, g3, g4, <span class="at">nrow =</span> <span class="dv">2</span>, <span class="at">ncol =</span> <span class="dv">2</span>)</span></code></pre></div>
-<p><img src="osnoveR_files/figure-html/unnamed-chunk-478-1.png" width="672" /></p>
+<div class="sourceCode" id="cb617"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb617-1"><a href="razdiobe.html#cb617-1" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;podaci.csv&quot;</span>, <span class="at">show_col_types =</span> F)</span>
+<span id="cb617-2"><a href="razdiobe.html#cb617-2" tabindex="-1"></a></span>
+<span id="cb617-3"><a href="razdiobe.html#cb617-3" tabindex="-1"></a><span class="co"># grafove ćemo složiti u 2 x 2 matricu radi bolje preglednosti</span></span>
+<span id="cb617-4"><a href="razdiobe.html#cb617-4" tabindex="-1"></a>g1 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(df, <span class="fu">aes</span>(x1)) <span class="sc">+</span> <span class="fu">geom_density</span>() <span class="sc">+</span> <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;&quot;</span>, <span class="at">title =</span> <span class="st">&quot;Normalna&quot;</span>) <span class="sc">+</span> <span class="fu">xlim</span>(<span class="fu">c</span>(<span class="dv">160</span>, <span class="dv">180</span>))</span>
+<span id="cb617-5"><a href="razdiobe.html#cb617-5" tabindex="-1"></a>g2 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(df, <span class="fu">aes</span>(x2)) <span class="sc">+</span> <span class="fu">geom_density</span>() <span class="sc">+</span> <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;&quot;</span>, <span class="at">title =</span> <span class="st">&quot;Lijevo nagnuta&quot;</span>) <span class="sc">+</span> <span class="fu">xlim</span>(<span class="fu">c</span>(<span class="dv">170</span>, <span class="dv">176</span>))</span>
+<span id="cb617-6"><a href="razdiobe.html#cb617-6" tabindex="-1"></a>g3 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(df, <span class="fu">aes</span>(x3))<span class="sc">+</span> <span class="fu">geom_density</span>() <span class="sc">+</span> <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;&quot;</span>, <span class="at">title =</span> <span class="st">&quot;Desno nagnuta&quot;</span>) <span class="sc">+</span> <span class="fu">xlim</span>(<span class="fu">c</span>(<span class="dv">160</span>, <span class="dv">170</span>))</span>
+<span id="cb617-7"><a href="razdiobe.html#cb617-7" tabindex="-1"></a>g4 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(df, <span class="fu">aes</span>(x4)) <span class="sc">+</span> <span class="fu">geom_density</span>() <span class="sc">+</span> <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;&quot;</span>, <span class="at">title =</span> <span class="st">&quot;Bimodalna&quot;</span>) <span class="sc">+</span> <span class="fu">xlim</span>(<span class="fu">c</span>(<span class="dv">90</span>, <span class="dv">190</span>))</span>
+<span id="cb617-8"><a href="razdiobe.html#cb617-8" tabindex="-1"></a></span>
+<span id="cb617-9"><a href="razdiobe.html#cb617-9" tabindex="-1"></a><span class="fu">grid.arrange</span>(g1, g2, g3, g4, <span class="at">nrow =</span> <span class="dv">2</span>, <span class="at">ncol =</span> <span class="dv">2</span>)</span></code></pre></div>
+<p><img src="osnoveR_files/figure-html/unnamed-chunk-483-1.png" width="672" /></p>
 </div>
 <hr />
 <p>Za provjeru normalnosti razdiobe odabrane varijable često se koristi i tzv. “QQ graf” (od engl. <em>quantile-quantile</em>), koji uspoređuje teoretske kvantile sa onima zaista uočenim u uzorku. Ovaj graf radi na sljedeći način: opservacije se poredaju na jednu os prema svojoj vrijednosti dok na drugu os stavljamo njihovu očekivanu Z-vrijednost (engl. <em>Z-score</em>) koju možemo interpretirati i kao “očekivanu udaljenost od sredine po broju standardnih devijacija”). Kod normalne razdiobe QQ graf leži na dijagonali grafa, dok se odstupanje od normalne razdiobe očituje u “izvijenosti” grafa tj. odstupanju od “pravca normalnosti”.</p>
 <p>Funkcija geometrije <code>geom_qq</code> uz definiranu estetiku <code>sample</code> nam omogućuje jednostavno stvaranje QQ grafa odabrane varijable.</p>
 <p><strong>Zadatak 12.11 - Funkcija <code>geom_qq</code></strong></p>
-<div class="sourceCode" id="cb605"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb605-1"><a href="razdiobe.html#cb605-1" tabindex="-1"></a><span class="co"># nacrtajte QQ grafove varijabli iz prethodnog zadatka</span></span></code></pre></div>
+<div class="sourceCode" id="cb618"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb618-1"><a href="razdiobe.html#cb618-1" tabindex="-1"></a><span class="co"># nacrtajte QQ grafove varijabli iz prethodnog zadatka</span></span></code></pre></div>
 <div class="fold s o">
-<div class="sourceCode" id="cb606"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb606-1"><a href="razdiobe.html#cb606-1" tabindex="-1"></a><span class="co">#library(gridExtras)    # ukoliko je potrebno</span></span>
-<span id="cb606-2"><a href="razdiobe.html#cb606-2" tabindex="-1"></a>g1 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(df, <span class="fu">aes</span>(<span class="at">sample =</span> x1)) <span class="sc">+</span> <span class="fu">geom_qq</span>() <span class="sc">+</span> <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;Normalna&quot;</span>)</span>
-<span id="cb606-3"><a href="razdiobe.html#cb606-3" tabindex="-1"></a>g2 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(df, <span class="fu">aes</span>(<span class="at">sample =</span> x2)) <span class="sc">+</span> <span class="fu">geom_qq</span>() <span class="sc">+</span> <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;Lijevo nagnuta&quot;</span>)</span>
-<span id="cb606-4"><a href="razdiobe.html#cb606-4" tabindex="-1"></a>g3 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(df, <span class="fu">aes</span>(<span class="at">sample =</span> x3)) <span class="sc">+</span> <span class="fu">geom_qq</span>() <span class="sc">+</span> <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;Desno nagnuta&quot;</span>)</span>
-<span id="cb606-5"><a href="razdiobe.html#cb606-5" tabindex="-1"></a>g4 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(df, <span class="fu">aes</span>(<span class="at">sample =</span> x4)) <span class="sc">+</span> <span class="fu">geom_qq</span>() <span class="sc">+</span> <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;Bimodalna&quot;</span>)</span>
-<span id="cb606-6"><a href="razdiobe.html#cb606-6" tabindex="-1"></a></span>
-<span id="cb606-7"><a href="razdiobe.html#cb606-7" tabindex="-1"></a><span class="fu">grid.arrange</span>(g1, g2, g3, g4, <span class="at">nrow =</span> <span class="dv">2</span>, <span class="at">ncol =</span> <span class="dv">2</span>)</span></code></pre></div>
-<p><img src="osnoveR_files/figure-html/unnamed-chunk-480-1.png" width="672" /></p>
+<div class="sourceCode" id="cb619"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb619-1"><a href="razdiobe.html#cb619-1" tabindex="-1"></a><span class="co">#library(gridExtras)    # ukoliko je potrebno</span></span>
+<span id="cb619-2"><a href="razdiobe.html#cb619-2" tabindex="-1"></a>g1 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(df, <span class="fu">aes</span>(<span class="at">sample =</span> x1)) <span class="sc">+</span> <span class="fu">geom_qq</span>() <span class="sc">+</span> <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;Normalna&quot;</span>)</span>
+<span id="cb619-3"><a href="razdiobe.html#cb619-3" tabindex="-1"></a>g2 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(df, <span class="fu">aes</span>(<span class="at">sample =</span> x2)) <span class="sc">+</span> <span class="fu">geom_qq</span>() <span class="sc">+</span> <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;Lijevo nagnuta&quot;</span>)</span>
+<span id="cb619-4"><a href="razdiobe.html#cb619-4" tabindex="-1"></a>g3 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(df, <span class="fu">aes</span>(<span class="at">sample =</span> x3)) <span class="sc">+</span> <span class="fu">geom_qq</span>() <span class="sc">+</span> <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;Desno nagnuta&quot;</span>)</span>
+<span id="cb619-5"><a href="razdiobe.html#cb619-5" tabindex="-1"></a>g4 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(df, <span class="fu">aes</span>(<span class="at">sample =</span> x4)) <span class="sc">+</span> <span class="fu">geom_qq</span>() <span class="sc">+</span> <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;Bimodalna&quot;</span>)</span>
+<span id="cb619-6"><a href="razdiobe.html#cb619-6" tabindex="-1"></a></span>
+<span id="cb619-7"><a href="razdiobe.html#cb619-7" tabindex="-1"></a><span class="fu">grid.arrange</span>(g1, g2, g3, g4, <span class="at">nrow =</span> <span class="dv">2</span>, <span class="at">ncol =</span> <span class="dv">2</span>)</span></code></pre></div>
+<p><img src="osnoveR_files/figure-html/unnamed-chunk-485-1.png" width="672" /></p>
 </div>
 <hr />
 <p>Ovdje završavamo priču o razdiobama. Ponovimo da prikazane funkcije imaju svoje korespondentne alternative za niz drugih razdiobi, pa tako npr. Poissonova razdioba ima funkcije <code>dpois</code>, <code>ppois</code>, <code>qpois</code> i <code>rpois</code> s kojima radimo vrlo slično prikazanim metodama normalne razdiobe, vodeći naravno računa o specifičnostima odabrane razdiobe (kao što smo već rekli, Poissonova razdioba očekivano nema parametre <code>mean</code> i <code>sd</code> već samo parametar <code>lambda</code>).</p>
@@ -750,24 +767,24 @@ elemenata na intervalu od 70 do 130 (što će obuhvatiti 99.7% ishoda)</li>
 <p>Pojam “Monte Carlo simulacije” označava klasu računalnih algoritama gdje provodimo višestruko uzorkovanje te na osnovu dobivenih rezultata donosimo određene zaključke (npr. o radziobi nekog slučajnog događaja). Ovaj način modeliranja slučajnih događaja često se koristi kad želimo zaobići (ili provjeriti valjanost) matematičkog modela.
 Za provedbu Monte Carlo simulacija često se oslanjamo na već upoznatu funkciju <code>sample</code>.</p>
 <p>Pretpostavimo da želimo provjeriti kolika je vjerojatnost pojedinog zbroja kod bacanja dvije kockice. Ovdje nam nije dosta jedan poziv funkcije <code>sample</code>, već trebamo zbroj dva poziva te funkcije kojeg ćemo računati velikih broj puta. Jedno od mogućih rješenja kako ovo isprogramirati jest uz pomoć petlje, no budući da znamo kako je u jeziku <em>R</em> poželjno izbjeći petlje ukoliko je to moguće, preporučljivije je koristiti funkciju <code>replicate</code>:</p>
-<div class="sourceCode" id="cb607"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb607-1"><a href="razdiobe.html#cb607-1" tabindex="-1"></a><span class="fu">replicate</span>(n, expr, <span class="at">simplify =</span> <span class="st">&quot;array&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb620"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb620-1"><a href="razdiobe.html#cb620-1" tabindex="-1"></a><span class="fu">replicate</span>(n, expr, <span class="at">simplify =</span> <span class="st">&quot;array&quot;</span>)</span></code></pre></div>
 <p>Ova funkcija uzima izraz <code>expr</code> i ponavlja ga <code>n</code> puta, pri čemu slaže međurezultate u prikladnu strukturu (ukoliko pogledamo dokumentaciju, uvidjet ćemo da je ova funkcija zapravo izvedenica funkcije <code>sapply</code>).</p>
 <hr />
 <p><strong>Zadatak 12.12 - funkcija <code>replicate</code></strong></p>
-<div class="sourceCode" id="cb608"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb608-1"><a href="razdiobe.html#cb608-1" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">1234</span>)</span>
-<span id="cb608-2"><a href="razdiobe.html#cb608-2" tabindex="-1"></a><span class="co"># napravite funkciju `baci2kockice(n)` koja vraća vektor od n elemenata</span></span>
-<span id="cb608-3"><a href="razdiobe.html#cb608-3" tabindex="-1"></a><span class="co"># gdje je svaki element zbroj rezultata jednog bacanja dvije kockice</span></span>
-<span id="cb608-4"><a href="razdiobe.html#cb608-4" tabindex="-1"></a><span class="co"># ovaj posao funkcija će obavljati uz pomoć funkcije `replicate`</span></span>
-<span id="cb608-5"><a href="razdiobe.html#cb608-5" tabindex="-1"></a><span class="co"># gdje će izraz koji se ponavlja biti zbroj dva poziva funkcije `sample`</span></span>
-<span id="cb608-6"><a href="razdiobe.html#cb608-6" tabindex="-1"></a></span>
-<span id="cb608-7"><a href="razdiobe.html#cb608-7" tabindex="-1"></a><span class="co"># ispišite vjerojatnosti svakog mogućeg zbroja za 100, 1000 i 1,000,000 bacanja kockice</span></span></code></pre></div>
+<div class="sourceCode" id="cb621"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb621-1"><a href="razdiobe.html#cb621-1" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">1234</span>)</span>
+<span id="cb621-2"><a href="razdiobe.html#cb621-2" tabindex="-1"></a><span class="co"># napravite funkciju `baci2kockice(n)` koja vraća vektor od n elemenata</span></span>
+<span id="cb621-3"><a href="razdiobe.html#cb621-3" tabindex="-1"></a><span class="co"># gdje je svaki element zbroj rezultata jednog bacanja dvije kockice</span></span>
+<span id="cb621-4"><a href="razdiobe.html#cb621-4" tabindex="-1"></a><span class="co"># ovaj posao funkcija će obavljati uz pomoć funkcije `replicate`</span></span>
+<span id="cb621-5"><a href="razdiobe.html#cb621-5" tabindex="-1"></a><span class="co"># gdje će izraz koji se ponavlja biti zbroj dva poziva funkcije `sample`</span></span>
+<span id="cb621-6"><a href="razdiobe.html#cb621-6" tabindex="-1"></a></span>
+<span id="cb621-7"><a href="razdiobe.html#cb621-7" tabindex="-1"></a><span class="co"># ispišite vjerojatnosti svakog mogućeg zbroja za 100, 1000 i 1,000,000 bacanja kockice</span></span></code></pre></div>
 <div class="fold s o">
-<div class="sourceCode" id="cb609"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb609-1"><a href="razdiobe.html#cb609-1" tabindex="-1"></a>baci2kockice <span class="ot">&lt;-</span> <span class="cf">function</span>(n) </span>
-<span id="cb609-2"><a href="razdiobe.html#cb609-2" tabindex="-1"></a>  <span class="fu">replicate</span>(n, <span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>, <span class="dv">1</span>) <span class="sc">+</span> <span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>, <span class="dv">1</span>))</span>
-<span id="cb609-3"><a href="razdiobe.html#cb609-3" tabindex="-1"></a></span>
-<span id="cb609-4"><a href="razdiobe.html#cb609-4" tabindex="-1"></a><span class="fu">table</span>(<span class="fu">baci2kockice</span>(<span class="dv">100</span>)) <span class="sc">/</span> <span class="dv">100</span></span>
-<span id="cb609-5"><a href="razdiobe.html#cb609-5" tabindex="-1"></a><span class="fu">table</span>(<span class="fu">baci2kockice</span>(<span class="dv">1000</span>)) <span class="sc">/</span> <span class="dv">1000</span></span>
-<span id="cb609-6"><a href="razdiobe.html#cb609-6" tabindex="-1"></a><span class="fu">round</span>(<span class="fu">table</span>(<span class="fu">baci2kockice</span>(<span class="dv">1000000</span>)) <span class="sc">/</span> <span class="dv">1000000</span>, <span class="dv">3</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb622"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb622-1"><a href="razdiobe.html#cb622-1" tabindex="-1"></a>baci2kockice <span class="ot">&lt;-</span> <span class="cf">function</span>(n) </span>
+<span id="cb622-2"><a href="razdiobe.html#cb622-2" tabindex="-1"></a>  <span class="fu">replicate</span>(n, <span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>, <span class="dv">1</span>) <span class="sc">+</span> <span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>, <span class="dv">1</span>))</span>
+<span id="cb622-3"><a href="razdiobe.html#cb622-3" tabindex="-1"></a></span>
+<span id="cb622-4"><a href="razdiobe.html#cb622-4" tabindex="-1"></a><span class="fu">table</span>(<span class="fu">baci2kockice</span>(<span class="dv">100</span>)) <span class="sc">/</span> <span class="dv">100</span></span>
+<span id="cb622-5"><a href="razdiobe.html#cb622-5" tabindex="-1"></a><span class="fu">table</span>(<span class="fu">baci2kockice</span>(<span class="dv">1000</span>)) <span class="sc">/</span> <span class="dv">1000</span></span>
+<span id="cb622-6"><a href="razdiobe.html#cb622-6" tabindex="-1"></a><span class="fu">round</span>(<span class="fu">table</span>(<span class="fu">baci2kockice</span>(<span class="dv">1000000</span>)) <span class="sc">/</span> <span class="dv">1000000</span>, <span class="dv">3</span>)</span></code></pre></div>
 <pre><code>## 
 ##    2    3    4    5    6    7    8    9   10   11   12 
 ## 0.02 0.04 0.08 0.09 0.15 0.17 0.17 0.12 0.05 0.07 0.04 
@@ -781,49 +798,49 @@ Za provedbu Monte Carlo simulacija često se oslanjamo na već upoznatu funkciju
 <hr />
 <p>Pokušajmo sada malo složeniju simulaciju.</p>
 <p><strong>Zadatak 12.13 - funkcija <code>replicate</code> (2)</strong></p>
-<div class="sourceCode" id="cb611"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb611-1"><a href="razdiobe.html#cb611-1" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">123</span>)</span>
-<span id="cb611-2"><a href="razdiobe.html#cb611-2" tabindex="-1"></a><span class="co"># procijenite vjerojatnost dobivanja četiri asa u pokeru tijekom prvog dijeljenja</span></span>
-<span id="cb611-3"><a href="razdiobe.html#cb611-3" tabindex="-1"></a><span class="co"># klasičan špil za poker ima 52 karte od kojih u četiri as, a u prvom dijeljenju dijeli se pet karata</span></span>
-<span id="cb611-4"><a href="razdiobe.html#cb611-4" tabindex="-1"></a><span class="co"># vjerojatnost ispišite u obliku postotka i zaokruženu na ŠEST decimala, npr. `65.231232%`</span></span>
-<span id="cb611-5"><a href="razdiobe.html#cb611-5" tabindex="-1"></a></span>
-<span id="cb611-6"><a href="razdiobe.html#cb611-6" tabindex="-1"></a></span>
-<span id="cb611-7"><a href="razdiobe.html#cb611-7" tabindex="-1"></a><span class="co"># NAPUTAK: </span></span>
-<span id="cb611-8"><a href="razdiobe.html#cb611-8" tabindex="-1"></a><span class="co"># - kod modeliranja špila uzmite u obzir da je u ovoj simulaciji jedino relevantno da li je karta as ili ne</span></span>
-<span id="cb611-9"><a href="razdiobe.html#cb611-9" tabindex="-1"></a><span class="co"># - napravite funkciju `dijeli` koja će promiješati karte i pogledati da li je četiri asa među prvih pet karata</span></span>
-<span id="cb611-10"><a href="razdiobe.html#cb611-10" tabindex="-1"></a><span class="co">#    - miješanje karata istovjetno je uzorkovanju svih karata bez ponavljanja</span></span>
-<span id="cb611-11"><a href="razdiobe.html#cb611-11" tabindex="-1"></a><span class="co">#    - ako je 4 asa unutar prvih 5 karata funkcija vraća `TRUE`, inače `FALSE`</span></span>
-<span id="cb611-12"><a href="razdiobe.html#cb611-12" tabindex="-1"></a><span class="co"># - za preciznu procjenu ponovite eksperiment veliki broj puta, minimalno 100.000 </span></span></code></pre></div>
+<div class="sourceCode" id="cb624"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb624-1"><a href="razdiobe.html#cb624-1" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">123</span>)</span>
+<span id="cb624-2"><a href="razdiobe.html#cb624-2" tabindex="-1"></a><span class="co"># procijenite vjerojatnost dobivanja četiri asa u pokeru tijekom prvog dijeljenja</span></span>
+<span id="cb624-3"><a href="razdiobe.html#cb624-3" tabindex="-1"></a><span class="co"># klasičan špil za poker ima 52 karte od kojih u četiri as, a u prvom dijeljenju dijeli se pet karata</span></span>
+<span id="cb624-4"><a href="razdiobe.html#cb624-4" tabindex="-1"></a><span class="co"># vjerojatnost ispišite u obliku postotka i zaokruženu na ŠEST decimala, npr. `65.231232%`</span></span>
+<span id="cb624-5"><a href="razdiobe.html#cb624-5" tabindex="-1"></a></span>
+<span id="cb624-6"><a href="razdiobe.html#cb624-6" tabindex="-1"></a></span>
+<span id="cb624-7"><a href="razdiobe.html#cb624-7" tabindex="-1"></a><span class="co"># NAPUTAK: </span></span>
+<span id="cb624-8"><a href="razdiobe.html#cb624-8" tabindex="-1"></a><span class="co"># - kod modeliranja špila uzmite u obzir da je u ovoj simulaciji jedino relevantno da li je karta as ili ne</span></span>
+<span id="cb624-9"><a href="razdiobe.html#cb624-9" tabindex="-1"></a><span class="co"># - napravite funkciju `dijeli` koja će promiješati karte i pogledati da li je četiri asa među prvih pet karata</span></span>
+<span id="cb624-10"><a href="razdiobe.html#cb624-10" tabindex="-1"></a><span class="co">#    - miješanje karata istovjetno je uzorkovanju svih karata bez ponavljanja</span></span>
+<span id="cb624-11"><a href="razdiobe.html#cb624-11" tabindex="-1"></a><span class="co">#    - ako je 4 asa unutar prvih 5 karata funkcija vraća `TRUE`, inače `FALSE`</span></span>
+<span id="cb624-12"><a href="razdiobe.html#cb624-12" tabindex="-1"></a><span class="co"># - za preciznu procjenu ponovite eksperiment veliki broj puta, minimalno 100.000 </span></span></code></pre></div>
 <div class="fold s o">
-<div class="sourceCode" id="cb612"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb612-1"><a href="razdiobe.html#cb612-1" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">123</span>)</span>
-<span id="cb612-2"><a href="razdiobe.html#cb612-2" tabindex="-1"></a><span class="co"># zanimaju me samo asevi </span></span>
-<span id="cb612-3"><a href="razdiobe.html#cb612-3" tabindex="-1"></a>spil <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fu">rep</span>(<span class="dv">1</span>, <span class="dv">4</span>), <span class="fu">rep</span>(<span class="dv">0</span>, <span class="dv">48</span>))</span>
-<span id="cb612-4"><a href="razdiobe.html#cb612-4" tabindex="-1"></a></span>
-<span id="cb612-5"><a href="razdiobe.html#cb612-5" tabindex="-1"></a>dijeli <span class="ot">&lt;-</span> <span class="cf">function</span>() {</span>
-<span id="cb612-6"><a href="razdiobe.html#cb612-6" tabindex="-1"></a>  spil <span class="ot">&lt;-</span> <span class="fu">sample</span>(spil, <span class="dv">52</span>) <span class="co"># mijesanje</span></span>
-<span id="cb612-7"><a href="razdiobe.html#cb612-7" tabindex="-1"></a>  aseva <span class="ot">&lt;-</span> spil[<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>] <span class="sc">%&gt;%</span> sum </span>
-<span id="cb612-8"><a href="razdiobe.html#cb612-8" tabindex="-1"></a>  aseva <span class="sc">==</span> <span class="dv">4</span></span>
-<span id="cb612-9"><a href="razdiobe.html#cb612-9" tabindex="-1"></a>}</span>
-<span id="cb612-10"><a href="razdiobe.html#cb612-10" tabindex="-1"></a></span>
-<span id="cb612-11"><a href="razdiobe.html#cb612-11" tabindex="-1"></a><span class="fu">replicate</span>(<span class="dv">1000000</span>, <span class="fu">dijeli</span>()) <span class="sc">%&gt;%</span> mean <span class="sc">%&gt;%</span> <span class="st">`</span><span class="at">*</span><span class="st">`</span>(<span class="dv">100</span>) <span class="sc">%&gt;%</span> <span class="fu">round</span>(<span class="dv">6</span>) <span class="sc">%&gt;%</span> <span class="fu">str_c</span>(<span class="st">&quot;%&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb625"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb625-1"><a href="razdiobe.html#cb625-1" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">123</span>)</span>
+<span id="cb625-2"><a href="razdiobe.html#cb625-2" tabindex="-1"></a><span class="co"># zanimaju me samo asevi </span></span>
+<span id="cb625-3"><a href="razdiobe.html#cb625-3" tabindex="-1"></a>spil <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fu">rep</span>(<span class="dv">1</span>, <span class="dv">4</span>), <span class="fu">rep</span>(<span class="dv">0</span>, <span class="dv">48</span>))</span>
+<span id="cb625-4"><a href="razdiobe.html#cb625-4" tabindex="-1"></a></span>
+<span id="cb625-5"><a href="razdiobe.html#cb625-5" tabindex="-1"></a>dijeli <span class="ot">&lt;-</span> <span class="cf">function</span>() {</span>
+<span id="cb625-6"><a href="razdiobe.html#cb625-6" tabindex="-1"></a>  spil <span class="ot">&lt;-</span> <span class="fu">sample</span>(spil, <span class="dv">52</span>) <span class="co"># mijesanje</span></span>
+<span id="cb625-7"><a href="razdiobe.html#cb625-7" tabindex="-1"></a>  aseva <span class="ot">&lt;-</span> spil[<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>] <span class="sc">%&gt;%</span> sum </span>
+<span id="cb625-8"><a href="razdiobe.html#cb625-8" tabindex="-1"></a>  aseva <span class="sc">==</span> <span class="dv">4</span></span>
+<span id="cb625-9"><a href="razdiobe.html#cb625-9" tabindex="-1"></a>}</span>
+<span id="cb625-10"><a href="razdiobe.html#cb625-10" tabindex="-1"></a></span>
+<span id="cb625-11"><a href="razdiobe.html#cb625-11" tabindex="-1"></a><span class="fu">replicate</span>(<span class="dv">1000000</span>, <span class="fu">dijeli</span>()) <span class="sc">%&gt;%</span> mean <span class="sc">%&gt;%</span> <span class="st">`</span><span class="at">*</span><span class="st">`</span>(<span class="dv">100</span>) <span class="sc">%&gt;%</span> <span class="fu">round</span>(<span class="dv">6</span>) <span class="sc">%&gt;%</span> <span class="fu">str_c</span>(<span class="st">&quot;%&quot;</span>)</span></code></pre></div>
 <pre><code>## [1] &quot;0.0024%&quot;</code></pre>
 </div>
 <hr />
 <p>Do sada smo funkciju <code>replicate</code> koristili uglavnom za složene eksperimente koji bi vraćali logičku vrijednost opisujući da li je tražena pojava uočena ili ne. Ako izraz kojeg funkcija <code>replicate</code> umjesto ovoga vraća vektor vrijednosti fiksne duljine, onda će konačni rezultat biti matrica u kojoj će svaki stupac biti jedna od provedbi ovakvog eksperimenta. Ovo nam omogućuje da izrađujemo simulacije gdje trajno čuvamo rezultate simulacije koje onda možemo koristiti za različite daljnje analize.</p>
 <hr />
 <p><strong>Zadatak 12.14 - matrica kao rezultat funkcije <code>replicate</code></strong></p>
-<div class="sourceCode" id="cb614"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb614-1"><a href="razdiobe.html#cb614-1" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">1234</span>)</span>
-<span id="cb614-2"><a href="razdiobe.html#cb614-2" tabindex="-1"></a><span class="co"># pretpostavite da u partiji neke društvene igre bacamo kockicu 100 puta</span></span>
-<span id="cb614-3"><a href="razdiobe.html#cb614-3" tabindex="-1"></a><span class="co"># simulirajte 1000 ovakvih partija pri čemu ćete sva bacanja trajno pohraniti u matricu `rez`</span></span>
-<span id="cb614-4"><a href="razdiobe.html#cb614-4" tabindex="-1"></a></span>
-<span id="cb614-5"><a href="razdiobe.html#cb614-5" tabindex="-1"></a><span class="co"># ispišite koji je najmanji broj šestica viđen u partiji</span></span>
-<span id="cb614-6"><a href="razdiobe.html#cb614-6" tabindex="-1"></a><span class="co"># i broj partije (ili brojeve partija) gdje je šestica viđena najmanje puta</span></span></code></pre></div>
+<div class="sourceCode" id="cb627"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb627-1"><a href="razdiobe.html#cb627-1" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">1234</span>)</span>
+<span id="cb627-2"><a href="razdiobe.html#cb627-2" tabindex="-1"></a><span class="co"># pretpostavite da u partiji neke društvene igre bacamo kockicu 100 puta</span></span>
+<span id="cb627-3"><a href="razdiobe.html#cb627-3" tabindex="-1"></a><span class="co"># simulirajte 1000 ovakvih partija pri čemu ćete sva bacanja trajno pohraniti u matricu `rez`</span></span>
+<span id="cb627-4"><a href="razdiobe.html#cb627-4" tabindex="-1"></a></span>
+<span id="cb627-5"><a href="razdiobe.html#cb627-5" tabindex="-1"></a><span class="co"># ispišite koji je najmanji broj šestica viđen u partiji</span></span>
+<span id="cb627-6"><a href="razdiobe.html#cb627-6" tabindex="-1"></a><span class="co"># i broj partije (ili brojeve partija) gdje je šestica viđena najmanje puta</span></span></code></pre></div>
 <div class="fold s o">
-<div class="sourceCode" id="cb615"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb615-1"><a href="razdiobe.html#cb615-1" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">1234</span>)</span>
-<span id="cb615-2"><a href="razdiobe.html#cb615-2" tabindex="-1"></a>rez <span class="ot">&lt;-</span> <span class="fu">replicate</span>(<span class="dv">1000</span>, <span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>, <span class="dv">100</span>, T)) </span>
-<span id="cb615-3"><a href="razdiobe.html#cb615-3" tabindex="-1"></a></span>
-<span id="cb615-4"><a href="razdiobe.html#cb615-4" tabindex="-1"></a>sestica <span class="ot">&lt;-</span> <span class="fu">apply</span>(rez, <span class="dv">2</span>, <span class="cf">function</span>(x) (x <span class="sc">==</span> <span class="dv">6</span>) <span class="sc">%&gt;%</span> sum) </span>
-<span id="cb615-5"><a href="razdiobe.html#cb615-5" tabindex="-1"></a><span class="fu">str_c</span>(<span class="st">&quot;Najmanje šestica: &quot;</span>, <span class="fu">min</span>(sestica))</span>
-<span id="cb615-6"><a href="razdiobe.html#cb615-6" tabindex="-1"></a><span class="fu">str_c</span>(<span class="st">&quot;Partija br: &quot;</span>, <span class="fu">which</span>(sestica  <span class="sc">==</span> <span class="fu">min</span>(sestica)))</span></code></pre></div>
+<div class="sourceCode" id="cb628"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb628-1"><a href="razdiobe.html#cb628-1" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">1234</span>)</span>
+<span id="cb628-2"><a href="razdiobe.html#cb628-2" tabindex="-1"></a>rez <span class="ot">&lt;-</span> <span class="fu">replicate</span>(<span class="dv">1000</span>, <span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>, <span class="dv">100</span>, T)) </span>
+<span id="cb628-3"><a href="razdiobe.html#cb628-3" tabindex="-1"></a></span>
+<span id="cb628-4"><a href="razdiobe.html#cb628-4" tabindex="-1"></a>sestica <span class="ot">&lt;-</span> <span class="fu">apply</span>(rez, <span class="dv">2</span>, <span class="cf">function</span>(x) (x <span class="sc">==</span> <span class="dv">6</span>) <span class="sc">%&gt;%</span> sum) </span>
+<span id="cb628-5"><a href="razdiobe.html#cb628-5" tabindex="-1"></a><span class="fu">str_c</span>(<span class="st">&quot;Najmanje šestica: &quot;</span>, <span class="fu">min</span>(sestica))</span>
+<span id="cb628-6"><a href="razdiobe.html#cb628-6" tabindex="-1"></a><span class="fu">str_c</span>(<span class="st">&quot;Partija br: &quot;</span>, <span class="fu">which</span>(sestica  <span class="sc">==</span> <span class="fu">min</span>(sestica)))</span></code></pre></div>
 <pre><code>## [1] &quot;Najmanje šestica: 5&quot;
 ## [1] &quot;Partija br: 469&quot;</code></pre>
 </div>
@@ -838,8 +855,8 @@ Za provedbu Monte Carlo simulacija često se oslanjamo na već upoznatu funkciju
 <strong>“IntroStat with Randomization and Simulation”</strong> koja je otvoreno dostupna na <a href  = "https://www.openintro.org/stat/textbook.php?stat_book=isrs">ovoj poveznici</a>. Ova knjiga okvirno prolazi kroz iste teme kao i knjiga <strong>“OpenIntro Statistics”</strong>, no s većim naglaskom na simulacije i korištenje nasumično odabranih vrijednosti uz pomoć jezika R.</p>
 <hr />
 </div>
-<div id="zadaci-za-vježbu-10" class="section level2 unnumbered hasAnchor">
-<h2>Zadaci za vježbu<a href="razdiobe.html#zadaci-za-vježbu-10" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="zadaci-za-vježbu-9" class="section level2 unnumbered hasAnchor">
+<h2>Zadaci za vježbu<a href="razdiobe.html#zadaci-za-vježbu-9" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ol style="list-style-type: decimal">
 <li><p>Vjerojatnost dobivanja sedmice na lotu “7 od 45” je 0.00000002204, tj. otprilike 1 naspram 45 milijuna. Ako igrate svaki tjedan tijekom 70 godina, koja je vjerojatnost da ćete barem jednom osvojiti sedmicu? Pretpostavite da u svakoj godini ima 52 tjedna, a vjerojatnost prikažite u obliku postotka zaokruženog na 8 decimala.</p></li>
 <li><p>Na istom grafu nacrtajte graf binomne razdiobe (100 pokušaja, vjerojatnost uspjeha 40%) i graf normalne razdiobe (sredina 40, standardna devijacija 4.9). Što uočavate?</p></li>
